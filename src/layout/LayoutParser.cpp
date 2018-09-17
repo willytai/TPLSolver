@@ -55,7 +55,7 @@ void LayoutParser::parse(const string& filename, vector<Polygon*>& debug) {
 				x = y = INT_MAX;
 			}
 		}
-		assert (valid_polygon); // check of polygon is valid
+		assert (valid_polygon); // check if polygon is valid
 		debug.push_back(polygon);
 	}
 }

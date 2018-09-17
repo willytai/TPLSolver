@@ -6,9 +6,13 @@ MAIN     = main
 LIBS     = $(addprefix -l, $(LIBPKGS))
 SRCLIBS  = $(addsuffix .a, $(addprefix lib, $(SRCPKGS)))
 
+DIRS     = include lib bin
+
 EXEC     = TPLSolver
 
-all: libs main
+.PHONY: directory
+
+all: directory libs main
 
 libs:
 	@for pkg in $(SRCPKGS); \
@@ -24,6 +28,18 @@ main:
 		make -f make.$(MAIN) --no-print-directory INCLIB="$(LIBS)" EXEC=$(EXEC);
 	@ln -fs bin/$(EXEC) .
 #	@strip bin/$(EXEC)
+
+directory:
+	@for dir in $(DIRS); \
+	do \
+		printf "Checking $$dir..."; \
+		if [ ! -d $$dir ]; then \
+			mkdir $$dir; \
+			echo "Creating directory \"$$dir\"..."; \
+		else \
+			echo "Directory $$dir exists."; \
+		fi; \
+	done
 
 .PHONY: clean
 
