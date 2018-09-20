@@ -1,0 +1,35 @@
+********************   ISCAS 85/89 Benchamrks   *******************
+                             by                                 
+                    Bei Yu  and  David Z. Pan                   
+              ECE Dept.,   Unve. of Texas at Austin               
+                     Copyright (c) 2010 - 2013                      
+ Contact Authors:   bei@cerc.utexas.edu,   dpan@ece.utexas.edu 
+******************************************************************
+
+==== Files attached:
+*** 15 ascii files for ISCAS 85/89 benchmark suite.
+
+==== Notes:
+
+*** For convenience, the testcase names have been modified as follows.
+C432	 --> c1sim    
+C499	 --> c2sim 
+C880	 --> c3sim 
+C1355	 --> c4sim 
+C1908	 --> c5sim  
+C2670	 --> c6sim  
+C3540	 --> c7sim   
+C5315	 --> c8sim   
+C6288	 --> c9sim   
+C7552	 --> c10sim   
+S1488	 --> s1sim  
+S38417 --> s2sim   
+S35932 --> s3sim   
+S38584 --> s4sim   
+S15850 --> s5sim   
+
+
+*** To compare with [ICCAD'11, Yu et.al], the coloring spacing for each cXsim case is set as 120, and the coloring spacing for each sXsim case is set as 100.
+
+
+
