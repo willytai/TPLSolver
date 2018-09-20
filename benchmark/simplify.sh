@@ -1,3 +1,8 @@
+# create simplified_benchmark
+if [ ! -d simplified_benchmark ]; then
+	mkdir simplified_benchmark
+fi
+
 for i in 1 2 3 4 5 6 7 8 9 10
 do
 	echo simplifing c${i}sim_merged.ascii...

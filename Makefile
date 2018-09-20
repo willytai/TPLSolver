@@ -10,6 +10,12 @@ DIRS     = include lib bin
 
 EXEC     = TPLSolver
 
+# for gnuplot
+PLOTDIR  = visualization
+
+BENCHPREFIX = c1 c2 c3 c4 c5 c6 c7 c8 c9 c10 s1 s2 s3 s4 s5
+BENCHFILE   = $(addprefix $(PLOTDIR)/, $(addsuffix sim_merged.txt, $(BENCHPREFIX))) $(wildcard $(PLOTDIR)/*.html)
+
 .PHONY: directory
 
 all: directory libs main
@@ -70,3 +76,17 @@ ctags:
 	done
 	@echo "Tagging $(MAIN)..."
 	@cd src/$(MAIN); ctags -R *.cpp
+
+# for gnuplot
+
+.PHONY: plot
+
+plot:
+	@if [ ! -d ${PLOTDIR} ]; then \
+		echo "Creating ${PLOTDIR}..."; \
+		mkdir ${PLOTDIR}; \
+	else \
+		echo "Directory ${PLOTDIR} exists."; \
+	fi
+	@cd ${PLOTDIR}; ./create_txt.sh; gnuplot plot.gp
+
