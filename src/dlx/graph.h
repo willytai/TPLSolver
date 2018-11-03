@@ -19,6 +19,13 @@ struct Vertex
         os << v.ID;
         return os;
     }
+
+    // for graph traversal
+    static unsigned _globalRef;
+    unsigned _ref;
+    static void setGlobalRef () { ++_globalRef; }
+    void setToGlobalRef      () { _ref = _globalRef; }
+    bool isGlobalRef         () { return _ref == _globalRef; }
 };
 
 struct Edge
@@ -46,10 +53,13 @@ public:
 
 private:
     vector<Vertex*>     _vertex;
+    vector<Vertex*>     _bfsList;
     vector<Edge*>       _edge;
 
     void add_vertex     (istringstream& iss);
     void construct_edge (string& token, istringstream& iss);
+    void bfs            ();
+    int  get_order      (const Vertex* v) const;
 };
 
 #endif /* GRAPH_H */
