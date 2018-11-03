@@ -62,6 +62,7 @@ clean:
 	@cd lib; rm -f $(SRCLIBS)
 	@echo "Removing $(EXEC)..."
 	@rm -f bin/$(EXEC)
+	@rm -rf $(EXEC)
 
 cleanall: clean
 	@echo "Removing bin/*..."
@@ -89,4 +90,8 @@ plot:
 		echo "Directory ${PLOTDIR} exists."; \
 	fi
 	@cd ${PLOTDIR}; ./create_txt.sh; gnuplot plot.gp
+
+DLX:
+	@echo "building dancing link program..."
+	@cd src/dlx; make -f make.dlx --no-print-directory
 

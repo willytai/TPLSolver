@@ -1,0 +1,2 @@
+g++ -std=c++11 -Wall -g -DDEBUG_MODE *.cpp -o test
+g++ -std=c++11 -O3 *.cpp -o test
