@@ -1,5 +1,5 @@
-#ifndef DLX_STRUCT
-#define DLX_STRUCT
+#ifndef DLX_STRUCT_H
+#define DLX_STRUCT_H
 
 #include<iostream>
 #include "graph.h"
@@ -134,4 +134,4 @@ private:
 };
 
 
-#endif /* DLX_STRUCT */
+#endif /* DLX_STRUCT_H */
