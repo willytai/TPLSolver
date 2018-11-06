@@ -93,10 +93,10 @@ void DancingLink::initCell() {
     for (unsigned int i = 1; i < _rowHeader.size(); ++i) {
         int   target_vertex_id = _rowHeader[i]->GetCorrespondVertex()->ID;
         Color target_color     = _rowHeader[i]->GetCellColor();
-        
+
         Cell* VertexNode = new NormalCell();
         Insert_Right(VertexNode, _rowHeader[i]);
-        
+
         Cell* above = _columnHeader[target_vertex_id];
         while (above->down->Type() == NORMAL_CELL) { above = above->down; }
         Insert_Down(VertexNode, above);

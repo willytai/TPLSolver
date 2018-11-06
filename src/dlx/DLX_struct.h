@@ -20,13 +20,13 @@ struct Cell
     Cell () { left = right = up = down = this; }
     virtual ~Cell() {}
     
-    virtual CellType Type                 ()               const = 0;
-    virtual Color    GetCellColor         ()               const { return UNDEF; }
-    virtual Edge*    GetCorrespondEdge    ()               const { return NULL; }
-    virtual Vertex*  GetCorrespondVertex  ()               const { return NULL; }
-    virtual void     RecordEdgeCellPtr    (Cell*)                { return; }
-    virtual void     GetEdgeCellPtr       (vector<Cell*>&) const { return; }
-    virtual void     print                (ostream& os)    const = 0;
+    virtual CellType Type                 ()               const = 0;               // returns cell type
+    virtual Color    GetCellColor         ()               const { return UNDEF; }  // returns the color of the cell if defined
+    virtual Edge*    GetCorrespondEdge    ()               const { return NULL; }   // returns the edge to the corresponding edge column
+    virtual Vertex*  GetCorrespondVertex  ()               const { return NULL; }   // returns the vertex to the corresponding vertex column
+    virtual void     RecordEdgeCellPtr    (Cell*)                { return; }        // to speed up the construction of the DLX
+    virtual void     GetEdgeCellPtr       (vector<Cell*>&) const { return; }        // to speed up the construction of the DLX
+    virtual void     print                (ostream& os)    const = 0;               // visualization
 
     friend ostream& operator << (ostream& os, const Cell& c) {
         c.print(os);
@@ -43,12 +43,12 @@ struct RowHeaderCell : Cell
 {
     RowHeaderCell(Vertex* v, Color c = UNDEF) { vertex = v; color = c; }
     
-    Color   GetCellColor        ()            const { return color; }
-    Vertex* GetCorrespondVertex ()            const { return vertex; }
-    void    print               (ostream& os) const {
+    Color     GetCellColor        ()            const { return color; }
+    Vertex*   GetCorrespondVertex ()            const { return vertex; }
+    CellType  Type                ()            const { return ROW_HEADER_CELL; }
+    void      print               (ostream& os) const {
         os << "<RowHeaderCell, VertexID:" << *vertex << ", color " << color << ">";
     }
-    CellType  Type              ()            const { return ROW_HEADER_CELL; }
     
     Color   color;
     Vertex* vertex;
@@ -58,15 +58,15 @@ struct VertexCell : Cell
 {
     VertexCell(Vertex* v, Color c = UNDEF) { vertex = v; color = c; }
     
-    Color  GetCellColor         ()                    const { return color; }
-    Vertex* GetCorrespondVertex ()                    const { return vertex; }
-    void   print                (ostream& os)         const {
+    Color    GetCellColor        ()                    const { return color; }
+    Vertex*  GetCorrespondVertex ()                    const { return vertex; }
+    CellType Type                ()                    const { return VERTEX_CELL; }
+    void     RecordEdgeCellPtr   (Cell* c)                   { edge_cell_ptr.push_back(c); }
+    void     GetEdgeCellPtr      (vector<Cell*>& ptrs) const { ptrs = edge_cell_ptr; }
+    void     print               (ostream& os)         const {
         os << "<VertexCell, VertexID:" << *vertex << ", color " << color << ">";
     }
-    void   RecordEdgeCellPtr    (Cell* c)                   { edge_cell_ptr.push_back(c); }
-    void   GetEdgeCellPtr       (vector<Cell*>& ptrs) const { ptrs = edge_cell_ptr; }
-    CellType Type               ()                    const { return VERTEX_CELL; }
-    
+
     Color   color;
     Vertex* vertex;
 
@@ -77,12 +77,12 @@ struct EdgeCell: Cell
 {
     EdgeCell(Edge* e, Color c = UNDEF) { edge = e; color = c; }
 
-    Color  GetCellColor      ()            const { return color; }
-    Edge*  GetCorrespondEdge ()            const { return edge; }
-    void   print             (ostream& os) const {
+    Color    GetCellColor      ()            const { return color; }
+    Edge*    GetCorrespondEdge ()            const { return edge; }
+    CellType Type              ()            const { return EDGE_CELL; }
+    void     print             (ostream& os) const {
         os << "<EdgeCell, " << *edge << ", color " << color << ">";
     }
-    CellType Type            ()            const { return EDGE_CELL; }
 
     Color   color;
     Edge*   edge;
@@ -92,8 +92,8 @@ struct NormalCell : Cell
 {
     // just an empty shell
     
-    void     print (ostream& os) const { os << "<NormalCell>"; }
     CellType Type ()             const { return NORMAL_CELL; }
+    void     print (ostream& os) const { os << "<NormalCell>"; }
 };
 
 class DancingLink
@@ -130,6 +130,7 @@ public:
     // remove horizontal links
     void LR_remove(Cell* c);
 
+    // remove the entire cell
     void remove(Cell* c);
 
     // recover virtical links
@@ -138,6 +139,7 @@ public:
     // recover horizontal links
     void LR_recover(Cell* c);
 
+    // recover entirely
     void recover(Cell* c);
 
     // insert 'c' to the right of 'ref'
