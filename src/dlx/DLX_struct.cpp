@@ -5,7 +5,7 @@
 using namespace std;
 
 bool DancingLink::isGoal() const {
-    if (_header->right->Type() != "VertexCell") return true;
+    if (_header->right->Type() != VERTEX_CELL) return true;
     return false;
 }
 
@@ -98,7 +98,7 @@ void DancingLink::initCell() {
         Insert_Right(VertexNode, _rowHeader[i]);
         
         Cell* above = _columnHeader[target_vertex_id];
-        while (above->down->Type() == "NormalCell") { above = above->down; }
+        while (above->down->Type() == NORMAL_CELL) { above = above->down; }
         Insert_Down(VertexNode, above);
 
         Cell* left = VertexNode;
@@ -111,7 +111,7 @@ void DancingLink::initCell() {
 
             above = EdgeCells[i];
             while (above->GetCellColor() != target_color) { above = above->right; }
-            while (above->down->Type() == "NormalCell") { above = above->down; }
+            while (above->down->Type() == NORMAL_CELL) { above = above->down; }
             Insert_Down(EdgeNode, above);
         }
     }
@@ -119,13 +119,13 @@ void DancingLink::initCell() {
     cout << "Row Representation" << endl;
     for (unsigned int i = 1; i < _rowHeader.size(); ++i) {
         Cell* tmp = _rowHeader[i];
-        while (tmp->right->Type() != "RowHeaderCell") { cout << *tmp << " "; tmp = tmp->right; }
+        while (tmp->right->Type() != ROW_HEADER_CELL) { cout << *tmp << " "; tmp = tmp->right; }
         cout << *tmp << endl;
     } cout << endl;
     cout << "Column representation" << endl;
     for (unsigned int i = 1; i < _columnHeader.size(); ++i) {
         Cell* tmp = _columnHeader[i];
-        while (tmp->down->Type() == "NormalCell") { cout << *tmp << " "; tmp = tmp->down; }
+        while (tmp->down->Type() == NORMAL_CELL) { cout << *tmp << " "; tmp = tmp->down; }
         cout << *tmp << endl;
     } cout << endl;
 #endif
@@ -210,13 +210,13 @@ void DancingLink::Insert_Down(Cell* c, Cell* ref) {
 
 Cell* DancingLink::FindCorrespondColumnHeader(Cell*& c) {
     Cell* tmp = c;
-    while (tmp->Type() == "NormalCell") { tmp = tmp->up; }
+    while (tmp->Type() == NORMAL_CELL) { tmp = tmp->up; }
     return tmp;
 }
 
 Cell* DancingLink::FindCorrespondRowHeader(Cell*& c) {
     Cell* tmp = c;
-    while (tmp->Type() == "NormalCell") { tmp = tmp->left; }
+    while (tmp->Type() == NORMAL_CELL) { tmp = tmp->left; }
     return tmp;
 }
 

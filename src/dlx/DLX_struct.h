@@ -7,18 +7,26 @@
 
 using namespace std;
 
+enum CellType
+{
+    ROW_HEADER_CELL,
+    VERTEX_CELL,
+    EDGE_CELL,
+    NORMAL_CELL
+};
+
 struct Cell
 {
     Cell () { left = right = up = down = this; }
     virtual ~Cell() {}
     
-    virtual string  Type                 ()               const = 0;
-    virtual Color   GetCellColor         ()               const { return UNDEF; }
-    virtual Edge*   GetCorrespondEdge    ()               const { return NULL; }
-    virtual Vertex* GetCorrespondVertex  ()               const { return NULL; }
-    virtual void    RecordEdgeCellPtr    (Cell*)                { return; }
-    virtual void    GetEdgeCellPtr       (vector<Cell*>&) const { return; }
-    virtual void    print (ostream& os)                   const = 0;
+    virtual CellType Type                 ()               const = 0;
+    virtual Color    GetCellColor         ()               const { return UNDEF; }
+    virtual Edge*    GetCorrespondEdge    ()               const { return NULL; }
+    virtual Vertex*  GetCorrespondVertex  ()               const { return NULL; }
+    virtual void     RecordEdgeCellPtr    (Cell*)                { return; }
+    virtual void     GetEdgeCellPtr       (vector<Cell*>&) const { return; }
+    virtual void     print                (ostream& os)    const = 0;
 
     friend ostream& operator << (ostream& os, const Cell& c) {
         c.print(os);
@@ -40,7 +48,7 @@ struct RowHeaderCell : Cell
     void    print               (ostream& os) const {
         os << "<RowHeaderCell, VertexID:" << *vertex << ", color " << color << ">";
     }
-    string  Type                ()            const { return "RowHeaderCell"; }
+    CellType  Type              ()            const { return ROW_HEADER_CELL; }
     
     Color   color;
     Vertex* vertex;
@@ -50,13 +58,14 @@ struct VertexCell : Cell
 {
     VertexCell(Vertex* v, Color c = UNDEF) { vertex = v; color = c; }
     
-    Color  GetCellColor      ()                    const { return color; }
-    void   print             (ostream& os)         const {
+    Color  GetCellColor         ()                    const { return color; }
+    Vertex* GetCorrespondVertex ()                    const { return vertex; }
+    void   print                (ostream& os)         const {
         os << "<VertexCell, VertexID:" << *vertex << ", color " << color << ">";
     }
-    void   RecordEdgeCellPtr (Cell* c)                   { edge_cell_ptr.push_back(c); }
-    void   GetEdgeCellPtr    (vector<Cell*>& ptrs) const { ptrs = edge_cell_ptr; }
-    string Type              ()                    const { return "VertexCell"; }
+    void   RecordEdgeCellPtr    (Cell* c)                   { edge_cell_ptr.push_back(c); }
+    void   GetEdgeCellPtr       (vector<Cell*>& ptrs) const { ptrs = edge_cell_ptr; }
+    CellType Type               ()                    const { return VERTEX_CELL; }
     
     Color   color;
     Vertex* vertex;
@@ -73,7 +82,7 @@ struct EdgeCell: Cell
     void   print             (ostream& os) const {
         os << "<EdgeCell, " << *edge << ", color " << color << ">";
     }
-    string Type              ()            const { return "EdgeCell"; }
+    CellType Type            ()            const { return EDGE_CELL; }
 
     Color   color;
     Edge*   edge;
@@ -83,8 +92,8 @@ struct NormalCell : Cell
 {
     // just an empty shell
     
-    void   print (ostream& os) const { os << "<NormalCell>"; }
-    string Type  ()            const { return "NormalCell"; }
+    void     print (ostream& os) const { os << "<NormalCell>"; }
+    CellType Type ()             const { return NORMAL_CELL; }
 };
 
 class DancingLink

@@ -31,7 +31,22 @@ bool ExactCoverSolver::X_star(int bfsIndex) {
     // get related rows
     Cell* tmp = TargetColumnCell->down;
     vector<Cell*> RelatedRow;
-    while (tmp->Type() == "NormalCell") { RelatedRow.push_back(tmp->left); tmp = tmp->down; }
+    while (tmp->Type() == NORMAL_CELL) { RelatedRow.push_back(tmp->left); tmp = tmp->down; }
+
+    if (!RelatedRow.size()) {
+        // Vertex* ConflictVertex = TargetColumnCell->GetCorrespondVertex();
+        // auto it = ConflictVertex->VertexList.begin();
+        // for (; it != ConflictVertex->VertexList.end(); ++it) {
+        //     if (*it == _solution.back()->GetCorrespondVertex()) break;
+        // }
+        // assert(it != ConflictVertex->VertexList.end());
+        // cout << "conflict vertex " << *(*it) << endl;
+
+        cout << "current solution" << endl;
+        for (auto it = _solution.begin(); it != _solution.end(); ++it)
+            cout << *(*it) << endl;
+        cout << *TargetColumnCell << " is uncolored" << endl;
+    }
 
     // for each row in related rows
     stack<Cell*> AffectedCells;
@@ -47,14 +62,14 @@ bool ExactCoverSolver::X_star(int bfsIndex) {
 }
 
 void ExactCoverSolver::CoverAffectedCells(const Cell* refCell, stack<Cell*>& AffectedCells) {
-    assert(refCell->Type() == "RowHeaderCell");
+    assert(refCell->Type() == ROW_HEADER_CELL);
     // cout << "ref: " << *refCell << endl << endl;
     // find affected columns
     Cell* tmp = refCell->right;
-    while (tmp->Type() == "NormalCell") {
+    while (tmp->Type() == NORMAL_CELL) {
         Cell* columnElement = tmp->down;
         while (true) {
-            if (columnElement->Type() != "NormalCell") { columnElement = columnElement->down; continue; }
+            if (columnElement->Type() != NORMAL_CELL) { columnElement = columnElement->down; continue; }
             if (tmp == columnElement) break;
             Cell* rowElement = columnElement;
             // cout << "removing entire row realted to " << *(_dlx.FindCorrespondRowHeader(rowElement)) << endl;
@@ -79,7 +94,7 @@ void ExactCoverSolver::CoverAffectedCells(const Cell* refCell, stack<Cell*>& Aff
     tmp = refCell->right;
     // cout << "removing entire row realted to " << *(_dlx.FindCorrespondRowHeader(tmp)) << endl;
     while (true) {
-        if (tmp->Type() == "RowHeaderCell") {
+        if (tmp->Type() == ROW_HEADER_CELL) {
             _dlx.remove(tmp);
             AffectedCells.push(tmp);
             // cout << *tmp << endl;
@@ -107,7 +122,7 @@ void ExactCoverSolver::UNCoverAffectedCells(stack<Cell*>& AffectedCells) {
 
 Cell* ExactCoverSolver::FindPriorityColumn(const Cell* header) {
     Cell* tmp = header->right;
-    while (tmp->Type() == "VertexCell") {
+    while (tmp->Type() == VERTEX_CELL) {
         if (tmp->down->down == tmp) return tmp;
         tmp = tmp->right;
     }
