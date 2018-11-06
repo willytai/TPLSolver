@@ -1,8 +1,7 @@
 #include <vector>
 #include <fstream>
 #include <iostream>
-#include "graph.h"
-#include "DLX_struct.h"
+#include "ExactCoverSolver.h"
 
 using namespace std;
 
@@ -16,10 +15,9 @@ int main(int argc, char *argv[])
         return 0;
     }
 
-    Graph graph;
-    graph.ContstructByFile(file);
-
-    DancingLink dlx(graph);
+    ExactCoverSolver solver;
+    solver.InitByFile(file);
+    solver.Solve();
 
     return 0;
 }

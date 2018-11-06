@@ -74,6 +74,10 @@ void Graph::RetrieveEdges(vector<Edge*>& vec) {
     vec = _edge;
 }
 
+void Graph::GetBFSList(vector<Vertex*>& vec) {
+    vec = _bfsList;
+}
+
 void Graph::add_vertex(istringstream& iss) {
     string buffer;
     iss >> buffer;

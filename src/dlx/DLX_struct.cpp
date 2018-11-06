@@ -4,6 +4,15 @@
 
 using namespace std;
 
+bool DancingLink::isGoal() const {
+    if (_header->right->Type() != "VertexCell") return true;
+    return false;
+}
+
+Cell* DancingLink::GetHeader() const {
+    return _header;
+}
+
 void DancingLink::init(Graph& g) {
     initHeader(g);
     initCell();
@@ -122,8 +131,15 @@ void DancingLink::initCell() {
 #endif
 }
 
+Cell* DancingLink::Column(const int& idx) const {
+    assert(idx);
+    return _columnHeader[idx];
+}
 
-
+Cell* DancingLink::Row(const int& idx) const {
+    assert(idx);
+    return _rowHeader[idx];
+}
 
 
 /**********************************************************************
@@ -151,6 +167,16 @@ void DancingLink::UD_remove(Cell* c) {
 void DancingLink::LR_remove(Cell* c) {
     c->left->right = c->right;
     c->right->left = c->left;
+}
+
+void DancingLink::remove(Cell* c) {
+    UD_remove(c);
+    LR_remove(c);
+}
+
+void DancingLink::recover(Cell* c) {
+    UD_recover(c);
+    LR_recover(c);
 }
 
 // recover virtical links
@@ -181,3 +207,16 @@ void DancingLink::Insert_Down(Cell* c, Cell* ref) {
     ref->down->up = c;
     ref->down     = c;
 }
+
+Cell* DancingLink::FindCorrespondColumnHeader(Cell*& c) {
+    Cell* tmp = c;
+    while (tmp->Type() == "NormalCell") { tmp = tmp->up; }
+    return tmp;
+}
+
+Cell* DancingLink::FindCorrespondRowHeader(Cell*& c) {
+    Cell* tmp = c;
+    while (tmp->Type() == "NormalCell") { tmp = tmp->left; }
+    return tmp;
+}
+

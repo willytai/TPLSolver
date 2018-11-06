@@ -95,9 +95,14 @@ public:
     DancingLink(Graph& g) { init(g); }
     ~DancingLink() {}
 
-    void init(Graph& g);
-    void initHeader(Graph& g);
-    void initCell();
+    void  init       (Graph& g);
+    void  initHeader (Graph& g);
+    void  initCell   ();
+    bool  isGoal     () const;
+    Cell* GetHeader  () const;
+
+    Cell* Column (const int& idx) const;
+    Cell* Row    (const int& idx) const;
 
 
     /**********************************************************************
@@ -116,17 +121,28 @@ public:
     // remove horizontal links
     void LR_remove(Cell* c);
 
+    void remove(Cell* c);
+
     // recover virtical links
     void UD_recover(Cell* c);
 
     // recover horizontal links
     void LR_recover(Cell* c);
 
+    void recover(Cell* c);
+
     // insert 'c' to the right of 'ref'
     void Insert_Right(Cell* c, Cell* ref);
 
     // insert 'c' to the bottom of 'ref'
     void Insert_Down(Cell* c, Cell* ref);
+
+    // find the corresponding column header
+    Cell* FindCorrespondColumnHeader(Cell*& c);
+
+    // find the corresponding row header
+    Cell* FindCorrespondRowHeader(Cell*& c);
+
 
 private:
     vector<Cell*>   _columnHeader;

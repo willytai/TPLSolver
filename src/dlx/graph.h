@@ -50,6 +50,9 @@ public:
     void ContstructByFile (fstream& file);
     void RetrieveVertexes (vector<Vertex*>& vec);
     void RetrieveEdges    (vector<Edge*>& vec);
+    void GetBFSList       (vector<Vertex*>& vec);
+
+    Vertex* operator [] (int idx) { return _bfsList[idx]; }
 
 private:
     vector<Vertex*>     _vertex;
