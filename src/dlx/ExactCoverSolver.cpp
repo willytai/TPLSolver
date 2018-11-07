@@ -4,6 +4,7 @@
 void ExactCoverSolver::InitByFile(fstream& file) {
     _graph.ContstructByFile(file);
     InitByGraph(_graph);
+    _solution.clear();
 }
 
 void ExactCoverSolver::InitByGraph(Graph& g) {
@@ -11,14 +12,21 @@ void ExactCoverSolver::InitByGraph(Graph& g) {
 }
 
 void ExactCoverSolver::Solve() {
-    bool result = X_star(0);
-    cout << "result: " << result << endl;
+    SolverState result = X_star(0, true);
+
+    cout << endl << "solution:" << endl;
     for (auto it = _solution.begin(); it != _solution.end(); ++it)
         cout << *(*it) << endl;
+
+    if (result == SUCCESS) cout << "Success!" << endl;
+    else if (result == CONFLICT_NOT_DONE) cout << "Conflict found, need to remove and keep on searching" << endl;
+    else if (result == CONFLICT_BUT_DONE) cout << "Conflict found, and search is done" << endl;
+    else assert(0);
+    cout << endl;
 }
 
-bool ExactCoverSolver::X_star(int bfsIndex) {
-    if (_dlx.isGoal()) return true;
+SolverState ExactCoverSolver::X_star(int bfsIndex, bool recordPartialResult) {
+    if (_dlx.isGoal()) return SUCCESS;
 
     /*******************************/
     /* cover vertex with bfs order */
@@ -34,7 +42,11 @@ bool ExactCoverSolver::X_star(int bfsIndex) {
     vector<Cell*> RelatedRow;
     while (tmp->Type() == NORMAL_CELL) { RelatedRow.push_back(tmp->left); tmp = tmp->down; }
 
+    // conflict found!
     if (!RelatedRow.size()) {
+        /*********************************************************************/
+        /* find the lastest vertex colored that covered the TargetColumnCell */
+        /*********************************************************************/
         Vertex* ConflictVertex = TargetColumnCell->GetCorrespondVertex();
         auto it = _solution.end(); --it;
         for (; it != _solution.begin(); --it) {
@@ -46,31 +58,62 @@ bool ExactCoverSolver::X_star(int bfsIndex) {
             }
             if (found) break;
         }
-        cout << *TargetColumnCell << " is uncolored, ";
-        cout << "conflict with " << *(*it) << endl;
-        cout << "current solution:" << endl;
-        for (auto it = _solution.begin(); it != _solution.end(); ++it)
-            cout << *(*it) << endl;
-        return false;
+        // cout << *TargetColumnCell << " is uncolored, ";
+        // cout << "conflict with " << *(*it) << endl;
+        // cout << "current solution:" << endl;
+        // for (auto it = _solution.begin(); it != _solution.end(); ++it)
+        //     cout << *(*it) << endl;
+
+        // cout << "===============================" << endl;
+        // cout << "Number of vertexes:         " << _graph.size()  << " =" << endl;
+        // cout << "Number of vertexes colored: " <<  1 + _solution.size() << " =" << endl;
+        // cout << "===============================" << endl;
+
+        if (recordPartialResult) {
+            cout << "recording partial result" << endl;
+            _solution.push_back(new RowHeaderCell(ConflictVertex, (*it)->GetCellColor()));
+        }
+
+        if (_graph.size() == _solution.size()) return CONFLICT_BUT_DONE;
+        return CONFLICT_NOT_DONE;
     }
 
     // for each row in related rows
     stack<Cell*> AffectedCells;
+    SolverState state = STATE_UNDEFINED;
+    bool recoredResultNextLevel = false;
     for (unsigned int i = 0; i < RelatedRow.size(); ++i) {
-        _solution.push_back(RelatedRow[i]);
-        CoverAffectedCells(RelatedRow[i], AffectedCells);
-        if (X_star(bfsIndex+1)) return true;
-        UNCoverAffectedCells(AffectedCells);
-        _solution.pop_back();
+
+        /*
+        // this controls whether to record the solution if a conflict is found
+        // this is only set to 'true' if all of the for loops in the recursive
+        // function is in the last loop
+        // i.e. X_star wiil terminate after the conflict is reported
+        */
+        if (i == RelatedRow.size() - 1) recoredResultNextLevel = true&recordPartialResult;
+        else recoredResultNextLevel = false;
+
+        _solution.push_back(RelatedRow[i]);                  // pick this row
+
+        CoverAffectedCells(RelatedRow[i], AffectedCells);    // cover the cells that is related to this row
+
+        state = X_star(bfsIndex+1, recoredResultNextLevel);  // search for the next node by BFS order
+        if (state == SUCCESS) break;                         // if a solution is found, stop searching
+
+        UNCoverAffectedCells(AffectedCells);                 // conflict occurs, try another row that is related to this column
+
+        if (!recoredResultNextLevel) _solution.pop_back();   // remember to undo the changes that were made previously
     }
 
-    return false;
+    assert(state != STATE_UNDEFINED);
+    return state;
 }
 
 void ExactCoverSolver::CoverAffectedCells(const Cell* refCell, stack<Cell*>& AffectedCells) {
     assert(refCell->Type() == ROW_HEADER_CELL);
     // cout << "ref: " << *refCell << endl << endl;
     // find affected columns
+    // in this part, the picked row is not dealt with
     Cell* tmp = refCell->right;
     while (tmp->Type() == NORMAL_CELL) {
         Cell* columnElement = tmp->down;
@@ -96,6 +139,7 @@ void ExactCoverSolver::CoverAffectedCells(const Cell* refCell, stack<Cell*>& Aff
         tmp = tmp->right;
     }
 
+	// deal with the picked row in this part
     // remove the picked row and the header
     tmp = refCell->right;
     // cout << "removing entire row realted to " << *(_dlx.FindCorrespondRowHeader(tmp)) << endl;
@@ -115,7 +159,6 @@ void ExactCoverSolver::CoverAffectedCells(const Cell* refCell, stack<Cell*>& Aff
         AffectedCells.push(columnHeader);
         tmp = tmp->right;
     }
-    
     // assert(0);
 }
 

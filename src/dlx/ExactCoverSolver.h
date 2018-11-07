@@ -4,6 +4,19 @@
 #include "DLX_struct.h"
 #include <stack>
 
+/*! \enum SolverState
+ *
+ *  SUCCESS -> the problem is three-colorable
+ *
+ */
+enum SolverState
+{
+    SUCCESS,
+    CONFLICT_NOT_DONE,
+    CONFLICT_BUT_DONE,
+    STATE_UNDEFINED
+};
+
 class ExactCoverSolver
 {
 public:
@@ -19,10 +32,11 @@ private:
     Graph           _graph;
     vector<Cell*>   _solution;
 
-    bool  X_star               (int bfsIndex);
+    SolverState X_star (int bfsIndex, bool recordPartialResult);
+
+    Cell* FindPriorityColumn   (const Cell* header);
     void  CoverAffectedCells   (const Cell*, stack<Cell*>&);
     void  UNCoverAffectedCells (stack<Cell*>&);
-    Cell* FindPriorityColumn   (const Cell* header);
 };
 
 #endif /* EXACT_COVER_SOLVER_H */
