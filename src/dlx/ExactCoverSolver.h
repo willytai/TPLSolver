@@ -19,7 +19,7 @@ private:
     Graph           _graph;
     vector<Cell*>   _solution;
 
-    bool  X_star(int bfsIndex);
+    bool  X_star               (int bfsIndex);
     void  CoverAffectedCells   (const Cell*, stack<Cell*>&);
     void  UNCoverAffectedCells (stack<Cell*>&);
     Cell* FindPriorityColumn   (const Cell* header);

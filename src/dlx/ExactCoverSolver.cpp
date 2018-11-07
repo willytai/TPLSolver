@@ -11,7 +11,8 @@ void ExactCoverSolver::InitByGraph(Graph& g) {
 }
 
 void ExactCoverSolver::Solve() {
-    cout << "result: " << X_star(0) << endl;
+    bool result = X_star(0);
+    cout << "result: " << result << endl;
     for (auto it = _solution.begin(); it != _solution.end(); ++it)
         cout << *(*it) << endl;
 }
@@ -34,18 +35,23 @@ bool ExactCoverSolver::X_star(int bfsIndex) {
     while (tmp->Type() == NORMAL_CELL) { RelatedRow.push_back(tmp->left); tmp = tmp->down; }
 
     if (!RelatedRow.size()) {
-        // Vertex* ConflictVertex = TargetColumnCell->GetCorrespondVertex();
-        // auto it = ConflictVertex->VertexList.begin();
-        // for (; it != ConflictVertex->VertexList.end(); ++it) {
-        //     if (*it == _solution.back()->GetCorrespondVertex()) break;
-        // }
-        // assert(it != ConflictVertex->VertexList.end());
-        // cout << "conflict vertex " << *(*it) << endl;
-
-        cout << "current solution" << endl;
+        Vertex* ConflictVertex = TargetColumnCell->GetCorrespondVertex();
+        auto it = _solution.end(); --it;
+        for (; it != _solution.begin(); --it) {
+            const Vertex* target = (*it)->GetCorrespondVertex();
+            auto itt = ConflictVertex->VertexList.begin();
+            bool found = false;
+            for (; itt != ConflictVertex->VertexList.end(); ++itt) {
+                if (target == *itt) { found = true; break; }
+            }
+            if (found) break;
+        }
+        cout << *TargetColumnCell << " is uncolored, ";
+        cout << "conflict with " << *(*it) << endl;
+        cout << "current solution:" << endl;
         for (auto it = _solution.begin(); it != _solution.end(); ++it)
             cout << *(*it) << endl;
-        cout << *TargetColumnCell << " is uncolored" << endl;
+        return false;
     }
 
     // for each row in related rows

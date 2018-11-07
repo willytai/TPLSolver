@@ -1,7 +1,7 @@
 #ifndef DLX_STRUCT_H
 #define DLX_STRUCT_H
 
-#include<iostream>
+#include <iostream>
 #include "graph.h"
 #include "color.h"
 

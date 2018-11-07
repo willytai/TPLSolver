@@ -51,6 +51,8 @@ public:
     void RetrieveVertexes (vector<Vertex*>& vec);
     void RetrieveEdges    (vector<Edge*>& vec);
     void GetBFSList       (vector<Vertex*>& vec);
+    int  get_order        (const Vertex* v) const;
+    int  size             ()                const;
 
     Vertex* operator [] (int idx) { return _bfsList[idx]; }
 
@@ -62,7 +64,6 @@ private:
     void add_vertex     (istringstream& iss);
     void construct_edge (string& token, istringstream& iss);
     void bfs            ();
-    int  get_order      (const Vertex* v) const;
 };
 
 #endif /* GRAPH_H */

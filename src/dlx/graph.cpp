@@ -4,6 +4,10 @@
 
 using namespace std;
 
+int Graph::size() const {
+    return _vertex.size() - 1;
+}
+
 void Graph::ContstructByFile(fstream& file) {
     string buffer;
     if (!file.is_open()) return;
@@ -94,7 +98,7 @@ void Graph::construct_edge(string& token, istringstream& iss) {
     _edge.push_back(new Edge(_vertex[id_1], _vertex[id_2]));
 
     (_vertex[id_1]->VertexList).push_back(_vertex[id_2]);
-    (_vertex[id_1]->VertexList).push_back(_vertex[id_2]);
+    (_vertex[id_2]->VertexList).push_back(_vertex[id_1]);
 
 }
 
