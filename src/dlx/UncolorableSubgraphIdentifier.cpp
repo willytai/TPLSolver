@@ -19,36 +19,34 @@ void UncolorableSubgraphIdentifier::InitByColoredVertexes(const vector<Cell*>& s
 
 void UncolorableSubgraphIdentifier::run() {
     Vertex::setGlobalRef();
-    propagate(_root, NULL);               // try all of the colors and propagate
+    propagate(_root);
 }
 
-bool UncolorableSubgraphIdentifier::propagate(Vertex* currentVertex, Vertex* parentVertex) {
-    if (currentVertex->isGlobalRef()) return false;
-    const Color originalColor = currentVertex->color;
-    const Color& parentColor  = (parentVertex ? parentVertex->color : COLORS[0]);
-    currentVertex->setToGlobalRef();
+bool UncolorableSubgraphIdentifier::propagate(Vertex* currentVertex) {
+    if (currentVertex->isGlobalRef()) return false;      // a dead end occurs
+
+    const Color originalColor = currentVertex->color;    // original color, need to restore it back to allow further traversal
+    currentVertex->setToGlobalRef();                     // mark the visited vertex
 
     bool returnValue = true;
     for (int i = 1; i <= 3; ++i) {
-        if (COLORS[i] == parentColor) continue;       // try a color different from it's parent's color
-        if (COLORS[i] == originalColor) continue;     // avoid trying the same color, normally this would be the same as parentColor
+        if (COLORS[i] == originalColor) continue;        // avoid its parent's color
 
         cout << "currentVertex: " << *currentVertex << ", trying color " << COLORS[i] << "; ";
 
         currentVertex->color = COLORS[i];
         for (auto it = currentVertex->VertexList.begin(); it != currentVertex->VertexList.end(); ++it) {
             if ((*it)->color != currentVertex->color) continue;     // skip the non-conflict vertexes
-            if ((*it) == parentVertex) continue;                    // do not search backwards
 
             cout << "found conflict with vertex: " << *(*it) << ", propagate" << endl;
             
-            if (!propagate(*it, currentVertex)) {                   // mark edge (currentVertex, *it) as a conflict edge
+            if (!propagate(*it)) {                       // mark edge (currentVertex, *it) as a conflict edge
                 cout << "(" << *currentVertex << ", " << *(*it) << ") is a conflict edge" << endl;
-                returnValue = false;
+                returnValue = false;                     // returns false if at least the value of one branch is false
             }
         }
     }
-    currentVertex->color = originalColor;
+    currentVertex->color = originalColor;                // restore the color
     cout << "currentVertex: " << *currentVertex << ", coloring it back to " << originalColor << endl;
     cout << "returning " << returnValue << " at vertex: " << *currentVertex << endl;
     return returnValue;

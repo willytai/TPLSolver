@@ -21,7 +21,7 @@ private:
     vector<Vertex*>     _vertex;
     Vertex*             _root;
 
-    bool propagate(Vertex* currentVertex, Vertex* parentVertex = NULL);
+    bool propagate(Vertex* currentVertex);
 };
 
 #endif /* UNCOLORABLE_SUBGRAPH_IDENTIFIER-H */
