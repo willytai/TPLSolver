@@ -2,6 +2,7 @@
 #define EXACT_COVER_SOLVER_H
 
 #include "DLX_struct.h"
+#include "UncolorableSubgraphIdentifier.h"
 #include <stack>
 
 /*! \enum SolverState
@@ -32,11 +33,14 @@ private:
     Graph           _graph;
     vector<Cell*>   _solution;
 
+    UncolorableSubgraphIdentifier   _identifier;
+
     SolverState X_star (int bfsIndex, bool recordPartialResult);
 
     Cell* FindPriorityColumn   (const Cell* header);
     void  CoverAffectedCells   (const Cell*, stack<Cell*>&);
     void  UNCoverAffectedCells (stack<Cell*>&);
+    void  IdentifyUncolorablePartAndRemove();
 };
 
 #endif /* EXACT_COVER_SOLVER_H */

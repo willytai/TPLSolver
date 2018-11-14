@@ -93,5 +93,5 @@ plot:
 
 DLX:
 	@echo "building dancing link program..."
-	@cd src/dlx; make -f make.dlx --no-print-directory
+	@cd src/dlx; make
 

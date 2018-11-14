@@ -5,7 +5,8 @@
 using namespace std;
 
 int Graph::size() const {
-    return _vertex.size() - 1;
+    assert(_bfsDone);
+    return _bfsList.size();
 }
 
 void Graph::ContstructByFile(fstream& file) {
@@ -43,12 +44,16 @@ void Graph::ContstructByFile(fstream& file) {
 unsigned Vertex::_globalRef = 0;
 
 void Graph::bfs() {
-    Vertex* root = _vertex[1];
-    for (unsigned int i = 2; i < _vertex.size(); ++i) {
+    Vertex* root = NULL;
+    _bfsList.clear();
+    for (unsigned int i = 1; i < _vertex.size(); ++i) {
+        if (!_vertex[i]) continue;
+        if (!root) { root = _vertex[i]; continue; }
         if (get_order(root) < get_order(_vertex[i])) {
             root = _vertex[i];
         }
     }
+    if (!root) { _bfsDone = true; return; }       // graph is empty
     Vertex::setGlobalRef();
     queue<Vertex*> Q;
     Q.push(root);
@@ -62,23 +67,19 @@ void Graph::bfs() {
             Q.push(currentNode->VertexList[i]);
         }
     }
-#ifdef DEBUG_MODE
-    cout << "BFS list" << endl;
-    for (auto it = _bfsList.begin(); it != _bfsList.end(); ++it) {
-        cout << *(*it) << endl;
-    } cout << endl;
-#endif
+    _bfsDone = true;
 }
 
-void Graph::RetrieveVertexes(vector<Vertex*>& vec) {
+void Graph::RetrieveVertexes(vector<Vertex*>& vec) const {
     vec = _vertex;
 }
 
-void Graph::RetrieveEdges(vector<Edge*>& vec) {
+void Graph::RetrieveEdges(vector<Edge*>& vec) const {
     vec = _edge;
 }
 
-void Graph::GetBFSList(vector<Vertex*>& vec) {
+void Graph::GetBFSList(vector<Vertex*>& vec) const {
+    assert(_bfsDone);
     vec = _bfsList;
 }
 
@@ -104,4 +105,75 @@ void Graph::construct_edge(string& token, istringstream& iss) {
 
 int Graph::get_order(const Vertex* v) const {
     return v->VertexList.size();
+}
+
+void Graph::RemoveEdge(Edge* e) {
+
+}
+
+void Graph::RemoveVertex(Vertex* v) {
+    if (!_vertex[v->ID]) {
+        cerr << "vertex ID:" << *v << " is already removed!"  << endl;
+        return;
+    }
+#ifdef DEBUG_MODE
+    cout << "Removing vertex ID:" << *v << endl;
+#endif
+    _bfsDone       = false;
+    _vertex[v->ID] = NULL;
+    _removed_vertexes.push(v);
+    for (auto it = v->VertexList.begin(); it != v->VertexList.end(); ++it) {
+        for (unsigned int i = 0; i < (*it)->VertexList.size(); ++i) {
+            if ((*it)->VertexList.at(i)->ID == v->ID) {
+                ::swap((*it)->VertexList.at(i), (*it)->VertexList.back());
+                (*it)->VertexList.pop_back();
+                break;
+            }
+        }
+    }
+}
+
+void Graph::RemoveVertex(int idx) {
+    RemoveVertex(_vertex[idx]);
+}
+
+void Graph::RecoverVertex(Vertex* v) {
+    RecoverVertex(v->ID);
+}
+
+void Graph::RecoverVertex(int idx) {
+    if (_vertex[idx]) {
+        cerr << "vertex ID:" << *_vertex[idx] << " is already in the graph!" << endl;
+        return;
+    }
+    while (!_removed_vertexes.empty()) {
+        restore(_removed_vertexes.top());
+        _vertex[_removed_vertexes.top()->ID] = _removed_vertexes.top();
+        if (_removed_vertexes.top()->ID == idx) {
+            _removed_vertexes.pop();
+            break;
+        }
+        _removed_vertexes.pop();
+    }
+    _bfsDone = false;
+}
+
+void Graph::restore(Vertex* v) {
+#ifdef DEBUG_MODE
+    cout << "Restoring vertex ID:" << *v << endl;
+#endif
+    for (auto it = v->VertexList.begin(); it != v->VertexList.end(); ++it) {
+        (*it)->VertexList.push_back(v);
+    }
+}
+
+void Graph::print() const {
+    assert(_bfsDone);
+    cout << "==============================" << endl;
+    cout << "= Graph printed in BFS order =" << endl;
+    cout << "==============================" << endl;
+    for (auto it = _bfsList.begin(); it != _bfsList.end(); ++it) {
+        cout << "Vertex ID:" << *(*it) << endl;
+    }
+    cout << endl;
 }

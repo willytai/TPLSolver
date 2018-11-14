@@ -18,6 +18,24 @@ int main(int argc, char *argv[])
     ExactCoverSolver solver;
     solver.InitByFile(file);
     solver.Solve();
+    return 0;
+
+    Graph g;
+    g.ContstructByFile(file);
+    g.print();
+    g.RemoveVertex(1);
+    g.RemoveVertex(2);
+    g.RemoveVertex(3);
+    g.RemoveVertex(4);
+    g.RemoveVertex(5);
+    g.RemoveVertex(6);
+    g.RemoveVertex(7);
+    g.RemoveVertex(8);
+    g.bfs();
+    g.print();
+    g.RecoverVertex(1);
+    g.bfs();
+    g.print();
 
     return 0;
 }
