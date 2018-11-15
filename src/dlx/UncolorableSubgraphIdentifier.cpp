@@ -51,11 +51,14 @@ bool UncolorableSubgraphIdentifier::propagate(Vertex* currentVertex) {
 
             if ((*it)->isGlobalRef()) {
                 //cout << "vertex: " << *(*it) << " is globalref; ";
-                /**************************************************************************************
-                * ignore the vertex whose color is the same as COLORS[i]                              *
-                * if 'break' instead of 'continue' is used, some conflict edges will not be collected *
-                * fail_case_2 is an example                                                           *
-                ***************************************************************************************/
+                /****************************************************************************************
+                * ignore the visited vertex whose color is COLORS[i]                                    *
+                * if 'break' instead of 'continue' is used, some conflict edges will not be collected   *
+                * fail_case_2 is an example                                                             *
+                * the color of vertex 3 and 6 would be COLORS[i], but only 3 is visited                 *
+                * normally we try a different color and see if the pattern works, but edge (current, 6) *
+                * needs to be collected first                                                           *
+                ****************************************************************************************/
                 continue;
             }
 
