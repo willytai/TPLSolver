@@ -9,11 +9,12 @@ using namespace std;
 
 struct Vertex
 {
-    Vertex(int id) : color(UNDEF) { ID = id; }
+    Vertex(int id) : color(UNDEF), state(VERTEX_STATE_NOT_DETERMINED) { ID = id; }
     
-    Color color;
-    int ID;
-    vector<Vertex*> VertexList;
+    int                 ID;
+    Color               color;
+    VertexState         state;
+    vector<Vertex*>     VertexList;
 
     // overload cout
     friend ostream& operator << (ostream& os, const Vertex& v) {

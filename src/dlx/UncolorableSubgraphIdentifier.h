@@ -5,6 +5,8 @@
 
 const Color COLORS[4] = {UNDEF, RED, GREEN, BLUE};
 
+enum CheckState { RETURN_FALSE, RETURN_TRUE, KEEP_SEARCHING };
+
 class UncolorableSubgraphIdentifier
 {
     friend class Graph;
@@ -21,7 +23,8 @@ private:
     vector<Vertex*>     _vertex;
     Vertex*             _root;
 
-    bool propagate(Vertex* currentVertex);
+    bool propagate          (Vertex* currentVertex);
+    inline CheckState check (Vertex*&);
 };
 
 #endif /* UNCOLORABLE_SUBGRAPH_IDENTIFIER-H */

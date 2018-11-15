@@ -2,11 +2,13 @@
 #include <fstream>
 #include <iostream>
 #include "ExactCoverSolver.h"
+#include "myUsage.h"
 
 using namespace std;
 
 int main(int argc, char *argv[])
 {
+    MyUsage usg;
     fstream file;
     file.open(argv[1]);
 
@@ -16,8 +18,16 @@ int main(int argc, char *argv[])
     }
 
     ExactCoverSolver solver;
+    usg.reset();
     solver.InitByFile(file);
     solver.Solve();
+    usg.report(1, 1);
+
+    cout << sizeof(Color) << endl;
+    cout << sizeof(Vertex)<< endl;
+    cout << sizeof(Edge)  << endl;
+    cout << sizeof(Vertex*)<< endl;
+
     return 0;
 
     Graph g;
