@@ -2,14 +2,8 @@
 #define EXACT_COVER_SOLVER_H
 
 #include "DLX_struct.h"
-#include "UncolorableSubgraphIdentifier.h"
 #include <stack>
 
-/*! \enum SolverState
- *
- *  SUCCESS -> the problem is three-colorable
- *
- */
 enum SolverState
 {
     SUCCESS,
@@ -32,8 +26,6 @@ private:
     DancingLink     _dlx;
     Graph           _graph;
     vector<Cell*>   _solution;
-
-    UncolorableSubgraphIdentifier   _identifier;
 
     SolverState X_star (int bfsIndex, bool recordPartialResult);
 

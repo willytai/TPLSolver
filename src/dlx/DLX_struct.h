@@ -15,11 +15,12 @@ public:
     DancingLink(Graph& g) { init(g); }
     ~DancingLink() {}
 
-    void  init       (Graph& g);
-    void  initHeader (Graph& g);
-    void  initCell   ();
-    bool  isGoal     () const;
-    Cell* GetHeader  () const;
+    void  init                (Graph& g);
+    void  initHeader          (Graph& g);
+    void  initCell            ();
+    void  removeConflictEdges (const vector<pair<int, int> >& Cedges);
+    bool  isGoal              () const;
+    Cell* GetHeader           () const;
 
     Cell* Column (const int& idx) const;
     Cell* Row    (const int& idx) const;
@@ -64,6 +65,9 @@ public:
 
     // find the corresponding row header
     Cell* FindCorrespondRowHeader(Cell*& c);
+
+    // removes the entire column whose column header is ref
+    void removeEntireColumn(Cell* ref);
 
 
 private:

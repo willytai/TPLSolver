@@ -118,8 +118,9 @@ SolverState ExactCoverSolver::X_star(int bfsIndex, bool recordPartialResult) {
         /*********************************************************************/
         /* find the lastest vertex colored that covered the TargetColumnCell */
         /*********************************************************************/
+        // this is actually not necessary
         Vertex* ConflictVertex = TargetColumnCell->GetCorrespondVertex();
-        auto it = _solution.end(); --it;
+        /* auto it = _solution.end(); --it;
         for (; it != _solution.begin(); --it) {
             const Vertex* target = (*it)->GetCorrespondVertex();
             auto itt = ConflictVertex->VertexList.begin();
@@ -128,7 +129,7 @@ SolverState ExactCoverSolver::X_star(int bfsIndex, bool recordPartialResult) {
                 if (target == *itt) { found = true; break; }
             }
             if (found) break;
-        }
+        } */
         // cout << *TargetColumnCell << " is uncolored, ";
         // cout << "conflict with " << *(*it) << endl;
         // cout << "current solution:" << endl;
@@ -155,12 +156,12 @@ SolverState ExactCoverSolver::X_star(int bfsIndex, bool recordPartialResult) {
     bool recoredResultNextLevel = false;
     for (unsigned int i = 0; i < RelatedRow.size(); ++i) {
 
-        /*
-        // this controls whether to record the solution if a conflict is found
-        // this is only set to 'true' if all of the for loops in the recursive
-        // function is in the last loop
-        // i.e. X_star wiil terminate after the conflict is reported
-        */
+        /***********************************************************************
+        *  this controls whether to record the solution if a conflict is found *
+        *  this is only set to 'true' if all of the for loops in the recursive *
+        *  function is in the last loop                                        *
+        *  i.e. X_star wiil terminate after the conflict is reported           *
+        ***********************************************************************/
         if (i == RelatedRow.size() - 1) recoredResultNextLevel = true&recordPartialResult;
         else recoredResultNextLevel = false;
 
@@ -181,6 +182,9 @@ SolverState ExactCoverSolver::X_star(int bfsIndex, bool recordPartialResult) {
 }
 
 void ExactCoverSolver::IdentifyUncolorablePartAndRemove() {
-    _identifier.InitByColoredVertexes(_solution, _solution.back()->GetCorrespondVertex()->ID, _graph.size());
-    _identifier.run();
+    _graph.ApplySolution(_solution, _solution.back()->GetCorrespondVertex()->ID);
+    _graph.runIdentification();
+    vector<pair<int, int> > ConflictEdges;
+    _graph.GetConflictEdges(ConflictEdges);
+    _dlx.removeConflictEdges(ConflictEdges);
 }

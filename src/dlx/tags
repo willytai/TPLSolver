@@ -1,0 +1,236 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BLUE	color.h	/^    BLUE = 3,$/;"	e	enum:Color
+CELL_H	Cell.h	/^#define CELL_H$/;"	d
+COLORS	UncolorableSubgraphIdentifier.cpp	/^const static Color COLORS[3] = {RED, GREEN, BLUE};$/;"	v	file:
+COLOR_H	color.h	/^#define COLOR_H$/;"	d
+CONFLICT_BUT_DONE	ExactCoverSolver.h	/^    CONFLICT_BUT_DONE,$/;"	e	enum:SolverState
+CONFLICT_NOT_DONE	ExactCoverSolver.h	/^    CONFLICT_NOT_DONE,$/;"	e	enum:SolverState
+Cell	Cell.h	/^    Cell () { left = right = up = down = this; }$/;"	f	struct:Cell
+Cell	Cell.h	/^struct Cell$/;"	s
+Cell	DLX_struct.h	/^    Cell () { left = right = up = down = this; }$/;"	f	struct:Cell
+Cell	DLX_struct.h	/^struct Cell$/;"	s
+CellType	Cell.h	/^enum CellType$/;"	g
+Color	color.h	/^enum Color$/;"	g
+Column	DLX_struct.cpp	/^Cell* DancingLink::Column(const int& idx) const {$/;"	f	class:DancingLink
+ContstructByFile	graph.cpp	/^void Graph::ContstructByFile(fstream& file) {$/;"	f	class:Graph
+CoverAffectedCells	ExactCoverSolver.cpp	/^void ExactCoverSolver::CoverAffectedCells(const Cell* refCell, stack<Cell*>& AffectedCells) {$/;"	f	class:ExactCoverSolver
+CoverAffectedCells	ExactCoverSolver.cpp	/^void ExactCoverSolver::CoverAffectedCells(const Cell* refCell, vector<Cell*>& AffectedCells) {$/;"	f	class:ExactCoverSolver
+DLX_STRUCT_H	DLX_struct.h	/^#define DLX_STRUCT_H$/;"	d
+DancingLink	DLX_struct.h	/^    DancingLink() {}$/;"	f	class:DancingLink
+DancingLink	DLX_struct.h	/^    DancingLink(Graph& g) { init(g); }$/;"	f	class:DancingLink
+DancingLink	DLX_struct.h	/^class DancingLink$/;"	c
+EDGE_CELL	Cell.h	/^    EDGE_CELL,$/;"	e	enum:CellType
+EDGE_H	Edge.h	/^#define EDGE_H$/;"	d
+EXACT_COVER_SOLVER_H	ExactCoverSolver.h	/^#define EXACT_COVER_SOLVER_H$/;"	d
+Edge	Edge.h	/^    Edge(Vertex* vv1, Vertex* vv2) : isConflictEdge(false) { v1 = vv1; v2 = vv2; }$/;"	f	struct:Edge
+Edge	Edge.h	/^    Edge(Vertex* vv1, Vertex* vv2) { v1 = vv1; v2 = vv2; }$/;"	f	struct:Edge
+Edge	Edge.h	/^struct Edge$/;"	s
+Edge	graph.h	/^    Edge(Vertex* vv1, Vertex* vv2) { v1 = vv1; v2 = vv2; }$/;"	f	struct:Edge
+Edge	graph.h	/^struct Edge$/;"	s
+EdgeCell	Cell.h	/^    EdgeCell(Edge* e, Color c = UNDEF) { edge = e; color = c; }$/;"	f	struct:EdgeCell
+EdgeCell	Cell.h	/^struct EdgeCell: Cell$/;"	s
+EdgeCell	DLX_struct.h	/^    EdgeCell(Edge* e, Color c = UNDEF) { edge = e; color = c; }$/;"	f	struct:EdgeCell
+EdgeCell	DLX_struct.h	/^struct EdgeCell: Cell$/;"	s
+ExactCoverSolver	ExactCoverSolver.h	/^    ExactCoverSolver() {}$/;"	f	class:ExactCoverSolver
+ExactCoverSolver	ExactCoverSolver.h	/^class ExactCoverSolver$/;"	c
+FindCorrespondColumnHeader	DLX_struct.cpp	/^Cell* DancingLink::FindCorrespondColumnHeader(Cell*& c) {$/;"	f	class:DancingLink
+FindCorrespondRowHeader	DLX_struct.cpp	/^Cell* DancingLink::FindCorrespondRowHeader(Cell*& c) {$/;"	f	class:DancingLink
+FindPriorityColumn	ExactCoverSolver.cpp	/^Cell* ExactCoverSolver::FindPriorityColumn(const Cell* header) {$/;"	f	class:ExactCoverSolver
+GRAPH_H	graph.h	/^#define GRAPH_H$/;"	d
+GREEN	color.h	/^    GREEN = 2,$/;"	e	enum:Color
+GetBFSList	graph.cpp	/^void Graph::GetBFSList(vector<Vertex*>& vec) const {$/;"	f	class:Graph
+GetBFSList	graph.cpp	/^void Graph::GetBFSList(vector<Vertex*>& vec) {$/;"	f	class:Graph
+GetCellColor	Cell.h	/^    Color     GetCellColor        ()            const { return color; }$/;"	f	struct:RowHeaderCell
+GetCellColor	Cell.h	/^    Color    GetCellColor        ()                    const { return color; }$/;"	f	struct:VertexCell
+GetCellColor	Cell.h	/^    Color    GetCellColor      ()            const { return color; }$/;"	f	struct:EdgeCell
+GetCellColor	Cell.h	/^    virtual Color    GetCellColor         ()               const { return UNDEF; }  \/\/ returns the color of the cell if defined$/;"	f	struct:Cell
+GetCellColor	DLX_struct.h	/^    Color   GetCellColor        ()            const { return color; }$/;"	f	struct:RowHeaderCell
+GetCellColor	DLX_struct.h	/^    Color  GetCellColor      ()                    const { return color; }$/;"	f	struct:VertexCell
+GetCellColor	DLX_struct.h	/^    Color  GetCellColor      ()            const { return color; }$/;"	f	struct:EdgeCell
+GetCellColor	DLX_struct.h	/^    virtual Color   GetCellColor         ()               const { return UNDEF; }$/;"	f	struct:Cell
+GetCorrespondEdge	Cell.h	/^    Edge*    GetCorrespondEdge ()            const { return edge; }$/;"	f	struct:EdgeCell
+GetCorrespondEdge	Cell.h	/^    virtual Edge*    GetCorrespondEdge    ()               const { return NULL; }   \/\/ returns the edge to the corresponding edge column$/;"	f	struct:Cell
+GetCorrespondEdge	DLX_struct.h	/^    Edge*  GetCorrespondEdge ()            const { return edge; }$/;"	f	struct:EdgeCell
+GetCorrespondEdge	DLX_struct.h	/^    virtual Edge*   GetCorrespondEdge    ()               const { return NULL; }$/;"	f	struct:Cell
+GetCorrespondVertex	Cell.h	/^    Vertex*   GetCorrespondVertex ()            const { return vertex; }$/;"	f	struct:RowHeaderCell
+GetCorrespondVertex	Cell.h	/^    Vertex*  GetCorrespondVertex ()                    const { return vertex; }$/;"	f	struct:VertexCell
+GetCorrespondVertex	Cell.h	/^    virtual Vertex*  GetCorrespondVertex  ()               const { return NULL; }   \/\/ returns the vertex to the corresponding vertex column$/;"	f	struct:Cell
+GetCorrespondVertex	DLX_struct.h	/^    Vertex* GetCorrespondVertex ()            const { return vertex; }$/;"	f	struct:RowHeaderCell
+GetCorrespondVertex	DLX_struct.h	/^    virtual Vertex* GetCorrespondVertex  ()               const { return NULL; }$/;"	f	struct:Cell
+GetEdgeCellPtr	Cell.h	/^    virtual void     GetEdgeCellPtr       (vector<Cell*>&) const { return; }        \/\/ to speed up the construction of the DLX$/;"	f	struct:Cell
+GetEdgeCellPtr	Cell.h	/^    void     GetEdgeCellPtr      (vector<Cell*>& ptrs) const { ptrs = edge_cell_ptr; }$/;"	f	struct:VertexCell
+GetEdgeCellPtr	DLX_struct.h	/^    virtual void    GetEdgeCellPtr       (vector<Cell*>&) const { return; }$/;"	f	struct:Cell
+GetEdgeCellPtr	DLX_struct.h	/^    void   GetEdgeCellPtr    (vector<Cell*>& ptrs) const { ptrs = edge_cell_ptr; }$/;"	f	struct:VertexCell
+GetHeader	DLX_struct.cpp	/^Cell* DancingLink::GetHeader() const {$/;"	f	class:DancingLink
+Graph	graph.h	/^    Graph() : _bfsDone(false) {}$/;"	f	class:Graph
+Graph	graph.h	/^    Graph() {}$/;"	f	class:Graph
+Graph	graph.h	/^class Graph$/;"	c
+ID	Vertex.h	/^    int ID;$/;"	m	struct:Vertex
+ID	graph.h	/^    int ID;$/;"	m	struct:Vertex
+IdentifyUncolorablePartAndRemove	ExactCoverSolver.cpp	/^void ExactCoverSolver::IdentifyUncolorablePartAndRemove() {$/;"	f	class:ExactCoverSolver
+InitByColoredVertexes	UncolorableSubgraphIdentifier.cpp	/^void UncolorableSubgraphIdentifier::InitByColoredVertexes(const vector<Cell*>& sol, int RootID, int VertexNum) {$/;"	f	class:UncolorableSubgraphIdentifier
+InitByFile	ExactCoverSolver.cpp	/^void ExactCoverSolver::InitByFile(fstream& file) {$/;"	f	class:ExactCoverSolver
+InitByGraph	ExactCoverSolver.cpp	/^void ExactCoverSolver::InitByGraph(Graph& g) {$/;"	f	class:ExactCoverSolver
+Insert_Down	DLX_struct.cpp	/^void DancingLink::Insert_Down(Cell* c, Cell* ref) {$/;"	f	class:DancingLink
+Insert_Right	DLX_struct.cpp	/^void DancingLink::Insert_Right(Cell* c, Cell* ref) {$/;"	f	class:DancingLink
+LR_recover	DLX_struct.cpp	/^void DancingLink::LR_recover(Cell* c) {$/;"	f	class:DancingLink
+LR_remove	DLX_struct.cpp	/^void DancingLink::LR_remove(Cell* c) {$/;"	f	class:DancingLink
+LR_self	DLX_struct.cpp	/^void DancingLink::LR_self(Cell* c) {$/;"	f	class:DancingLink
+NORMAL_CELL	Cell.h	/^    NORMAL_CELL$/;"	e	enum:CellType
+NormalCell	Cell.h	/^struct NormalCell : Cell$/;"	s
+NormalCell	DLX_struct.h	/^struct NormalCell : Cell$/;"	s
+RED	color.h	/^    RED = 1,$/;"	e	enum:Color
+ROW_HEADER_CELL	Cell.h	/^    ROW_HEADER_CELL,$/;"	e	enum:CellType
+RecordEdgeCellPtr	Cell.h	/^    virtual void     RecordEdgeCellPtr    (Cell*)                { return; }        \/\/ to speed up the construction of the DLX$/;"	f	struct:Cell
+RecordEdgeCellPtr	Cell.h	/^    void     RecordEdgeCellPtr   (Cell* c)                   { edge_cell_ptr.push_back(c); }$/;"	f	struct:VertexCell
+RecordEdgeCellPtr	DLX_struct.h	/^    virtual void    RecordEdgeCellPtr    (Cell*)                { return; }$/;"	f	struct:Cell
+RecordEdgeCellPtr	DLX_struct.h	/^    void   RecordEdgeCellPtr (Cell* c)                   { edge_cell_ptr.push_back(c); }$/;"	f	struct:VertexCell
+RecoverVertex	graph.cpp	/^void Graph::RecoverVertex(Vertex* v) {$/;"	f	class:Graph
+RecoverVertex	graph.cpp	/^void Graph::RecoverVertex(int idx) {$/;"	f	class:Graph
+RemoveEdge	graph.cpp	/^void Graph::RemoveEdge(Edge* e) {$/;"	f	class:Graph
+RemoveVertex	graph.cpp	/^void Graph::RemoveVertex(Vertex* v) {$/;"	f	class:Graph
+RemoveVertex	graph.cpp	/^void Graph::RemoveVertex(int idx) {$/;"	f	class:Graph
+RetrieveEdges	graph.cpp	/^void Graph::RetrieveEdges(vector<Edge*>& vec) const {$/;"	f	class:Graph
+RetrieveEdges	graph.cpp	/^void Graph::RetrieveEdges(vector<Edge*>& vec) {$/;"	f	class:Graph
+RetrieveVertexes	graph.cpp	/^void Graph::RetrieveVertexes(vector<Vertex*>& vec) const {$/;"	f	class:Graph
+RetrieveVertexes	graph.cpp	/^void Graph::RetrieveVertexes(vector<Vertex*>& vec) {$/;"	f	class:Graph
+Row	DLX_struct.cpp	/^Cell* DancingLink::Row(const int& idx) const {$/;"	f	class:DancingLink
+RowHeaderCell	Cell.h	/^    RowHeaderCell(Vertex* v, Color c = UNDEF) { vertex = v; color = c; }$/;"	f	struct:RowHeaderCell
+RowHeaderCell	Cell.h	/^struct RowHeaderCell : Cell$/;"	s
+RowHeaderCell	DLX_struct.h	/^    RowHeaderCell(Vertex* v, Color c = UNDEF) { vertex = v; color = c; }$/;"	f	struct:RowHeaderCell
+RowHeaderCell	DLX_struct.h	/^struct RowHeaderCell : Cell$/;"	s
+STATE_UNDEFINED	ExactCoverSolver.h	/^    STATE_UNDEFINED$/;"	e	enum:SolverState
+SUCCESS	ExactCoverSolver.h	/^    SUCCESS,$/;"	e	enum:SolverState
+Solve	ExactCoverSolver.cpp	/^void ExactCoverSolver::Solve() {$/;"	f	class:ExactCoverSolver
+SolverState	ExactCoverSolver.h	/^enum SolverState$/;"	g
+Type	Cell.h	/^    CellType  Type                ()            const { return ROW_HEADER_CELL; }$/;"	f	struct:RowHeaderCell
+Type	Cell.h	/^    CellType Type                ()                    const { return VERTEX_CELL; }$/;"	f	struct:VertexCell
+Type	Cell.h	/^    CellType Type              ()            const { return EDGE_CELL; }$/;"	f	struct:EdgeCell
+Type	Cell.h	/^    CellType Type ()             const { return NORMAL_CELL; }$/;"	f	struct:NormalCell
+Type	DLX_struct.h	/^    string  Type                ()            const { return "RowHeaderCell"; }$/;"	f	struct:RowHeaderCell
+Type	DLX_struct.h	/^    string Type              ()                    const { return "VertexCell"; }$/;"	f	struct:VertexCell
+Type	DLX_struct.h	/^    string Type              ()            const { return "EdgeCell"; }$/;"	f	struct:EdgeCell
+Type	DLX_struct.h	/^    string Type  ()            const { return "NormalCell"; }$/;"	f	struct:NormalCell
+UD_recover	DLX_struct.cpp	/^void DancingLink::UD_recover(Cell* c) {$/;"	f	class:DancingLink
+UD_remove	DLX_struct.cpp	/^void DancingLink::UD_remove(Cell* c) {$/;"	f	class:DancingLink
+UD_self	DLX_struct.cpp	/^void DancingLink::UD_self(Cell* c) {$/;"	f	class:DancingLink
+UNCOLORABLE_SUBGRAPH_IDENTIFIER_H	UncolorableSubgraphIdentifier.h	/^#define UNCOLORABLE_SUBGRAPH_IDENTIFIER_H$/;"	d
+UNCoverAffectedCells	ExactCoverSolver.cpp	/^void ExactCoverSolver::UNCoverAffectedCells(const vector<Cell*>& AffectedCells) {$/;"	f	class:ExactCoverSolver
+UNCoverAffectedCells	ExactCoverSolver.cpp	/^void ExactCoverSolver::UNCoverAffectedCells(stack<Cell*>& AffectedCells) {$/;"	f	class:ExactCoverSolver
+UNDEF	color.h	/^    UNDEF,$/;"	e	enum:Color
+UncolorableSubgraphIdentifier	UncolorableSubgraphIdentifier.h	/^    UncolorableSubgraphIdentifier() {}$/;"	f	class:UncolorableSubgraphIdentifier
+UncolorableSubgraphIdentifier	UncolorableSubgraphIdentifier.h	/^class UncolorableSubgraphIdentifier$/;"	c
+VERTEX_CELL	Cell.h	/^    VERTEX_CELL,$/;"	e	enum:CellType
+VERTEX_H	Vertex.h	/^#define VERTEX_H$/;"	d
+Vertex	Vertex.h	/^    Vertex(int id) : color(UNDEF) { ID = id; }$/;"	f	struct:Vertex
+Vertex	Vertex.h	/^struct Vertex$/;"	s
+Vertex	graph.h	/^    Vertex(int id) { ID = id; }$/;"	f	struct:Vertex
+Vertex	graph.h	/^struct Vertex$/;"	s
+VertexCell	Cell.h	/^    VertexCell(Vertex* v, Color c = UNDEF) { vertex = v; color = c; }$/;"	f	struct:VertexCell
+VertexCell	Cell.h	/^struct VertexCell : Cell$/;"	s
+VertexCell	DLX_struct.h	/^    VertexCell(Vertex* v, Color c = UNDEF) { vertex = v; color = c; }$/;"	f	struct:VertexCell
+VertexCell	DLX_struct.h	/^struct VertexCell : Cell$/;"	s
+VertexList	Vertex.h	/^    vector<Vertex*> VertexList;$/;"	m	struct:Vertex
+VertexList	graph.h	/^    vector<Vertex*> VertexList;$/;"	m	struct:Vertex
+X_star	ExactCoverSolver.cpp	/^SolverState ExactCoverSolver::X_star(int bfsIndex, bool recordPartialResult) {$/;"	f	class:ExactCoverSolver
+X_star	ExactCoverSolver.cpp	/^bool ExactCoverSolver::X_star(int bfsIndex) {$/;"	f	class:ExactCoverSolver
+_bfsDone	graph.h	/^    mutable bool        _bfsDone;$/;"	m	class:Graph
+_bfsList	graph.h	/^    vector<Vertex*>     _bfsList;$/;"	m	class:Graph
+_columnHeader	DLX_struct.h	/^    vector<Cell*>   _columnHeader;$/;"	m	class:DancingLink
+_dlx	ExactCoverSolver.h	/^    DancingLink     _dlx;$/;"	m	class:ExactCoverSolver
+_edge	graph.h	/^    vector<Edge*>       _edge;$/;"	m	class:Graph
+_globalRef	Vertex.h	/^    static unsigned _globalRef;$/;"	m	struct:Vertex
+_globalRef	graph.cpp	/^unsigned Vertex::_globalRef = 0;$/;"	m	class:Vertex	file:
+_globalRef	graph.h	/^    static unsigned _globalRef;$/;"	m	struct:Vertex
+_graph	ExactCoverSolver.h	/^    Graph           _graph;$/;"	m	class:ExactCoverSolver
+_header	DLX_struct.h	/^#define _header /;"	d
+_identifier	ExactCoverSolver.h	/^    UncolorableSubgraphIdentifier   _identifier;$/;"	m	class:ExactCoverSolver
+_ref	Vertex.h	/^    unsigned _ref;$/;"	m	struct:Vertex
+_ref	graph.h	/^    unsigned _ref;$/;"	m	struct:Vertex
+_removed_edges	graph.h	/^    stack<Edge*>        _removed_edges;$/;"	m	class:Graph
+_removed_vertexes	graph.h	/^    stack<Vertex*>      _removed_vertexes;$/;"	m	class:Graph
+_root	UncolorableSubgraphIdentifier.h	/^    Vertex*             _root;$/;"	m	class:UncolorableSubgraphIdentifier
+_rowHeader	DLX_struct.h	/^    vector<Cell*>   _rowHeader;$/;"	m	class:DancingLink
+_solution	ExactCoverSolver.h	/^    vector<Cell*>   _solution;$/;"	m	class:ExactCoverSolver
+_vertex	UncolorableSubgraphIdentifier.h	/^    vector<Vertex*>     _vertex;$/;"	m	class:UncolorableSubgraphIdentifier
+_vertex	graph.h	/^    vector<Vertex*>     _vertex;$/;"	m	class:Graph
+add_vertex	graph.cpp	/^void Graph::add_vertex(istringstream& iss) {$/;"	f	class:Graph
+bfs	UncolorableSubgraphIdentifier.cpp	/^void UncolorableSubgraphIdentifier::bfs() {$/;"	f	class:UncolorableSubgraphIdentifier
+bfs	graph.cpp	/^void Graph::bfs() {$/;"	f	class:Graph
+color	Cell.h	/^    Color   color;$/;"	m	struct:EdgeCell
+color	Cell.h	/^    Color   color;$/;"	m	struct:RowHeaderCell
+color	Cell.h	/^    Color   color;$/;"	m	struct:VertexCell
+color	DLX_struct.h	/^    Color   color;$/;"	m	struct:EdgeCell
+color	DLX_struct.h	/^    Color   color;$/;"	m	struct:RowHeaderCell
+color	DLX_struct.h	/^    Color   color;$/;"	m	struct:VertexCell
+color	Vertex.h	/^    Color color;$/;"	m	struct:Vertex
+construct_edge	graph.cpp	/^void Graph::construct_edge(string& token, istringstream& iss) {$/;"	f	class:Graph
+down	Cell.h	/^    Cell* down;$/;"	m	struct:Cell
+down	DLX_struct.h	/^    Cell* down;$/;"	m	struct:Cell
+edge	Cell.h	/^    Edge*   edge;$/;"	m	struct:EdgeCell
+edge	DLX_struct.h	/^    Edge*   edge;$/;"	m	struct:EdgeCell
+edge_cell_ptr	Cell.h	/^    vector<Cell*>   edge_cell_ptr;$/;"	m	struct:VertexCell
+edge_cell_ptr	DLX_struct.h	/^    vector<Cell*>   edge_cell_ptr;$/;"	m	struct:VertexCell
+get_order	graph.cpp	/^int Graph::get_order(const Vertex* v) const {$/;"	f	class:Graph
+init	DLX_struct.cpp	/^void DancingLink::init(Graph& g) {$/;"	f	class:DancingLink
+initCell	DLX_struct.cpp	/^void DancingLink::initCell() {$/;"	f	class:DancingLink
+initHeader	DLX_struct.cpp	/^void DancingLink::initHeader(Graph& g) {$/;"	f	class:DancingLink
+isConflictEdge	Edge.h	/^    bool        isConflictEdge;$/;"	m	struct:Edge
+isGlobalRef	Vertex.h	/^    bool isGlobalRef         () { return _ref == _globalRef; }$/;"	f	struct:Vertex
+isGlobalRef	graph.h	/^    bool isGlobalRef         () { return _ref == _globalRef; }$/;"	f	struct:Vertex
+isGoal	DLX_struct.cpp	/^bool DancingLink::isGoal() const {$/;"	f	class:DancingLink
+left	Cell.h	/^    Cell* left;$/;"	m	struct:Cell
+left	DLX_struct.h	/^    Cell* left;$/;"	m	struct:Cell
+main	main.cpp	/^int main(int argc, char *argv[])$/;"	f
+operator <<	Cell.h	/^    friend ostream& operator << (ostream& os, const Cell& c) {$/;"	f	struct:Cell
+operator <<	DLX_struct.h	/^    friend ostream& operator << (ostream& os, const Cell& c) {$/;"	f	struct:Cell
+operator <<	Edge.h	/^    friend ostream& operator << (ostream& os, const Edge& e) {$/;"	f	struct:Edge
+operator <<	Vertex.h	/^    friend ostream& operator << (ostream& os, const Vertex& v) {$/;"	f	struct:Vertex
+operator <<	graph.h	/^    friend ostream& operator << (ostream& os, const Edge& e) {$/;"	f	struct:Edge
+operator <<	graph.h	/^    friend ostream& operator << (ostream& os, const Vertex& v) {$/;"	f	struct:Vertex
+operator []	graph.h	/^    Vertex* operator [] (int idx) { return _bfsList[idx]; }$/;"	f	class:Graph
+print	Cell.h	/^    void      print               (ostream& os) const {$/;"	f	struct:RowHeaderCell
+print	Cell.h	/^    void     print               (ostream& os)         const {$/;"	f	struct:VertexCell
+print	Cell.h	/^    void     print             (ostream& os) const {$/;"	f	struct:EdgeCell
+print	Cell.h	/^    void     print (ostream& os) const { os << "<NormalCell>"; }$/;"	f	struct:NormalCell
+print	DLX_struct.h	/^    void    print               (ostream& os) const {$/;"	f	struct:RowHeaderCell
+print	DLX_struct.h	/^    void   print             (ostream& os)         const {$/;"	f	struct:VertexCell
+print	DLX_struct.h	/^    void   print             (ostream& os) const {$/;"	f	struct:EdgeCell
+print	DLX_struct.h	/^    void   print (ostream& os) const { os << "<NormalCell>"; }$/;"	f	struct:NormalCell
+print	graph.cpp	/^void Graph::print() const {$/;"	f	class:Graph
+propagate	UncolorableSubgraphIdentifier.cpp	/^bool UncolorableSubgraphIdentifier::propagate(Vertex* currentVertex, const Color& C) {$/;"	f	class:UncolorableSubgraphIdentifier
+recover	DLX_struct.cpp	/^void DancingLink::recover(Cell* c) {$/;"	f	class:DancingLink
+remove	DLX_struct.cpp	/^void DancingLink::remove(Cell* c) {$/;"	f	class:DancingLink
+restore	graph.cpp	/^void Graph::restore(Vertex* v) {$/;"	f	class:Graph
+right	Cell.h	/^    Cell* right;$/;"	m	struct:Cell
+right	DLX_struct.h	/^    Cell* right;$/;"	m	struct:Cell
+run	UncolorableSubgraphIdentifier.cpp	/^void UncolorableSubgraphIdentifier::run() {$/;"	f	class:UncolorableSubgraphIdentifier
+setGlobalRef	Vertex.h	/^    static void setGlobalRef () { ++_globalRef; }$/;"	f	struct:Vertex
+setGlobalRef	graph.h	/^    static void setGlobalRef () { ++_globalRef; }$/;"	f	struct:Vertex
+setToGlobalRef	Vertex.h	/^    void setToGlobalRef      () { _ref = _globalRef; }$/;"	f	struct:Vertex
+setToGlobalRef	graph.h	/^    void setToGlobalRef      () { _ref = _globalRef; }$/;"	f	struct:Vertex
+size	graph.cpp	/^int Graph::size() const {$/;"	f	class:Graph
+unSetGlobalRef	Vertex.h	/^    void unSetGlobalRef      () { assert(isGlobalRef()); _ref--; }$/;"	f	struct:Vertex
+up	Cell.h	/^    Cell* up;$/;"	m	struct:Cell
+up	DLX_struct.h	/^    Cell* up;$/;"	m	struct:Cell
+v1	Edge.h	/^    Vertex*     v1;$/;"	m	struct:Edge
+v1	Edge.h	/^    Vertex* v1;$/;"	m	struct:Edge
+v1	graph.h	/^    Vertex* v1;$/;"	m	struct:Edge
+v2	Edge.h	/^    Vertex*     v2;$/;"	m	struct:Edge
+v2	Edge.h	/^    Vertex* v2;$/;"	m	struct:Edge
+v2	graph.h	/^    Vertex* v2;$/;"	m	struct:Edge
+vertex	Cell.h	/^    Vertex* vertex;$/;"	m	struct:RowHeaderCell
+vertex	Cell.h	/^    Vertex* vertex;$/;"	m	struct:VertexCell
+vertex	DLX_struct.h	/^    Vertex* vertex;$/;"	m	struct:RowHeaderCell
+vertex	DLX_struct.h	/^    Vertex* vertex;$/;"	m	struct:VertexCell
+~Cell	Cell.h	/^    virtual ~Cell() {}$/;"	f	struct:Cell
+~Cell	DLX_struct.h	/^    virtual ~Cell() {}$/;"	f	struct:Cell
+~DancingLink	DLX_struct.h	/^    ~DancingLink() {}$/;"	f	class:DancingLink
+~ExactCoverSolver	ExactCoverSolver.h	/^    ~ExactCoverSolver() {}$/;"	f	class:ExactCoverSolver
+~Graph	graph.h	/^    ~Graph() {}$/;"	f	class:Graph
+~UncolorableSubgraphIdentifier	UncolorableSubgraphIdentifier.h	/^    ~UncolorableSubgraphIdentifier() {}$/;"	f	class:UncolorableSubgraphIdentifier

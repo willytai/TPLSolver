@@ -1,28 +1,40 @@
-#include "UncolorableSubgraphIdentifier.h"
+#include "graph.h"
 #include <queue>
 
 using namespace std;
 
 
-void UncolorableSubgraphIdentifier::InitByColoredVertexes(const vector<Cell*>& sol, int RootID, int VertexNum) {
-    _vertex.resize(VertexNum+1, NULL);
+/**********************************************************************
+*                 the identification part in graph.h                 *
+**********************************************************************/
+
+void Graph::ApplySolution(const vector<Cell*>& sol, int RootID) {
     for (auto it = sol.begin(); it != sol.end(); ++it) {
-        Vertex* currentVertex     = (*it)->GetCorrespondVertex();
-        const Color& currentColor = (*it)->GetCellColor();
-        _vertex[currentVertex->ID] = currentVertex;
-        currentVertex->color = currentColor;
+        _vertex[(*it)->GetCorrespondVertex()->ID]->color = (*it)->GetCellColor();
     }
     _root = _vertex[RootID];
     assert(!_vertex[0]);
     assert(_root);
 }
 
-void UncolorableSubgraphIdentifier::run() {
+void Graph::runIdentification() {
+    /**************************************************
+    * the color of the vertexes will all be restored  *
+    * and the detected conflict edges will be removed *
+    **************************************************/
+    _conflict_edges.clear();
     Vertex::setGlobalRef();
     propagate(_root);
+    for (auto it = _conflict_edges.begin(); it != _conflict_edges.end(); ++it) {
+        RemoveEdge(it->first, it->second);
+    }
 }
 
-bool UncolorableSubgraphIdentifier::propagate(Vertex* currentVertex) {
+void Graph::GetConflictEdges(vector<pair<int, int> >& cedges) {
+    cedges = _conflict_edges;
+}
+
+bool Graph::propagate(Vertex* currentVertex) {
     if (currentVertex->state == VERTEX_COLORABLE) return true;
     if (currentVertex->state == VERTEX_UNCOLORABLE) return false;
 
@@ -44,12 +56,13 @@ bool UncolorableSubgraphIdentifier::propagate(Vertex* currentVertex) {
 
         currentVertex->color = COLORS[i];                // set the color
 
-        for (auto it = currentVertex->VertexList.begin(); it != currentVertex->VertexList.end(); ++it) {
+        // for (auto it = currentVertex->VertexList.begin(); it != currentVertex->VertexList.end(); ++it) {
+        for (auto it = _adjList[currentVertex->ID].begin(); it != _adjList[currentVertex->ID].end(); ++it) {
 
             // skip the non-conflict vertexes, vertexes that does not contribute to the conflict will be skipped as well (their colors would all be UNDEF)
-            if ((*it)->color != currentVertex->color) continue;     
+            if (_vertex[*it]->color != currentVertex->color) continue;
 
-            if ((*it)->isGlobalRef()) {
+            if (_vertex[*it]->isGlobalRef()) {
                 //cout << "vertex: " << *(*it) << " is globalref; ";
                 /****************************************************************************************
                 * ignore the visited vertex whose color is COLORS[i]                                    *
@@ -65,8 +78,12 @@ bool UncolorableSubgraphIdentifier::propagate(Vertex* currentVertex) {
             //cout << "currentVertex: " << *currentVertex << ", trying color " << COLORS[i] << "; ";
             //cout << "found conflict with vertex: " << *(*it) << ", propagate" << endl;
 
-            if (!propagate(*it)) {                       // mark edge (currentVertex, *it) as a conflict edge
-                cout << "(" << *currentVertex << ", " << *(*it) << ") is a conflict edge" << endl;
+            if (!propagate(_vertex[*it])) {              // mark edge (currentVertex, *it) as a conflict edge
+                cout << "(" << *currentVertex << ", " << *_vertex[*it] << ") is a conflict edge" << endl;
+
+                // sort the vertex id in ascending order
+                if (currentVertex->ID > *it) _conflict_edges.push_back(pair<int, int>(*it, currentVertex->ID));
+                else _conflict_edges.push_back(pair<int, int>(currentVertex->ID, *it));
                 returnValue = false;                     // returns false if at least the value of one branch is false
             }
         }
@@ -80,17 +97,18 @@ bool UncolorableSubgraphIdentifier::propagate(Vertex* currentVertex) {
     return returnValue;
 }
 
-inline CheckState UncolorableSubgraphIdentifier::check(Vertex*& currentVertex) {
+inline CheckState Graph::check(Vertex*& currentVertex) {
     bool* dummy = new bool(false);
     bool determined = true;
     bool colorable  = false;
     CheckState checkstate = KEEP_SEARCHING;                      // default CheckState
     vector<bool*> color_checker; color_checker.resize(5, dummy); // index 0 is dummy node, index 4 is for UNDEF, only 1~3 is actually used
 
-    for (auto it = currentVertex->VertexList.begin(); it != currentVertex->VertexList.end(); ++it) {
-        if (!_vertex[(*it)->ID]) continue;                       // skip the vertexes that do not contribute to the conflict
-        if (!(*it)->isGlobalRef()) { determined = false; }       // there are still some other vertexes left
-        else color_checker[int((*it)->color)] = NULL;            // mark the used color
+    // for (auto it = currentVertex->VertexList.begin(); it != currentVertex->VertexList.end(); ++it) {
+    for (auto it = _adjList[currentVertex->ID].begin(); it != _adjList[currentVertex->ID].end(); ++it) {
+        if (!_vertex[*it]) continue;                                 // skip the vertexes that do not contribute to the conflict
+        if (!_vertex[*it]->isGlobalRef()) { determined = false; }    // there are still some other vertexes left
+        else color_checker[int(_vertex[*it]->color)] = NULL;         // mark the used color
     }
     for (size_t i = 1; i <= 3; ++i) {
         if (color_checker[i]) colorable = true;
@@ -114,22 +132,4 @@ inline CheckState UncolorableSubgraphIdentifier::check(Vertex*& currentVertex) {
 
     delete dummy;  // free up memory
     return checkstate;
-}
-
-void UncolorableSubgraphIdentifier::bfs() {
-    Vertex::setGlobalRef();
-    queue<Vertex*> Q;
-    Q.push(_root);
-    while (!Q.empty()) {
-        Vertex* current = Q.front();
-        Q.pop();
-        if (current->isGlobalRef()) continue;
-        for (auto it = current->VertexList.begin(); it != current->VertexList.end(); ++it) {
-            if (!_vertex[(*it)->ID]) continue;
-            if ((*it)->isGlobalRef()) continue;
-            Q.push(*it);
-        }
-        current->setToGlobalRef();
-        cout << "vertex ID:" << *current << " with color " << current->color << endl;
-    }
 }

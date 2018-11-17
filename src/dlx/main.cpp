@@ -8,6 +8,11 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
+    if (argc != 1) {
+        cerr << "usage: ./DLX <graph file>";
+        return 0;
+    }
+
     MyUsage usg;
     fstream file;
     file.open(argv[1]);
@@ -23,14 +28,19 @@ int main(int argc, char *argv[])
     solver.Solve();
     usg.report(1, 1);
 
-    cout << sizeof(Color) << endl;
-    cout << sizeof(Vertex)<< endl;
-    cout << sizeof(Edge)  << endl;
-    cout << sizeof(Vertex*)<< endl;
+
+    cout << "size of Color:  " << sizeof(Color) << endl;
+    cout << "size of Vertex: " << sizeof(Vertex)<< endl;
+    cout << "size of Edge:   " << sizeof(Edge)  << endl;
+    cout << "size of NormalCell:    " << sizeof(NormalCell) << endl;
+    cout << "size of VertexCell:    " << sizeof(VertexCell) << endl;
+    cout << "size of RowHeaderCell: " << sizeof(RowHeaderCell) << endl;
+    cout << "size of EdgeCell:      " << sizeof(EdgeCell) << endl;
+    
 
     return 0;
 
-    Graph g;
+    /*Graph g;
     g.ContstructByFile(file);
     g.print();
     g.RemoveVertex(1);
@@ -47,5 +57,5 @@ int main(int argc, char *argv[])
     g.bfs();
     g.print();
 
-    return 0;
+    return 0;*/
 }

@@ -2,19 +2,18 @@
 #define VERTEX_H
 
 #include <iostream>
-#include <vector>
 #include "color.h"
 
 using namespace std;
 
+// 16 byte
 struct Vertex
 {
     Vertex(int id) : color(UNDEF), state(VERTEX_STATE_NOT_DETERMINED) { ID = id; }
     
     int                 ID;
     Color               color;
-    VertexState         state;
-    vector<Vertex*>     VertexList;
+    VertexState         state; // consumes memory, very costly
 
     // overload cout
     friend ostream& operator << (ostream& os, const Vertex& v) {

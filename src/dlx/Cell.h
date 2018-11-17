@@ -52,8 +52,8 @@ struct RowHeaderCell : Cell
         os << "<RowHeaderCell, VertexID:" << *vertex << ", color " << color << ">";
     }
     
-    Color   color;
     Vertex* vertex;
+    Color   color;
 };
 
 struct VertexCell : Cell
@@ -69,8 +69,8 @@ struct VertexCell : Cell
         os << "<VertexCell, VertexID:" << *vertex << ", color " << color << ">";
     }
 
-    Color   color;
     Vertex* vertex;
+    Color   color;
 
     vector<Cell*>   edge_cell_ptr;
 };
@@ -86,8 +86,8 @@ struct EdgeCell: Cell
         os << "<EdgeCell, " << *edge << ", color " << color << ">";
     }
 
-    Color   color;
     Edge*   edge;
+    Color   color;
 };
 
 struct NormalCell : Cell

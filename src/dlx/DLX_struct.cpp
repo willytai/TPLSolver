@@ -20,7 +20,7 @@ void DancingLink::init(Graph& g) {
 
 void DancingLink::initHeader(Graph& g) {
     vector<Vertex*> vertexes;
-    vector<Edge*>   edges;
+    map<int, map<int, Edge*> > edges;
     g.RetrieveVertexes(vertexes);
     g.RetrieveEdges(edges);
 
@@ -37,20 +37,26 @@ void DancingLink::initHeader(Graph& g) {
         _columnHeader.push_back(new VertexCell(vertexes[id]));
         Insert_Right(_columnHeader[id], _columnHeader[id-1]);
     }
-    for (unsigned int i = 0; i < edges.size(); ++i) {
-        Cell* MainEdgeCell = new EdgeCell(edges[i], RED);
+    // for (unsigned int i = 0; i < edges.size(); ++i) {
+    for (auto it = edges.begin(); it != edges.end(); ++it) {
+        for (auto ti = (it->second).begin(); ti != (it->second).end(); ++ti) {
+        // Cell* MainEdgeCell = new EdgeCell(edges[i], RED);
+        Cell* MainEdgeCell = new EdgeCell(ti->second, RED);
         _columnHeader.push_back(MainEdgeCell);
         Insert_Right(_columnHeader[_columnHeader.size()-1], _columnHeader[_columnHeader.size()-2]);
-        _columnHeader.push_back(new EdgeCell(edges[i], GREEN));
+        // _columnHeader.push_back(new EdgeCell(edges[i], GREEN));
+        _columnHeader.push_back(new EdgeCell(ti->second, GREEN));
         Insert_Right(_columnHeader[_columnHeader.size()-1], _columnHeader[_columnHeader.size()-2]);
-        _columnHeader.push_back(new EdgeCell(edges[i], BLUE));
+        // _columnHeader.push_back(new EdgeCell(edges[i], BLUE));
+        _columnHeader.push_back(new EdgeCell(ti->second, BLUE));
         Insert_Right(_columnHeader[_columnHeader.size()-1], _columnHeader[_columnHeader.size()-2]);
 
         // save the information to the corresponding VertexCell
-        int vertex_id_1 = MainEdgeCell->GetCorrespondEdge()->v1->ID;
-        int vertex_id_2 = MainEdgeCell->GetCorrespondEdge()->v2->ID;
+        int vertex_id_1 = MainEdgeCell->GetCorrespondEdge()->v1_id;
+        int vertex_id_2 = MainEdgeCell->GetCorrespondEdge()->v2_id;
         _columnHeader[vertex_id_1]->RecordEdgeCellPtr(MainEdgeCell);
         _columnHeader[vertex_id_2]->RecordEdgeCellPtr(MainEdgeCell);
+        }
     }
 
     /* construct the row header
@@ -129,6 +135,26 @@ void DancingLink::initCell() {
         cout << *tmp << endl;
     } cout << endl;
 #endif
+}
+
+void DancingLink::removeConflictEdges(const vector<pair<int, int> >& Cedges) {
+    for (auto it = Cedges.begin(); it != Cedges.end(); ++it) {
+        const int& id_1 = (*it).first;
+        vector<Cell*> EdgeCellCandidate; _columnHeader[id_1]->GetEdgeCellPtr(EdgeCellCandidate);
+        for (auto iter = EdgeCellCandidate.begin(); iter != EdgeCellCandidate.end(); ++iter) {
+            if ((*iter)->GetCorrespondEdge()->v2_id == (*it).second) {
+                this->removeEntireColumn(*iter);
+                this->removeEntireColumn((*iter)->right);
+                this->removeEntireColumn((*iter)->right->right);
+#ifdef DEBUG_MODE
+                cout << "column " << **iter << " removed" << endl;
+                cout << "column " << *((*iter)->right) << " removed" << endl;
+                cout << "column " << *((*iter)->right->right) << " removed" << endl;
+#endif
+                break;
+            }
+        }
+    }
 }
 
 Cell* DancingLink::Column(const int& idx) const {
@@ -220,3 +246,6 @@ Cell* DancingLink::FindCorrespondRowHeader(Cell*& c) {
     return tmp;
 }
 
+void DancingLink::removeEntireColumn(Cell* ref) {
+
+}

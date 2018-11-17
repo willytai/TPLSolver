@@ -5,14 +5,15 @@
 
 struct Edge
 {
-    Edge(Vertex* vv1, Vertex* vv2) : isConflictEdge(false) { v1 = vv1; v2 = vv2; }
-    Vertex*     v1;
-    Vertex*     v2;
-    bool        isConflictEdge;
+    Edge(int vv1, int vv2) { v1_id = vv1; v2_id = vv2; if (v1_id > v2_id) ::swap(v1_id, v2_id); }
+
+    int         v1_id;
+    int         v2_id;
 
     // overload cout
     friend ostream& operator << (ostream& os, const Edge& e) {
-        os << '(' << *(e.v1) << ", " << *(e.v2) << ')';
+        os << '(' << e.v1_id << ", " << e.v2_id << ')';
+        // os << '(' << *(e.v1) << ", " << *(e.v2) << ')';
         return os;
     }
 };
