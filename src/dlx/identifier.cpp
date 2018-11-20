@@ -5,7 +5,7 @@ using namespace std;
 
 
 /**********************************************************************
-*                 the identification part in graph.h                 *
+*                 the identification part in graph.h                  *
 **********************************************************************/
 
 void Graph::ApplySolution(const vector<Cell*>& sol, int RootID) {
@@ -22,16 +22,16 @@ void Graph::runIdentification() {
     * the color of the vertexes will all be restored  *
     * and the detected conflict edges will be removed *
     **************************************************/
-    _conflict_edges.clear();
     Vertex::setGlobalRef();
+    _conflict_subgraphs.resize(_conflict_subgraphs.size()+1);
     propagate(_root);
-    for (auto it = _conflict_edges.begin(); it != _conflict_edges.end(); ++it) {
+    for (auto it = _conflict_subgraphs.back().begin(); it != _conflict_subgraphs.back().end(); ++it) {
         RemoveEdge(it->first, it->second);
     }
 }
 
-void Graph::GetConflictEdges(vector<pair<int, int> >& cedges) {
-    cedges = _conflict_edges;
+void Graph::GetLatestConflictEdges(vector<pair<int, int> >& cedges) {
+    cedges = _conflict_subgraphs.back();
 }
 
 bool Graph::propagate(Vertex* currentVertex) {
@@ -82,8 +82,8 @@ bool Graph::propagate(Vertex* currentVertex) {
                 cout << "(" << *currentVertex << ", " << *_vertex[*it] << ") is a conflict edge" << endl;
 
                 // sort the vertex id in ascending order
-                if (currentVertex->ID > *it) _conflict_edges.push_back(pair<int, int>(*it, currentVertex->ID));
-                else _conflict_edges.push_back(pair<int, int>(currentVertex->ID, *it));
+                if (currentVertex->ID > *it) _conflict_subgraphs.back().push_back(pair<int, int>(*it, currentVertex->ID));
+                else _conflict_subgraphs.back().push_back(pair<int, int>(currentVertex->ID, *it));
                 returnValue = false;                     // returns false if at least the value of one branch is false
             }
         }

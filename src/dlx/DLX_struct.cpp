@@ -247,5 +247,9 @@ Cell* DancingLink::FindCorrespondRowHeader(Cell*& c) {
 }
 
 void DancingLink::removeEntireColumn(Cell* ref) {
-
+    while (ref->down != ref) {
+        this->remove(ref);
+        ref = ref->down;
+    }
+    this->remove(ref);
 }

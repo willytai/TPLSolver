@@ -14,17 +14,24 @@ void ExactCoverSolver::InitByGraph(Graph& g) {
 void ExactCoverSolver::Solve() {
     SolverState result = X_star(0, true);
 
+    while (result != SUCCESS) {
+        cout << endl << "solution:" << endl;
+        for (auto it = _solution.begin(); it != _solution.end(); ++it)
+            cout << *(*it) << endl;
+        cout << "Conflict found, need to remove and keep on searching" << endl;
+
+        IdentifyUncolorablePartAndRemove();
+        _solution.clear();
+        result = X_star(0, true);
+    }
+
     cout << endl << "solution:" << endl;
     for (auto it = _solution.begin(); it != _solution.end(); ++it)
         cout << *(*it) << endl;
 
     if (result == SUCCESS) cout << "Success!" << endl;
-    else if (result == CONFLICT_NOT_DONE) cout << "Conflict found, need to remove and keep on searching" << endl;
-    else if (result == CONFLICT_BUT_DONE) cout << "Conflict found, and search is done" << endl;
     else assert(0);
     cout << endl;
-
-    if (result != SUCCESS) IdentifyUncolorablePartAndRemove();
 }
 
 void ExactCoverSolver::CoverAffectedCells(const Cell* refCell, stack<Cell*>& AffectedCells) {
@@ -185,6 +192,6 @@ void ExactCoverSolver::IdentifyUncolorablePartAndRemove() {
     _graph.ApplySolution(_solution, _solution.back()->GetCorrespondVertex()->ID);
     _graph.runIdentification();
     vector<pair<int, int> > ConflictEdges;
-    _graph.GetConflictEdges(ConflictEdges);
+    _graph.GetLatestConflictEdges(ConflictEdges);
     _dlx.removeConflictEdges(ConflictEdges);
 }

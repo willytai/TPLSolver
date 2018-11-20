@@ -8,7 +8,7 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-    if (argc != 1) {
+    if (argc != 2) {
         cerr << "usage: ./DLX <graph file>";
         return 0;
     }
