@@ -30,8 +30,7 @@ void ExactCoverSolver::Solve() {
         cout << *(*it) << endl;
 
     if (result == SUCCESS) cout << "Success!" << endl;
-    else assert(0);
-    cout << endl;
+    _graph.reportConflictSubgraphs();
 }
 
 void ExactCoverSolver::CoverAffectedCells(const Cell* refCell, stack<Cell*>& AffectedCells) {

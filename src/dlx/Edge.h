@@ -13,7 +13,6 @@ struct Edge
     // overload cout
     friend ostream& operator << (ostream& os, const Edge& e) {
         os << '(' << e.v1_id << ", " << e.v2_id << ')';
-        // os << '(' << *(e.v1) << ", " << *(e.v2) << ')';
         return os;
     }
 };

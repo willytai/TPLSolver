@@ -1,4 +1,6 @@
 #include "graph.h"
+#include <sstream>
+#include <iomanip>
 #include <queue>
 
 using namespace std;
@@ -27,6 +29,30 @@ void Graph::runIdentification() {
     propagate(_root);
     for (auto it = _conflict_subgraphs.back().begin(); it != _conflict_subgraphs.back().end(); ++it) {
         RemoveEdge(it->first, it->second);
+    }
+}
+
+void Graph::reportConflictSubgraphs() const {
+    cout << "****************************************************" << endl;
+    cout << "*          Uncolorable Subgraph Reporter           *" << endl;
+    cout << "****************************************************" << endl;
+    cout << "| There are " << setw(3) << _conflict_subgraphs.size() << "  uncolorable parts                 |" << endl;
+    cout << "----------------------------------------------------" << endl;
+    for (unsigned int i = 0; i < _conflict_subgraphs.size(); ++i) {
+        cout << "| subgraph " << setw(40) << left << i+1 << "|" << endl;
+        cout << "| ";
+        int edgecount = 0;
+        stringstream ss;
+        for (auto it = _conflict_subgraphs.at(i).begin(); it != _conflict_subgraphs.at(i).end(); ++it) {
+            ss << "(" << setw(2) << (*it).first << ", " << setw(2) << (*it).second << ") ";
+            if (++edgecount == 5) {
+                edgecount = 0;
+                cout << left << setw(49) << ss.str() << "|" << endl << "| ";
+                ss.str("");
+            }
+        }
+        cout << left << setw(49) << ss.str() << "|" << endl; 
+        cout << "----------------------------------------------------" << endl;
     }
 }
 

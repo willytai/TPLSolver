@@ -44,11 +44,12 @@ public:
     /*******************************************************
     * this part is for uncolorable subgraph identification *
     *******************************************************/
-    void              ApplySolution          (const vector<Cell*>& sol, int RootID);
-    void              GetLatestConflictEdges (vector<pair<int, int> >& cedges);
-    void              runIdentification      ();
-    bool              propagate              (Vertex* currentVertex);
-    inline CheckState check                  (Vertex*& currentVertex);
+    void              ApplySolution           (const vector<Cell*>& sol, int RootID);
+    void              GetLatestConflictEdges  (vector<pair<int, int> >& cedges);
+    void              reportConflictSubgraphs () const;
+    void              runIdentification       ();
+    bool              propagate               (Vertex* currentVertex);
+    inline CheckState check                   (Vertex*& currentVertex);
     
 
     Vertex* operator [] (int idx) { return _bfsList[idx]; }
