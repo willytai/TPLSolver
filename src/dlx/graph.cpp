@@ -142,7 +142,11 @@ void Graph::RemoveEdge(int id_1, int id_2) {
         if (*it == id_1) { _adjList[id_2].erase(it); break; }
     }
     _removed_edges.push(_edge[id_1][id_2]);
-    _bfsDone = false;
+
+    /*************************************************
+    * it's OK not to change the order of the bfslist *
+    *************************************************/
+    // _bfsDone = false;
 }
 
 void Graph::RemoveVertex(Vertex* v) {

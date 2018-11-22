@@ -121,31 +121,7 @@ SolverState ExactCoverSolver::X_star(int bfsIndex, bool recordPartialResult) {
 
     // conflict found!
     if (!RelatedRow.size()) {
-        /*********************************************************************/
-        /* find the lastest vertex colored that covered the TargetColumnCell */
-        /*********************************************************************/
-        // this is actually not necessary
         Vertex* ConflictVertex = TargetColumnCell->GetCorrespondVertex();
-        /* auto it = _solution.end(); --it;
-        for (; it != _solution.begin(); --it) {
-            const Vertex* target = (*it)->GetCorrespondVertex();
-            auto itt = ConflictVertex->VertexList.begin();
-            bool found = false;
-            for (; itt != ConflictVertex->VertexList.end(); ++itt) {
-                if (target == *itt) { found = true; break; }
-            }
-            if (found) break;
-        } */
-        // cout << *TargetColumnCell << " is uncolored, ";
-        // cout << "conflict with " << *(*it) << endl;
-        // cout << "current solution:" << endl;
-        // for (auto it = _solution.begin(); it != _solution.end(); ++it)
-        //     cout << *(*it) << endl;
-
-        // cout << "===============================" << endl;
-        // cout << "Number of vertexes:         " << _graph.size()  << " =" << endl;
-        // cout << "Number of vertexes colored: " <<  1 + _solution.size() << " =" << endl;
-        // cout << "===============================" << endl;
 
         if (recordPartialResult) {
             cout << "recording partial result" << endl;

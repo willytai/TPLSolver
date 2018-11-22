@@ -1,4 +1,3 @@
-#include <vector>
 #include <fstream>
 #include <iostream>
 #include "ExactCoverSolver.h"
@@ -9,7 +8,7 @@ using namespace std;
 int main(int argc, char *argv[])
 {
     if (argc != 2) {
-        cerr << "usage: ./DLX <graph file>";
+        cerr << "usage: ./DLX <graph file>" << endl;
         return 0;
     }
 
@@ -29,9 +28,9 @@ int main(int argc, char *argv[])
     usg.report(1, 1);
 
 
-    cout << "size of Color:  " << sizeof(Color) << endl;
-    cout << "size of Vertex: " << sizeof(Vertex)<< endl;
-    cout << "size of Edge:   " << sizeof(Edge)  << endl;
+    cout << "size of Color:         " << sizeof(Color) << endl;
+    cout << "size of Vertex:        " << sizeof(Vertex)<< endl;
+    cout << "size of Edge:          " << sizeof(Edge)  << endl;
     cout << "size of NormalCell:    " << sizeof(NormalCell) << endl;
     cout << "size of VertexCell:    " << sizeof(VertexCell) << endl;
     cout << "size of RowHeaderCell: " << sizeof(RowHeaderCell) << endl;
