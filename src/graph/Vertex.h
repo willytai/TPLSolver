@@ -6,6 +6,14 @@
 
 using namespace std;
 
+enum VertexState
+{
+    VERTEX_COLORABLE = 1,
+    VERTEX_UNCOLORABLE = 2,
+    VERTEX_STATE_NOT_DETERMINED,
+};
+
+
 // 16 byte
 struct Vertex
 {
