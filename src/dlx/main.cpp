@@ -7,10 +7,13 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-    if (argc != 2) {
-        cerr << "usage: ./DLX <graph file>" << endl;
+    if (argc < 2) {
+        cerr << "usage: ./DLX <graph file> <report filename (default cout)>" << endl;
         return 0;
     }
+
+    ofstream ofile;
+    if (argc == 3) ofile.open(argv[2]);
 
     MyUsage usg;
     fstream file;
@@ -25,9 +28,13 @@ int main(int argc, char *argv[])
     usg.reset();
     solver.InitByFile(file);
     solver.Solve();
+    if (!ofile.is_open()) 
+        solver.report(cout, argv[1]);
+    else
+        solver.report(ofile, argv[1]);
     usg.report(1, 1);
 
-
+#ifdef DEBUG_MODE
     cout << "size of Color:         " << sizeof(Color) << endl;
     cout << "size of Vertex:        " << sizeof(Vertex)<< endl;
     cout << "size of Edge:          " << sizeof(Edge)  << endl;
@@ -35,7 +42,7 @@ int main(int argc, char *argv[])
     cout << "size of VertexCell:    " << sizeof(VertexCell) << endl;
     cout << "size of RowHeaderCell: " << sizeof(RowHeaderCell) << endl;
     cout << "size of EdgeCell:      " << sizeof(EdgeCell) << endl;
-    
+#endif 
 
     return 0;
 

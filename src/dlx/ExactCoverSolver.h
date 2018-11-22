@@ -21,6 +21,7 @@ public:
     void InitByFile  (fstream& file);
     void InitByGraph (Graph& g);
     void Solve       ();
+    void report      (ostream& os, string filename);
 
 private:
     DancingLink     _dlx;

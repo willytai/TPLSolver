@@ -1,4 +1,5 @@
 #include "ExactCoverSolver.h"
+#include <iomanip>
 #include <cassert>
 
 void ExactCoverSolver::InitByFile(fstream& file) {
@@ -30,7 +31,10 @@ void ExactCoverSolver::Solve() {
         cout << *(*it) << endl;
 
     if (result == SUCCESS) cout << "Success!" << endl;
-    _graph.reportConflictSubgraphs();
+}
+
+void ExactCoverSolver::report(ostream& os, string filename) {
+    _graph.reportConflictSubgraphs(os, " Filename: "+filename);
 }
 
 void ExactCoverSolver::CoverAffectedCells(const Cell* refCell, stack<Cell*>& AffectedCells) {
@@ -114,6 +118,11 @@ SolverState ExactCoverSolver::X_star(int bfsIndex, bool recordPartialResult) {
     Cell* PriorityColumnCell = FindPriorityColumn(_dlx.GetHeader());
     Cell* TargetColumnCell   = (PriorityColumnCell ? PriorityColumnCell : _dlx.Column(_graph[bfsIndex]->ID));
 
+    // if this happens, it means that after some edges removed by the identifier, some isolated vertex appears
+    // therefore, there will be no need to consider the order of the vertex traversed after this point
+    // just simply try to cover the column to the right of the _dlx header
+    if (size_t(bfsIndex) > _graph.size()-1) TargetColumnCell = _dlx.GetHeader()->right;
+
     // get related rows
     Cell* tmp = TargetColumnCell->down;
     vector<Cell*> RelatedRow;
@@ -124,7 +133,6 @@ SolverState ExactCoverSolver::X_star(int bfsIndex, bool recordPartialResult) {
         Vertex* ConflictVertex = TargetColumnCell->GetCorrespondVertex();
 
         if (recordPartialResult) {
-            cout << "recording partial result" << endl;
             _solution.push_back(new RowHeaderCell(ConflictVertex, UNDEF));
         }
 

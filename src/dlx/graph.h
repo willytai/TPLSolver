@@ -17,9 +17,6 @@ using namespace std;
 
 const Color COLORS[4] = {UNDEF, RED, GREEN, BLUE};
 
-enum CheckState { RETURN_FALSE, RETURN_TRUE, KEEP_SEARCHING };
-
-
 class Graph
 {
 public:
@@ -46,10 +43,10 @@ public:
     *******************************************************/
     void              ApplySolution           (const vector<Cell*>& sol, int RootID);
     void              GetLatestConflictEdges  (vector<pair<int, int> >& cedges);
-    void              reportConflictSubgraphs () const;
+    void              reportConflictSubgraphs (ostream& os, string filename) const;
     void              runIdentification       ();
     bool              propagate               (Vertex* currentVertex);
-    inline CheckState check                   (Vertex*& currentVertex);
+    inline bool       check                   (Vertex*& currentVertex);
     
 
     Vertex* operator [] (int idx) { return _bfsList[idx]; }
