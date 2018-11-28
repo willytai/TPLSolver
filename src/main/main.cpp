@@ -34,35 +34,16 @@ int main(int argc, char *argv[])
         solver->report(ofile, argv[1]);
     usg.report(1, 1);
 
-#ifdef DEBUG_MODE
-    cout << "size of Color:         " << sizeof(Color) << endl;
-    cout << "size of Vertex:        " << sizeof(Vertex)<< endl;
-    cout << "size of Edge:          " << sizeof(Edge)  << endl;
-    cout << "size of NormalCell:    " << sizeof(NormalCell) << endl;
-    cout << "size of VertexCell:    " << sizeof(VertexCell) << endl;
-    cout << "size of RowHeaderCell: " << sizeof(RowHeaderCell) << endl;
-    cout << "size of EdgeCell:      " << sizeof(EdgeCell) << endl;
-#endif 
-
     delete solver;
     return 0;
 
-    /*Graph g;
-    g.ContstructByFile(file);
-    g.print();
-    g.RemoveVertex(1);
-    g.RemoveVertex(2);
-    g.RemoveVertex(3);
-    g.RemoveVertex(4);
-    g.RemoveVertex(5);
-    g.RemoveVertex(6);
-    g.RemoveVertex(7);
-    g.RemoveVertex(8);
-    g.bfs();
-    g.print();
-    g.RecoverVertex(1);
-    g.bfs();
-    g.print();
-
-    return 0;*/
+/*
+size of Color:         4
+size of Vertex:        16
+size of Edge:          8
+size of NormalCell:    40
+size of VertexCell:    80
+size of RowHeaderCell: 56
+size of EdgeCell:      56
+*/
 }

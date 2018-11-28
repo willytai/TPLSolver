@@ -25,19 +25,27 @@ void Graph::runIdentification() {
     * and the detected conflict edges will be removed *
     **************************************************/
     // reset all the vertexes to VERTEX_STATE_NOT_DETERMINED
-    for (auto it = _traversed_vertexes.begin(); it != _traversed_vertexes.end(); ++it) {
+    for (auto it = _temporary_colorable_vertexes.begin(); it != _temporary_colorable_vertexes.end(); ++it) {
         (*it)->state = VERTEX_STATE_NOT_DETERMINED;
 #ifdef DEBUG_MODE
         cout << "reseting vertex " << *(*it) << " to state undetermined" << endl;
 #endif
     }
-    _traversed_vertexes.clear();
-    Vertex::setGlobalRef();
-    _conflict_subgraphs.resize(_conflict_subgraphs.size()+1);
-    propagate(_root);
-    for (auto it = _conflict_subgraphs.back().begin(); it != _conflict_subgraphs.back().end(); ++it) {
-        RemoveEdge(it->first, it->second);
+    if (_conflict_subgraphs.size()) {
+        for (auto it = _conflict_subgraphs.back().begin(); it != _conflict_subgraphs.back().end(); ++it) {
+            (*it)->state = VERTEX_STATE_NOT_DETERMINED;
+#ifdef DEBUG_MODE
+            cout << "reseting vertex " << *(*it) << " to state undetermined" << endl;
+#endif
+        }
     }
+    _temporary_colorable_vertexes.clear();
+
+    Vertex::setGlobalRef();
+    _conflict_subgraphs.resize(_conflict_subgraphs.size()+1); // the container for the next subgraph
+    this->propagate(_root);
+    this->RemoveEdge();
+
     // because some edges will be removed, need to re-run bfs
     bfs();
 }
@@ -56,7 +64,7 @@ void Graph::reportConflictSubgraphs(ostream& os, string filename) const {
         int edgecount = 0;
         stringstream ss;
         for (auto it = _conflict_subgraphs.at(i).begin(); it != _conflict_subgraphs.at(i).end(); ++it) {
-            ss << "(" << setw(2) << (*it).first << ", " << setw(2) << (*it).second << ") ";
+            ss << "V " << setw(2) << *(*it) << ", ";
             if (++edgecount == 5) {
                 edgecount = 0;
                 os << left << setw(49) << ss.str() << "|" << endl << "| ";
@@ -68,15 +76,37 @@ void Graph::reportConflictSubgraphs(ostream& os, string filename) const {
     }
 }
 
+void Graph::RemoveEdge() {
+    /****************************************************************************
+    * find all the conflict edges (formed by two adjacent uncolorbale vertexes) *
+    ****************************************************************************/
+    Vertex::setGlobalRef();
+    _latest_conflict_edges.clear();
+    for (auto it = _conflict_subgraphs.back().begin(); it != _conflict_subgraphs.back().end(); ++it) {
+        (*it)->setToGlobalRef();
+        for (auto index_it = _adjList[(*it)->ID].begin(); index_it != _adjList[(*it)->ID].end(); ++index_it) {
+            if (_vertex[*index_it]->isGlobalRef()) continue;
+            if (_vertex[*index_it]->state != VERTEX_UNCOLORABLE) continue;
+
+            // set the vertex ID in acending order
+            if ((*it)->ID < *index_it) _latest_conflict_edges.push_back(pair<int, int>((*it)->ID, *index_it));
+            else _latest_conflict_edges.push_back(pair<int, int>(*index_it, (*it)->ID));
+
+        }
+    }
+    for (auto it = _latest_conflict_edges.begin(); it != _latest_conflict_edges.end(); ++it) {
+        RemoveEdge((*it).first, (*it).second);
+    }
+}
+
 void Graph::GetLatestConflictEdges(vector<pair<int, int> >& cedges) {
-    cedges = _conflict_subgraphs.back();
+    cedges = _latest_conflict_edges;
 }
 
 bool Graph::propagate(Vertex* currentVertex) {
     if (currentVertex->state == VERTEX_COLORABLE)   return true;
     if (currentVertex->state == VERTEX_UNCOLORABLE) return false;
 
-    _traversed_vertexes.push_back(currentVertex); // need to reset the state to allow another traversal
     /***********************************************
     * To check if the vertex is uncolorlabe        *
     * refer to check(Vertex*& currentVertex) below *
@@ -93,7 +123,7 @@ bool Graph::propagate(Vertex* currentVertex) {
     for (int i = 1; i <= 3; ++i) {
         if (!color_checker[i]) continue;
 
-        cout << "vertex: " << *currentVertex << ", color " << COLORS[i] << "; ";
+        // cout << "vertex: " << *currentVertex << ", color " << COLORS[i] << "; ";
 
         bool LegalColor = true;
         currentVertex->color = COLORS[i];                // set the color
@@ -106,7 +136,7 @@ bool Graph::propagate(Vertex* currentVertex) {
             // currentVertex would not be colorable with COLORS[i]
             LegalColor = false;
 
-            if (_vertex[*it]->isGlobalRef()) {
+            // if (_vertex[*it]->isGlobalRef()) {
                 //cout << "vertex: " << *(*it) << " is globalref; ";
                 /****************************************************************************************
                 * ignore the visited vertex whose color is COLORS[i]                                    *
@@ -116,19 +146,20 @@ bool Graph::propagate(Vertex* currentVertex) {
                 * normally we try a different color and see if the pattern works, but edge (current, 6) *
                 * needs to be collected first                                                           *
                 ****************************************************************************************/
-                continue;
-            }
+            //     assert(0);
+            //     continue;
+            // }
 
-            cout << "currentVertex: " << *currentVertex << ", trying color " << COLORS[i] << "; ";
-            cout << "found conflict with vertex: " << *_vertex[*it] << ", propagate" << endl;
+            // cout << "currentVertex: " << *currentVertex << ", trying color " << COLORS[i] << "; ";
+            // cout << "found conflict with vertex: " << *_vertex[*it] << ", propagate" << endl;
 
             if (!propagate(_vertex[*it])) { // mark edge (currentVertex, *it) as a conflict edge
 #ifdef DEBUG_MODE
                 cout << "(" << *currentVertex << ", " << *_vertex[*it] << ") is a conflict edge" << endl;
 #endif
                 // sort the vertex id in ascending order
-                if (currentVertex->ID > *it) _conflict_subgraphs.back().push_back(pair<int, int>(*it, currentVertex->ID));
-                else _conflict_subgraphs.back().push_back(pair<int, int>(currentVertex->ID, *it));
+                // if (currentVertex->ID > *it) _conflict_subgraphs.back().push_back(pair<int, int>(*it, currentVertex->ID));
+                // else _conflict_subgraphs.back().push_back(pair<int, int>(currentVertex->ID, *it));
                 returnValue = false;                     // returns false if at least the value of one branch is false
             }
         }
@@ -137,14 +168,18 @@ bool Graph::propagate(Vertex* currentVertex) {
             break;
         }
     }
-    cout << "currentVertex: " << *currentVertex << ", coloring it back to " << originalColor << endl;
-    cout << "returning " << returnValue << " at vertex: " << *currentVertex << endl;
+    // cout << "currentVertex: " << *currentVertex << ", coloring it back to " << originalColor << endl;
+    // cout << "returning " << returnValue << " at vertex: " << *currentVertex << endl;
     currentVertex->color = originalColor;                          // restore the color back
     currentVertex->unSetGlobalRef();                               // unmark the vertex
     if (!returnValue) {
         currentVertex->state = VERTEX_UNCOLORABLE;   // set the state of the vertex
+        _conflict_subgraphs.back().push_back(currentVertex);
     }
-    else currentVertex->state = VERTEX_COLORABLE;
+    else {
+        _temporary_colorable_vertexes.push_back(currentVertex);
+        currentVertex->state = VERTEX_COLORABLE;
+    }
     return returnValue;
 }
 
@@ -154,7 +189,7 @@ inline bool Graph::check(Vertex*& currentVertex, vector<bool>& color_checker) {
 
     // To check if the vertex is colorable
     for (auto it = _adjList[currentVertex->ID].begin(); it != _adjList[currentVertex->ID].end(); ++it) {
-        if (_vertex[*it]->color == UNDEF) continue;                                        // skip the vertexes that do not contribute to the conflict
+        if (_vertex[*it]->color == UNDEF) continue;   // skip the vertexes that do not contribute to the conflict
         if (_vertex[*it]->isGlobalRef()) {
             color_checker[int(_vertex[*it]->color)] = false;  // mark the used color
         }
@@ -171,6 +206,7 @@ inline bool Graph::check(Vertex*& currentVertex, vector<bool>& color_checker) {
         * this avoids going into a infinite loop                                      *
         ******************************************************************************/
         currentVertex->state = VERTEX_UNCOLORABLE;
+        _conflict_subgraphs.back().push_back(currentVertex);
         return false;
     }
     return true;

@@ -45,11 +45,12 @@ public:
     void              GetLatestConflictEdges  (vector<pair<int, int> >& cedges);
     void              reportConflictSubgraphs (ostream& os, string filename) const;
     void              runIdentification       ();
+    void              RemoveEdge              ();
     bool              propagate               (Vertex* currentVertex);
     inline bool       check                   (Vertex*& currentVertex, vector<bool>& LegalColor);
     
 
-    Vertex* operator [] (int idx) { assert(idx < _bfsList.size()); return _bfsList[idx]; }
+    Vertex* operator [] (int idx) { assert(size_t(idx) < _bfsList.size()); return _bfsList[idx]; }
 
 private:
     vector<vector<int> >       _adjList;            // adjacency list
@@ -60,8 +61,9 @@ private:
     stack<Vertex*>             _removed_vertexes;
 
     Vertex*                          _root;                  // this is for uncolorable subgraph identification
-    vector<vector<pair<int, int> > > _conflict_subgraphs;    // to store the conflict edges
-    vector<Vertex*>                  _traversed_vertexes;
+    vector<pair<int, int> >          _latest_conflict_edges;    // to store the conflict edges
+    vector<vector<Vertex*> >         _conflict_subgraphs;    // to store the conflict edges
+    vector<Vertex*>                  _temporary_colorable_vertexes;
 
     mutable bool          _bfsDone;
 
