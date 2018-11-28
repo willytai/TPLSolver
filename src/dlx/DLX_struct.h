@@ -20,6 +20,7 @@ public:
     void  initCell            ();
     void  removeConflictEdges (const vector<pair<int, int> >& Cedges);
     bool  isGoal              () const;
+    bool  inDLX               (Cell* c) const;
     Cell* GetHeader           () const;
 
     Cell* Column (const int& idx) const;

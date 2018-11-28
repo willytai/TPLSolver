@@ -14,7 +14,7 @@ AR        = ar cr
 ECHO      = /bin/echo
 
 CFLAGS = -O3 -Wall -std=c++11 $(PKGFLAG)
-CFLAGS = -g -Wall -DDEBUG -std=c++11 $(PKGFLAG)
+CFLAGS = -g -Wall -DDEBUG_MODE -std=c++11 $(PKGFLAG)
 
 .PHONY: depend extheader
 

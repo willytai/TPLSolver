@@ -24,14 +24,14 @@ int main(int argc, char *argv[])
         return 0;
     }
 
-    ExactCoverSolver solver;
+    ExactCoverSolver* solver = new ExactCoverSolver;
     usg.reset();
-    solver.InitByFile(file);
-    solver.Solve();
+    solver->InitByFile(file);
+    solver->Solve();
     if (!ofile.is_open()) 
-        solver.report(cout, argv[1]);
+        solver->report(cout, argv[1]);
     else
-        solver.report(ofile, argv[1]);
+        solver->report(ofile, argv[1]);
     usg.report(1, 1);
 
 #ifdef DEBUG_MODE
@@ -44,6 +44,7 @@ int main(int argc, char *argv[])
     cout << "size of EdgeCell:      " << sizeof(EdgeCell) << endl;
 #endif 
 
+    delete solver;
     return 0;
 
     /*Graph g;

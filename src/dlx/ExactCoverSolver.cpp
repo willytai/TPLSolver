@@ -93,6 +93,9 @@ void ExactCoverSolver::CoverAffectedCells(const Cell* refCell, stack<Cell*>& Aff
 void ExactCoverSolver::UNCoverAffectedCells(stack<Cell*>& AffectedCells) {
     while (!AffectedCells.empty()) {
         _dlx.recover(AffectedCells.top());
+#ifdef DEBUG_MODE_EXACTSOLVER
+        if (AffectedCells.top()->Type() == VERTEX_CELL) cout << "recovering vertex cell: " << *(AffectedCells.top()) << endl;
+#endif
         AffectedCells.pop();
     }
 }
@@ -116,12 +119,37 @@ SolverState ExactCoverSolver::X_star(int bfsIndex, bool recordPartialResult) {
     // check if there is any vertex that can be colored (only one color choice remains)
     // column with only one NormalCell
     Cell* PriorityColumnCell = FindPriorityColumn(_dlx.GetHeader());
-    Cell* TargetColumnCell   = (PriorityColumnCell ? PriorityColumnCell : _dlx.Column(_graph[bfsIndex]->ID));
 
     // if this happens, it means that after some edges removed by the identifier, some isolated vertex appears
     // therefore, there will be no need to consider the order of the vertex traversed after this point
     // just simply try to cover the column to the right of the _dlx header
-    if (size_t(bfsIndex) > _graph.size()-1) TargetColumnCell = _dlx.GetHeader()->right;
+    if (size_t(bfsIndex) > _graph.size()-1) {
+        PriorityColumnCell = _dlx.GetHeader()->right;
+#ifdef DEBUG_MODE
+        cout << "Toggling isolated vertex, ID: " << PriorityColumnCell->GetCorrespondVertex()->ID << endl;
+#endif
+    }
+
+    // otherwise, cover with bfs order
+    Cell* TargetColumnCell = PriorityColumnCell;
+    if (!PriorityColumnCell) {
+        TargetColumnCell = _dlx.Column(_graph[bfsIndex]->ID);
+    }
+    // maintain bfs order
+    else --bfsIndex;
+
+    // if this is false, it means that this column is covered preivously due to the sole choice that was available
+    // therefore, need to skip this vertex and go on
+    if (!_dlx.inDLX(TargetColumnCell)) {
+        return X_star(bfsIndex+1, recordPartialResult);
+    }
+
+
+#ifdef DEBUG_MODE_EXACTSOLVER
+    if (!PriorityColumnCell) cout << "bfsIndex : " << bfsIndex;
+    else cout << "priority taken, ";
+    cout << "  covering column " << *TargetColumnCell << endl;
+#endif
 
     // get related rows
     Cell* tmp = TargetColumnCell->down;

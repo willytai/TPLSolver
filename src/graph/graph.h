@@ -46,10 +46,10 @@ public:
     void              reportConflictSubgraphs (ostream& os, string filename) const;
     void              runIdentification       ();
     bool              propagate               (Vertex* currentVertex);
-    inline bool       check                   (Vertex*& currentVertex);
+    inline bool       check                   (Vertex*& currentVertex, vector<bool>& LegalColor);
     
 
-    Vertex* operator [] (int idx) { return _bfsList[idx]; }
+    Vertex* operator [] (int idx) { assert(idx < _bfsList.size()); return _bfsList[idx]; }
 
 private:
     vector<vector<int> >       _adjList;            // adjacency list
@@ -61,6 +61,7 @@ private:
 
     Vertex*                          _root;                  // this is for uncolorable subgraph identification
     vector<vector<pair<int, int> > > _conflict_subgraphs;    // to store the conflict edges
+    vector<Vertex*>                  _traversed_vertexes;
 
     mutable bool          _bfsDone;
 

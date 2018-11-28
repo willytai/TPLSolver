@@ -9,6 +9,10 @@ bool DancingLink::isGoal() const {
     return false;
 }
 
+bool DancingLink::inDLX(Cell* c) const {
+    return (c->left->right == c && c->right->left == c && c->up->down == c && c->down->up == c);
+}
+
 Cell* DancingLink::GetHeader() const {
     return _header;
 }
@@ -158,7 +162,7 @@ void DancingLink::removeConflictEdges(const vector<pair<int, int> >& Cedges) {
 }
 
 Cell* DancingLink::Column(const int& idx) const {
-    assert(idx);
+    assert(idx > 0);
     return _columnHeader[idx];
 }
 

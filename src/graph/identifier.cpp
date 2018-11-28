@@ -24,6 +24,14 @@ void Graph::runIdentification() {
     * the color of the vertexes will all be restored  *
     * and the detected conflict edges will be removed *
     **************************************************/
+    // reset all the vertexes to VERTEX_STATE_NOT_DETERMINED
+    for (auto it = _traversed_vertexes.begin(); it != _traversed_vertexes.end(); ++it) {
+        (*it)->state = VERTEX_STATE_NOT_DETERMINED;
+#ifdef DEBUG_MODE
+        cout << "reseting vertex " << *(*it) << " to state undetermined" << endl;
+#endif
+    }
+    _traversed_vertexes.clear();
     Vertex::setGlobalRef();
     _conflict_subgraphs.resize(_conflict_subgraphs.size()+1);
     propagate(_root);
@@ -68,20 +76,24 @@ bool Graph::propagate(Vertex* currentVertex) {
     if (currentVertex->state == VERTEX_COLORABLE)   return true;
     if (currentVertex->state == VERTEX_UNCOLORABLE) return false;
 
+    _traversed_vertexes.push_back(currentVertex); // need to reset the state to allow another traversal
     /***********************************************
     * To check if the vertex is uncolorlabe        *
     * refer to check(Vertex*& currentVertex) below *
     ***********************************************/
-    if (!check(currentVertex)) return false;
+    vector<bool> color_checker;
+    if (!check(currentVertex, color_checker)) return false;
 
     const Color originalColor = currentVertex->color;    // original color, needs to restore it back to allow further traversal
     currentVertex->setToGlobalRef();                     // mark the visited vertex
 
     bool returnValue = true;                             // this will be set to false if any propagate called bellow returns false
+    // for (int i = 1; i <= 3; ++i) {
+        // if (COLORS[i] == originalColor) continue;        // avoid its parent's color, i.e. don't search backwards
     for (int i = 1; i <= 3; ++i) {
-        if (COLORS[i] == originalColor) continue;        // avoid its parent's color, i.e. don't search backwards
+        if (!color_checker[i]) continue;
 
-        //cout << "vertex: " << *currentVertex << ", color " << COLORS[i] << "; ";
+        cout << "vertex: " << *currentVertex << ", color " << COLORS[i] << "; ";
 
         bool LegalColor = true;
         currentVertex->color = COLORS[i];                // set the color
@@ -107,8 +119,8 @@ bool Graph::propagate(Vertex* currentVertex) {
                 continue;
             }
 
-            //cout << "currentVertex: " << *currentVertex << ", trying color " << COLORS[i] << "; ";
-            //cout << "found conflict with vertex: " << *_vertex[*it] << ", propagate" << endl;
+            cout << "currentVertex: " << *currentVertex << ", trying color " << COLORS[i] << "; ";
+            cout << "found conflict with vertex: " << *_vertex[*it] << ", propagate" << endl;
 
             if (!propagate(_vertex[*it])) { // mark edge (currentVertex, *it) as a conflict edge
 #ifdef DEBUG_MODE
@@ -125,23 +137,27 @@ bool Graph::propagate(Vertex* currentVertex) {
             break;
         }
     }
-    //cout << "currentVertex: " << *currentVertex << ", coloring it back to " << originalColor << endl;
-    //cout << "returning " << returnValue << " at vertex: " << *currentVertex << endl;
+    cout << "currentVertex: " << *currentVertex << ", coloring it back to " << originalColor << endl;
+    cout << "returning " << returnValue << " at vertex: " << *currentVertex << endl;
     currentVertex->color = originalColor;                          // restore the color back
     currentVertex->unSetGlobalRef();                               // unmark the vertex
-    if (!returnValue) currentVertex->state = VERTEX_UNCOLORABLE;   // set the state of the vertex
+    if (!returnValue) {
+        currentVertex->state = VERTEX_UNCOLORABLE;   // set the state of the vertex
+    }
     else currentVertex->state = VERTEX_COLORABLE;
     return returnValue;
 }
 
-inline bool Graph::check(Vertex*& currentVertex) {
+inline bool Graph::check(Vertex*& currentVertex, vector<bool>& color_checker) {
     bool colorable  = false;
-    vector<bool> color_checker; color_checker.resize(5, true);   // index 0 is dummy node, index 4 is for UNDEF, only 1~3 is actually used
+    color_checker.resize(5, true);   // index 0 is dummy node, index 4 is for UNDEF, only 1~3 is actually used
 
     // To check if the vertex is colorable
     for (auto it = _adjList[currentVertex->ID].begin(); it != _adjList[currentVertex->ID].end(); ++it) {
         if (_vertex[*it]->color == UNDEF) continue;                                        // skip the vertexes that do not contribute to the conflict
-        if (_vertex[*it]->isGlobalRef()) color_checker[int(_vertex[*it]->color)] = false;  // mark the used color
+        if (_vertex[*it]->isGlobalRef()) {
+            color_checker[int(_vertex[*it]->color)] = false;  // mark the used color
+        }
     }
     for (size_t i = 1; i <= 3; ++i) {
         if (color_checker[i]) {
