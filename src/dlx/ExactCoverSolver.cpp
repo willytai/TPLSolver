@@ -125,7 +125,7 @@ SolverState ExactCoverSolver::X_star(int bfsIndex, bool recordPartialResult) {
     // just simply try to cover the column to the right of the _dlx header
     if (size_t(bfsIndex) > _graph.size()-1) {
         PriorityColumnCell = _dlx.GetHeader()->right;
-#ifdef DEBUG_MODE
+#ifdef DEBUG_MODE_EXACTSOLVER
         cout << "Toggling isolated vertex, ID: " << PriorityColumnCell->GetCorrespondVertex()->ID << endl;
 #endif
     }

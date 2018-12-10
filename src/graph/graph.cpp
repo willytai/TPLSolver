@@ -129,7 +129,7 @@ void Graph::RemoveEdge(int id_1, int id_2) {
     auto iter = _edge[id_1].find(id_2);
     if (iter == _edge[id_1].end()) { cerr << "edge (" << id_1 << ", " << id_2 << ") does not exist!" << endl; return; }
 
-#ifdef DEBUG_MODE
+#ifdef DEBUG_MODE_GRAPH
     cerr << "removing edge (" << id_1 << ", " << id_2 << ")!" << endl;
 #endif
 
@@ -154,7 +154,7 @@ void Graph::RemoveVertex(Vertex* v) {
         cerr << "vertex ID:" << *v << " is already removed!"  << endl;
         return;
     }
-#ifdef DEBUG_MODE
+#ifdef DEBUG_MODE_GRAPH
     cout << "Removing vertex ID:" << *v << endl;
 #endif
     _bfsDone       = false;
@@ -197,7 +197,7 @@ void Graph::RecoverVertex(int idx) {
 }
 
 void Graph::restore(Vertex* v) {
-#ifdef DEBUG_MODE
+#ifdef DEBUG_MODE_GRAPH
     cout << "Restoring vertex ID:" << *v << endl;
 #endif
     for (auto it = _adjList[v->ID].begin(); it != _adjList[v->ID].end(); ++it) {

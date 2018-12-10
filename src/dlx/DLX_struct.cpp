@@ -82,7 +82,7 @@ void DancingLink::initHeader(Graph& g) {
        Insert_Down(_rowHeader[3*i-0], _rowHeader[3*i-1]);
     }
 
-#ifdef DEBUG_MODE
+#ifdef DEBUG_MODE_DLX
     cout << endl << "Column Header" << endl;
     Cell* tmp = _header;
     while (true) {
@@ -125,7 +125,7 @@ void DancingLink::initCell() {
             Insert_Down(EdgeNode, above);
         }
     }
-#ifdef DEBUG_MODE
+#ifdef DEBUG_MODE_DLX
     cout << "Row Representation" << endl;
     for (unsigned int i = 1; i < _rowHeader.size(); ++i) {
         Cell* tmp = _rowHeader[i];

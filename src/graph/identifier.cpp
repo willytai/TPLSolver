@@ -155,7 +155,7 @@ bool Graph::propagate(Vertex* currentVertex) {
 
             if (!propagate(_vertex[*it])) { // mark edge (currentVertex, *it) as a conflict edge
 #ifdef DEBUG_MODE
-                cout << "(" << *currentVertex << ", " << *_vertex[*it] << ") is a conflict edge" << endl;
+                // cout << "(" << *currentVertex << ", " << *_vertex[*it] << ") is a conflict edge" << endl;
 #endif
                 // sort the vertex id in ascending order
                 // if (currentVertex->ID > *it) _conflict_subgraphs.back().push_back(pair<int, int>(*it, currentVertex->ID));
