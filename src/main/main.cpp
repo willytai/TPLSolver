@@ -26,7 +26,8 @@ int main(int argc, char *argv[])
 
     ExactCoverSolver* solver = new ExactCoverSolver;
     usg.reset();
-    solver->InitByFile(file);
+    // solver->InitByFile(file);
+    solver->InitByAdjList(file);
     solver->Solve();
     if (!ofile.is_open()) 
         solver->report(cout, argv[1]);

@@ -15,22 +15,25 @@ enum SolverState
 class ExactCoverSolver
 {
 public:
-    ExactCoverSolver() {}
+    ExactCoverSolver() : _component_id(0) {}
     ~ExactCoverSolver() {}
 
-    void InitByFile  (fstream& file);
-    void InitByGraph (Graph& g);
-    void Solve       ();
-    void report      (ostream& os, string filename);
+    void InitByFile    (fstream& file);
+    void InitByAdjList (fstream& file);
+    void InitByGraph   (Graph& g);
+    void Solve         ();
+    void report        (ostream& os, string filename);
 
 private:
     DancingLink     _dlx;
     Graph           _graph;
     vector<Cell*>   _solution;
+    int             _component_id;
 
     SolverState X_star (int bfsIndex, bool recordPartialResult);
 
     Cell* FindPriorityColumn   (const Cell* header);
+    void  solve                (int component_id);
     void  CoverAffectedCells   (const Cell*, stack<Cell*>&);
     void  UNCoverAffectedCells (stack<Cell*>&);
     void  IdentifyUncolorablePartAndRemove();

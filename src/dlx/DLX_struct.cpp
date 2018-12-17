@@ -1,4 +1,5 @@
 #include "DLX_struct.h"
+#include <stack>
 #include <cassert>
 #include <iostream>
 
@@ -17,16 +18,49 @@ Cell* DancingLink::GetHeader() const {
     return _header;
 }
 
-void DancingLink::init(Graph& g) {
-    initHeader(g);
-    initCell();
+void DancingLink::clear() {
+    // in X_star, the result will return imediately if a solution is found
+    // therefore, the dlx will be broken, making it unable to be tracked
+    /* stack<Cell*> S;
+    for (unsigned int i = 1; i < _rowHeader.size(); ++i) {
+        Cell* tmp = _rowHeader[i];
+        Cell* ref = tmp;
+        while (tmp->right != ref) {
+            S.push(tmp);
+            tmp = tmp->right;
+        }
+    }
+    while (!S.empty()) {
+        delete S.top();
+        S.pop();
+    }*/
+    for (unsigned int i = 0; i < _rowHeader.size(); ++i) {
+        delete _rowHeader[i];
+    }
+    for (unsigned int i = 0; i < _columnHeader.size(); ++i) {
+        if (!_columnHeader[i]) delete _columnHeader[i];
+    }
+    _columnHeader.clear();
+    _rowHeader.clear();
 }
 
-void DancingLink::initHeader(Graph& g) {
+void DancingLink::init(Graph& g, const int& component_id) {
+    cerr << "Initializing dlx...";
+    initHeader(g, component_id);
+    initCell();
+    cerr << "Done" << endl;
+}
+
+void DancingLink::initHeader(Graph& g, const int& component_id) {
     vector<Vertex*> vertexes;
     map<int, map<int, Edge*> > edges;
-    g.RetrieveVertexes(vertexes);
-    g.RetrieveEdges(edges);
+    g.RetrieveVertexes(vertexes, component_id);
+    g.RetrieveEdges(edges, component_id);
+
+#ifdef DEBUG_MODE_EDGES
+    // check if edges are legal
+    this->check_edge(edges);
+#endif
 
     /* Contstruct the column header
      * The IDs of the vertexes would be the 
@@ -37,23 +71,31 @@ void DancingLink::initHeader(Graph& g) {
      */
     _columnHeader.resize(1, NULL);
     _columnHeader[0] = new NormalCell();
-    for (unsigned int id = 1; id < vertexes.size(); ++id) {
-        _columnHeader.push_back(new VertexCell(vertexes[id]));
-        Insert_Right(_columnHeader[id], _columnHeader[id-1]);
+    int prev_id = 0;
+    // for (unsigned int id = 1; id < vertexes.size(); ++id) {
+    for (auto it = vertexes.begin(); it != vertexes.end(); ++it) {
+        if (_columnHeader.size() < (*it)->ID+1) _columnHeader.resize((*it)->ID+1);
+        _columnHeader[(*it)->ID] = new VertexCell(*it);
+        Insert_Right(_columnHeader[(*it)->ID], _columnHeader[prev_id]);
+        prev_id = (*it)->ID;
     }
+    /*for (auto it = vertexes.begin(); it != vertexes.end(); ++it) {
+        _columnHeader.push_back(new VertexCell(*it));
+        Insert_Right(_columnHeader[_columnHeader.size()-1], _columnHeader[_columnHeader.size()-2]);
+    }*/
     // for (unsigned int i = 0; i < edges.size(); ++i) {
     for (auto it = edges.begin(); it != edges.end(); ++it) {
         for (auto ti = (it->second).begin(); ti != (it->second).end(); ++ti) {
         // Cell* MainEdgeCell = new EdgeCell(edges[i], RED);
         Cell* MainEdgeCell = new EdgeCell(ti->second, RED);
         _columnHeader.push_back(MainEdgeCell);
-        Insert_Right(_columnHeader[_columnHeader.size()-1], _columnHeader[_columnHeader.size()-2]);
+        Insert_Right(_columnHeader[_columnHeader.size()-1], _columnHeader[prev_id]); prev_id = _columnHeader.size() - 1;
         // _columnHeader.push_back(new EdgeCell(edges[i], GREEN));
         _columnHeader.push_back(new EdgeCell(ti->second, GREEN));
-        Insert_Right(_columnHeader[_columnHeader.size()-1], _columnHeader[_columnHeader.size()-2]);
+        Insert_Right(_columnHeader[_columnHeader.size()-1], _columnHeader[prev_id]); prev_id = _columnHeader.size() - 1;
         // _columnHeader.push_back(new EdgeCell(edges[i], BLUE));
         _columnHeader.push_back(new EdgeCell(ti->second, BLUE));
-        Insert_Right(_columnHeader[_columnHeader.size()-1], _columnHeader[_columnHeader.size()-2]);
+        Insert_Right(_columnHeader[_columnHeader.size()-1], _columnHeader[prev_id]); prev_id = _columnHeader.size() - 1;
 
         // save the information to the corresponding VertexCell
         int vertex_id_1 = MainEdgeCell->GetCorrespondEdge()->v1_id;
@@ -71,15 +113,15 @@ void DancingLink::initHeader(Graph& g) {
      * the additional 1 is for the header of the whole dlx
      * the number of vertexes is actually vertexes.size()-1
      */
-    _rowHeader.resize(3*(vertexes.size()-1)+1, NULL);
+    _rowHeader.resize(3*(vertexes.size())+1, NULL);
     _rowHeader[0] = _columnHeader[0];
-    for (unsigned int i = 1; i < vertexes.size(); ++i) {
-       _rowHeader[3*i-2] = new RowHeaderCell(vertexes[i], RED);
-       Insert_Down(_rowHeader[3*i-2], _rowHeader[3*i-3]);
-       _rowHeader[3*i-1] = new RowHeaderCell(vertexes[i], GREEN);
-       Insert_Down(_rowHeader[3*i-1], _rowHeader[3*i-2]);
-       _rowHeader[3*i-0] = new RowHeaderCell(vertexes[i], BLUE);
-       Insert_Down(_rowHeader[3*i-0], _rowHeader[3*i-1]);
+    for (unsigned int i = 0; i < vertexes.size(); ++i) {
+       _rowHeader[3*i+1] = new RowHeaderCell(vertexes[i], RED);
+       Insert_Down(_rowHeader[3*i+1], _rowHeader[3*i+0]);
+       _rowHeader[3*i+2] = new RowHeaderCell(vertexes[i], GREEN);
+       Insert_Down(_rowHeader[3*i+2], _rowHeader[3*i+1]);
+       _rowHeader[3*i+3] = new RowHeaderCell(vertexes[i], BLUE);
+       Insert_Down(_rowHeader[3*i+3], _rowHeader[3*i+2]);
     }
 
 #ifdef DEBUG_MODE_DLX
@@ -135,6 +177,7 @@ void DancingLink::initCell() {
     cout << "Column representation" << endl;
     for (unsigned int i = 1; i < _columnHeader.size(); ++i) {
         Cell* tmp = _columnHeader[i];
+        if (!tmp) continue;
         while (tmp->down->Type() == NORMAL_CELL) { cout << *tmp << " "; tmp = tmp->down; }
         cout << *tmp << endl;
     } cout << endl;
@@ -150,7 +193,7 @@ void DancingLink::removeConflictEdges(const vector<pair<int, int> >& Cedges) {
                 this->removeEntireColumn(*iter);
                 this->removeEntireColumn((*iter)->right);
                 this->removeEntireColumn((*iter)->right->right);
-#ifdef DEBUG_MODE
+#ifdef DEBUG_MODE_DLX
                 cout << "column " << **iter << " removed" << endl;
                 cout << "column " << *((*iter)->right) << " removed" << endl;
                 cout << "column " << *((*iter)->right->right) << " removed" << endl;
@@ -162,7 +205,7 @@ void DancingLink::removeConflictEdges(const vector<pair<int, int> >& Cedges) {
 }
 
 Cell* DancingLink::Column(const int& idx) const {
-    assert(idx > 0);
+    assert(idx);
     return _columnHeader[idx];
 }
 
@@ -257,3 +300,27 @@ void DancingLink::removeEntireColumn(Cell* ref) {
     }
     this->remove(ref);
 }
+
+#ifdef DEBUG_MODE_EDGES
+void DancingLink::check_edge(map<int, map<int, Edge*> >& edges) {
+    for (auto it1 = edges.begin(); it1 != edges.end(); ++it1) {
+        const auto& key1 = (*it1).first;
+        const auto& value = (*it1).second;
+        for (auto it2 = value.begin(); it2 != value.end(); ++it2) {
+            const auto& key2 = (*it2).first;
+            auto check1 = edges.find(key2);
+            if (check1 == edges.end()) {
+                cout << "edges error1, " << key1 << ", " << key2 << endl;
+                assert(0);
+            }
+            auto check2 = (*check1).second.find(key1);
+            if (check2 == (*check1).second.end()) {
+                cout << "edges error2: " << key1 << ", " << key2 << endl;
+                assert(0);
+            }
+        }
+    }
+    cout << "Edge test passed" << endl;
+    exit(0);
+}
+#endif

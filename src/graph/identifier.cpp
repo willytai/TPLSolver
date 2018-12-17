@@ -19,7 +19,7 @@ void Graph::ApplySolution(const vector<Cell*>& sol, int RootID) {
     assert(_root);
 }
 
-void Graph::runIdentification() {
+void Graph::runIdentification(const int& component_id) {
     /**************************************************
     * the color of the vertexes will all be restored  *
     * and the detected conflict edges will be removed *
@@ -44,10 +44,15 @@ void Graph::runIdentification() {
     Vertex::setGlobalRef();
     _conflict_subgraphs.resize(_conflict_subgraphs.size()+1); // the container for the next subgraph
     this->propagate(_root);
-    this->RemoveEdge();
+    this->RemoveEdges(component_id);
+
+    cout << "New identified conflict vertexes" << endl;
+    for (auto it = _conflict_subgraphs.back().begin(); it != _conflict_subgraphs.back().end(); ++it)
+        cout << *(*it) << ' ';
+    cout << endl;
 
     // because some edges will be removed, need to re-run bfs
-    bfs();
+    bfs(component_id, -1);
 }
 
 void Graph::reportConflictSubgraphs(ostream& os, string filename) const {
@@ -76,7 +81,7 @@ void Graph::reportConflictSubgraphs(ostream& os, string filename) const {
     }
 }
 
-void Graph::RemoveEdge() {
+void Graph::RemoveEdges(const int& component_id) {
     /****************************************************************************
     * find all the conflict edges (formed by two adjacent uncolorbale vertexes) *
     ****************************************************************************/
@@ -95,7 +100,7 @@ void Graph::RemoveEdge() {
         }
     }
     for (auto it = _latest_conflict_edges.begin(); it != _latest_conflict_edges.end(); ++it) {
-        RemoveEdge((*it).first, (*it).second);
+        RemoveEdge((*it).first, (*it).second, component_id);
     }
 }
 

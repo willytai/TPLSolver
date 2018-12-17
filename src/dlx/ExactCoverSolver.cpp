@@ -4,37 +4,63 @@
 
 void ExactCoverSolver::InitByFile(fstream& file) {
     _graph.ContstructByFile(file);
-    InitByGraph(_graph);
-    _solution.clear();
+    //this->InitByGraph(_graph);
 }
 
-void ExactCoverSolver::InitByGraph(Graph& g) {
-    _dlx.init(g);
+void ExactCoverSolver::InitByAdjList(fstream& file) {
+    _graph.ContstructByAdjList(file);
 }
 
 void ExactCoverSolver::Solve() {
+    for (int i = 0; i < _graph.numComponents(); ++i) {
+#ifdef DEBUG_MODE_EDGES
+        if (i != 2) continue;
+#endif
+        cout << "Solving Component " << i << endl;
+        _component_id = i;
+        solve(i);
+        // if (i == 1) break;
+    }
+}
+
+void ExactCoverSolver::solve(int component_id) {
+
+    _dlx.clear();
+    _dlx.init(_graph, component_id);
+
+    _solution.clear();
+    cerr << endl << "Running X_star...";
     SolverState result = X_star(0, true);
+    cerr << "Done" << endl;
 
     while (result != SUCCESS) {
+#ifdef DEBUG_MODE_SOL
         cout << endl << "solution:" << endl;
         for (auto it = _solution.begin(); it != _solution.end(); ++it)
             cout << *(*it) << endl;
+#endif
         cout << "Conflict found, need to remove and keep on searching" << endl;
 
         IdentifyUncolorablePartAndRemove();
         _solution.clear();
+        cerr << endl << "Running X_star...";
         result = X_star(0, true);
+        cerr << "Done" << endl;
     }
 
+#ifdef DEBUG_MODE_SOL
     cout << endl << "solution:" << endl;
     for (auto it = _solution.begin(); it != _solution.end(); ++it)
         cout << *(*it) << endl;
-
+#endif
     if (result == SUCCESS) cout << "Success!" << endl;
 }
 
 void ExactCoverSolver::report(ostream& os, string filename) {
     _graph.reportConflictSubgraphs(os, " Filename: "+filename);
+    cout << endl << "Final solution:" << endl;
+    for (auto it = _solution.begin(); it != _solution.end(); ++it)
+        cout << *(*it) << endl;
 }
 
 void ExactCoverSolver::CoverAffectedCells(const Cell* refCell, stack<Cell*>& AffectedCells) {
@@ -123,7 +149,7 @@ SolverState ExactCoverSolver::X_star(int bfsIndex, bool recordPartialResult) {
     // if this happens, it means that after some edges removed by the identifier, some isolated vertex appears
     // therefore, there will be no need to consider the order of the vertex traversed after this point
     // just simply try to cover the column to the right of the _dlx header
-    if (size_t(bfsIndex) > _graph.size()-1) {
+    if (size_t(bfsIndex) > _graph.size(_component_id)-1) {
         PriorityColumnCell = _dlx.GetHeader()->right;
 #ifdef DEBUG_MODE_EXACTSOLVER
         cout << "Toggling isolated vertex, ID: " << PriorityColumnCell->GetCorrespondVertex()->ID << endl;
@@ -133,7 +159,8 @@ SolverState ExactCoverSolver::X_star(int bfsIndex, bool recordPartialResult) {
     // otherwise, cover with bfs order
     Cell* TargetColumnCell = PriorityColumnCell;
     if (!PriorityColumnCell) {
-        TargetColumnCell = _dlx.Column(_graph[bfsIndex]->ID);
+        TargetColumnCell = _dlx.Column(_graph.GetVByBFSIndex(_component_id, bfsIndex)->ID);
+        assert(TargetColumnCell);
     }
     // maintain bfs order
     else --bfsIndex;
@@ -164,7 +191,7 @@ SolverState ExactCoverSolver::X_star(int bfsIndex, bool recordPartialResult) {
             _solution.push_back(new RowHeaderCell(ConflictVertex, UNDEF));
         }
 
-        if (_graph.size() == _solution.size()) return CONFLICT_BUT_DONE;
+        if (_graph.size(_component_id) == _solution.size()) return CONFLICT_BUT_DONE;
         return CONFLICT_NOT_DONE;
     }
 
@@ -201,8 +228,12 @@ SolverState ExactCoverSolver::X_star(int bfsIndex, bool recordPartialResult) {
 
 void ExactCoverSolver::IdentifyUncolorablePartAndRemove() {
     _graph.ApplySolution(_solution, _solution.back()->GetCorrespondVertex()->ID);
-    _graph.runIdentification();
+    cerr << "Identifing uncolorable part...";
+    _graph.runIdentification(_component_id);
+    cerr << "Done" << endl;
     vector<pair<int, int> > ConflictEdges;
     _graph.GetLatestConflictEdges(ConflictEdges);
+    cerr << "Removing conflict edges...";
     _dlx.removeConflictEdges(ConflictEdges);
+    cerr << "Done" << endl;
 }

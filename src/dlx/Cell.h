@@ -93,6 +93,8 @@ struct EdgeCell: Cell
 struct NormalCell : Cell
 {
     // just an empty shell
+    NormalCell() {}
+    ~NormalCell() {}
     
     CellType Type ()             const { return NORMAL_CELL; }
     void     print (ostream& os) const { os << "<NormalCell>"; }
