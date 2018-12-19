@@ -13,8 +13,8 @@ CCC       = gcc
 AR        = ar cr
 ECHO      = /bin/echo
 
-CFLAGS = -g -Wall -DDEBUG_MODE_SOL -std=c++11 $(PKGFLAG)
 CFLAGS = -O3 -Wall -std=c++11 $(PKGFLAG)
+CFLAGS = -g -Wall -DDEBUG_MODE_SOL -DDEBUG_MODE_IDENT -DENABLE_PRIORITY_VERTEX -DDEBUG_XSTAR -std=c++11 $(PKGFLAG)
 
 .PHONY: depend extheader
 

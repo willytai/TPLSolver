@@ -127,8 +127,9 @@ bool Graph::propagate(Vertex* currentVertex) {
         // if (COLORS[i] == originalColor) continue;        // avoid its parent's color, i.e. don't search backwards
     for (int i = 1; i <= 3; ++i) {
         if (!color_checker[i]) continue;
-
-        // cout << "vertex: " << *currentVertex << ", color " << COLORS[i] << "; ";
+#ifdef DEBUG_MODE_IDENT
+        cout << "vertex: " << *currentVertex << ", color " << COLORS[i] << "; ";
+#endif
 
         bool LegalColor = true;
         currentVertex->color = COLORS[i];                // set the color
@@ -154,9 +155,10 @@ bool Graph::propagate(Vertex* currentVertex) {
             //     assert(0);
             //     continue;
             // }
-
-            // cout << "currentVertex: " << *currentVertex << ", trying color " << COLORS[i] << "; ";
-            // cout << "found conflict with vertex: " << *_vertex[*it] << ", propagate" << endl;
+#ifdef DEBUG_MODE_IDENT
+            cout << "currentVertex: " << *currentVertex << ", trying color " << COLORS[i] << "; ";
+            cout << "found conflict with vertex: " << *_vertex[*it] << ", propagate" << endl;
+#endif
 
             if (!propagate(_vertex[*it])) { // mark edge (currentVertex, *it) as a conflict edge
 #ifdef DEBUG_MODE
@@ -173,8 +175,10 @@ bool Graph::propagate(Vertex* currentVertex) {
             break;
         }
     }
-    // cout << "currentVertex: " << *currentVertex << ", coloring it back to " << originalColor << endl;
-    // cout << "returning " << returnValue << " at vertex: " << *currentVertex << endl;
+#ifdef DEBUG_MODE_IDENT
+    cout << "currentVertex: " << *currentVertex << ", coloring it back to " << originalColor << endl;
+    cout << "returning " << returnValue << " at vertex: " << *currentVertex << endl;
+#endif
     currentVertex->color = originalColor;                          // restore the color back
     currentVertex->unSetGlobalRef();                               // unmark the vertex
     if (!returnValue) {

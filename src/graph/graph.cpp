@@ -12,6 +12,27 @@ size_t Graph::size(const int& component_id) const {
 size_t Graph::numComponents() const {
     return _root_of_cc.size();
 }
+ 
+// this part is for graph visualization only
+void Graph::write_adjlist(ostream& os, vector<Cell*>& sol) {
+    this->RestoreEdges();
+    for (auto it = sol.begin(); it != sol.end(); ++it) {
+        Vertex* v = (*it)->GetCorrespondVertex();
+        os << v->ID << ":";
+        for (unsigned int i = 0; i < _adjList[v->ID].size(); ++i) {
+            if (_vertex[_adjList[v->ID][i]]->color == UNDEF) continue;
+            os << ' ' << _adjList[v->ID][i];
+        } os << endl;
+    }
+}
+
+void Graph::RestoreEdges() {
+    while (!_removed_edges.empty()) {
+        auto current = _removed_edges.top(); _removed_edges.pop();
+        _adjList[current->v1_id].push_back(current->v2_id);
+        _adjList[current->v2_id].push_back(current->v1_id);
+    }
+}
 
 void Graph::ContstructByFile(fstream& file) {
     string buffer;
@@ -277,6 +298,7 @@ void Graph::RemoveEdge(int id_1, int id_2, int component_id) {
 #endif
 
     // remove edge and revise adjacency list
+    _removed_edges.push(_edge[component_id][id_1][id_2]);
     _edge[component_id][id_1].erase(_edge[component_id][id_1].find(id_2));
     for (auto it = _adjList[id_1].begin(); it != _adjList[id_1].end(); ++it) {
         if (*it == id_2) { _adjList[id_1].erase(it); break; }
@@ -284,7 +306,6 @@ void Graph::RemoveEdge(int id_1, int id_2, int component_id) {
     for (auto it = _adjList[id_2].begin(); it != _adjList[id_2].end(); ++it) {
         if (*it == id_1) { _adjList[id_2].erase(it); break; }
     }
-    _removed_edges.push(_edge[component_id][id_1][id_2]);
 
     /*************************************************
     * it's OK not to change the order of the bfslist *

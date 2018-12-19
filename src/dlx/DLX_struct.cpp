@@ -42,9 +42,15 @@ void DancingLink::clear() {
     }
     _columnHeader.clear();
     _rowHeader.clear();
+#ifdef DEBUG_XSTAR
+    _cellCount = 0;
+#endif
 }
 
 void DancingLink::init(Graph& g, const int& component_id) {
+#ifdef DEBUG_XSTAR
+    _cellCount = 0;
+#endif
     cerr << "Initializing dlx...";
     initHeader(g, component_id);
     initCell();
@@ -147,6 +153,9 @@ void DancingLink::initCell() {
         Color target_color     = _rowHeader[i]->GetCellColor();
 
         Cell* VertexNode = new NormalCell();
+#ifdef DEBUG_XSTAR
+        ++_cellCount;
+#endif
         Insert_Right(VertexNode, _rowHeader[i]);
 
         Cell* above = _columnHeader[target_vertex_id];
@@ -158,6 +167,9 @@ void DancingLink::initCell() {
         _columnHeader[target_vertex_id]->GetEdgeCellPtr(EdgeCells);
         for (unsigned int i = 0; i < EdgeCells.size(); ++i) {
             Cell* EdgeNode = new NormalCell();
+#ifdef DEBUG_XSTAR
+            ++_cellCount;
+#endif
             Insert_Right(EdgeNode, left);
             left = EdgeNode;
 
@@ -245,11 +257,17 @@ void DancingLink::LR_remove(Cell* c) {
 void DancingLink::remove(Cell* c) {
     UD_remove(c);
     LR_remove(c);
+#ifdef DEBUG_XSTAR
+    if (c->Type() == NORMAL_CELL) --_cellCount;
+#endif
 }
 
 void DancingLink::recover(Cell* c) {
     UD_recover(c);
     LR_recover(c);
+#ifdef DEBUG_XSTAR
+    if (c->Type() == NORMAL_CELL) ++_cellCount;
+#endif
 }
 
 // recover virtical links

@@ -75,10 +75,17 @@ public:
     void check_edge(map<int, map<int, Edge*> >& edges);
 #endif
 
+#ifdef DEBUG_XSTAR
+    int cellcount() const { return _cellCount; }
+#endif
+
 
 private:
     vector<Cell*>   _columnHeader;
     vector<Cell*>   _rowHeader;
+#ifdef DEBUG_XSTAR
+    int             _cellCount;
+#endif
 };
 
 

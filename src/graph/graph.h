@@ -29,6 +29,7 @@ public:
     void   RetrieveEdges       (map<int, map<int, Edge*> >& vec, const int& component_id) const;
     void   GetBFSList          (vector<Vertex*>& vec, int component_id) const;
     void   RemoveEdge          (int id_1, int id_2, int component_id);
+    void   RestoreEdges        ();
     void   RemoveVertex        (Vertex* v);
     void   RecoverVertex       (Vertex* v);
     void   RemoveVertex        (int idx);
@@ -52,6 +53,9 @@ public:
     void              RemoveEdges             (const int& component_id);
     bool              propagate               (Vertex* currentVertex);
     inline bool       check                   (Vertex*& currentVertex, vector<bool>& LegalColor);
+
+    // this part is for graph visualization only
+    void write_adjlist(ostream& os, vector<Cell*>& sol);
 
 private:
     vector<vector<int> >                _adjList;      // adjacency list
