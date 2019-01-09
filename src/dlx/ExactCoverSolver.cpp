@@ -3,6 +3,8 @@
 #include <cassert>
 
 void ExactCoverSolver::InitByFile(fstream& file) {
+    cerr << "Method InitByFile(fstream& file) removed from ExactCoverSolver!" << endl;
+    assert(false);
     _graph.ContstructByFile(file);
     //this->InitByGraph(_graph);
 }
@@ -29,7 +31,7 @@ void ExactCoverSolver::solve(int component_id) {
     _dlx.clear();
     _dlx.init(_graph, component_id);
 
-    // _solution.clear();
+    _solution.clear();
     cerr << endl << "Running X_star..." << endl;
     SolverState result = X_star(0, true);
     cerr << endl << "Done" << endl;

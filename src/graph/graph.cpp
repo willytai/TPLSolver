@@ -35,6 +35,9 @@ void Graph::RestoreEdges() {
 }
 
 void Graph::ContstructByFile(fstream& file) {
+    cerr << "Method ContstructByFile(fstream& file) removed from Graph!" << endl;
+    assert(false);
+
     string buffer;
     if (!file.is_open()) return;
 
