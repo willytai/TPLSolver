@@ -22,7 +22,7 @@ void ExactCoverSolver::Solve() {
         cout << "Solving Component " << i << endl;
         _component_id = i;
         solve(i);
-        if (i == 0) break;
+        if (i == 1) break;
     }
 }
 
