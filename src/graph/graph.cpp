@@ -423,4 +423,12 @@ void Graph::identify_connected_component() {
     }
     for (unsigned int i = 0; i < _bfsList.size(); ++i)
         cout << "cc " << i << ": " << _bfsList[i].size() << endl;
+
+#ifdef DEBUG_MODE_IDENT
+    if (_bfsList.size() > 96) {
+        ::swap(_bfsList[0], _bfsList[96]);
+        ::swap(_root_of_cc[0], _root_of_cc[96]);
+        ::swap(_edge[0], _edge[96]);
+    }
+#endif
 }

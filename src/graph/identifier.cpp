@@ -123,8 +123,6 @@ bool Graph::propagate(Vertex* currentVertex) {
     currentVertex->setToGlobalRef();                     // mark the visited vertex
 
     bool returnValue = true;                             // this will be set to false if any propagate called bellow returns false
-    // for (int i = 1; i <= 3; ++i) {
-        // if (COLORS[i] == originalColor) continue;        // avoid its parent's color, i.e. don't search backwards
     for (int i = 1; i <= 3; ++i) {
         if (!color_checker[i]) continue;
 #ifdef DEBUG_MODE_IDENT
@@ -134,27 +132,35 @@ bool Graph::propagate(Vertex* currentVertex) {
         bool LegalColor = true;
         currentVertex->color = COLORS[i];                // set the color
 
+#ifdef DEBUG_MODE_IDENT
+        // check if after setting this color, any of the adjacent vertexes who were marked VERTEX_COLORABLE becomes uncolorable
+        bool skip = false;
+        for (auto it = _adjList[currentVertex->ID].begin(); it != _adjList[currentVertex->ID].end(); ++it) {
+            if (_vertex[*it]->state != VERTEX_COLORABLE) continue;
+            vector<bool> tmp;
+            if (!check(_vertex[*it], tmp)) {
+                cout << "currentVertex: " << *currentVertex << ", made vertex " << *_vertex[*it];
+                cout << " who was marked colorable uncolorable after setting its color to " << COLORS[i] << endl;
+
+                // don't know if this is correct //
+                // _vertex[*it]->state = VERTEX_UNCOLORABLE;
+                // don't know if this is correct //
+
+                skip = true;
+                break;
+            }
+        }
+        if (skip) continue;
+#endif
+
         for (auto it = _adjList[currentVertex->ID].begin(); it != _adjList[currentVertex->ID].end(); ++it) {
 
             // skip the non-conflict vertexes, vertexes that does not contribute to the conflict will be skipped as well (their colors would all be UNDEF)
             if (_vertex[*it]->color != currentVertex->color) continue;
-            
+
             // currentVertex would not be colorable with COLORS[i]
             LegalColor = false;
 
-            // if (_vertex[*it]->isGlobalRef()) {
-                //cout << "vertex: " << *(*it) << " is globalref; ";
-                /****************************************************************************************
-                * ignore the visited vertex whose color is COLORS[i]                                    *
-                * if 'break' instead of 'continue' is used, some conflict edges will not be collected   *
-                * fail_case_2 is an example                                                             *
-                * the color of vertex 3 and 6 would be COLORS[i], but only 3 is visited                 *
-                * normally we try a different color and see if the pattern works, but edge (current, 6) *
-                * needs to be collected first                                                           *
-                ****************************************************************************************/
-            //     assert(0);
-            //     continue;
-            // }
 #ifdef DEBUG_MODE_IDENT
             cout << "currentVertex: " << *currentVertex << ", trying color " << COLORS[i] << "; ";
             cout << "found conflict with vertex: " << *_vertex[*it] << ", propagate" << endl;
@@ -209,27 +215,7 @@ inline bool Graph::check(Vertex*& currentVertex, vector<bool>& color_checker) {
             break;
         }
     }
-    
-    /**********************************************************************
-    *            check if the color left in checker is legal             *
-    **********************************************************************/
-    /*
-    for (unsigned int i = 1; i <= 3; ++i) {
-        if (!color_checker[i]) continue;
-        // check if the color makes any of the adjacent vertexes which was set to VERTEX_COLORABLE becomes uncolorable
-        Color originalColor = currentVertex->color;
-        currentVertex->color = Color(i);
-        for (auto it = _adjList[currentVertex->ID].begin(); it != _adjList[currentVertex->ID].end(); ++it) {
-            if (_vertex[*it]->color == UNDEF) continue;
-            if (this->not_colorable_due_to_ident_process(*it)) {
-                color_checker[i] = false;
-                // assert(false);
-                break;
-            }
-        }
-        currentVertex->color = originalColor;
-    }
-    */
+
     if (!colorable) {
         /******************************************************************************
         * if a vertex is found to be uncolorable, do not keep searching, return false *

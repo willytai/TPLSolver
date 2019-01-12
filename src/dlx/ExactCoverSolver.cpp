@@ -152,7 +152,14 @@ Cell* ExactCoverSolver::FindPriorityColumn(const Cell* header) {
 SolverState ExactCoverSolver::X_star(int bfsIndex, bool recordPartialResult) {
     if (_dlx.isGoal()) return SUCCESS;
 #ifdef DEBUG_XSTAR
-    cout << '\r' << right << setw(6) << _dlx.cellcount() << " cells left in dlx, solving CC " << _component_id << flush;
+    // cout << '\r' << right << setw(6) << _dlx.cellcount() << " cells left in dlx, solving CC " << setw(4) << _component_id << '/' << _graph.numComponents()-1 << flush;
+    cout << right << setw(6) << _dlx.cellcount() << " cells left in dlx, solving CC " << setw(4) << _component_id << '/' << _graph.numComponents()-1 << endl;
+    Cell* mp = _dlx.GetHeader();
+    while (mp->right->Type() == VERTEX_CELL) {
+        cout << *mp << ' ';
+        mp = mp->right;
+    }
+    cout << endl << endl;
 #endif
 
     /*******************************/
