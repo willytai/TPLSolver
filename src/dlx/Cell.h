@@ -100,4 +100,14 @@ struct NormalCell : Cell
     void     print (ostream& os) const { os << "<NormalCell>"; }
 };
 
+struct DLXHeaderCell : Cell
+{
+    // just an empty shell
+    DLXHeaderCell() {}
+    ~DLXHeaderCell() {}
+    
+    CellType Type ()             const { return NORMAL_CELL; }
+    void     print (ostream& os) const { os << "<DLXHeaderCell>"; }
+};
+
 #endif /* CELL_H */

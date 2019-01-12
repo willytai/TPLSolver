@@ -52,6 +52,7 @@ void DancingLink::init(Graph& g, const int& component_id) {
     _cellCount = 0;
 #endif
     cerr << "Initializing dlx...";
+    _header = new DLXHeaderCell();
     initHeader(g, component_id);
     initCell();
     cerr << "Done" << endl;
@@ -71,18 +72,18 @@ void DancingLink::initHeader(Graph& g, const int& component_id) {
     /* Contstruct the column header
      * The IDs of the vertexes would be the 
      * indexes of _columnHeader
-     * i.e. _columnHeader[1] stores the vertex with ID = 1
-     * _columnHeader[0] is reserved for the header of the whole
-     * DancingLink structure
+     * i.e. _columnHeader[0] stores the vertex with ID = 0
+     * _header is the header of the whole DancingLink structure
      */
-    _columnHeader.resize(1, NULL);
-    _columnHeader[0] = new NormalCell();
-    int prev_id = 0;
+    int prev_id = -1;
     // for (unsigned int id = 1; id < vertexes.size(); ++id) {
     for (auto it = vertexes.begin(); it != vertexes.end(); ++it) {
         if (_columnHeader.size() < (*it)->ID+1) _columnHeader.resize((*it)->ID+1);
         _columnHeader[(*it)->ID] = new VertexCell(*it);
-        Insert_Right(_columnHeader[(*it)->ID], _columnHeader[prev_id]);
+        if (prev_id == -1)
+            Insert_Right(_columnHeader[(*it)->ID], _header);
+        else
+            Insert_Right(_columnHeader[(*it)->ID], _columnHeader[prev_id]);
         prev_id = (*it)->ID;
     }
     /*for (auto it = vertexes.begin(); it != vertexes.end(); ++it) {
@@ -114,20 +115,20 @@ void DancingLink::initHeader(Graph& g, const int& component_id) {
     /* construct the row header
      * each vertexes will need three different rows
      * to represent three different color
-     * let _rowHeader[0] be _header i.e. _columnHeader[0]
-     * resize to number of vertexes + 1
-     * the additional 1 is for the header of the whole dlx
-     * the number of vertexes is actually vertexes.size()-1
+     * let _rowHeader[0] link upward to _header
+     * resize to number of 3*vertexes
      */
-    _rowHeader.resize(3*(vertexes.size())+1, NULL);
-    _rowHeader[0] = _columnHeader[0];
+    _rowHeader.resize(3*vertexes.size(), NULL);
     for (unsigned int i = 0; i < vertexes.size(); ++i) {
-       _rowHeader[3*i+1] = new RowHeaderCell(vertexes[i], RED);
-       Insert_Down(_rowHeader[3*i+1], _rowHeader[3*i+0]);
-       _rowHeader[3*i+2] = new RowHeaderCell(vertexes[i], GREEN);
-       Insert_Down(_rowHeader[3*i+2], _rowHeader[3*i+1]);
-       _rowHeader[3*i+3] = new RowHeaderCell(vertexes[i], BLUE);
-       Insert_Down(_rowHeader[3*i+3], _rowHeader[3*i+2]);
+        _rowHeader[3*i+0] = new RowHeaderCell(vertexes[i], RED);
+        if (!i)
+            Insert_Down(_rowHeader[3*i+0], _header);
+        else
+            Insert_Down(_rowHeader[3*i+0], _rowHeader[3*i-1]);
+        _rowHeader[3*i+1] = new RowHeaderCell(vertexes[i], GREEN);
+        Insert_Down(_rowHeader[3*i+1], _rowHeader[3*i+0]);
+        _rowHeader[3*i+2] = new RowHeaderCell(vertexes[i], BLUE);
+        Insert_Down(_rowHeader[3*i+2], _rowHeader[3*i+1]);
     }
 
 #ifdef DEBUG_MODE_DLX
@@ -148,7 +149,7 @@ void DancingLink::initHeader(Graph& g, const int& component_id) {
 }
 
 void DancingLink::initCell() {
-    for (unsigned int i = 1; i < _rowHeader.size(); ++i) {
+    for (unsigned int i = 0; i < _rowHeader.size(); ++i) {
         int   target_vertex_id = _rowHeader[i]->GetCorrespondVertex()->ID;
         Color target_color     = _rowHeader[i]->GetCellColor();
 
@@ -181,13 +182,13 @@ void DancingLink::initCell() {
     }
 #ifdef DEBUG_MODE_DLX
     cout << "Row Representation" << endl;
-    for (unsigned int i = 1; i < _rowHeader.size(); ++i) {
+    for (unsigned int i = 0; i < _rowHeader.size(); ++i) {
         Cell* tmp = _rowHeader[i];
         while (tmp->right->Type() != ROW_HEADER_CELL) { cout << *tmp << " "; tmp = tmp->right; }
         cout << *tmp << endl;
     } cout << endl;
     cout << "Column representation" << endl;
-    for (unsigned int i = 1; i < _columnHeader.size(); ++i) {
+    for (unsigned int i = 0; i < _columnHeader.size(); ++i) {
         Cell* tmp = _columnHeader[i];
         if (!tmp) continue;
         while (tmp->down->Type() == NORMAL_CELL) { cout << *tmp << " "; tmp = tmp->down; }
@@ -217,12 +218,12 @@ void DancingLink::removeConflictEdges(const vector<pair<int, int> >& Cedges) {
 }
 
 Cell* DancingLink::Column(const int& idx) const {
-    assert(idx);
+    assert(idx>=0);
     return _columnHeader[idx];
 }
 
 Cell* DancingLink::Row(const int& idx) const {
-    assert(idx);
+    assert(idx>=0);
     return _rowHeader[idx];
 }
 

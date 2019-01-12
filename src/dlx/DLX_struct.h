@@ -9,7 +9,6 @@ using namespace std;
 
 class DancingLink
 {
-#define _header _columnHeader[0]
 public:
     DancingLink() {}
     DancingLink(Graph& g, int component_id) { init(g, component_id); }
@@ -83,6 +82,7 @@ public:
 private:
     vector<Cell*>   _columnHeader;
     vector<Cell*>   _rowHeader;
+    Cell*           _header;
 #ifdef DEBUG_XSTAR
     int             _cellCount;
 #endif

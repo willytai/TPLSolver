@@ -54,6 +54,9 @@ public:
     bool              propagate               (Vertex* currentVertex);
     inline bool       check                   (Vertex*& currentVertex, vector<bool>& LegalColor);
 
+    inline bool       not_colorable_due_to_ident_process (int& id);
+    inline bool       not_colorable_due_to_ident_process (Vertex*& v);
+
     // this part is for graph visualization only
     void write_adjlist(ostream& os, vector<Cell*>& sol);
 

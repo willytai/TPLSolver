@@ -14,6 +14,10 @@ void ExactCoverSolver::InitByAdjList(fstream& file) {
 }
 
 void ExactCoverSolver::Solve() {
+#ifndef ENABLE_PRIORITY_VERTEX
+    cerr << "[Warning] Priority Column Disabled" << endl;
+#endif
+    int target_CC = 0;
     _solution.clear();
     for (int i = 0; i < _graph.numComponents(); ++i) {
 #ifdef DEBUG_MODE_EDGES
@@ -22,7 +26,7 @@ void ExactCoverSolver::Solve() {
         cout << "Solving Component " << i << endl;
         _component_id = i;
         solve(i);
-        if (i == 1) break;
+        // if (i == 2) break;
     }
 }
 
@@ -148,13 +152,13 @@ Cell* ExactCoverSolver::FindPriorityColumn(const Cell* header) {
 SolverState ExactCoverSolver::X_star(int bfsIndex, bool recordPartialResult) {
     if (_dlx.isGoal()) return SUCCESS;
 #ifdef DEBUG_XSTAR
-    cout << '\r' << right << setw(6) << _dlx.cellcount() << " cells left in dlx" << flush;
+    cout << '\r' << right << setw(6) << _dlx.cellcount() << " cells left in dlx, solving CC " << _component_id << flush;
 #endif
 
     /*******************************/
     /* cover vertex with bfs order */
     /*******************************/
-#ifdef ENALBLE_PRIORITY_VERTEX
+#ifdef ENABLE_PRIORITY_VERTEX
     // cover target column
     // check if there is any vertex that can be colored (only one color choice remains)
     // column with only one NormalCell

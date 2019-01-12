@@ -81,30 +81,27 @@ void Graph::ContstructByAdjList(fstream& file) {
     if (!file.is_open()) return;
 
     while (getline(file, buffer)) {
-        
         // adjust the size of the _adjList
-        // increase the vertex id by 1 because it starts from 0
-        if (_adjList.size() < RowNum+2) {
-            _adjList.resize(RowNum+2);
-            _vertex.resize(RowNum+2);
+        if (_adjList.size() < RowNum+1) {
+            _adjList.resize(RowNum+1);
+            _vertex.resize(RowNum+1);
         }
 
         istringstream iss(buffer);
         string token;
-        int id_1 = RowNum + 1;
+        int id_1 = RowNum;
         while (iss >> token) {
-            int id_2 = stoi(token) + 1;
+            int id_2 = stoi(token);
             _adjList[id_1].push_back(id_2);
         }
-        _vertex[RowNum+1] = new Vertex(RowNum+1);
+        _vertex[RowNum] = new Vertex(RowNum);
         ++RowNum;
     }
-    _vertex[0] = NULL;
 #ifdef DEBUG_MODE_GRAPH
     for (unsigned int i = 0; i < _adjList.size(); ++i) {
-        cout << i << ':';
+        // cout << i << ':';
         for (auto ti = _adjList[i].begin(); ti != _adjList[i].end(); ++ti) {
-            cout << ' ' << *ti;
+            cout << *ti << ' ';
         } cout << endl;
     }
 #endif
@@ -410,4 +407,20 @@ void Graph::identify_connected_component() {
         }
     }
 #endif
+
+    // sort the CCs is ascendig order in terms of the number of vertexes
+    // very stupid
+    assert (_bfsList.size() == _root_of_cc.size());
+    assert (_edge.size() == _bfsList.size());
+    for (unsigned int i = 0; i < _root_of_cc.size()-1; ++i) {
+        for (unsigned int j = i + 1; j < _root_of_cc.size(); ++j) {
+            if (_bfsList[i].size() > _bfsList[j].size()) {
+                ::swap(_bfsList[i], _bfsList[j]);
+                ::swap(_root_of_cc[i], _root_of_cc[j]);
+                ::swap(_edge[i], _edge[j]);
+            }
+        }
+    }
+    for (unsigned int i = 0; i < _bfsList.size(); ++i)
+        cout << "cc " << i << ": " << _bfsList[i].size() << endl;
 }

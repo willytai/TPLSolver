@@ -15,7 +15,6 @@ void Graph::ApplySolution(const vector<Cell*>& sol, int RootID) {
         _vertex[(*it)->GetCorrespondVertex()->ID]->color = (*it)->GetCellColor();
     }
     _root = _vertex[RootID];
-    assert(!_vertex[0]);
     assert(_root);
 }
 
@@ -47,6 +46,7 @@ void Graph::runIdentification(const int& component_id) {
     this->RemoveEdges(component_id);
 
     cout << "New identified conflict vertexes" << endl;
+    assert(_conflict_subgraphs.back().size());
     for (auto it = _conflict_subgraphs.back().begin(); it != _conflict_subgraphs.back().end(); ++it)
         cout << *(*it) << ' ';
     cout << endl;
@@ -209,6 +209,27 @@ inline bool Graph::check(Vertex*& currentVertex, vector<bool>& color_checker) {
             break;
         }
     }
+    
+    /**********************************************************************
+    *            check if the color left in checker is legal             *
+    **********************************************************************/
+    /*
+    for (unsigned int i = 1; i <= 3; ++i) {
+        if (!color_checker[i]) continue;
+        // check if the color makes any of the adjacent vertexes which was set to VERTEX_COLORABLE becomes uncolorable
+        Color originalColor = currentVertex->color;
+        currentVertex->color = Color(i);
+        for (auto it = _adjList[currentVertex->ID].begin(); it != _adjList[currentVertex->ID].end(); ++it) {
+            if (_vertex[*it]->color == UNDEF) continue;
+            if (this->not_colorable_due_to_ident_process(*it)) {
+                color_checker[i] = false;
+                // assert(false);
+                break;
+            }
+        }
+        currentVertex->color = originalColor;
+    }
+    */
     if (!colorable) {
         /******************************************************************************
         * if a vertex is found to be uncolorable, do not keep searching, return false *
@@ -219,4 +240,21 @@ inline bool Graph::check(Vertex*& currentVertex, vector<bool>& color_checker) {
         return false;
     }
     return true;
+}
+
+inline bool Graph::not_colorable_due_to_ident_process(int& id) {
+    return not_colorable_due_to_ident_process(_vertex[id]);
+}
+
+inline bool Graph::not_colorable_due_to_ident_process(Vertex*& v) {
+    bool color_checker[] = {true, true, true, true};
+    for (auto it = _adjList[v->ID].begin(); it != _adjList[v->ID].end(); ++it) {
+        if (_vertex[*it]->color == UNDEF) continue;
+        if (!_vertex[*it]->isGlobalRef()) continue;
+        color_checker[int(_vertex[*it]->color)] = false;
+        if (color_checker[1] == false && color_checker[2] == false && color_checker[3] == false) {
+            if (v->state == VERTEX_COLORABLE) return true;
+        }
+    }
+    return false;
 }
