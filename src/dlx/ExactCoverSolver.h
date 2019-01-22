@@ -30,13 +30,17 @@ private:
     vector<Cell*>   _solution;
     int             _component_id;
 
-    SolverState X_star (int bfsIndex, bool recordPartialResult);
+    SolverState X_star (int bfsIndex, bool recordPartialResult, int Depth);
 
     Cell* FindPriorityColumn   (const Cell* header);
     void  solve                (int component_id);
     void  CoverAffectedCells   (const Cell*, stack<Cell*>&);
     void  UNCoverAffectedCells (stack<Cell*>&);
     void  IdentifyUncolorablePartAndRemove();
+
+#ifdef DEBUG_XSTAR
+    void print() const;
+#endif
 };
 
 #endif /* EXACT_COVER_SOLVER_H */
