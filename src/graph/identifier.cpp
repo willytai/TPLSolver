@@ -143,7 +143,7 @@ bool Graph::propagate(Vertex* currentVertex) {
                 cout << " who was marked colorable uncolorable after setting its color to " << COLORS[i] << endl;
 
                 // don't know if this is correct //
-                // _vertex[*it]->state = VERTEX_UNCOLORABLE;
+                _vertex[*it]->state = VERTEX_UNCOLORABLE;
                 // don't know if this is correct //
 
                 skip = true;

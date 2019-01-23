@@ -32,11 +32,13 @@ private:
 
     SolverState X_star (int bfsIndex, bool recordPartialResult, int Depth);
 
-    Cell* FindPriorityColumn   (const Cell* header);
-    void  solve                (int component_id);
-    void  CoverAffectedCells   (const Cell*, stack<Cell*>&);
-    void  UNCoverAffectedCells (stack<Cell*>&);
+    Cell* FindPriorityColumn      (const Cell* header);
+    void  solve                   (int component_id);
+    void  CoverAffectedCells      (const Cell*, stack<Cell*>&);
+    void  CoverAffectedCells_Hard (const Cell*);
+    void  UNCoverAffectedCells    (stack<Cell*>&);
     void  IdentifyUncolorablePartAndRemove();
+    void  ApplySolution();
 
 #ifdef DEBUG_XSTAR
     void print() const;
