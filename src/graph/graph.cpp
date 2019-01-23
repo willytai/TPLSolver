@@ -408,6 +408,7 @@ void Graph::identify_connected_component() {
     }
 #endif
 
+    // return;
     // sort the CCs is ascendig order in terms of the number of vertexes
     // very stupid
     assert (_bfsList.size() == _root_of_cc.size());
