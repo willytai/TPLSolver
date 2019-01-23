@@ -386,7 +386,7 @@ void Graph::identify_connected_component() {
     int CC_count = 0;
     _predecessor = new int[_vertex.size()];
     for (unsigned int i = 0; i < _vertex.size(); ++i) _predecessor[i] = -1;
-    for (unsigned int v = 1; v < _vertex.size(); ++v) {
+    for (unsigned int v = 0; v < _vertex.size(); ++v) {
         if (_predecessor[v] == -1) {
             // cerr << "bfs...";
             _root_of_cc.push_back(bfs(CC_count++, v));
@@ -425,11 +425,11 @@ void Graph::identify_connected_component() {
     for (unsigned int i = 0; i < _bfsList.size(); ++i)
         cout << "cc " << i << ": " << _bfsList[i].size() << endl;
 
-#ifdef DEBUG_MODE_IDENT
-    if (_bfsList.size() > 96) {
-        ::swap(_bfsList[0], _bfsList[96]);
-        ::swap(_root_of_cc[0], _root_of_cc[96]);
-        ::swap(_edge[0], _edge[96]);
-    }
-#endif
+// #ifdef DEBUG_MODE_IDENT
+//     if (_bfsList.size() > 96) {
+//         ::swap(_bfsList[0], _bfsList[96]);
+//         ::swap(_root_of_cc[0], _root_of_cc[96]);
+//         ::swap(_edge[0], _edge[96]);
+//     }
+// #endif
 }

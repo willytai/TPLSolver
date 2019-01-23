@@ -48,8 +48,8 @@ void ExactCoverSolver::solve(int component_id) {
         cout << "Conflict found, need to remove and keep on searching" << endl;
 
         IdentifyUncolorablePartAndRemove();
-        this->ApplySolution();
-        // _solution.clear();
+        // this->ApplySolution();
+        _solution.clear();
 
         // _dlx.clear();
         // _dlx.init(_graph, component_id);
