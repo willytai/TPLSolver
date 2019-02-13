@@ -29,8 +29,9 @@ int main(int argc, char *argv[])
     // solver->InitByFile(file);
     solver->InitByAdjList(file);
     solver->Solve();
+    ostream NullStream(NULL); // nothing will be printed if this is used as an ostream obj
     if (!ofile.is_open()) 
-        solver->report(cout, argv[1]);
+        solver->report(NullStream, argv[1]);
     else
         solver->report(ofile, argv[1]);
     usg.report(1, 1);

@@ -30,7 +30,8 @@ void ExactCoverSolver::Solve() {
 }
 
 void ExactCoverSolver::report(ostream& os, string filename) {
-    _graph.reportConflictSubgraphs(os, " Filename: "+filename);
+    _graph.reportConflictSubgraphs(os,   " Filename: "+filename);
+    _graph.reportConflictSubgraphs(cout, " Filename: "+filename);
     cout << endl << "Final solution:" << endl;
     for (int i = 0; i < _solution.size(); ++i)
         _graph.ApplySolution(_solution[i], 1); // root id doesn't matter
