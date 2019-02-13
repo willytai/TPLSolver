@@ -19,6 +19,8 @@ Cell* DancingLink::GetHeader() const {
 }
 
 void DancingLink::clear() {
+    cerr << "Method DancingLink::clear() disabled!" << endl;
+    return;
     // in X_star, the result will return imediately if a solution is found
     // therefore, the dlx will be broken, making it unable to be tracked
     /* stack<Cell*> S;

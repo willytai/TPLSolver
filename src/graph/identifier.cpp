@@ -26,15 +26,15 @@ void Graph::runIdentification(const int& component_id) {
     // reset all the vertexes to VERTEX_STATE_NOT_DETERMINED
     for (auto it = _temporary_colorable_vertexes.begin(); it != _temporary_colorable_vertexes.end(); ++it) {
         (*it)->state = VERTEX_STATE_NOT_DETERMINED;
-#ifdef DEBUG_MODE
-        cout << "reseting vertex " << *(*it) << " to state undetermined" << endl;
+#ifdef DEBUG_MODE_IDENT
+        // cout << "reseting vertex " << *(*it) << " to state undetermined" << endl;
 #endif
     }
     if (_conflict_subgraphs.size()) {
         for (auto it = _conflict_subgraphs.back().begin(); it != _conflict_subgraphs.back().end(); ++it) {
             (*it)->state = VERTEX_STATE_NOT_DETERMINED;
-#ifdef DEBUG_MODE
-            cout << "reseting vertex " << *(*it) << " to state undetermined" << endl;
+#ifdef DEBUG_MODE_IDENT
+            // cout << "reseting vertex " << *(*it) << " to state undetermined" << endl;
 #endif
         }
     }
@@ -126,7 +126,7 @@ bool Graph::propagate(Vertex* currentVertex) {
     for (int i = 1; i <= 3; ++i) {
         if (!color_checker[i]) continue;
 #ifdef DEBUG_MODE_IDENT
-        cout << "vertex: " << *currentVertex << ", color " << COLORS[i] << "; ";
+        // cout << "vertex: " << *currentVertex << ", color " << COLORS[i] << "; ";
 #endif
 
         bool LegalColor = true;
@@ -139,8 +139,8 @@ bool Graph::propagate(Vertex* currentVertex) {
             if (_vertex[*it]->state != VERTEX_COLORABLE) continue;
             vector<bool> tmp;
             if (!check(_vertex[*it], tmp)) {
-                cout << "currentVertex: " << *currentVertex << ", made vertex " << *_vertex[*it];
-                cout << " who was marked colorable uncolorable after setting its color to " << COLORS[i] << endl;
+                // cout << "currentVertex: " << *currentVertex << ", made vertex " << *_vertex[*it];
+                // cout << " who was marked colorable uncolorable after setting its color to " << COLORS[i] << endl;
 
                 // don't know if this is correct //
                 _vertex[*it]->state = VERTEX_UNCOLORABLE;
@@ -162,8 +162,8 @@ bool Graph::propagate(Vertex* currentVertex) {
             LegalColor = false;
 
 #ifdef DEBUG_MODE_IDENT
-            cout << "currentVertex: " << *currentVertex << ", trying color " << COLORS[i] << "; ";
-            cout << "found conflict with vertex: " << *_vertex[*it] << ", propagate" << endl;
+            // cout << "currentVertex: " << *currentVertex << ", trying color " << COLORS[i] << "; ";
+            // cout << "found conflict with vertex: " << *_vertex[*it] << ", propagate" << endl;
 #endif
 
             if (!propagate(_vertex[*it])) { // mark edge (currentVertex, *it) as a conflict edge
@@ -182,8 +182,8 @@ bool Graph::propagate(Vertex* currentVertex) {
         }
     }
 #ifdef DEBUG_MODE_IDENT
-    cout << "currentVertex: " << *currentVertex << ", coloring it back to " << originalColor << endl;
-    cout << "returning " << returnValue << " at vertex: " << *currentVertex << endl;
+    // cout << "currentVertex: " << *currentVertex << ", coloring it back to " << originalColor << endl;
+    // cout << "returning " << returnValue << " at vertex: " << *currentVertex << endl;
 #endif
     currentVertex->color = originalColor;                          // restore the color back
     currentVertex->unSetGlobalRef();                               // unmark the vertex

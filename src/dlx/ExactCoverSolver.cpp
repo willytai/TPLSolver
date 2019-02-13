@@ -17,68 +17,33 @@ void ExactCoverSolver::Solve() {
 #ifndef ENABLE_PRIORITY_VERTEX
     cerr << "[Warning] Priority Column Disabled" << endl;
 #endif
-    _solution.clear();
+    _solution.resize(_graph.numComponents());
     for (int i = 0; i < _graph.numComponents(); ++i) {
 #ifdef DEBUG_MODE_EDGES
         if (i != 2) continue;
 #endif
-        cout << "Solving Component " << i << endl;
+        cout << "Solving Component " << i << ", " << _graph.size(i) << " vertices" << endl;
         _component_id = i;
         solve(i);
         // if (i == 2) break;
     }
 }
 
-void ExactCoverSolver::solve(int component_id) {
-
-    _dlx.clear();
-    _dlx.init(_graph, component_id);
-
-    _solution.clear();
-    cerr << endl << "Running X_star..." << endl;
-    SolverState result = X_star(0, true, 0);
-    cerr << endl << "Done" << endl;
-
-    while (result != SUCCESS) {
-#ifdef DEBUG_MODE_SOL
-        cout << endl << "solution:" << endl;
-        for (auto it = _solution.begin(); it != _solution.end(); ++it)
-            cout << *(*it) << endl;
-#endif
-        cout << "Conflict found, need to remove and keep on searching" << endl;
-
-        IdentifyUncolorablePartAndRemove();
-        // this->ApplySolution();
-        _solution.clear();
-
-        // _dlx.clear();
-        // _dlx.init(_graph, component_id);
-
-        cerr << endl << "Running X_star..." << endl;
-        result = X_star(0, true, 0);
-        cerr << endl << "Done" << endl;
-    }
-
-#ifdef DEBUG_MODE_SOL
-    cout << endl << "solution:" << endl;
-    for (auto it = _solution.begin(); it != _solution.end(); ++it)
-        cout << *(*it) << endl;
-#endif
-    if (result == SUCCESS) cout << "Success!" << endl;
-}
-
 void ExactCoverSolver::report(ostream& os, string filename) {
     _graph.reportConflictSubgraphs(os, " Filename: "+filename);
     cout << endl << "Final solution:" << endl;
-    _graph.ApplySolution(_solution, 1); // root id doesn't matter
-    for (auto it = _solution.begin(); it != _solution.end(); ++it) {
-        const Vertex* v = ((*it)->GetCorrespondVertex());
-        cout << *(*it) << endl;
-        os << "vertexID," << v->ID << ",color," << v->color << endl;
+    for (int i = 0; i < _solution.size(); ++i)
+        _graph.ApplySolution(_solution[i], 1); // root id doesn't matter
+    for (int i = 0; i < _solution.size(); ++i) {
+        for (auto it = _solution[i].begin(); it != _solution[i].end(); ++it) {
+            const Vertex* v = ((*it)->GetCorrespondVertex());
+            os << "vertexID," << setw(4) << v->ID << ",color," << v->color << endl;
+        }
     }
 
     // this part is for graph visualization only
-    _graph.write_adjlist(os, _solution);
+    for (int i = 0; i < _solution.size(); ++i)
+        _graph.write_adjlist(os, _solution[i]);
 }
 
 void ExactCoverSolver::CoverAffectedCells(const Cell* refCell, stack<Cell*>& AffectedCells) {
@@ -148,13 +113,14 @@ Cell* ExactCoverSolver::FindPriorityColumn(const Cell* header) {
     Cell* tmp = header->right;
     while (tmp->Type() == VERTEX_CELL) {
         if (tmp->down->down == tmp) return tmp;
+        if (tmp->down == tmp) return tmp;         // detects conflict earlier
         tmp = tmp->right;
     }
     return NULL;
 }
 
 void ExactCoverSolver::IdentifyUncolorablePartAndRemove() {
-    _graph.ApplySolution(_solution, _solution.back()->GetCorrespondVertex()->ID);
+    _graph.ApplySolution(_solution[_component_id], _solution[_component_id].back()->GetCorrespondVertex()->ID);
     cerr << "Identifing uncolorable part...";
     _graph.runIdentification(_component_id);
     cerr << "Done" << endl;
@@ -199,12 +165,11 @@ void ExactCoverSolver::print() const {
 }
 #endif
 
-void ExactCoverSolver::ApplySolution() {
-    /*****************************/
-    /* work on this first !!!!!! */
-    /*****************************/
+void ExactCoverSolver::SetPartialResult() {
+    assert(0);
+
     // this is not working for multi_pattern_3!!!!!
-    cerr << "Setting current solution into _dlx...";
+    /*cerr << "Setting current solution into _dlx...";
     for (auto it = _solution.begin(); it != _solution.end(); ++it) {
         // cout << *(*it) << endl;
         if ((*it)->GetCellColor() == UNDEF) {
@@ -214,8 +179,9 @@ void ExactCoverSolver::ApplySolution() {
         }
         this->CoverAffectedCells_Hard(*it);
     }
-    // assert(0);
     cerr << "done" << endl;
+    _solution.pop_back();
+    */
 }
 
 void ExactCoverSolver::CoverAffectedCells_Hard(const Cell* refCell) {

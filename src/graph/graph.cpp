@@ -56,7 +56,7 @@ void Graph::ContstructByFile(fstream& file) {
     }
     _root_of_cc.push_back(bfs(_root_of_cc.size(), 1));
 #ifdef DEBUG_MODE
-    cout << "vertexes: ";
+    cout << "vertices: ";
     auto it = _vertex.begin();
     ++it;
     for (; it != _vertex.end(); ++it)

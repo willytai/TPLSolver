@@ -25,12 +25,17 @@ public:
     void report        (ostream& os, string filename);
 
 private:
-    DancingLink     _dlx;
-    Graph           _graph;
-    vector<Cell*>   _solution;
-    int             _component_id;
+    DancingLink              _dlx;
+    Graph                    _graph;
+    vector<vector<Cell*> >   _solution;      // _solution[i] represnets the solution of the ith connected componet
+    int                      _component_id;
 
+#ifdef ENGINE_V1
+    SolverState X_star (int bfsIndex, bool recordPartialResult, const int Depth);
+#endif
+#ifdef ENGINE_V2
     SolverState X_star (int bfsIndex, bool recordPartialResult, int Depth);
+#endif
 
     Cell* FindPriorityColumn      (const Cell* header);
     void  solve                   (int component_id);
@@ -38,7 +43,7 @@ private:
     void  CoverAffectedCells_Hard (const Cell*);
     void  UNCoverAffectedCells    (stack<Cell*>&);
     void  IdentifyUncolorablePartAndRemove();
-    void  ApplySolution();
+    void  SetPartialResult();
 
 #ifdef DEBUG_XSTAR
     void print() const;
