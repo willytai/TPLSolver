@@ -45,17 +45,20 @@ void Graph::runIdentification(const int& component_id) {
     this->propagate(_root);
     this->RemoveEdges(component_id);
 
+#ifdef DEBUG_MODE_IDENT
     cout << "New identified conflict vertexes" << endl;
     assert(_conflict_subgraphs.back().size());
     for (auto it = _conflict_subgraphs.back().begin(); it != _conflict_subgraphs.back().end(); ++it)
         cout << *(*it) << ' ';
     cout << endl;
+#endif
 
     // because some edges will be removed, need to re-run bfs
     bfs(component_id, -1);
 }
 
 void Graph::reportConflictSubgraphs(ostream& os, string filename) const {
+    #define VERTEX_ID_LENGTH 4
     os << "****************************************************" << endl;
     os << "*          Uncolorable Subgraph Reporter           *" << endl;
     os << "****************************************************" << endl;
@@ -69,8 +72,8 @@ void Graph::reportConflictSubgraphs(ostream& os, string filename) const {
         int edgecount = 0;
         stringstream ss;
         for (auto it = _conflict_subgraphs.at(i).begin(); it != _conflict_subgraphs.at(i).end(); ++it) {
-            ss << "V " << setw(2) << *(*it) << ", ";
-            if (++edgecount == 5) {
+            ss << setw(VERTEX_ID_LENGTH) << *(*it) << ", ";
+            if (++edgecount == 6 && it != --(_conflict_subgraphs.at(i).end())) {
                 edgecount = 0;
                 os << left << setw(49) << ss.str() << "|" << endl << "| ";
                 ss.str("");

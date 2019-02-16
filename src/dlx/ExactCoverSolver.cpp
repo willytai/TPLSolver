@@ -30,11 +30,12 @@ void ExactCoverSolver::Solve() {
 }
 
 void ExactCoverSolver::report(ostream& os, string filename) {
-    _graph.reportConflictSubgraphs(os,   " Filename: "+filename);
-    _graph.reportConflictSubgraphs(cout, " Filename: "+filename);
-    cout << endl << "Final solution:" << endl;
-    for (int i = 0; i < _solution.size(); ++i)
+    _graph.reportConflictSubgraphs(os,   " Filename: "+filename); // write to file if filename specified
+    _graph.reportConflictSubgraphs(cout, " Filename: "+filename); // display conflict part on screen
+    for (int i = 0; i < _solution.size(); ++i) {
         _graph.ApplySolution(_solution[i], 1); // root id doesn't matter
+    }
+    // write to file if filename specified
     for (int i = 0; i < _solution.size(); ++i) {
         for (auto it = _solution[i].begin(); it != _solution[i].end(); ++it) {
             const Vertex* v = ((*it)->GetCorrespondVertex());
@@ -42,14 +43,14 @@ void ExactCoverSolver::report(ostream& os, string filename) {
         }
     }
 
-    // this part is for graph visualization only
-    for (int i = 0; i < _solution.size(); ++i)
+    // write to file if filename specified
+    for (int i = 0; i < _solution.size(); ++i) {
         _graph.write_adjlist(os, _solution[i]);
+    }
 }
 
 void ExactCoverSolver::CoverAffectedCells(const Cell* refCell, stack<Cell*>& AffectedCells) {
     assert(refCell->Type() == ROW_HEADER_CELL);
-    // cout << "ref: " << *refCell << endl << endl;
     // find affected columns
     // in this part, the picked row is not dealt with
     Cell* tmp = refCell->right;
@@ -59,19 +60,16 @@ void ExactCoverSolver::CoverAffectedCells(const Cell* refCell, stack<Cell*>& Aff
             if (columnElement->Type() != NORMAL_CELL) { columnElement = columnElement->down; continue; }
             if (tmp == columnElement) break;
             Cell* rowElement = columnElement;
-            // cout << "removing entire row realted to " << *(_dlx.FindCorrespondRowHeader(rowElement)) << endl;
             while (true) {
                 _dlx.remove(rowElement);
                 AffectedCells.push(rowElement);
-                // cout << *rowElement << endl;
                 rowElement = rowElement->right;
                 if (rowElement == rowElement->right) {
                     _dlx.remove(rowElement);
-                    // cout << *rowElement << endl;
                     AffectedCells.push(rowElement);
                     break;
                 }
-            } // cout << endl;
+            }
             columnElement = columnElement->down;
         }
         tmp = tmp->right;
@@ -80,24 +78,19 @@ void ExactCoverSolver::CoverAffectedCells(const Cell* refCell, stack<Cell*>& Aff
 	// deal with the picked row in this part
     // remove the picked row and the header
     tmp = refCell->right;
-    // cout << "removing entire row realted to " << *(_dlx.FindCorrespondRowHeader(tmp)) << endl;
     while (true) {
         if (tmp->Type() == ROW_HEADER_CELL) {
             _dlx.remove(tmp);
             AffectedCells.push(tmp);
-            // cout << *tmp << endl;
             break;
         }
         _dlx.remove(tmp);
         AffectedCells.push(tmp);
-        // cout << *tmp << endl;
         Cell* columnHeader = _dlx.FindCorrespondColumnHeader(tmp);
         _dlx.remove(columnHeader);
-        // cout << *columnHeader << endl;
         AffectedCells.push(columnHeader);
         tmp = tmp->right;
     }
-    // assert(0);
 }
 
 void ExactCoverSolver::UNCoverAffectedCells(stack<Cell*>& AffectedCells) {
@@ -165,76 +158,3 @@ void ExactCoverSolver::print() const {
     } cout << endl;
 }
 #endif
-
-void ExactCoverSolver::SetPartialResult() {
-    assert(0);
-
-    // this is not working for multi_pattern_3!!!!!
-    /*cerr << "Setting current solution into _dlx...";
-    for (auto it = _solution.begin(); it != _solution.end(); ++it) {
-        // cout << *(*it) << endl;
-        if ((*it)->GetCellColor() == UNDEF) {
-            assert(it == --(_solution.end()));
-            _solution.erase(it);
-            break;
-        }
-        this->CoverAffectedCells_Hard(*it);
-    }
-    cerr << "done" << endl;
-    _solution.pop_back();
-    */
-}
-
-void ExactCoverSolver::CoverAffectedCells_Hard(const Cell* refCell) {
-    assert(refCell->Type() == ROW_HEADER_CELL);
-    // cout << "ref: " << *refCell << endl << endl;
-    // find affected columns
-    // in this part, the picked row is not dealt with
-    Cell* tmp = refCell->right;
-    while (tmp->Type() == NORMAL_CELL) {
-        Cell* columnElement = tmp->down;
-        while (true) {
-            if (columnElement->Type() != NORMAL_CELL) { columnElement = columnElement->down; continue; }
-            if (tmp == columnElement) break;
-            Cell* rowElement = columnElement;
-            // cout << "removing entire row realted to " << *(_dlx.FindCorrespondRowHeader(rowElement)) << endl;
-            while (true) {
-                _dlx.remove(rowElement);
-                // AffectedCells.push(rowElement);
-                // cout << *rowElement << endl;
-                rowElement = rowElement->right;
-                if (rowElement == rowElement->right) {
-                    _dlx.remove(rowElement);
-                    // cout << *rowElement << endl;
-                    // AffectedCells.push(rowElement);
-                    break;
-                }
-            } // cout << endl;
-            columnElement = columnElement->down;
-        }
-        tmp = tmp->right;
-    }
-
-    // deal with the picked row in this part
-    // remove the picked row and the header
-    tmp = refCell->right;
-    // cout << "removing entire row realted to " << *(_dlx.FindCorrespondRowHeader(tmp)) << endl;
-    while (true) {
-        if (tmp->Type() == ROW_HEADER_CELL) {
-            _dlx.remove(tmp);
-            // AffectedCells.push(tmp);
-            // cout << *tmp << endl;
-            break;
-        }
-        _dlx.remove(tmp);
-        // AffectedCells.push(tmp);
-        // cout << *tmp << endl;
-        Cell* columnHeader = _dlx.FindCorrespondColumnHeader(tmp);
-        _dlx.remove(columnHeader);
-        // cout << *columnHeader << endl;
-        // AffectedCells.push(columnHeader);
-        tmp = tmp->right;
-    }
-    // assert(0);
-}
-

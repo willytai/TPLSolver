@@ -408,7 +408,9 @@ void Graph::identify_connected_component() {
     }
 #endif
 
-    // return;
+#ifndef DEBUG_MODE_GRAPH
+    return;
+#else
     // sort the CCs is ascendig order in terms of the number of vertexes
     // very stupid
     assert (_bfsList.size() == _root_of_cc.size());
@@ -431,5 +433,5 @@ void Graph::identify_connected_component() {
 //         ::swap(_root_of_cc[0], _root_of_cc[96]);
 //         ::swap(_edge[0], _edge[96]);
 //     }
-// #endif
+#endif
 }

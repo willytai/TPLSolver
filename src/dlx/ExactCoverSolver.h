@@ -40,10 +40,8 @@ private:
     Cell* FindPriorityColumn      (const Cell* header);
     void  solve                   (int component_id);
     void  CoverAffectedCells      (const Cell*, stack<Cell*>&);
-    void  CoverAffectedCells_Hard (const Cell*);
     void  UNCoverAffectedCells    (stack<Cell*>&);
     void  IdentifyUncolorablePartAndRemove();
-    void  SetPartialResult();
 
 #ifdef DEBUG_XSTAR
     void print() const;

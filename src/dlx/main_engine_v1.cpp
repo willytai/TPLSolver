@@ -18,27 +18,22 @@ void ExactCoverSolver::solve(int component_id) {
         cout << endl << "solution:" << endl;
         for (auto it = _solution[component_id].begin(); it != _solution[component_id].end(); ++it)
             cout << *(*it) << endl;
-#endif
         cout << "Conflict found, need to remove and keep on searching" << endl;
+#endif
 
         this->IdentifyUncolorablePartAndRemove();
-        // this->ApplySolution();
         _solution[component_id].clear();
-
-        // _dlx.clear();
-        // _dlx.init(_graph, component_id);
 
         cerr << "Running X_star...";
         result = X_star(0, true, 0);
         cerr << "Done" << endl;
-    }
+    } cerr << endl;
 
 #ifdef DEBUG_MODE_SOL
     cout << endl << "solution:" << endl;
     for (auto it = _solution[component_id].begin(); it != _solution[component_id].end(); ++it)
         cout << *(*it) << endl;
 #endif
-    if (result == SUCCESS) cout << "Success!" << endl << endl;
 }
 
 

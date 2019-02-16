@@ -26,7 +26,6 @@ int main(int argc, char *argv[])
 
     ExactCoverSolver* solver = new ExactCoverSolver;
     usg.reset();
-    // solver->InitByFile(file);
     solver->InitByAdjList(file);
     solver->Solve();
     ostream NullStream(NULL); // nothing will be printed if this is used as an ostream obj
