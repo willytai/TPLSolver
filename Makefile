@@ -1,5 +1,5 @@
 REFPKGS  =
-SRCPKGS  = layout util
+SRCPKGS  = dlx graph util
 LIBPKGS  = $(REFPKGS) $(SRCPKGS)
 MAIN     = main
 
@@ -23,13 +23,13 @@ all: directory libs main
 libs:
 	@for pkg in $(SRCPKGS); \
 	do \
-		echo "Checking $$pkg..."; \
+		printf "Checking $$pkg..."; \
 		cd src/$$pkg; make -f make.$$pkg --no-print-directory PKGNAME=$$pkg; \
 		cd ../..; \
 	done
 
 main:
-	@echo "Checking $(MAIN)..."
+	@printf "Checking $(MAIN)..."
 	@cd src/$(MAIN); \
 		make -f make.$(MAIN) --no-print-directory INCLIB="$(LIBS)" EXEC=$(EXEC);
 	@ln -fs bin/$(EXEC) .
@@ -43,7 +43,7 @@ directory:
 			mkdir $$dir; \
 			echo "Creating directory \"$$dir\"..."; \
 		else \
-			echo "Directory $$dir exists."; \
+			echo "Directory exists."; \
 		fi; \
 	done
 
@@ -52,13 +52,13 @@ directory:
 clean:
 	@for pkg in $(SRCPKGS); \
 	do \
-		echo "Cleaning $$pkg..."; \
+		printf "Cleaning $$pkg..."; \
 		cd src/$$pkg; make -f make.$$pkg --no-print-directory PKGNAME=$$pkg clean; \
                 cd ../..; \
 	done
-	@echo "Cleaning $(MAIN)..."
+	@printf "Cleaning $(MAIN)..."
 	@cd src/$(MAIN); make -f make.$(MAIN) --no-print-directory clean
-	@echo "Removing $(SRCLIBS)..."
+	@printf "Cleaning $(SRCLIBS)..."
 	@cd lib; rm -f $(SRCLIBS)
 	@echo "Removing $(EXEC)..."
 	@rm -f bin/$(EXEC)

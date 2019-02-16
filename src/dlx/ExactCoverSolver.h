@@ -15,25 +15,37 @@ enum SolverState
 class ExactCoverSolver
 {
 public:
-    ExactCoverSolver() {}
+    ExactCoverSolver() : _component_id(0) {}
     ~ExactCoverSolver() {}
 
-    void InitByFile  (fstream& file);
-    void InitByGraph (Graph& g);
-    void Solve       ();
-    void report      (ostream& os, string filename);
+    void InitByFile    (fstream& file);
+    void InitByAdjList (fstream& file);
+    void InitByGraph   (Graph& g);
+    void Solve         ();
+    void report        (ostream& os, string filename);
 
 private:
-    DancingLink     _dlx;
-    Graph           _graph;
-    vector<Cell*>   _solution;
+    DancingLink              _dlx;
+    Graph                    _graph;
+    vector<vector<Cell*> >   _solution;      // _solution[i] represnets the solution of the ith connected componet
+    int                      _component_id;
 
-    SolverState X_star (int bfsIndex, bool recordPartialResult);
+#ifdef ENGINE_V1
+    SolverState X_star (int bfsIndex, bool recordPartialResult, const int Depth);
+#endif
+#ifdef ENGINE_V2
+    SolverState X_star (int bfsIndex, bool recordPartialResult, int Depth);
+#endif
 
-    Cell* FindPriorityColumn   (const Cell* header);
-    void  CoverAffectedCells   (const Cell*, stack<Cell*>&);
-    void  UNCoverAffectedCells (stack<Cell*>&);
+    Cell* FindPriorityColumn      (const Cell* header);
+    void  solve                   (int component_id);
+    void  CoverAffectedCells      (const Cell*, stack<Cell*>&);
+    void  UNCoverAffectedCells    (stack<Cell*>&);
     void  IdentifyUncolorablePartAndRemove();
+
+#ifdef DEBUG_XSTAR
+    void print() const;
+#endif
 };
 
 #endif /* EXACT_COVER_SOLVER_H */

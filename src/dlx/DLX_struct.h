@@ -9,17 +9,18 @@ using namespace std;
 
 class DancingLink
 {
-#define _header _columnHeader[0]
 public:
     DancingLink() {}
-    DancingLink(Graph& g) { init(g); }
+    DancingLink(Graph& g, int component_id) { init(g, component_id); }
     ~DancingLink() {}
 
-    void  init                (Graph& g);
-    void  initHeader          (Graph& g);
+    void  init                (Graph& g, const int& component_id);
+    void  initHeader          (Graph& g, const int& component_id);
     void  initCell            ();
     void  removeConflictEdges (const vector<pair<int, int> >& Cedges);
+    void  clear               ();
     bool  isGoal              () const;
+    bool  inDLX               (Cell* c) const;
     Cell* GetHeader           () const;
 
     Cell* Column (const int& idx) const;
@@ -69,10 +70,22 @@ public:
     // removes the entire column whose column header is ref
     void removeEntireColumn(Cell* ref);
 
+#ifdef DEBUG_MODE_EDGES
+    void check_edge(map<int, map<int, Edge*> >& edges);
+#endif
+
+#ifdef DEBUG_XSTAR
+    int cellcount() const { return _cellCount; }
+#endif
+
 
 private:
     vector<Cell*>   _columnHeader;
     vector<Cell*>   _rowHeader;
+    Cell*           _header;
+#ifdef DEBUG_XSTAR
+    int             _cellCount;
+#endif
 };
 
 

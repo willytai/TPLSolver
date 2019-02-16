@@ -10,6 +10,8 @@ outfile = open(outputfile, 'w')
 print ('reading ', inputfile)
 print ('saveing to ', outputfile)
 
+polygon_count = 0;
+
 with open(inputfile, 'r') as f:
     for line in f:
         line = line.strip()
@@ -20,5 +22,9 @@ with open(inputfile, 'r') as f:
         for data in line:
             outfile.write('{} {}\n'.format(data[0], data[1]))
         outfile.write('\n')
+
+        polygon_count += 1
+
+print ('Total Polygons :', polygon_count)
 
 outfile.close()
