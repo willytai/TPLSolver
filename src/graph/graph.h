@@ -27,13 +27,14 @@ public:
     void   ContstructByAdjList (fstream& file);
     void   RetrieveVertexes    (vector<Vertex*>& vec, const int& component_id) const;
     void   RetrieveEdges       (map<int, map<int, Edge*> >& vec, const int& component_id) const;
-    void   GetBFSList          (vector<Vertex*>& vec, int component_id) const;
     void   RemoveEdge          (int id_1, int id_2, int component_id);
     void   RestoreEdges        ();
     void   RemoveVertex        (Vertex* v);
     void   RecoverVertex       (Vertex* v);
     void   RemoveVertex        (int idx);
     void   RecoverVertex       (int idx);
+    void   GetBFSList          (vector<Vertex*>& vec, int component_id) const;
+    void   GetConflictID       (vector<int>& conflict_vID);
     void   print               ();
     int    bfs                 (int component_id, int r_id);
     int    get_order           (const Vertex* v)      const;
@@ -53,9 +54,6 @@ public:
     void              RemoveEdges             (const int& component_id);
     bool              propagate               (Vertex* currentVertex);
     inline bool       check                   (Vertex*& currentVertex, vector<bool>& LegalColor);
-
-    inline bool       not_colorable_due_to_ident_process (int& id);
-    inline bool       not_colorable_due_to_ident_process (Vertex*& v);
 
     // this part is for graph visualization only
     void write_adjlist(ostream& os, vector<Cell*>& sol);

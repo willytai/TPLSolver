@@ -29,13 +29,22 @@ void ExactCoverSolver::Solve() {
     }
 }
 
-void ExactCoverSolver::report(ostream& os, string filename) {
+void ExactCoverSolver::report(ostream& os, string filename, bool dump_adjlist) {
     _graph.reportConflictSubgraphs(os,   " Filename: "+filename); // write to file if filename specified
     _graph.reportConflictSubgraphs(cout, " Filename: "+filename); // display conflict part on screen
     for (int i = 0; i < _solution.size(); ++i) {
         _graph.ApplySolution(_solution[i], 1); // root id doesn't matter
     }
     // write to file if filename specified
+    os << "-    Final Result    -" << endl;
+    os << "----------------------" << endl;
+    os << "conflict vertices: ";
+    vector<int> conflict_vID;
+    _graph.GetConflictID(conflict_vID);
+    for (auto it = conflict_vID.begin(); it != conflict_vID.end(); ++it) {
+        os << *it;
+        if (it != --(conflict_vID.end())) os << ' ';
+    } os << endl;
     for (int i = 0; i < _solution.size(); ++i) {
         for (auto it = _solution[i].begin(); it != _solution[i].end(); ++it) {
             const Vertex* v = ((*it)->GetCorrespondVertex());
@@ -43,9 +52,10 @@ void ExactCoverSolver::report(ostream& os, string filename) {
         }
     }
 
-    // write to file if filename specified
-    for (int i = 0; i < _solution.size(); ++i) {
-        _graph.write_adjlist(os, _solution[i]);
+    if (dump_adjlist) { 
+        for (int i = 0; i < _solution.size(); ++i) {
+            _graph.write_adjlist(os, _solution[i]);
+        }
     }
 }
 

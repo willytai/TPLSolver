@@ -22,7 +22,7 @@ public:
     void InitByAdjList (fstream& file);
     void InitByGraph   (Graph& g);
     void Solve         ();
-    void report        (ostream& os, string filename);
+    void report        (ostream& os, string filename, bool dump_adjlist);
 
 private:
     DancingLink              _dlx;

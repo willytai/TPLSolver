@@ -435,3 +435,11 @@ void Graph::identify_connected_component() {
 //     }
 #endif
 }
+
+void Graph::GetConflictID(vector<int>& conflict_vID) {
+    for (auto g_it = _conflict_subgraphs.begin(); g_it != _conflict_subgraphs.end(); ++g_it) {
+        for (auto v_it = (*g_it).begin(); v_it != (*g_it).end(); ++v_it) {
+            conflict_vID.push_back((*v_it)->ID);
+        }
+    }
+}

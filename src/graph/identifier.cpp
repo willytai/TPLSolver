@@ -231,7 +231,7 @@ inline bool Graph::check(Vertex*& currentVertex, vector<bool>& color_checker) {
     return true;
 }
 
-inline bool Graph::not_colorable_due_to_ident_process(int& id) {
+/*inline bool Graph::not_colorable_due_to_ident_process(int& id) {
     return not_colorable_due_to_ident_process(_vertex[id]);
 }
 
@@ -246,4 +246,4 @@ inline bool Graph::not_colorable_due_to_ident_process(Vertex*& v) {
         }
     }
     return false;
-}
+}*/

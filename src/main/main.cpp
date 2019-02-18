@@ -8,12 +8,14 @@ using namespace std;
 int main(int argc, char *argv[])
 {
     if (argc < 2) {
-        cerr << "usage: ./DLX <graph file> <report filename (default cout)>" << endl;
+        cerr << "usage: ./TPLSolver <adjacency list> <report filename (default cout)> <whether to dump adjacency list> (default 0)" << endl;
         return 0;
     }
 
     ofstream ofile;
+    bool dump_adjlist = false;
     if (argc == 3) ofile.open(argv[2]);
+    else if (argc == 4) dump_adjlist = true;
 
     MyUsage usg;
     fstream file;
@@ -30,9 +32,9 @@ int main(int argc, char *argv[])
     solver->Solve();
     ostream NullStream(NULL); // nothing will be printed if this is used as an ostream obj
     if (!ofile.is_open()) 
-        solver->report(NullStream, argv[1]);
+        solver->report(NullStream, argv[1], dump_adjlist);
     else
-        solver->report(ofile, argv[1]);
+        solver->report(ofile, argv[1], dump_adjlist);
     usg.report(1, 1);
 
     delete solver;
