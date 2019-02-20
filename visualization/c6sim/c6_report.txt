@@ -1,0 +1,7961 @@
+****************************************************
+*          Uncolorable Subgraph Reporter           *
+****************************************************
+| Filename: benchmark/c6sim_adjlist.txt            |
+----------------------------------------------------
+| There are 6    uncolorable parts                 |
+----------------------------------------------------
+| subgraph 1                                       |
+| 1844, 1768, 1782, 1845,                          |
+----------------------------------------------------
+| subgraph 2                                       |
+| 1679, 1719, 1678, 1609,                          |
+----------------------------------------------------
+| subgraph 3                                       |
+| 4817, 4840, 4882, 4913,                          |
+----------------------------------------------------
+| subgraph 4                                       |
+| 5477, 5525, 5506, 5526,                          |
+----------------------------------------------------
+| subgraph 5                                       |
+| 5986, 5913, 5942, 5987,                          |
+----------------------------------------------------
+| subgraph 6                                       |
+| 5845, 5940, 5895, 5896,                          |
+----------------------------------------------------
+-    Final Result    -
+----------------------
+conflict vertices: 1844 1768 1782 1845 1679 1719 1678 1609 4817 4840 4882 4913 5477 5525 5506 5526 5986 5913 5942 5987 5845 5940 5895 5896
+vertexID,109 ,color,1
+vertexID,159 ,color,2
+vertexID,158 ,color,2
+vertexID,141 ,color,2
+vertexID,84  ,color,2
+vertexID,0   ,color,3
+vertexID,83  ,color,2
+vertexID,200 ,color,1
+vertexID,229 ,color,2
+vertexID,251 ,color,3
+vertexID,230 ,color,2
+vertexID,298 ,color,1
+vertexID,281 ,color,1
+vertexID,299 ,color,1
+vertexID,334 ,color,2
+vertexID,363 ,color,1
+vertexID,384 ,color,3
+vertexID,364 ,color,1
+vertexID,438 ,color,1
+vertexID,439 ,color,1
+vertexID,417 ,color,1
+vertexID,471 ,color,2
+vertexID,500 ,color,1
+vertexID,517 ,color,3
+vertexID,499 ,color,1
+vertexID,550 ,color,1
+vertexID,568 ,color,1
+vertexID,567 ,color,1
+vertexID,603 ,color,2
+vertexID,633 ,color,1
+vertexID,650 ,color,3
+vertexID,632 ,color,1
+vertexID,699 ,color,1
+vertexID,684 ,color,1
+vertexID,700 ,color,1
+vertexID,724 ,color,2
+vertexID,757 ,color,1
+vertexID,769 ,color,3
+vertexID,758 ,color,1
+vertexID,801 ,color,1
+vertexID,825 ,color,1
+vertexID,824 ,color,1
+vertexID,866 ,color,1
+vertexID,737 ,color,2
+vertexID,864 ,color,2
+vertexID,865 ,color,2
+vertexID,990 ,color,2
+vertexID,1016,color,3
+vertexID,991 ,color,2
+vertexID,992 ,color,2
+vertexID,920 ,color,2
+vertexID,652 ,color,1
+vertexID,618 ,color,3
+vertexID,721 ,color,1
+vertexID,720 ,color,1
+vertexID,795 ,color,1
+vertexID,1064,color,1
+vertexID,1104,color,2
+vertexID,571 ,color,1
+vertexID,686 ,color,1
+vertexID,653 ,color,1
+vertexID,1196,color,1
+vertexID,1168,color,3
+vertexID,1119,color,1
+vertexID,1120,color,1
+vertexID,1140,color,1
+vertexID,519 ,color,2
+vertexID,1167,color,2
+vertexID,1243,color,2
+vertexID,1244,color,3
+vertexID,1332,color,1
+vertexID,489 ,color,1
+vertexID,473 ,color,2
+vertexID,409 ,color,3
+vertexID,474 ,color,2
+vertexID,540 ,color,2
+vertexID,541 ,color,2
+vertexID,1355,color,2
+vertexID,1450,color,2
+vertexID,1412,color,3
+vertexID,1356,color,2
+vertexID,1385,color,2
+vertexID,350 ,color,1
+vertexID,1411,color,1
+vertexID,253 ,color,2
+vertexID,215 ,color,3
+vertexID,325 ,color,2
+vertexID,324 ,color,2
+vertexID,162 ,color,1
+vertexID,254 ,color,1
+vertexID,283 ,color,1
+vertexID,112 ,color,2
+vertexID,1   ,color,1
+vertexID,111 ,color,2
+vertexID,113 ,color,2
+vertexID,115 ,color,1
+vertexID,89  ,color,2
+vertexID,3   ,color,3
+vertexID,90  ,color,2
+vertexID,165 ,color,2
+vertexID,166 ,color,3
+vertexID,144 ,color,2
+vertexID,167 ,color,2
+vertexID,2   ,color,1
+vertexID,256 ,color,1
+vertexID,255 ,color,1
+vertexID,257 ,color,1
+vertexID,43  ,color,2
+vertexID,302 ,color,2
+vertexID,42  ,color,1
+vertexID,337 ,color,1
+vertexID,351 ,color,3
+vertexID,336 ,color,1
+vertexID,410 ,color,1
+vertexID,388 ,color,1
+vertexID,411 ,color,1
+vertexID,442 ,color,2
+vertexID,476 ,color,1
+vertexID,492 ,color,3
+vertexID,475 ,color,1
+vertexID,521 ,color,1
+vertexID,543 ,color,1
+vertexID,542 ,color,1
+vertexID,590 ,color,2
+vertexID,588 ,color,2
+vertexID,622 ,color,1
+vertexID,621 ,color,2
+vertexID,655 ,color,2
+vertexID,703 ,color,2
+vertexID,589 ,color,1
+vertexID,774 ,color,1
+vertexID,775 ,color,1
+vertexID,776 ,color,1
+vertexID,826 ,color,2
+vertexID,869 ,color,1
+vertexID,946 ,color,2
+vertexID,994 ,color,3
+vertexID,921 ,color,2
+vertexID,897 ,color,2
+vertexID,898 ,color,2
+vertexID,945 ,color,1
+vertexID,1505,color,1
+vertexID,1453,color,2
+vertexID,1613,color,2
+vertexID,1644,color,3
+vertexID,1615,color,2
+vertexID,1614,color,2
+vertexID,1507,color,2
+vertexID,1554,color,2
+vertexID,1553,color,2
+vertexID,1335,color,1
+vertexID,1416,color,3
+vertexID,1417,color,1
+vertexID,1506,color,1
+vertexID,1689,color,1
+vertexID,1751,color,2
+vertexID,1359,color,2
+vertexID,1387,color,2
+vertexID,1288,color,2
+vertexID,1336,color,3
+vertexID,1360,color,2
+vertexID,1750,color,1
+vertexID,1172,color,1
+vertexID,1255,color,3
+vertexID,1256,color,1
+vertexID,1724,color,2
+vertexID,1794,color,2
+vertexID,1867,color,2
+vertexID,1202,color,2
+vertexID,1234,color,2
+vertexID,1132,color,2
+vertexID,1203,color,2
+vertexID,1888,color,1
+vertexID,1889,color,3
+vertexID,1890,color,1
+vertexID,1891,color,1
+vertexID,1107,color,1
+vertexID,1958,color,1
+vertexID,1957,color,1
+vertexID,1075,color,2
+vertexID,2067,color,2
+vertexID,2069,color,2
+vertexID,2068,color,2
+vertexID,1012,color,1
+vertexID,1066,color,3
+vertexID,1067,color,3
+vertexID,1113,color,1
+vertexID,1114,color,1
+vertexID,947 ,color,2
+vertexID,891 ,color,1
+vertexID,841 ,color,2
+vertexID,949 ,color,2
+vertexID,948 ,color,2
+vertexID,740 ,color,1
+vertexID,805 ,color,3
+vertexID,806 ,color,3
+vertexID,807 ,color,1
+vertexID,738 ,color,2
+vertexID,656 ,color,2
+vertexID,739 ,color,3
+vertexID,623 ,color,1
+vertexID,679 ,color,2
+vertexID,572 ,color,2
+vertexID,605 ,color,3
+vertexID,606 ,color,3
+vertexID,680 ,color,2
+vertexID,544 ,color,1
+vertexID,545 ,color,1
+vertexID,493 ,color,2
+vertexID,443 ,color,1
+vertexID,477 ,color,3
+vertexID,478 ,color,3
+vertexID,522 ,color,1
+vertexID,412 ,color,2
+vertexID,413 ,color,2
+vertexID,352 ,color,1
+vertexID,303 ,color,2
+vertexID,338 ,color,3
+vertexID,339 ,color,3
+vertexID,389 ,color,2
+vertexID,275 ,color,1
+vertexID,276 ,color,1
+vertexID,219 ,color,2
+vertexID,202 ,color,1
+vertexID,168 ,color,3
+vertexID,203 ,color,1
+vertexID,258 ,color,1
+vertexID,4   ,color,1
+vertexID,76  ,color,2
+vertexID,63  ,color,2
+vertexID,77  ,color,2
+vertexID,5   ,color,1
+vertexID,6   ,color,1
+vertexID,123 ,color,2
+vertexID,121 ,color,2
+vertexID,62  ,color,2
+vertexID,122 ,color,2
+vertexID,125 ,color,1
+vertexID,151 ,color,2
+vertexID,179 ,color,2
+vertexID,7   ,color,2
+vertexID,101 ,color,3
+vertexID,102 ,color,3
+vertexID,180 ,color,2
+vertexID,209 ,color,1
+vertexID,243 ,color,2
+vertexID,269 ,color,3
+vertexID,244 ,color,2
+vertexID,292 ,color,1
+vertexID,315 ,color,1
+vertexID,316 ,color,1
+vertexID,347 ,color,2
+vertexID,399 ,color,1
+vertexID,377 ,color,3
+vertexID,378 ,color,3
+vertexID,426 ,color,2
+vertexID,455 ,color,2
+vertexID,456 ,color,2
+vertexID,486 ,color,1
+vertexID,511 ,color,2
+vertexID,531 ,color,3
+vertexID,512 ,color,2
+vertexID,558 ,color,1
+vertexID,581 ,color,1
+vertexID,582 ,color,1
+vertexID,613 ,color,2
+vertexID,645 ,color,1
+vertexID,667 ,color,3
+vertexID,646 ,color,1
+vertexID,694 ,color,1
+vertexID,712 ,color,1
+vertexID,713 ,color,1
+vertexID,728 ,color,2
+vertexID,765 ,color,1
+vertexID,786 ,color,3
+vertexID,766 ,color,1
+vertexID,815 ,color,1
+vertexID,833 ,color,1
+vertexID,834 ,color,1
+vertexID,858 ,color,2
+vertexID,893 ,color,1
+vertexID,901 ,color,3
+vertexID,894 ,color,1
+vertexID,938 ,color,1
+vertexID,925 ,color,1
+vertexID,939 ,color,1
+vertexID,8   ,color,1
+vertexID,129 ,color,2
+vertexID,128 ,color,2
+vertexID,130 ,color,2
+vertexID,535 ,color,1
+vertexID,537 ,color,2
+vertexID,467 ,color,2
+vertexID,696 ,color,2
+vertexID,671 ,color,3
+vertexID,670 ,color,3
+vertexID,672 ,color,3
+vertexID,596 ,color,2
+vertexID,597 ,color,2
+vertexID,430 ,color,1
+vertexID,328 ,color,3
+vertexID,431 ,color,1
+vertexID,536 ,color,1
+vertexID,723 ,color,1
+vertexID,225 ,color,1
+vertexID,277 ,color,2
+vertexID,355 ,color,1
+vertexID,356 ,color,1
+vertexID,402 ,color,1
+vertexID,798 ,color,2
+vertexID,792 ,color,3
+vertexID,790 ,color,2
+vertexID,791 ,color,2
+vertexID,793 ,color,2
+vertexID,195 ,color,2
+vertexID,154 ,color,2
+vertexID,80  ,color,3
+vertexID,132 ,color,2
+vertexID,194 ,color,2
+vertexID,853 ,color,1
+vertexID,883 ,color,1
+vertexID,9   ,color,1
+vertexID,131 ,color,1
+vertexID,322 ,color,1
+vertexID,273 ,color,2
+vertexID,297 ,color,3
+vertexID,321 ,color,3
+vertexID,323 ,color,3
+vertexID,416 ,color,2
+vertexID,405 ,color,3
+vertexID,404 ,color,3
+vertexID,403 ,color,2
+vertexID,250 ,color,1
+vertexID,212 ,color,3
+vertexID,249 ,color,1
+vertexID,498 ,color,1
+vertexID,497 ,color,1
+vertexID,496 ,color,1
+vertexID,185 ,color,1
+vertexID,186 ,color,1
+vertexID,585 ,color,2
+vertexID,133 ,color,2
+vertexID,617 ,color,1
+vertexID,627 ,color,3
+vertexID,616 ,color,1
+vertexID,10  ,color,1
+vertexID,107 ,color,3
+vertexID,108 ,color,3
+vertexID,155 ,color,1
+vertexID,683 ,color,1
+vertexID,682 ,color,1
+vertexID,673 ,color,1
+vertexID,329 ,color,1
+vertexID,278 ,color,2
+vertexID,432 ,color,2
+vertexID,468 ,color,3
+vertexID,357 ,color,2
+vertexID,279 ,color,2
+vertexID,330 ,color,2
+vertexID,358 ,color,2
+vertexID,406 ,color,2
+vertexID,226 ,color,1
+vertexID,563 ,color,1
+vertexID,515 ,color,2
+vertexID,433 ,color,1
+vertexID,213 ,color,2
+vertexID,187 ,color,3
+vertexID,214 ,color,2
+vertexID,274 ,color,2
+vertexID,598 ,color,2
+vertexID,674 ,color,2
+vertexID,697 ,color,3
+vertexID,599 ,color,2
+vertexID,628 ,color,2
+vertexID,134 ,color,1
+vertexID,136 ,color,1
+vertexID,733 ,color,1
+vertexID,675 ,color,1
+vertexID,11  ,color,2
+vertexID,799 ,color,2
+vertexID,819 ,color,3
+vertexID,800 ,color,2
+vertexID,135 ,color,1
+vertexID,862 ,color,1
+vertexID,861 ,color,1
+vertexID,854 ,color,1
+vertexID,895 ,color,2
+vertexID,934 ,color,1
+vertexID,933 ,color,1
+vertexID,935 ,color,2
+vertexID,1006,color,2
+vertexID,1005,color,2
+vertexID,1058,color,2
+vertexID,1090,color,3
+vertexID,1057,color,2
+vertexID,1056,color,2
+vertexID,12  ,color,1
+vertexID,13  ,color,1
+vertexID,14  ,color,2
+vertexID,15  ,color,1
+vertexID,16  ,color,2
+vertexID,17  ,color,1
+vertexID,18  ,color,2
+vertexID,19  ,color,1
+vertexID,20  ,color,2
+vertexID,21  ,color,1
+vertexID,22  ,color,2
+vertexID,23  ,color,1
+vertexID,24  ,color,2
+vertexID,25  ,color,1
+vertexID,26  ,color,2
+vertexID,27  ,color,1
+vertexID,28  ,color,2
+vertexID,29  ,color,1
+vertexID,30  ,color,2
+vertexID,31  ,color,1
+vertexID,32  ,color,2
+vertexID,33  ,color,1
+vertexID,34  ,color,2
+vertexID,35  ,color,1
+vertexID,331 ,color,1
+vertexID,227 ,color,2
+vertexID,280 ,color,3
+vertexID,359 ,color,2
+vertexID,469 ,color,3
+vertexID,435 ,color,2
+vertexID,360 ,color,2
+vertexID,407 ,color,2
+vertexID,81  ,color,1
+vertexID,137 ,color,3
+vertexID,197 ,color,3
+vertexID,196 ,color,1
+vertexID,434 ,color,1
+vertexID,36  ,color,2
+vertexID,138 ,color,2
+vertexID,156 ,color,2
+vertexID,754 ,color,1
+vertexID,888 ,color,2
+vertexID,906 ,color,3
+vertexID,889 ,color,2
+vertexID,887 ,color,2
+vertexID,822 ,color,2
+vertexID,698 ,color,3
+vertexID,734 ,color,2
+vertexID,755 ,color,1
+vertexID,823 ,color,2
+vertexID,756 ,color,2
+vertexID,566 ,color,1
+vertexID,602 ,color,2
+vertexID,677 ,color,2
+vertexID,678 ,color,1
+vertexID,470 ,color,2
+vertexID,516 ,color,3
+vertexID,601 ,color,2
+vertexID,631 ,color,2
+vertexID,332 ,color,1
+vertexID,436 ,color,3
+vertexID,437 ,color,1
+vertexID,228 ,color,2
+vertexID,333 ,color,2
+vertexID,361 ,color,2
+vertexID,362 ,color,2
+vertexID,408 ,color,2
+vertexID,82  ,color,1
+vertexID,140 ,color,3
+vertexID,198 ,color,3
+vertexID,199 ,color,1
+vertexID,37  ,color,2
+vertexID,139 ,color,2
+vertexID,157 ,color,2
+vertexID,38  ,color,1
+vertexID,39  ,color,1
+vertexID,40  ,color,1
+vertexID,41  ,color,2
+vertexID,44  ,color,1
+vertexID,45  ,color,2
+vertexID,46  ,color,1
+vertexID,47  ,color,2
+vertexID,48  ,color,1
+vertexID,49  ,color,2
+vertexID,50  ,color,1
+vertexID,51  ,color,2
+vertexID,52  ,color,1
+vertexID,53  ,color,2
+vertexID,54  ,color,1
+vertexID,55  ,color,2
+vertexID,56  ,color,1
+vertexID,57  ,color,2
+vertexID,58  ,color,1
+vertexID,59  ,color,2
+vertexID,60  ,color,1
+vertexID,61  ,color,1
+vertexID,78  ,color,1
+vertexID,118 ,color,2
+vertexID,70  ,color,3
+vertexID,188 ,color,2
+vertexID,147 ,color,2
+vertexID,79  ,color,2
+vertexID,65  ,color,3
+vertexID,64  ,color,1
+vertexID,261 ,color,2
+vertexID,222 ,color,3
+vertexID,221 ,color,1
+vertexID,220 ,color,1
+vertexID,308 ,color,1
+vertexID,342 ,color,2
+vertexID,353 ,color,3
+vertexID,343 ,color,2
+vertexID,414 ,color,1
+vertexID,415 ,color,1
+vertexID,392 ,color,1
+vertexID,448 ,color,2
+vertexID,481 ,color,1
+vertexID,494 ,color,3
+vertexID,482 ,color,1
+vertexID,546 ,color,1
+vertexID,547 ,color,1
+vertexID,525 ,color,1
+vertexID,591 ,color,2
+vertexID,593 ,color,3
+vertexID,592 ,color,1
+vertexID,660 ,color,1
+vertexID,691 ,color,3
+vertexID,661 ,color,1
+vertexID,659 ,color,1
+vertexID,725 ,color,1
+vertexID,759 ,color,2
+vertexID,782 ,color,3
+vertexID,760 ,color,2
+vertexID,827 ,color,1
+vertexID,828 ,color,1
+vertexID,810 ,color,1
+vertexID,873 ,color,2
+vertexID,875 ,color,2
+vertexID,900 ,color,1
+vertexID,874 ,color,2
+vertexID,952 ,color,2
+vertexID,997 ,color,3
+vertexID,953 ,color,1
+vertexID,954 ,color,1
+vertexID,1044,color,1
+vertexID,1124,color,2
+vertexID,1109,color,3
+vertexID,1110,color,3
+vertexID,1045,color,2
+vertexID,1108,color,1
+vertexID,735 ,color,1
+vertexID,701 ,color,2
+vertexID,770 ,color,2
+vertexID,838 ,color,2
+vertexID,863 ,color,3
+vertexID,771 ,color,2
+vertexID,802 ,color,2
+vertexID,736 ,color,2
+vertexID,702 ,color,2
+vertexID,651 ,color,1
+vertexID,839 ,color,1
+vertexID,909 ,color,1
+vertexID,634 ,color,2
+vertexID,604 ,color,3
+vertexID,635 ,color,2
+vertexID,685 ,color,2
+vertexID,941 ,color,2
+vertexID,569 ,color,1
+vertexID,570 ,color,1
+vertexID,988 ,color,1
+vertexID,989 ,color,1
+vertexID,1015,color,1
+vertexID,1041,color,1
+vertexID,1071,color,3
+vertexID,518 ,color,2
+vertexID,1042,color,1
+vertexID,501 ,color,1
+vertexID,472 ,color,3
+vertexID,502 ,color,1
+vertexID,551 ,color,1
+vertexID,441 ,color,1
+vertexID,440 ,color,1
+vertexID,385 ,color,2
+vertexID,365 ,color,1
+vertexID,335 ,color,3
+vertexID,366 ,color,1
+vertexID,418 ,color,1
+vertexID,301 ,color,1
+vertexID,300 ,color,1
+vertexID,252 ,color,2
+vertexID,231 ,color,1
+vertexID,201 ,color,3
+vertexID,232 ,color,1
+vertexID,282 ,color,1
+vertexID,160 ,color,1
+vertexID,161 ,color,1
+vertexID,110 ,color,2
+vertexID,85  ,color,1
+vertexID,66  ,color,3
+vertexID,86  ,color,1
+vertexID,142 ,color,1
+vertexID,114 ,color,1
+vertexID,88  ,color,2
+vertexID,67  ,color,3
+vertexID,87  ,color,2
+vertexID,143 ,color,2
+vertexID,163 ,color,2
+vertexID,164 ,color,2
+vertexID,216 ,color,1
+vertexID,218 ,color,3
+vertexID,217 ,color,1
+vertexID,326 ,color,1
+vertexID,284 ,color,2
+vertexID,285 ,color,2
+vertexID,286 ,color,2
+vertexID,116 ,color,1
+vertexID,92  ,color,2
+vertexID,68  ,color,3
+vertexID,91  ,color,2
+vertexID,170 ,color,2
+vertexID,169 ,color,2
+vertexID,145 ,color,2
+vertexID,204 ,color,1
+vertexID,234 ,color,2
+vertexID,259 ,color,3
+vertexID,233 ,color,2
+vertexID,304 ,color,1
+vertexID,305 ,color,1
+vertexID,287 ,color,1
+vertexID,340 ,color,2
+vertexID,390 ,color,1
+vertexID,367 ,color,3
+vertexID,368 ,color,3
+vertexID,421 ,color,2
+vertexID,445 ,color,2
+vertexID,444 ,color,2
+vertexID,479 ,color,1
+vertexID,504 ,color,2
+vertexID,523 ,color,3
+vertexID,503 ,color,2
+vertexID,574 ,color,1
+vertexID,552 ,color,1
+vertexID,573 ,color,1
+vertexID,607 ,color,2
+vertexID,637 ,color,1
+vertexID,657 ,color,3
+vertexID,636 ,color,1
+vertexID,689 ,color,1
+vertexID,705 ,color,1
+vertexID,704 ,color,1
+vertexID,117 ,color,1
+vertexID,94  ,color,2
+vertexID,69  ,color,3
+vertexID,93  ,color,2
+vertexID,171 ,color,2
+vertexID,172 ,color,2
+vertexID,146 ,color,2
+vertexID,205 ,color,1
+vertexID,235 ,color,2
+vertexID,260 ,color,3
+vertexID,236 ,color,2
+vertexID,306 ,color,1
+vertexID,288 ,color,1
+vertexID,307 ,color,1
+vertexID,341 ,color,2
+vertexID,370 ,color,1
+vertexID,391 ,color,3
+vertexID,369 ,color,1
+vertexID,447 ,color,1
+vertexID,446 ,color,1
+vertexID,422 ,color,1
+vertexID,480 ,color,2
+vertexID,505 ,color,1
+vertexID,524 ,color,3
+vertexID,506 ,color,1
+vertexID,553 ,color,1
+vertexID,576 ,color,1
+vertexID,575 ,color,1
+vertexID,608 ,color,2
+vertexID,638 ,color,1
+vertexID,658 ,color,3
+vertexID,639 ,color,1
+vertexID,690 ,color,1
+vertexID,707 ,color,1
+vertexID,706 ,color,1
+vertexID,119 ,color,1
+vertexID,173 ,color,2
+vertexID,148 ,color,2
+vertexID,95  ,color,2
+vertexID,71  ,color,3
+vertexID,96  ,color,2
+vertexID,174 ,color,2
+vertexID,206 ,color,1
+vertexID,237 ,color,2
+vertexID,262 ,color,3
+vertexID,238 ,color,2
+vertexID,289 ,color,1
+vertexID,309 ,color,1
+vertexID,310 ,color,1
+vertexID,344 ,color,2
+vertexID,371 ,color,1
+vertexID,393 ,color,3
+vertexID,372 ,color,1
+vertexID,449 ,color,1
+vertexID,423 ,color,1
+vertexID,450 ,color,1
+vertexID,483 ,color,2
+vertexID,507 ,color,1
+vertexID,526 ,color,3
+vertexID,508 ,color,1
+vertexID,577 ,color,1
+vertexID,554 ,color,1
+vertexID,578 ,color,1
+vertexID,609 ,color,2
+vertexID,662 ,color,1
+vertexID,640 ,color,3
+vertexID,641 ,color,3
+vertexID,708 ,color,2
+vertexID,692 ,color,2
+vertexID,709 ,color,2
+vertexID,726 ,color,1
+vertexID,761 ,color,2
+vertexID,783 ,color,3
+vertexID,762 ,color,2
+vertexID,811 ,color,1
+vertexID,829 ,color,1
+vertexID,830 ,color,1
+vertexID,855 ,color,2
+vertexID,922 ,color,1
+vertexID,911 ,color,3
+vertexID,912 ,color,3
+vertexID,955 ,color,2
+vertexID,978 ,color,2
+vertexID,979 ,color,2
+vertexID,1013,color,1
+vertexID,1078,color,2
+vertexID,1077,color,2
+vertexID,1079,color,2
+vertexID,120 ,color,1
+vertexID,175 ,color,2
+vertexID,176 ,color,2
+vertexID,72  ,color,2
+vertexID,98  ,color,3
+vertexID,97  ,color,3
+vertexID,149 ,color,2
+vertexID,207 ,color,1
+vertexID,240 ,color,2
+vertexID,263 ,color,3
+vertexID,239 ,color,2
+vertexID,290 ,color,1
+vertexID,312 ,color,1
+vertexID,311 ,color,1
+vertexID,345 ,color,2
+vertexID,373 ,color,1
+vertexID,394 ,color,3
+vertexID,374 ,color,1
+vertexID,424 ,color,1
+vertexID,452 ,color,1
+vertexID,451 ,color,1
+vertexID,484 ,color,2
+vertexID,509 ,color,1
+vertexID,527 ,color,3
+vertexID,510 ,color,1
+vertexID,555 ,color,1
+vertexID,580 ,color,1
+vertexID,579 ,color,1
+vertexID,610 ,color,2
+vertexID,663 ,color,1
+vertexID,642 ,color,3
+vertexID,643 ,color,3
+vertexID,693 ,color,2
+vertexID,711 ,color,2
+vertexID,710 ,color,2
+vertexID,727 ,color,1
+vertexID,763 ,color,2
+vertexID,784 ,color,3
+vertexID,764 ,color,2
+vertexID,812 ,color,1
+vertexID,832 ,color,1
+vertexID,831 ,color,1
+vertexID,856 ,color,2
+vertexID,913 ,color,1
+vertexID,923 ,color,3
+vertexID,914 ,color,1
+vertexID,981 ,color,1
+vertexID,980 ,color,1
+vertexID,956 ,color,1
+vertexID,1046,color,2
+vertexID,1083,color,1
+vertexID,1082,color,3
+vertexID,1081,color,1
+vertexID,1080,color,1
+vertexID,924 ,color,1
+vertexID,983 ,color,2
+vertexID,961 ,color,3
+vertexID,984 ,color,2
+vertexID,985 ,color,3
+vertexID,982 ,color,2
+vertexID,915 ,color,2
+vertexID,892 ,color,3
+vertexID,916 ,color,2
+vertexID,1037,color,1
+vertexID,847 ,color,1
+vertexID,849 ,color,1
+vertexID,1179,color,2
+vertexID,814 ,color,2
+vertexID,1212,color,1
+vertexID,1213,color,1
+vertexID,1266,color,1
+vertexID,1294,color,3
+vertexID,1238,color,1
+vertexID,746 ,color,1
+vertexID,848 ,color,1
+vertexID,1265,color,1
+vertexID,1380,color,1
+vertexID,644 ,color,2
+vertexID,1408,color,2
+vertexID,1426,color,3
+vertexID,1409,color,2
+vertexID,745 ,color,1
+vertexID,612 ,color,1
+vertexID,747 ,color,1
+vertexID,1476,color,1
+vertexID,1460,color,1
+vertexID,1477,color,1
+vertexID,557 ,color,2
+vertexID,485 ,color,1
+vertexID,548 ,color,3
+vertexID,549 ,color,3
+vertexID,595 ,color,1
+vertexID,611 ,color,1
+vertexID,454 ,color,2
+vertexID,398 ,color,1
+vertexID,375 ,color,2
+vertexID,346 ,color,3
+vertexID,376 ,color,2
+vertexID,425 ,color,2
+vertexID,453 ,color,2
+vertexID,313 ,color,1
+vertexID,314 ,color,1
+vertexID,268 ,color,2
+vertexID,241 ,color,1
+vertexID,208 ,color,3
+vertexID,242 ,color,1
+vertexID,291 ,color,1
+vertexID,177 ,color,1
+vertexID,178 ,color,1
+vertexID,124 ,color,2
+vertexID,150 ,color,1
+vertexID,99  ,color,1
+vertexID,73  ,color,3
+vertexID,100 ,color,1
+vertexID,962 ,color,1
+vertexID,918 ,color,2
+vertexID,963 ,color,2
+vertexID,917 ,color,2
+vertexID,1000,color,2
+vertexID,999 ,color,2
+vertexID,1086,color,2
+vertexID,1052,color,3
+vertexID,1023,color,3
+vertexID,878 ,color,1
+vertexID,1051,color,1
+vertexID,1117,color,1
+vertexID,1118,color,1
+vertexID,1111,color,1
+vertexID,835 ,color,2
+vertexID,859 ,color,3
+vertexID,860 ,color,3
+vertexID,902 ,color,2
+vertexID,1134,color,2
+vertexID,797 ,color,1
+vertexID,796 ,color,1
+vertexID,1181,color,1
+vertexID,1160,color,3
+vertexID,1159,color,3
+vertexID,748 ,color,2
+vertexID,730 ,color,1
+vertexID,714 ,color,3
+vertexID,729 ,color,1
+vertexID,787 ,color,1
+vertexID,668 ,color,1
+vertexID,559 ,color,2
+vertexID,625 ,color,3
+vertexID,626 ,color,3
+vertexID,624 ,color,2
+vertexID,560 ,color,1
+vertexID,487 ,color,1
+vertexID,427 ,color,2
+vertexID,400 ,color,1
+vertexID,348 ,color,2
+vertexID,379 ,color,3
+vertexID,380 ,color,3
+vertexID,458 ,color,2
+vertexID,457 ,color,2
+vertexID,318 ,color,1
+vertexID,317 ,color,1
+vertexID,270 ,color,2
+vertexID,245 ,color,1
+vertexID,210 ,color,3
+vertexID,246 ,color,1
+vertexID,293 ,color,1
+vertexID,181 ,color,1
+vertexID,182 ,color,1
+vertexID,126 ,color,2
+vertexID,104 ,color,1
+vertexID,74  ,color,3
+vertexID,103 ,color,1
+vertexID,152 ,color,1
+vertexID,964 ,color,1
+vertexID,1001,color,2
+vertexID,965 ,color,2
+vertexID,1087,color,2
+vertexID,1112,color,3
+vertexID,1088,color,2
+vertexID,1089,color,2
+vertexID,1024,color,3
+vertexID,1025,color,2
+vertexID,1026,color,2
+vertexID,926 ,color,1
+vertexID,1135,color,1
+vertexID,903 ,color,2
+vertexID,1161,color,2
+vertexID,1182,color,3
+vertexID,1162,color,2
+vertexID,750 ,color,1
+vertexID,879 ,color,3
+vertexID,880 ,color,1
+vertexID,881 ,color,1
+vertexID,1226,color,1
+vertexID,1227,color,1
+vertexID,1216,color,1
+vertexID,731 ,color,2
+vertexID,716 ,color,3
+vertexID,749 ,color,2
+vertexID,695 ,color,1
+vertexID,669 ,color,2
+vertexID,717 ,color,3
+vertexID,715 ,color,1
+vertexID,816 ,color,2
+vertexID,850 ,color,2
+vertexID,1267,color,2
+vertexID,1300,color,1
+vertexID,1301,color,1
+vertexID,1302,color,1
+vertexID,648 ,color,1
+vertexID,614 ,color,3
+vertexID,647 ,color,1
+vertexID,584 ,color,1
+vertexID,583 ,color,1
+vertexID,532 ,color,2
+vertexID,514 ,color,1
+vertexID,488 ,color,3
+vertexID,513 ,color,1
+vertexID,561 ,color,1
+vertexID,460 ,color,1
+vertexID,459 ,color,1
+vertexID,401 ,color,2
+vertexID,382 ,color,1
+vertexID,349 ,color,3
+vertexID,381 ,color,1
+vertexID,428 ,color,1
+vertexID,320 ,color,1
+vertexID,319 ,color,1
+vertexID,271 ,color,2
+vertexID,248 ,color,1
+vertexID,211 ,color,3
+vertexID,247 ,color,1
+vertexID,294 ,color,1
+vertexID,184 ,color,1
+vertexID,183 ,color,1
+vertexID,127 ,color,2
+vertexID,106 ,color,1
+vertexID,75  ,color,3
+vertexID,105 ,color,1
+vertexID,153 ,color,1
+vertexID,191 ,color,1
+vertexID,190 ,color,2
+vertexID,189 ,color,2
+vertexID,264 ,color,2
+vertexID,265 ,color,3
+vertexID,266 ,color,2
+vertexID,267 ,color,1
+vertexID,429 ,color,1
+vertexID,465 ,color,2
+vertexID,327 ,color,2
+vertexID,383 ,color,3
+vertexID,534 ,color,2
+vertexID,562 ,color,3
+vertexID,495 ,color,2
+vertexID,466 ,color,2
+vertexID,295 ,color,1
+vertexID,296 ,color,1
+vertexID,192 ,color,3
+vertexID,533 ,color,1
+vertexID,615 ,color,1
+vertexID,193 ,color,1
+vertexID,223 ,color,1
+vertexID,272 ,color,1
+vertexID,224 ,color,1
+vertexID,751 ,color,2
+vertexID,788 ,color,1
+vertexID,789 ,color,1
+vertexID,852 ,color,1
+vertexID,882 ,color,3
+vertexID,817 ,color,1
+vertexID,851 ,color,1
+vertexID,354 ,color,1
+vertexID,395 ,color,2
+vertexID,396 ,color,2
+vertexID,397 ,color,2
+vertexID,586 ,color,1
+vertexID,722 ,color,2
+vertexID,687 ,color,3
+vertexID,654 ,color,2
+vertexID,587 ,color,2
+vertexID,520 ,color,3
+vertexID,619 ,color,2
+vertexID,620 ,color,2
+vertexID,688 ,color,1
+vertexID,386 ,color,1
+vertexID,490 ,color,2
+vertexID,491 ,color,1
+vertexID,420 ,color,2
+vertexID,419 ,color,2
+vertexID,387 ,color,2
+vertexID,461 ,color,2
+vertexID,742 ,color,1
+vertexID,743 ,color,2
+vertexID,681 ,color,3
+vertexID,741 ,color,2
+vertexID,785 ,color,3
+vertexID,813 ,color,2
+vertexID,846 ,color,2
+vertexID,877 ,color,3
+vertexID,876 ,color,2
+vertexID,857 ,color,3
+vertexID,665 ,color,1
+vertexID,594 ,color,2
+vertexID,664 ,color,1
+vertexID,744 ,color,1
+vertexID,959 ,color,1
+vertexID,960 ,color,1
+vertexID,957 ,color,1
+vertexID,958 ,color,2
+vertexID,998 ,color,3
+vertexID,666 ,color,1
+vertexID,556 ,color,1
+vertexID,1021,color,1
+vertexID,1084,color,1
+vertexID,1047,color,1
+vertexID,464 ,color,2
+vertexID,529 ,color,3
+vertexID,528 ,color,3
+vertexID,530 ,color,2
+vertexID,1085,color,2
+vertexID,462 ,color,1
+vertexID,463 ,color,1
+vertexID,753 ,color,1
+vertexID,821 ,color,2
+vertexID,820 ,color,2
+vertexID,752 ,color,2
+vertexID,885 ,color,2
+vertexID,905 ,color,3
+vertexID,884 ,color,2
+vertexID,886 ,color,2
+vertexID,719 ,color,2
+vertexID,718 ,color,1
+vertexID,676 ,color,3
+vertexID,564 ,color,1
+vertexID,538 ,color,2
+vertexID,630 ,color,1
+vertexID,629 ,color,1
+vertexID,539 ,color,1
+vertexID,600 ,color,1
+vertexID,565 ,color,1
+vertexID,649 ,color,1
+vertexID,1153,color,1
+vertexID,1101,color,2
+vertexID,1102,color,3
+vertexID,1055,color,1
+vertexID,1128,color,2
+vertexID,1127,color,2
+vertexID,1228,color,2
+vertexID,1250,color,3
+vertexID,1191,color,2
+vertexID,1229,color,1
+vertexID,1281,color,1
+vertexID,1303,color,2
+vertexID,1280,color,1
+vertexID,1039,color,2
+vertexID,1014,color,3
+vertexID,1038,color,2
+vertexID,1004,color,1
+vertexID,986 ,color,1
+vertexID,987 ,color,1
+vertexID,930 ,color,2
+vertexID,932 ,color,2
+vertexID,904 ,color,1
+vertexID,818 ,color,2
+vertexID,931 ,color,2
+vertexID,794 ,color,1
+vertexID,732 ,color,2
+vertexID,767 ,color,3
+vertexID,768 ,color,3
+vertexID,836 ,color,2
+vertexID,837 ,color,2
+vertexID,942 ,color,1
+vertexID,896 ,color,2
+vertexID,944 ,color,3
+vertexID,936 ,color,3
+vertexID,993 ,color,2
+vertexID,943 ,color,1
+vertexID,1017,color,2
+vertexID,1073,color,2
+vertexID,1105,color,3
+vertexID,1072,color,2
+vertexID,1074,color,2
+vertexID,868 ,color,1
+vertexID,772 ,color,1
+vertexID,867 ,color,3
+vertexID,773 ,color,2
+vertexID,803 ,color,2
+vertexID,804 ,color,2
+vertexID,840 ,color,2
+vertexID,1290,color,1
+vertexID,1289,color,2
+vertexID,1388,color,2
+vertexID,1418,color,3
+vertexID,1390,color,2
+vertexID,1389,color,2
+vertexID,1306,color,2
+vertexID,1337,color,2
+vertexID,1277,color,2
+vertexID,1235,color,1
+vertexID,1475,color,1
+vertexID,1122,color,2
+vertexID,1205,color,3
+vertexID,1204,color,2
+vertexID,1555,color,2
+vertexID,1556,color,2
+vertexID,1557,color,3
+vertexID,1142,color,1
+vertexID,1097,color,1
+vertexID,1043,color,3
+vertexID,1141,color,1
+vertexID,1173,color,1
+vertexID,1645,color,1
+vertexID,1690,color,3
+vertexID,1616,color,1
+vertexID,1586,color,1
+vertexID,1617,color,1
+vertexID,950 ,color,1
+vertexID,995 ,color,2
+vertexID,1019,color,2
+vertexID,1018,color,1
+vertexID,1727,color,1
+vertexID,1728,color,1
+vertexID,910 ,color,2
+vertexID,951 ,color,2
+vertexID,1752,color,2
+vertexID,1726,color,2
+vertexID,1836,color,2
+vertexID,1868,color,3
+vertexID,1835,color,2
+vertexID,1834,color,2
+vertexID,1795,color,2
+vertexID,870 ,color,1
+vertexID,1981,color,1
+vertexID,1979,color,2
+vertexID,1980,color,1
+vertexID,843 ,color,2
+vertexID,777 ,color,3
+vertexID,844 ,color,2
+vertexID,842 ,color,2
+vertexID,2024,color,1
+vertexID,2042,color,3
+vertexID,2025,color,1
+vertexID,778 ,color,1
+vertexID,779 ,color,1
+vertexID,2115,color,1
+vertexID,2023,color,1
+vertexID,2168,color,2
+vertexID,2203,color,3
+vertexID,2114,color,2
+vertexID,2140,color,2
+vertexID,2169,color,1
+vertexID,2288,color,1
+vertexID,2260,color,2
+vertexID,2259,color,2
+vertexID,2314,color,2
+vertexID,2368,color,3
+vertexID,2369,color,2
+vertexID,2343,color,2
+vertexID,2344,color,1
+vertexID,2391,color,1
+vertexID,780 ,color,1
+vertexID,781 ,color,2
+vertexID,808 ,color,2
+vertexID,809 ,color,2
+vertexID,899 ,color,3
+vertexID,845 ,color,2
+vertexID,871 ,color,2
+vertexID,872 ,color,1
+vertexID,937 ,color,1
+vertexID,977 ,color,2
+vertexID,996 ,color,3
+vertexID,976 ,color,2
+vertexID,1036,color,1
+vertexID,1035,color,1
+vertexID,1020,color,1
+vertexID,1069,color,2
+vertexID,1068,color,2
+vertexID,1098,color,1
+vertexID,1076,color,2
+vertexID,1123,color,2
+vertexID,1115,color,3
+vertexID,1116,color,3
+vertexID,1158,color,1
+vertexID,1207,color,2
+vertexID,1206,color,1
+vertexID,1258,color,1
+vertexID,1291,color,3
+vertexID,1257,color,1
+vertexID,1259,color,1
+vertexID,1361,color,1
+vertexID,1393,color,2
+vertexID,1392,color,3
+vertexID,1391,color,2
+vertexID,1394,color,2
+vertexID,1455,color,1
+vertexID,1454,color,1
+vertexID,1520,color,2
+vertexID,1559,color,1
+vertexID,1558,color,2
+vertexID,1618,color,2
+vertexID,1646,color,3
+vertexID,1619,color,2
+vertexID,1620,color,1
+vertexID,919 ,color,1
+vertexID,975 ,color,2
+vertexID,908 ,color,2
+vertexID,890 ,color,3
+vertexID,907 ,color,2
+vertexID,940 ,color,2
+vertexID,974 ,color,2
+vertexID,927 ,color,1
+vertexID,928 ,color,2
+vertexID,966 ,color,2
+vertexID,1002,color,2
+vertexID,967 ,color,2
+vertexID,1028,color,2
+vertexID,1053,color,3
+vertexID,1027,color,1
+vertexID,1099,color,1
+vertexID,1136,color,2
+vertexID,1151,color,3
+vertexID,1137,color,2
+vertexID,1183,color,1
+vertexID,1187,color,1
+vertexID,1188,color,1
+vertexID,1240,color,2
+vertexID,1269,color,1
+vertexID,1268,color,1
+vertexID,1270,color,1
+vertexID,1311,color,2
+vertexID,1370,color,1
+vertexID,1344,color,2
+vertexID,1345,color,2
+vertexID,969 ,color,1
+vertexID,929 ,color,2
+vertexID,968 ,color,3
+vertexID,1003,color,2
+vertexID,1030,color,2
+vertexID,1054,color,2
+vertexID,1029,color,2
+vertexID,1100,color,2
+vertexID,970 ,color,1
+vertexID,1138,color,1
+vertexID,1152,color,3
+vertexID,1139,color,1
+vertexID,1190,color,1
+vertexID,1184,color,1
+vertexID,1189,color,1
+vertexID,971 ,color,1
+vertexID,972 ,color,2
+vertexID,1007,color,2
+vertexID,1008,color,2
+vertexID,1060,color,2
+vertexID,1091,color,3
+vertexID,1031,color,2
+vertexID,1059,color,1
+vertexID,1010,color,1
+vertexID,973 ,color,2
+vertexID,1009,color,3
+vertexID,1061,color,2
+vertexID,1062,color,2
+vertexID,1092,color,2
+vertexID,1032,color,2
+vertexID,1011,color,1
+vertexID,1022,color,1
+vertexID,1049,color,2
+vertexID,1048,color,2
+vertexID,1050,color,2
+vertexID,1063,color,1
+vertexID,1094,color,2
+vertexID,1103,color,3
+vertexID,1093,color,2
+vertexID,1033,color,2
+vertexID,1034,color,2
+vertexID,1040,color,2
+vertexID,1106,color,1
+vertexID,1095,color,2
+vertexID,1065,color,3
+vertexID,1096,color,2
+vertexID,1130,color,2
+vertexID,1121,color,2
+vertexID,1131,color,2
+vertexID,1171,color,1
+vertexID,1200,color,2
+vertexID,1199,color,2
+vertexID,1201,color,2
+vertexID,1245,color,1
+vertexID,1317,color,2
+vertexID,1286,color,1
+vertexID,1287,color,1
+vertexID,1070,color,1
+vertexID,1125,color,1
+vertexID,1180,color,2
+vertexID,1126,color,2
+vertexID,1150,color,2
+vertexID,1149,color,2
+vertexID,1239,color,2
+vertexID,1214,color,3
+vertexID,1215,color,1
+vertexID,1155,color,1
+vertexID,1217,color,2
+vertexID,1218,color,2
+vertexID,1154,color,2
+vertexID,1129,color,3
+vertexID,1156,color,2
+vertexID,1157,color,1
+vertexID,1530,color,1
+vertexID,1681,color,2
+vertexID,1648,color,3
+vertexID,1649,color,3
+vertexID,1650,color,3
+vertexID,1562,color,2
+vertexID,1456,color,2
+vertexID,1531,color,2
+vertexID,1588,color,2
+vertexID,1700,color,1
+vertexID,1497,color,1
+vertexID,1340,color,1
+vertexID,1420,color,3
+vertexID,1421,color,1
+vertexID,1753,color,2
+vertexID,1754,color,3
+vertexID,1755,color,2
+vertexID,1363,color,2
+vertexID,1293,color,2
+vertexID,1319,color,3
+vertexID,1397,color,2
+vertexID,1364,color,2
+vertexID,1801,color,1
+vertexID,1820,color,1
+vertexID,1821,color,1
+vertexID,1840,color,1
+vertexID,1176,color,1
+vertexID,1262,color,3
+vertexID,1263,color,1
+vertexID,1133,color,2
+vertexID,1210,color,2
+vertexID,1237,color,2
+vertexID,1211,color,2
+vertexID,1278,color,1
+vertexID,1246,color,2
+vertexID,1247,color,2
+vertexID,1264,color,2
+vertexID,1307,color,2
+vertexID,1320,color,3
+vertexID,1308,color,2
+vertexID,1177,color,1
+vertexID,1145,color,2
+vertexID,1144,color,2
+vertexID,1143,color,2
+vertexID,1651,color,1
+vertexID,1701,color,2
+vertexID,1534,color,2
+vertexID,1652,color,3
+vertexID,1653,color,2
+vertexID,1654,color,2
+vertexID,1760,color,2
+vertexID,1803,color,3
+vertexID,1759,color,2
+vertexID,1758,color,2
+vertexID,1513,color,1
+vertexID,1425,color,3
+vertexID,1514,color,1
+vertexID,1823,color,1
+vertexID,1348,color,1
+vertexID,1459,color,1
+vertexID,1458,color,1
+vertexID,1481,color,1
+vertexID,1869,color,2
+vertexID,1870,color,3
+vertexID,1871,color,2
+vertexID,1321,color,2
+vertexID,1902,color,1
+vertexID,1965,color,1
+vertexID,1934,color,1
+vertexID,1935,color,1
+vertexID,1310,color,1
+vertexID,1279,color,3
+vertexID,1309,color,1
+vertexID,1249,color,1
+vertexID,1248,color,1
+vertexID,1225,color,1
+vertexID,1178,color,2
+vertexID,1148,color,1
+vertexID,1146,color,1
+vertexID,1147,color,1
+vertexID,1315,color,1
+vertexID,1231,color,2
+vertexID,1316,color,3
+vertexID,1331,color,2
+vertexID,1353,color,2
+vertexID,1382,color,2
+vertexID,1352,color,2
+vertexID,1445,color,2
+vertexID,1444,color,2
+vertexID,1314,color,1
+vertexID,1192,color,1
+vertexID,1472,color,1
+vertexID,1165,color,2
+vertexID,1164,color,2
+vertexID,1163,color,2
+vertexID,1494,color,2
+vertexID,1500,color,3
+vertexID,1495,color,2
+vertexID,1447,color,2
+vertexID,1545,color,1
+vertexID,1546,color,1
+vertexID,1581,color,2
+vertexID,1547,color,1
+vertexID,1607,color,1
+vertexID,1602,color,3
+vertexID,1603,color,3
+vertexID,1667,color,2
+vertexID,1666,color,2
+vertexID,1688,color,1
+vertexID,1716,color,2
+vertexID,1710,color,3
+vertexID,1711,color,3
+vertexID,1675,color,2
+vertexID,1785,color,1
+vertexID,1786,color,2
+vertexID,1815,color,2
+vertexID,1878,color,2
+vertexID,1814,color,3
+vertexID,1866,color,3
+vertexID,1832,color,2
+vertexID,1865,color,1
+vertexID,1950,color,1
+vertexID,1997,color,2
+vertexID,1974,color,2
+vertexID,1973,color,2
+vertexID,1951,color,2
+vertexID,2041,color,2
+vertexID,2021,color,3
+vertexID,2020,color,1
+vertexID,2083,color,1
+vertexID,2082,color,1
+vertexID,2098,color,2
+vertexID,2126,color,1
+vertexID,2130,color,3
+vertexID,2125,color,1
+vertexID,2088,color,1
+vertexID,2187,color,1
+vertexID,2188,color,1
+vertexID,2220,color,2
+vertexID,2198,color,1
+vertexID,2246,color,1
+vertexID,2254,color,3
+vertexID,2247,color,1
+vertexID,2300,color,1
+vertexID,2301,color,1
+vertexID,2331,color,2
+vertexID,2306,color,1
+vertexID,2358,color,1
+vertexID,2364,color,3
+vertexID,2359,color,1
+vertexID,2410,color,1
+vertexID,2411,color,1
+vertexID,2442,color,2
+vertexID,2475,color,1
+vertexID,2467,color,3
+vertexID,2468,color,3
+vertexID,2412,color,1
+vertexID,2523,color,2
+vertexID,2524,color,2
+vertexID,2562,color,1
+vertexID,2528,color,2
+vertexID,2585,color,2
+vertexID,2593,color,3
+vertexID,2586,color,2
+vertexID,2631,color,1
+vertexID,2662,color,2
+vertexID,2660,color,3
+vertexID,2661,color,3
+vertexID,2721,color,1
+vertexID,2720,color,1
+vertexID,2690,color,1
+vertexID,2739,color,2
+vertexID,2738,color,2
+vertexID,2769,color,1
+vertexID,2744,color,2
+vertexID,2795,color,2
+vertexID,2803,color,3
+vertexID,2796,color,2
+vertexID,2859,color,1
+vertexID,2888,color,2
+vertexID,2878,color,3
+vertexID,2879,color,3
+vertexID,2933,color,1
+vertexID,2932,color,1
+vertexID,2909,color,1
+vertexID,2959,color,2
+vertexID,2976,color,1
+vertexID,2984,color,3
+vertexID,2977,color,1
+vertexID,3026,color,1
+vertexID,3025,color,1
+vertexID,3007,color,1
+vertexID,3062,color,2
+vertexID,3061,color,2
+vertexID,3088,color,1
+vertexID,3111,color,2
+vertexID,3121,color,3
+vertexID,3110,color,2
+vertexID,3070,color,2
+vertexID,3177,color,1
+vertexID,3230,color,2
+vertexID,3211,color,1
+vertexID,3210,color,1
+vertexID,3252,color,1
+vertexID,3254,color,3
+vertexID,3251,color,1
+vertexID,3313,color,1
+vertexID,3312,color,1
+vertexID,3339,color,2
+vertexID,3314,color,1
+vertexID,3364,color,1
+vertexID,3368,color,3
+vertexID,3363,color,1
+vertexID,3422,color,1
+vertexID,3420,color,1
+vertexID,3448,color,2
+vertexID,3421,color,1
+vertexID,3505,color,1
+vertexID,3584,color,2
+vertexID,3610,color,3
+vertexID,3557,color,2
+vertexID,3528,color,2
+vertexID,3529,color,2
+vertexID,3583,color,1
+vertexID,1194,color,1
+vertexID,1251,color,2
+vertexID,1232,color,2
+vertexID,1193,color,2
+vertexID,1166,color,3
+vertexID,1252,color,2
+vertexID,1284,color,2
+vertexID,1330,color,3
+vertexID,1195,color,1
+vertexID,1354,color,1
+vertexID,1448,color,2
+vertexID,1478,color,3
+vertexID,1383,color,2
+vertexID,1410,color,2
+vertexID,1384,color,2
+vertexID,1449,color,1
+vertexID,1548,color,1
+vertexID,1549,color,2
+vertexID,1582,color,2
+vertexID,1639,color,2
+vertexID,1676,color,3
+vertexID,1608,color,2
+vertexID,1583,color,2
+vertexID,1640,color,1
+vertexID,1169,color,1
+vertexID,1170,color,2
+vertexID,1197,color,2
+vertexID,1198,color,2
+vertexID,1285,color,3
+vertexID,1253,color,2
+vertexID,1233,color,2
+vertexID,1254,color,1
+vertexID,1174,color,1
+vertexID,1208,color,2
+vertexID,1209,color,2
+vertexID,1175,color,2
+vertexID,1236,color,2
+vertexID,1292,color,2
+vertexID,1261,color,3
+vertexID,1260,color,1
+vertexID,1318,color,1
+vertexID,1339,color,2
+vertexID,1338,color,1
+vertexID,1395,color,1
+vertexID,1419,color,3
+vertexID,1362,color,1
+vertexID,1396,color,1
+vertexID,1220,color,1
+vertexID,1274,color,2
+vertexID,1185,color,3
+vertexID,1221,color,2
+vertexID,1304,color,2
+vertexID,1275,color,2
+vertexID,1241,color,2
+vertexID,1219,color,1
+vertexID,1223,color,1
+vertexID,1276,color,2
+vertexID,1222,color,2
+vertexID,1186,color,3
+vertexID,1230,color,2
+vertexID,1305,color,2
+vertexID,1242,color,2
+vertexID,1224,color,1
+vertexID,1438,color,1
+vertexID,1346,color,2
+vertexID,1436,color,2
+vertexID,1437,color,2
+vertexID,1489,color,2
+vertexID,1518,color,3
+vertexID,1488,color,2
+vertexID,1328,color,1
+vertexID,1327,color,1
+vertexID,1273,color,3
+vertexID,1326,color,1
+vertexID,1572,color,1
+vertexID,1490,color,1
+vertexID,1573,color,1
+vertexID,1272,color,1
+vertexID,1271,color,1
+vertexID,1571,color,2
+vertexID,1593,color,1
+vertexID,1660,color,1
+vertexID,1629,color,3
+vertexID,1628,color,2
+vertexID,1738,color,2
+vertexID,1575,color,1
+vertexID,1596,color,2
+vertexID,1661,color,2
+vertexID,1686,color,3
+vertexID,1521,color,2
+vertexID,1491,color,3
+vertexID,1597,color,2
+vertexID,1631,color,2
+vertexID,1465,color,1
+vertexID,1401,color,2
+vertexID,1466,color,1
+vertexID,1467,color,1
+vertexID,1662,color,1
+vertexID,1745,color,1
+vertexID,1399,color,1
+vertexID,1350,color,1
+vertexID,1400,color,1
+vertexID,1808,color,2
+vertexID,1349,color,2
+vertexID,1329,color,3
+vertexID,1809,color,1
+vertexID,1858,color,1
+vertexID,1874,color,3
+vertexID,1825,color,1
+vertexID,1312,color,1
+vertexID,1282,color,2
+vertexID,1313,color,1
+vertexID,1347,color,1
+vertexID,1857,color,1
+vertexID,1283,color,1
+vertexID,1656,color,1
+vertexID,1658,color,2
+vertexID,1591,color,2
+vertexID,1637,color,3
+vertexID,1657,color,1
+vertexID,1765,color,2
+vertexID,1804,color,3
+vertexID,1767,color,2
+vertexID,1766,color,2
+vertexID,1702,color,2
+vertexID,1482,color,1
+vertexID,1516,color,3
+vertexID,1566,color,3
+vertexID,1567,color,1
+vertexID,1398,color,2
+vertexID,1446,color,3
+vertexID,1537,color,2
+vertexID,1515,color,2
+vertexID,1295,color,1
+vertexID,1365,color,3
+vertexID,1366,color,1
+vertexID,1296,color,2
+vertexID,1322,color,2
+vertexID,1323,color,2
+vertexID,1341,color,2
+vertexID,1297,color,1
+vertexID,1734,color,1
+vertexID,1783,color,2
+vertexID,1782,color,3
+vertexID,1712,color,2
+vertexID,1670,color,3
+vertexID,1713,color,2
+vertexID,1768,color,2
+vertexID,1781,color,2
+vertexID,1592,color,1
+vertexID,1623,color,2
+vertexID,1846,color,1
+vertexID,1462,color,2
+vertexID,1570,color,2
+vertexID,1844,color,2
+vertexID,1483,color,1
+vertexID,1461,color,1
+vertexID,1429,color,1
+vertexID,1381,color,3
+vertexID,1428,color,2
+vertexID,1325,color,1
+vertexID,1342,color,2
+vertexID,1569,color,1
+vertexID,1938,color,1
+vertexID,1907,color,3
+vertexID,1906,color,3
+vertexID,1905,color,2
+vertexID,1983,color,2
+vertexID,1982,color,2
+vertexID,1299,color,2
+vertexID,1324,color,2
+vertexID,1984,color,1
+vertexID,1298,color,1
+vertexID,2052,color,2
+vertexID,2027,color,3
+vertexID,2008,color,2
+vertexID,2028,color,1
+vertexID,2078,color,1
+vertexID,2119,color,2
+vertexID,2175,color,1
+vertexID,2195,color,3
+vertexID,2163,color,1
+vertexID,2164,color,1
+vertexID,2093,color,1
+vertexID,2094,color,1
+vertexID,2239,color,1
+vertexID,2225,color,2
+vertexID,2226,color,2
+vertexID,2281,color,2
+vertexID,2332,color,1
+vertexID,2305,color,2
+vertexID,2304,color,2
+vertexID,2362,color,2
+vertexID,2377,color,3
+vertexID,2363,color,2
+vertexID,2431,color,1
+vertexID,2429,color,1
+vertexID,2462,color,2
+vertexID,2430,color,1
+vertexID,2510,color,1
+vertexID,1845,color,1
+vertexID,1503,color,1
+vertexID,1519,color,2
+vertexID,1496,color,2
+vertexID,1551,color,2
+vertexID,1641,color,2
+vertexID,1611,color,3
+vertexID,1610,color,3
+vertexID,1612,color,3
+vertexID,1504,color,2
+vertexID,1451,color,1
+vertexID,1333,color,2
+vertexID,1413,color,3
+vertexID,1414,color,2
+vertexID,1386,color,1
+vertexID,1358,color,1
+vertexID,1334,color,1
+vertexID,1357,color,1
+vertexID,1343,color,1
+vertexID,1367,color,2
+vertexID,1368,color,2
+vertexID,1369,color,2
+vertexID,1351,color,1
+vertexID,1464,color,1
+vertexID,1441,color,2
+vertexID,1371,color,3
+vertexID,1440,color,2
+vertexID,1498,color,2
+vertexID,1542,color,3
+vertexID,1439,color,2
+vertexID,1373,color,1
+vertexID,1372,color,1
+vertexID,1541,color,1
+vertexID,1574,color,1
+vertexID,1594,color,1
+vertexID,1630,color,2
+vertexID,1595,color,1
+vertexID,1673,color,1
+vertexID,1706,color,1
+vertexID,1705,color,2
+vertexID,1776,color,1
+vertexID,1807,color,3
+vertexID,1777,color,1
+vertexID,1775,color,1
+vertexID,1374,color,1
+vertexID,1375,color,2
+vertexID,1402,color,2
+vertexID,1492,color,2
+vertexID,1469,color,3
+vertexID,1403,color,2
+vertexID,1442,color,2
+vertexID,1468,color,1
+vertexID,1739,color,1
+vertexID,1687,color,2
+vertexID,1810,color,3
+vertexID,1811,color,2
+vertexID,1779,color,2
+vertexID,1741,color,2
+vertexID,1861,color,2
+vertexID,1875,color,3
+vertexID,1862,color,2
+vertexID,1860,color,2
+vertexID,1600,color,1
+vertexID,1579,color,3
+vertexID,1664,color,1
+vertexID,1665,color,1
+vertexID,1740,color,1
+vertexID,1968,color,1
+vertexID,1923,color,2
+vertexID,1522,color,1
+vertexID,1493,color,2
+vertexID,1599,color,1
+vertexID,1634,color,1
+vertexID,2019,color,2
+vertexID,1993,color,3
+vertexID,2033,color,3
+vertexID,1992,color,2
+vertexID,2014,color,2
+vertexID,1471,color,1
+vertexID,1376,color,1
+vertexID,1470,color,3
+vertexID,2034,color,1
+vertexID,1377,color,2
+vertexID,1405,color,2
+vertexID,1404,color,2
+vertexID,1443,color,2
+vertexID,1378,color,1
+vertexID,1415,color,1
+vertexID,1406,color,2
+vertexID,1379,color,3
+vertexID,1407,color,2
+vertexID,1473,color,2
+vertexID,1452,color,2
+vertexID,1474,color,2
+vertexID,2146,color,1
+vertexID,2103,color,2
+vertexID,2148,color,3
+vertexID,2074,color,3
+vertexID,2147,color,1
+vertexID,2204,color,2
+vertexID,2268,color,2
+vertexID,2238,color,2
+vertexID,2291,color,2
+vertexID,2317,color,3
+vertexID,1933,color,1
+vertexID,2048,color,1
+vertexID,2047,color,1
+vertexID,2267,color,1
+vertexID,2290,color,1
+vertexID,2345,color,1
+vertexID,1802,color,2
+vertexID,1901,color,2
+vertexID,1964,color,2
+vertexID,2425,color,2
+vertexID,2424,color,2
+vertexID,2426,color,2
+vertexID,1693,color,1
+vertexID,1757,color,1
+vertexID,1822,color,1
+vertexID,1900,color,1
+vertexID,2540,color,1
+vertexID,2606,color,1
+vertexID,2605,color,3
+vertexID,2574,color,1
+vertexID,1589,color,2
+vertexID,1683,color,3
+vertexID,2701,color,1
+vertexID,2753,color,1
+vertexID,2675,color,1
+vertexID,2732,color,1
+vertexID,2604,color,2
+vertexID,2674,color,2
+vertexID,1684,color,1
+vertexID,1533,color,1
+vertexID,1682,color,1
+vertexID,2844,color,2
+vertexID,2846,color,2
+vertexID,2845,color,2
+vertexID,1457,color,2
+vertexID,1532,color,3
+vertexID,1512,color,2
+vertexID,1563,color,2
+vertexID,2882,color,1
+vertexID,1510,color,1
+vertexID,1423,color,1
+vertexID,1424,color,1
+vertexID,1422,color,1
+vertexID,1511,color,1
+vertexID,2935,color,2
+vertexID,2948,color,3
+vertexID,2934,color,2
+vertexID,2980,color,1
+vertexID,2969,color,1
+vertexID,2979,color,1
+vertexID,3002,color,2
+vertexID,3001,color,2
+vertexID,3029,color,1
+vertexID,3063,color,2
+vertexID,3079,color,3
+vertexID,3064,color,2
+vertexID,3015,color,2
+vertexID,3114,color,1
+vertexID,3113,color,1
+vertexID,3148,color,2
+vertexID,3132,color,1
+vertexID,3196,color,1
+vertexID,3180,color,3
+vertexID,3179,color,3
+vertexID,3269,color,2
+vertexID,3234,color,2
+vertexID,3294,color,1
+vertexID,3268,color,2
+vertexID,3353,color,2
+vertexID,3375,color,1
+vertexID,3374,color,3
+vertexID,3376,color,1
+vertexID,3383,color,1
+vertexID,3373,color,1
+vertexID,3465,color,1
+vertexID,3433,color,1
+vertexID,1427,color,1
+vertexID,1638,color,1
+vertexID,1605,color,2
+vertexID,1606,color,2
+vertexID,1624,color,2
+vertexID,1672,color,2
+vertexID,1685,color,3
+vertexID,1671,color,2
+vertexID,1484,color,1
+vertexID,1539,color,3
+vertexID,1714,color,1
+vertexID,1538,color,2
+vertexID,1463,color,2
+vertexID,1540,color,2
+vertexID,1743,color,2
+vertexID,1769,color,3
+vertexID,1744,color,2
+vertexID,1430,color,1
+vertexID,1432,color,1
+vertexID,1431,color,1
+vertexID,1813,color,1
+vertexID,1805,color,1
+vertexID,1812,color,1
+vertexID,1849,color,2
+vertexID,1847,color,3
+vertexID,1848,color,1
+vertexID,1939,color,1
+vertexID,1909,color,3
+vertexID,1908,color,3
+vertexID,1910,color,2
+vertexID,1433,color,1
+vertexID,1486,color,2
+vertexID,1517,color,3
+vertexID,1487,color,2
+vertexID,1435,color,2
+vertexID,1434,color,2
+vertexID,1485,color,1
+vertexID,1479,color,1
+vertexID,1480,color,2
+vertexID,1508,color,2
+vertexID,1587,color,3
+vertexID,1561,color,2
+vertexID,1509,color,2
+vertexID,1529,color,2
+vertexID,1635,color,1
+vertexID,1560,color,1
+vertexID,1636,color,1
+vertexID,1669,color,2
+vertexID,1691,color,1
+vertexID,1699,color,3
+vertexID,1692,color,1
+vertexID,1647,color,1
+vertexID,1733,color,1
+vertexID,1798,color,2
+vertexID,1799,color,2
+vertexID,1800,color,3
+vertexID,1838,color,1
+vertexID,1837,color,3
+vertexID,1839,color,1
+vertexID,1897,color,1
+vertexID,1932,color,2
+vertexID,1898,color,1
+vertexID,1896,color,1
+vertexID,2004,color,1
+vertexID,2002,color,2
+vertexID,2003,color,1
+vertexID,2045,color,1
+vertexID,2073,color,3
+vertexID,2046,color,1
+vertexID,2044,color,1
+vertexID,2101,color,1
+vertexID,2102,color,1
+vertexID,2127,color,2
+vertexID,2161,color,1
+vertexID,2171,color,3
+vertexID,2162,color,1
+vertexID,2116,color,1
+vertexID,2234,color,1
+vertexID,2236,color,1
+vertexID,2262,color,2
+vertexID,2235,color,1
+vertexID,2302,color,1
+vertexID,2373,color,2
+vertexID,2375,color,2
+vertexID,2374,color,2
+vertexID,2486,color,1
+vertexID,2453,color,1
+vertexID,2503,color,1
+vertexID,2502,color,2
+vertexID,2571,color,1
+vertexID,2624,color,1
+vertexID,2601,color,1
+vertexID,2623,color,2
+vertexID,2699,color,3
+vertexID,2669,color,1
+vertexID,2670,color,1
+vertexID,2740,color,1
+vertexID,2815,color,2
+vertexID,2782,color,2
+vertexID,2840,color,2
+vertexID,2839,color,1
+vertexID,1499,color,1
+vertexID,1882,color,1
+vertexID,1817,color,2
+vertexID,1954,color,2
+vertexID,1881,color,2
+vertexID,2000,color,2
+vertexID,2022,color,3
+vertexID,1999,color,2
+vertexID,2001,color,2
+vertexID,1953,color,2
+vertexID,1928,color,2
+vertexID,1679,color,1
+vertexID,1788,color,3
+vertexID,1789,color,3
+vertexID,1790,color,3
+vertexID,1863,color,1
+vertexID,2134,color,1
+vertexID,1677,color,2
+vertexID,1718,color,2
+vertexID,1668,color,2
+vertexID,2135,color,2
+vertexID,2166,color,2
+vertexID,2202,color,2
+vertexID,1678,color,1
+vertexID,1609,color,1
+vertexID,2201,color,1
+vertexID,2200,color,1
+vertexID,1501,color,2
+vertexID,1585,color,3
+vertexID,1584,color,2
+vertexID,2283,color,2
+vertexID,2309,color,3
+vertexID,2199,color,2
+vertexID,1524,color,1
+vertexID,1502,color,1
+vertexID,1525,color,1
+vertexID,1550,color,1
+vertexID,2284,color,1
+vertexID,2285,color,1
+vertexID,2335,color,1
+vertexID,2390,color,1
+vertexID,2414,color,2
+vertexID,2413,color,3
+vertexID,2476,color,1
+vertexID,2448,color,1
+vertexID,2529,color,2
+vertexID,2565,color,2
+vertexID,2530,color,3
+vertexID,2531,color,2
+vertexID,2618,color,1
+vertexID,2635,color,2
+vertexID,2688,color,3
+vertexID,2595,color,2
+vertexID,2722,color,1
+vertexID,2730,color,2
+vertexID,2723,color,1
+vertexID,2770,color,1
+vertexID,2771,color,1
+vertexID,2745,color,1
+vertexID,2804,color,2
+vertexID,2806,color,2
+vertexID,2836,color,1
+vertexID,2967,color,2
+vertexID,2866,color,2
+vertexID,2903,color,2
+vertexID,2835,color,2
+vertexID,2988,color,1
+vertexID,2805,color,1
+vertexID,2968,color,2
+vertexID,3071,color,2
+vertexID,3098,color,1
+vertexID,3072,color,1
+vertexID,3187,color,1
+vertexID,3152,color,3
+vertexID,3099,color,1
+vertexID,3123,color,1
+vertexID,3231,color,2
+vertexID,3151,color,2
+vertexID,3258,color,2
+vertexID,3284,color,1
+vertexID,3259,color,2
+vertexID,3346,color,2
+vertexID,3369,color,1
+vertexID,3382,color,1
+vertexID,3370,color,3
+vertexID,3371,color,1
+vertexID,3451,color,1
+vertexID,3500,color,1
+vertexID,3424,color,1
+vertexID,3389,color,1
+vertexID,3508,color,2
+vertexID,3509,color,2
+vertexID,3510,color,2
+vertexID,1719,color,1
+vertexID,1523,color,1
+vertexID,1552,color,1
+vertexID,1526,color,2
+vertexID,1527,color,2
+vertexID,1528,color,2
+vertexID,1680,color,2
+vertexID,1604,color,3
+vertexID,1643,color,1
+vertexID,1697,color,1
+vertexID,1723,color,1
+vertexID,1819,color,2
+vertexID,1792,color,1
+vertexID,1793,color,1
+vertexID,1886,color,1
+vertexID,1931,color,1
+vertexID,1887,color,2
+vertexID,1956,color,2
+vertexID,1535,color,1
+vertexID,1564,color,2
+vertexID,1536,color,2
+vertexID,1565,color,2
+vertexID,1622,color,2
+vertexID,1655,color,3
+vertexID,1590,color,2
+vertexID,1621,color,1
+vertexID,1694,color,1
+vertexID,1762,color,2
+vertexID,1763,color,3
+vertexID,1761,color,2
+vertexID,1764,color,2
+vertexID,1708,color,1
+vertexID,1707,color,2
+vertexID,1715,color,2
+vertexID,1778,color,2
+vertexID,1827,color,2
+vertexID,1859,color,3
+vertexID,1826,color,2
+vertexID,1828,color,2
+vertexID,1695,color,2
+vertexID,1663,color,1
+vertexID,1543,color,2
+vertexID,1633,color,3
+vertexID,1632,color,2
+vertexID,1577,color,1
+vertexID,1576,color,3
+vertexID,1544,color,1
+vertexID,1578,color,1
+vertexID,1598,color,1
+vertexID,1568,color,1
+vertexID,1580,color,1
+vertexID,1601,color,1
+vertexID,1784,color,1
+vertexID,1771,color,2
+vertexID,1850,color,2
+vertexID,1940,color,2
+vertexID,1912,color,3
+vertexID,1852,color,2
+vertexID,1853,color,3
+vertexID,1851,color,3
+vertexID,1772,color,2
+vertexID,1703,color,3
+vertexID,1735,color,1
+vertexID,1941,color,1
+vertexID,1913,color,3
+vertexID,1770,color,1
+vertexID,1704,color,1
+vertexID,1659,color,1
+vertexID,1966,color,2
+vertexID,2053,color,2
+vertexID,2030,color,2
+vertexID,1625,color,2
+vertexID,1627,color,2
+vertexID,1626,color,2
+vertexID,2031,color,1
+vertexID,2080,color,1
+vertexID,1642,color,1
+vertexID,1674,color,1
+vertexID,2801,color,2
+vertexID,1721,color,1
+vertexID,1696,color,2
+vertexID,1720,color,3
+vertexID,1742,color,3
+vertexID,1749,color,2
+vertexID,1791,color,2
+vertexID,1818,color,2
+vertexID,1722,color,1
+vertexID,1829,color,1
+vertexID,1894,color,2
+vertexID,1893,color,3
+vertexID,1892,color,2
+vertexID,1895,color,2
+vertexID,1797,color,2
+vertexID,1796,color,2
+vertexID,1730,color,1
+vertexID,1959,color,1
+vertexID,1960,color,1
+vertexID,1698,color,2
+vertexID,1731,color,3
+vertexID,1729,color,3
+vertexID,1732,color,1
+vertexID,1709,color,1
+vertexID,1747,color,1
+vertexID,1746,color,2
+vertexID,1717,color,3
+vertexID,1780,color,2
+vertexID,1816,color,2
+vertexID,1787,color,2
+vertexID,1833,color,2
+vertexID,1748,color,1
+vertexID,1725,color,1
+vertexID,2121,color,1
+vertexID,2097,color,2
+vertexID,2065,color,2
+vertexID,2096,color,2
+vertexID,2155,color,2
+vertexID,2214,color,3
+vertexID,2213,color,2
+vertexID,2178,color,2
+vertexID,2032,color,1
+vertexID,2241,color,1
+vertexID,2177,color,1
+vertexID,2379,color,1
+vertexID,1994,color,2
+vertexID,2016,color,3
+vertexID,2017,color,3
+vertexID,2378,color,2
+vertexID,1970,color,1
+vertexID,1971,color,1
+vertexID,1986,color,1
+vertexID,2443,color,1
+vertexID,2402,color,1
+vertexID,2352,color,1
+vertexID,1915,color,2
+vertexID,2518,color,2
+vertexID,2489,color,2
+vertexID,2551,color,2
+vertexID,1824,color,1
+vertexID,2552,color,1
+vertexID,1773,color,2
+vertexID,1914,color,2
+vertexID,1916,color,2
+vertexID,2616,color,2
+vertexID,1736,color,1
+vertexID,1806,color,1
+vertexID,1774,color,1
+vertexID,2683,color,1
+vertexID,2682,color,3
+vertexID,2681,color,1
+vertexID,1737,color,2
+vertexID,2735,color,1
+vertexID,2736,color,1
+vertexID,2713,color,1
+vertexID,2757,color,1
+vertexID,2855,color,2
+vertexID,2853,color,2
+vertexID,2854,color,2
+vertexID,2954,color,1
+vertexID,2953,color,1
+vertexID,2952,color,1
+vertexID,2983,color,2
+vertexID,3054,color,1
+vertexID,3021,color,2
+vertexID,3020,color,2
+vertexID,3138,color,2
+vertexID,3170,color,1
+vertexID,3169,color,1
+vertexID,3171,color,1
+vertexID,1756,color,1
+vertexID,1864,color,1
+vertexID,1830,color,2
+vertexID,1841,color,2
+vertexID,1876,color,2
+vertexID,1903,color,3
+vertexID,1877,color,2
+vertexID,1831,color,2
+vertexID,1948,color,1
+vertexID,1949,color,1
+vertexID,2076,color,2
+vertexID,2049,color,1
+vertexID,2050,color,1
+vertexID,2194,color,1
+vertexID,2224,color,2
+vertexID,2252,color,1
+vertexID,2270,color,3
+vertexID,2253,color,1
+vertexID,2193,color,1
+vertexID,2206,color,1
+vertexID,2318,color,1
+vertexID,2320,color,1
+vertexID,2348,color,2
+vertexID,2319,color,1
+vertexID,2395,color,1
+vertexID,2427,color,2
+vertexID,2456,color,2
+vertexID,2507,color,2
+vertexID,2396,color,2
+vertexID,2458,color,2
+vertexID,2457,color,1
+vertexID,1842,color,1
+vertexID,1843,color,2
+vertexID,1873,color,2
+vertexID,1922,color,3
+vertexID,1936,color,2
+vertexID,1872,color,2
+vertexID,1904,color,2
+vertexID,1937,color,1
+vertexID,1942,color,1
+vertexID,1854,color,2
+vertexID,1919,color,3
+vertexID,1918,color,3
+vertexID,1917,color,2
+vertexID,1996,color,2
+vertexID,1972,color,2
+vertexID,1855,color,1
+vertexID,1856,color,1
+vertexID,2018,color,1
+vertexID,2054,color,2
+vertexID,2038,color,3
+vertexID,2039,color,3
+vertexID,1995,color,2
+vertexID,1879,color,1
+vertexID,1926,color,2
+vertexID,1975,color,2
+vertexID,1998,color,3
+vertexID,1927,color,2
+vertexID,1880,color,2
+vertexID,1952,color,2
+vertexID,1976,color,1
+vertexID,1883,color,1
+vertexID,1930,color,2
+vertexID,1969,color,3
+vertexID,1977,color,2
+vertexID,1929,color,2
+vertexID,1884,color,2
+vertexID,1955,color,2
+vertexID,1978,color,1
+vertexID,1885,color,1
+vertexID,1899,color,1
+vertexID,1911,color,1
+vertexID,2013,color,1
+vertexID,1920,color,2
+vertexID,1946,color,3
+vertexID,1967,color,3
+vertexID,1991,color,3
+vertexID,1990,color,2
+vertexID,2040,color,2
+vertexID,2123,color,2
+vertexID,1921,color,1
+vertexID,1947,color,1
+vertexID,2122,color,1
+vertexID,2218,color,2
+vertexID,2181,color,3
+vertexID,2182,color,3
+vertexID,2180,color,1
+vertexID,2279,color,1
+vertexID,2355,color,2
+vertexID,2329,color,3
+vertexID,2278,color,2
+vertexID,2297,color,2
+vertexID,2277,color,2
+vertexID,2330,color,1
+vertexID,1924,color,1
+vertexID,1925,color,2
+vertexID,2012,color,1
+vertexID,1945,color,2
+vertexID,1987,color,3
+vertexID,1988,color,3
+vertexID,2057,color,2
+vertexID,2081,color,3
+vertexID,1989,color,2
+vertexID,1943,color,1
+vertexID,1944,color,1
+vertexID,2055,color,1
+vertexID,2056,color,1
+vertexID,2108,color,1
+vertexID,2157,color,2
+vertexID,2242,color,1
+vertexID,2217,color,3
+vertexID,2179,color,1
+vertexID,2158,color,1
+vertexID,2216,color,2
+vertexID,2276,color,2
+vertexID,2380,color,1
+vertexID,2381,color,3
+vertexID,2382,color,1
+vertexID,2383,color,1
+vertexID,2438,color,1
+vertexID,2439,color,1
+vertexID,2026,color,1
+vertexID,1963,color,2
+vertexID,2005,color,3
+vertexID,2006,color,3
+vertexID,2007,color,2
+vertexID,2060,color,2
+vertexID,2092,color,2
+vertexID,1961,color,1
+vertexID,1962,color,1
+vertexID,2091,color,1
+vertexID,2117,color,2
+vertexID,2172,color,2
+vertexID,2145,color,3
+vertexID,2144,color,1
+vertexID,2079,color,1
+vertexID,2063,color,2
+vertexID,2037,color,3
+vertexID,2064,color,2
+vertexID,2106,color,2
+vertexID,2107,color,2
+vertexID,2095,color,2
+vertexID,2009,color,1
+vertexID,2011,color,1
+vertexID,2149,color,1
+vertexID,2151,color,3
+vertexID,1985,color,2
+vertexID,2208,color,1
+vertexID,2240,color,2
+vertexID,2209,color,1
+vertexID,2150,color,1
+vertexID,2010,color,1
+vertexID,2282,color,1
+vertexID,2210,color,1
+vertexID,2349,color,2
+vertexID,2324,color,1
+vertexID,2325,color,1
+vertexID,2400,color,1
+vertexID,2051,color,1
+vertexID,2035,color,2
+vertexID,2015,color,3
+vertexID,2036,color,2
+vertexID,2077,color,2
+vertexID,2086,color,2
+vertexID,2087,color,2
+vertexID,2207,color,1
+vertexID,2173,color,2
+vertexID,2174,color,2
+vertexID,2029,color,1
+vertexID,2170,color,1
+vertexID,2233,color,2
+vertexID,2043,color,2
+vertexID,2141,color,3
+vertexID,2142,color,3
+vertexID,2143,color,2
+vertexID,2232,color,2
+vertexID,2261,color,2
+vertexID,2071,color,1
+vertexID,2070,color,1
+vertexID,2072,color,1
+vertexID,2231,color,1
+vertexID,2289,color,1
+vertexID,2084,color,1
+vertexID,2100,color,2
+vertexID,2113,color,3
+vertexID,2099,color,2
+vertexID,2058,color,2
+vertexID,2066,color,2
+vertexID,2059,color,2
+vertexID,2160,color,1
+vertexID,2221,color,2
+vertexID,2189,color,1
+vertexID,2190,color,1
+vertexID,2248,color,1
+vertexID,2258,color,3
+vertexID,2249,color,1
+vertexID,2312,color,1
+vertexID,2339,color,2
+vertexID,2338,color,2
+vertexID,2337,color,2
+vertexID,3446,color,1
+vertexID,3340,color,2
+vertexID,3434,color,3
+vertexID,3467,color,2
+vertexID,3468,color,2
+vertexID,3566,color,2
+vertexID,3568,color,2
+vertexID,3567,color,2
+vertexID,3295,color,1
+vertexID,3466,color,1
+vertexID,3400,color,1
+vertexID,3161,color,2
+vertexID,3198,color,3
+vertexID,3271,color,2
+vertexID,3270,color,2
+vertexID,3041,color,1
+vertexID,3017,color,2
+vertexID,3081,color,2
+vertexID,3197,color,2
+vertexID,3133,color,2
+vertexID,2949,color,1
+vertexID,3016,color,1
+vertexID,3080,color,1
+vertexID,2918,color,2
+vertexID,2961,color,1
+vertexID,2904,color,1
+vertexID,2883,color,3
+vertexID,2905,color,1
+vertexID,2960,color,1
+vertexID,2817,color,1
+vertexID,2847,color,2
+vertexID,2772,color,2
+vertexID,2785,color,2
+vertexID,2676,color,1
+vertexID,2702,color,2
+vertexID,2643,color,2
+vertexID,2613,color,2
+vertexID,2541,color,1
+vertexID,2608,color,3
+vertexID,2487,color,2
+vertexID,2609,color,2
+vertexID,2607,color,2
+vertexID,2376,color,1
+vertexID,2454,color,3
+vertexID,2488,color,1
+vertexID,2506,color,1
+vertexID,2303,color,2
+vertexID,2347,color,2
+vertexID,2346,color,2
+vertexID,2394,color,2
+vertexID,2269,color,1
+vertexID,2251,color,2
+vertexID,2223,color,3
+vertexID,2250,color,2
+vertexID,2205,color,1
+vertexID,2191,color,1
+vertexID,2192,color,1
+vertexID,2118,color,2
+vertexID,2085,color,1
+vertexID,2104,color,3
+vertexID,2105,color,3
+vertexID,2062,color,2
+vertexID,2061,color,2
+vertexID,2075,color,2
+vertexID,2360,color,1
+vertexID,2308,color,2
+vertexID,2334,color,3
+vertexID,2366,color,2
+vertexID,2367,color,2
+vertexID,2446,color,2
+vertexID,2447,color,2
+vertexID,2445,color,2
+vertexID,2307,color,1
+vertexID,2255,color,1
+vertexID,2365,color,1
+vertexID,2493,color,1
+vertexID,2492,color,1
+vertexID,2227,color,2
+vertexID,2228,color,2
+vertexID,2109,color,2
+vertexID,2132,color,3
+vertexID,2525,color,2
+vertexID,2090,color,1
+vertexID,2495,color,1
+vertexID,2564,color,1
+vertexID,2568,color,3
+vertexID,2563,color,1
+vertexID,2089,color,2
+vertexID,2131,color,2
+vertexID,2133,color,2
+vertexID,2229,color,1
+vertexID,2136,color,2
+vertexID,2230,color,2
+vertexID,2286,color,2
+vertexID,2257,color,2
+vertexID,2336,color,3
+vertexID,2310,color,2
+vertexID,2256,color,2
+vertexID,2111,color,1
+vertexID,2110,color,1
+vertexID,2112,color,1
+vertexID,2387,color,1
+vertexID,2415,color,2
+vertexID,2311,color,1
+vertexID,2477,color,1
+vertexID,2496,color,1
+vertexID,2532,color,3
+vertexID,2449,color,1
+vertexID,2450,color,1
+vertexID,2497,color,1
+vertexID,2636,color,1
+vertexID,2587,color,2
+vertexID,2620,color,2
+vertexID,2747,color,2
+vertexID,2774,color,2
+vertexID,2665,color,2
+vertexID,2664,color,2
+vertexID,2775,color,1
+vertexID,2746,color,1
+vertexID,2807,color,1
+vertexID,2153,color,1
+vertexID,2176,color,2
+vertexID,2152,color,2
+vertexID,2120,color,3
+vertexID,2211,color,2
+vertexID,2212,color,2
+vertexID,2154,color,1
+vertexID,2294,color,1
+vertexID,2295,color,3
+vertexID,2296,color,1
+vertexID,2293,color,1
+vertexID,2350,color,1
+vertexID,2351,color,1
+vertexID,2124,color,1
+vertexID,2165,color,1
+vertexID,2128,color,2
+vertexID,2197,color,2
+vertexID,2215,color,3
+vertexID,2196,color,2
+vertexID,2129,color,2
+vertexID,2156,color,2
+vertexID,2275,color,1
+vertexID,2273,color,2
+vertexID,2274,color,1
+vertexID,2328,color,1
+vertexID,2354,color,3
+vertexID,2327,color,1
+vertexID,2326,color,1
+vertexID,2611,color,1
+vertexID,2695,color,2
+vertexID,2598,color,2
+vertexID,2570,color,3
+vertexID,2599,color,2
+vertexID,2724,color,2
+vertexID,2697,color,3
+vertexID,2696,color,2
+vertexID,2452,color,1
+vertexID,2600,color,1
+vertexID,2777,color,1
+vertexID,2837,color,1
+vertexID,2778,color,1
+vertexID,2808,color,1
+vertexID,2869,color,1
+vertexID,2341,color,2
+vertexID,2479,color,2
+vertexID,2938,color,2
+vertexID,2940,color,2
+vertexID,2939,color,2
+vertexID,2419,color,1
+vertexID,2478,color,1
+vertexID,2313,color,1
+vertexID,3009,color,1
+vertexID,2222,color,2
+vertexID,3037,color,2
+vertexID,2287,color,1
+vertexID,2340,color,1
+vertexID,2167,color,1
+vertexID,3008,color,1
+vertexID,3124,color,1
+vertexID,3154,color,3
+vertexID,3010,color,1
+vertexID,3089,color,1
+vertexID,3155,color,2
+vertexID,2137,color,2
+vertexID,2139,color,2
+vertexID,2138,color,2
+vertexID,3190,color,1
+vertexID,3318,color,1
+vertexID,3232,color,2
+vertexID,3317,color,2
+vertexID,3287,color,1
+vertexID,3350,color,1
+vertexID,3372,color,1
+vertexID,3390,color,2
+vertexID,3455,color,2
+vertexID,3428,color,2
+vertexID,3445,color,3
+vertexID,3456,color,1
+vertexID,3511,color,1
+vertexID,3512,color,1
+vertexID,3457,color,1
+vertexID,2184,color,1
+vertexID,2280,color,2
+vertexID,2159,color,2
+vertexID,2183,color,3
+vertexID,2185,color,3
+vertexID,2186,color,3
+vertexID,2244,color,2
+vertexID,2299,color,2
+vertexID,2243,color,2
+vertexID,2298,color,1
+vertexID,2386,color,1
+vertexID,2384,color,1
+vertexID,2385,color,3
+vertexID,2388,color,1
+vertexID,2409,color,1
+vertexID,2441,color,1
+vertexID,2466,color,1
+vertexID,2219,color,1
+vertexID,2264,color,1
+vertexID,2237,color,2
+vertexID,2263,color,3
+vertexID,2265,color,3
+vertexID,2315,color,2
+vertexID,2361,color,2
+vertexID,2316,color,3
+vertexID,2266,color,1
+vertexID,2421,color,1
+vertexID,2423,color,1
+vertexID,2422,color,1
+vertexID,2245,color,1
+vertexID,3030,color,1
+vertexID,3018,color,2
+vertexID,2950,color,3
+vertexID,3003,color,2
+vertexID,3065,color,2
+vertexID,3084,color,3
+vertexID,3066,color,2
+vertexID,3004,color,2
+vertexID,2862,color,1
+vertexID,2920,color,1
+vertexID,2919,color,1
+vertexID,3116,color,1
+vertexID,3117,color,1
+vertexID,2819,color,2
+vertexID,3149,color,2
+vertexID,2726,color,1
+vertexID,3201,color,1
+vertexID,3181,color,3
+vertexID,3182,color,3
+vertexID,3134,color,1
+vertexID,2614,color,2
+vertexID,2703,color,3
+vertexID,2704,color,2
+vertexID,2818,color,2
+vertexID,2820,color,2
+vertexID,3236,color,2
+vertexID,3274,color,2
+vertexID,2576,color,1
+vertexID,2646,color,1
+vertexID,2678,color,1
+vertexID,3298,color,1
+vertexID,2544,color,2
+vertexID,2460,color,2
+vertexID,2545,color,2
+vertexID,3275,color,2
+vertexID,3378,color,2
+vertexID,2428,color,1
+vertexID,3377,color,1
+vertexID,3403,color,1
+vertexID,3437,color,1
+vertexID,3439,color,1
+vertexID,3470,color,3
+vertexID,2322,color,2
+vertexID,3438,color,2
+vertexID,3521,color,1
+vertexID,3490,color,1
+vertexID,3537,color,1
+vertexID,3538,color,2
+vertexID,2292,color,1
+vertexID,2272,color,3
+vertexID,2459,color,1
+vertexID,2397,color,1
+vertexID,3539,color,2
+vertexID,3631,color,1
+vertexID,3594,color,1
+vertexID,3655,color,1
+vertexID,3675,color,1
+vertexID,2323,color,1
+vertexID,2271,color,1
+vertexID,2321,color,1
+vertexID,3595,color,2
+vertexID,3740,color,2
+vertexID,3742,color,2
+vertexID,3741,color,2
+vertexID,3778,color,1
+vertexID,3826,color,2
+vertexID,3810,color,3
+vertexID,3811,color,3
+vertexID,3855,color,1
+vertexID,3872,color,1
+vertexID,3873,color,1
+vertexID,2333,color,1
+vertexID,2342,color,1
+vertexID,2353,color,1
+vertexID,2356,color,1
+vertexID,2357,color,1
+vertexID,2500,color,1
+vertexID,2469,color,2
+vertexID,2484,color,3
+vertexID,2538,color,2
+vertexID,2483,color,2
+vertexID,2588,color,2
+vertexID,2612,color,3
+vertexID,2642,color,2
+vertexID,2392,color,1
+vertexID,2668,color,1
+vertexID,2393,color,2
+vertexID,2420,color,2
+vertexID,2370,color,2
+vertexID,2698,color,2
+vertexID,2641,color,2
+vertexID,2781,color,2
+vertexID,2371,color,1
+vertexID,2814,color,1
+vertexID,2811,color,1
+vertexID,2810,color,3
+vertexID,2812,color,3
+vertexID,2813,color,1
+vertexID,2893,color,2
+vertexID,2917,color,3
+vertexID,2894,color,1
+vertexID,2892,color,1
+vertexID,2372,color,1
+vertexID,2389,color,1
+vertexID,2432,color,1
+vertexID,2398,color,2
+vertexID,2433,color,2
+vertexID,2463,color,2
+vertexID,2399,color,1
+vertexID,2651,color,1
+vertexID,2550,color,2
+vertexID,2734,color,2
+vertexID,2711,color,3
+vertexID,2712,color,3
+vertexID,2652,color,2
+vertexID,2549,color,1
+vertexID,2578,color,1
+vertexID,2517,color,1
+vertexID,2710,color,1
+vertexID,2471,color,2
+vertexID,2435,color,1
+vertexID,2401,color,2
+vertexID,2434,color,1
+vertexID,2436,color,1
+vertexID,2494,color,1
+vertexID,2526,color,2
+vertexID,2554,color,3
+vertexID,2527,color,2
+vertexID,2437,color,2
+vertexID,2472,color,3
+vertexID,2473,color,3
+vertexID,2490,color,2
+vertexID,2403,color,1
+vertexID,2405,color,1
+vertexID,2404,color,1
+vertexID,2590,color,1
+vertexID,2591,color,2
+vertexID,2629,color,1
+vertexID,2653,color,2
+vertexID,2684,color,1
+vertexID,2408,color,1
+vertexID,2407,color,2
+vertexID,2406,color,2
+vertexID,2440,color,2
+vertexID,2464,color,2
+vertexID,2491,color,3
+vertexID,2465,color,1
+vertexID,2666,color,1
+vertexID,2621,color,2
+vertexID,2637,color,3
+vertexID,2694,color,2
+vertexID,2731,color,2
+vertexID,2693,color,2
+vertexID,2750,color,2
+vertexID,2776,color,3
+vertexID,2498,color,1
+vertexID,2533,color,3
+vertexID,2597,color,3
+vertexID,2596,color,1
+vertexID,2749,color,1
+vertexID,2868,color,1
+vertexID,2451,color,2
+vertexID,2534,color,2
+vertexID,2569,color,2
+vertexID,2914,color,2
+vertexID,2867,color,2
+vertexID,2913,color,2
+vertexID,2418,color,1
+vertexID,2417,color,1
+vertexID,2416,color,1
+vertexID,2444,color,1
+vertexID,2455,color,1
+vertexID,2461,color,1
+vertexID,2861,color,1
+vertexID,2784,color,2
+vertexID,2841,color,3
+vertexID,2830,color,3
+vertexID,2816,color,1
+vertexID,2842,color,2
+vertexID,2944,color,2
+vertexID,2945,color,3
+vertexID,2946,color,2
+vertexID,2947,color,2
+vertexID,2700,color,1
+vertexID,2783,color,1
+vertexID,2991,color,1
+vertexID,2992,color,1
+vertexID,2843,color,1
+vertexID,2671,color,2
+vertexID,2602,color,2
+vertexID,2672,color,2
+vertexID,3078,color,2
+vertexID,2572,color,1
+vertexID,2504,color,1
+vertexID,2573,color,3
+vertexID,3104,color,1
+vertexID,3103,color,3
+vertexID,3160,color,3
+vertexID,3105,color,1
+vertexID,2505,color,2
+vertexID,2470,color,2
+vertexID,2539,color,2
+vertexID,3159,color,2
+vertexID,3131,color,2
+vertexID,3195,color,2
+vertexID,3233,color,3
+vertexID,3266,color,1
+vertexID,3326,color,2
+vertexID,3267,color,2
+vertexID,3328,color,2
+vertexID,3327,color,3
+vertexID,3398,color,2
+vertexID,3432,color,3
+vertexID,3431,color,1
+vertexID,3397,color,2
+vertexID,3464,color,2
+vertexID,3503,color,2
+vertexID,3562,color,1
+vertexID,3581,color,1
+vertexID,3563,color,3
+vertexID,3561,color,1
+vertexID,3706,color,2
+vertexID,3649,color,2
+vertexID,3650,color,2
+vertexID,3707,color,2
+vertexID,3821,color,1
+vertexID,3822,color,3
+vertexID,3823,color,1
+vertexID,3848,color,1
+vertexID,3912,color,1
+vertexID,3886,color,1
+vertexID,3887,color,1
+vertexID,2474,color,1
+vertexID,2480,color,1
+vertexID,2566,color,1
+vertexID,2537,color,2
+vertexID,2481,color,3
+vertexID,2638,color,2
+vertexID,2640,color,2
+vertexID,2536,color,2
+vertexID,2499,color,1
+vertexID,2639,color,2
+vertexID,2482,color,1
+vertexID,2667,color,1
+vertexID,2725,color,2
+vertexID,2779,color,1
+vertexID,2780,color,2
+vertexID,2870,color,1
+vertexID,2891,color,1
+vertexID,2890,color,3
+vertexID,2752,color,1
+vertexID,2809,color,1
+vertexID,2872,color,2
+vertexID,2978,color,2
+vertexID,2916,color,2
+vertexID,2871,color,1
+vertexID,3011,color,1
+vertexID,2989,color,2
+vertexID,2990,color,2
+vertexID,3038,color,2
+vertexID,2485,color,1
+vertexID,2501,color,1
+vertexID,2543,color,1
+vertexID,2542,color,2
+vertexID,2509,color,2
+vertexID,2575,color,2
+vertexID,2626,color,2
+vertexID,2645,color,2
+vertexID,2508,color,1
+vertexID,2627,color,1
+vertexID,2677,color,1
+vertexID,2547,color,1
+vertexID,2512,color,2
+vertexID,2546,color,2
+vertexID,2577,color,2
+vertexID,2615,color,2
+vertexID,2679,color,3
+vertexID,2647,color,2
+vertexID,2511,color,1
+vertexID,2648,color,1
+vertexID,2649,color,1
+vertexID,2706,color,1
+vertexID,2741,color,1
+vertexID,2821,color,2
+vertexID,2788,color,1
+vertexID,2787,color,1
+vertexID,2849,color,1
+vertexID,2886,color,1
+vertexID,2906,color,2
+vertexID,2921,color,1
+vertexID,2922,color,1
+vertexID,2689,color,1
+vertexID,2789,color,2
+vertexID,2790,color,2
+vertexID,2680,color,2
+vertexID,2589,color,3
+vertexID,2709,color,2
+vertexID,2791,color,2
+vertexID,2708,color,1
+vertexID,2650,color,1
+vertexID,2707,color,1
+vertexID,2548,color,1
+vertexID,2513,color,2
+vertexID,2514,color,2
+vertexID,2515,color,2
+vertexID,2516,color,1
+vertexID,2762,color,1
+vertexID,2685,color,2
+vertexID,2761,color,2
+vertexID,2825,color,2
+vertexID,2857,color,3
+vertexID,2826,color,2
+vertexID,2654,color,1
+vertexID,2714,color,1
+vertexID,2686,color,1
+vertexID,2827,color,1
+vertexID,2555,color,2
+vertexID,2519,color,1
+vertexID,2579,color,1
+vertexID,2556,color,1
+vertexID,2520,color,2
+vertexID,2521,color,1
+vertexID,2559,color,1
+vertexID,2583,color,2
+vertexID,2558,color,2
+vertexID,2522,color,3
+vertexID,2567,color,2
+vertexID,2610,color,2
+vertexID,2630,color,2
+vertexID,2560,color,1
+vertexID,2535,color,1
+vertexID,2553,color,1
+vertexID,2592,color,1
+vertexID,2581,color,2
+vertexID,2557,color,3
+vertexID,2582,color,2
+vertexID,2659,color,2
+vertexID,2658,color,3
+vertexID,2657,color,2
+vertexID,2656,color,2
+vertexID,2580,color,1
+vertexID,2742,color,1
+vertexID,2715,color,1
+vertexID,2716,color,1
+vertexID,2765,color,2
+vertexID,2764,color,2
+vertexID,2763,color,2
+vertexID,2858,color,2
+vertexID,2875,color,1
+vertexID,2876,color,3
+vertexID,2877,color,1
+vertexID,2930,color,1
+vertexID,2902,color,1
+vertexID,2929,color,1
+vertexID,2957,color,1
+vertexID,2997,color,2
+vertexID,2998,color,3
+vertexID,2996,color,3
+vertexID,2995,color,2
+vertexID,3059,color,1
+vertexID,3060,color,1
+vertexID,3094,color,1
+vertexID,3176,color,2
+vertexID,3208,color,2
+vertexID,3144,color,2
+vertexID,3207,color,1
+vertexID,3281,color,2
+vertexID,3309,color,2
+vertexID,3249,color,2
+vertexID,3381,color,1
+vertexID,3308,color,3
+vertexID,3359,color,2
+vertexID,3413,color,2
+vertexID,3360,color,2
+vertexID,3482,color,1
+vertexID,3487,color,3
+vertexID,3483,color,1
+vertexID,3484,color,1
+vertexID,3550,color,1
+vertexID,3551,color,2
+vertexID,3524,color,1
+vertexID,3578,color,1
+vertexID,2561,color,1
+vertexID,2584,color,1
+vertexID,2594,color,1
+vertexID,2603,color,1
+vertexID,2617,color,1
+vertexID,2619,color,1
+vertexID,2622,color,1
+vertexID,2625,color,1
+vertexID,2628,color,1
+vertexID,2834,color,1
+vertexID,2797,color,2
+vertexID,2829,color,3
+vertexID,2828,color,3
+vertexID,2881,color,2
+vertexID,2865,color,2
+vertexID,2880,color,2
+vertexID,2729,color,1
+vertexID,2966,color,1
+vertexID,2692,color,2
+vertexID,2663,color,2
+vertexID,2634,color,3
+vertexID,2691,color,2
+vertexID,2985,color,2
+vertexID,2986,color,2
+vertexID,2987,color,2
+vertexID,2633,color,1
+vertexID,2632,color,1
+vertexID,2644,color,1
+vertexID,2655,color,1
+vertexID,2673,color,1
+vertexID,2718,color,1
+vertexID,2766,color,2
+vertexID,2727,color,2
+vertexID,2687,color,3
+vertexID,2717,color,2
+vertexID,2737,color,2
+vertexID,2793,color,2
+vertexID,2719,color,1
+vertexID,2705,color,1
+vertexID,2728,color,1
+vertexID,2773,color,2
+vertexID,2743,color,2
+vertexID,2802,color,3
+vertexID,2848,color,1
+vertexID,2831,color,2
+vertexID,2798,color,3
+vertexID,2832,color,2
+vertexID,2884,color,2
+vertexID,2885,color,2
+vertexID,2873,color,2
+vertexID,2754,color,1
+vertexID,2756,color,1
+vertexID,2970,color,1
+vertexID,2972,color,1
+vertexID,2971,color,3
+vertexID,2733,color,2
+vertexID,2755,color,1
+vertexID,2748,color,1
+vertexID,2751,color,1
+vertexID,2758,color,1
+vertexID,2759,color,2
+vertexID,2760,color,2
+vertexID,2824,color,2
+vertexID,2856,color,3
+vertexID,2792,color,2
+vertexID,2823,color,1
+vertexID,2767,color,1
+vertexID,2768,color,1
+vertexID,2786,color,1
+vertexID,2794,color,1
+vertexID,3168,color,1
+vertexID,3167,color,2
+vertexID,3085,color,3
+vertexID,3243,color,2
+vertexID,3278,color,2
+vertexID,3237,color,3
+vertexID,3203,color,2
+vertexID,3137,color,2
+vertexID,3136,color,1
+vertexID,3051,color,1
+vertexID,3052,color,1
+vertexID,3135,color,1
+vertexID,3053,color,1
+vertexID,3355,color,1
+vertexID,3379,color,1
+vertexID,3301,color,1
+vertexID,3245,color,1
+vertexID,3244,color,1
+vertexID,2994,color,2
+vertexID,3356,color,2
+vertexID,3411,color,2
+vertexID,2981,color,1
+vertexID,2963,color,3
+vertexID,2982,color,1
+vertexID,2936,color,1
+vertexID,2951,color,1
+vertexID,2937,color,1
+vertexID,2874,color,2
+vertexID,2833,color,1
+vertexID,2863,color,3
+vertexID,2864,color,3
+vertexID,2799,color,2
+vertexID,2822,color,2
+vertexID,2800,color,2
+vertexID,3040,color,1
+vertexID,3027,color,2
+vertexID,3000,color,3
+vertexID,3028,color,2
+vertexID,3090,color,2
+vertexID,3091,color,2
+vertexID,3077,color,2
+vertexID,3112,color,1
+vertexID,2942,color,1
+vertexID,3178,color,2
+vertexID,2860,color,2
+vertexID,3212,color,1
+vertexID,3222,color,3
+vertexID,3213,color,1
+vertexID,3146,color,1
+vertexID,3147,color,1
+vertexID,2838,color,1
+vertexID,2941,color,1
+vertexID,2943,color,1
+vertexID,3293,color,1
+vertexID,3253,color,1
+vertexID,3324,color,2
+vertexID,3323,color,3
+vertexID,3352,color,1
+vertexID,3395,color,1
+vertexID,3396,color,2
+vertexID,3463,color,2
+vertexID,3430,color,2
+vertexID,3462,color,1
+vertexID,3713,color,1
+vertexID,3800,color,2
+vertexID,3828,color,3
+vertexID,3743,color,2
+vertexID,3767,color,2
+vertexID,3656,color,2
+vertexID,3679,color,3
+vertexID,3744,color,2
+vertexID,3573,color,1
+vertexID,3541,color,3
+vertexID,3632,color,1
+vertexID,3633,color,1
+vertexID,3801,color,1
+vertexID,3919,color,1
+vertexID,3572,color,1
+vertexID,3504,color,1
+vertexID,3600,color,1
+vertexID,3964,color,2
+vertexID,3920,color,2
+vertexID,3963,color,2
+vertexID,3474,color,2
+vertexID,3408,color,3
+vertexID,3473,color,1
+vertexID,3407,color,1
+vertexID,3341,color,2
+vertexID,3409,color,1
+vertexID,3333,color,1
+vertexID,3300,color,3
+vertexID,3410,color,1
+vertexID,3331,color,1
+vertexID,3226,color,1
+vertexID,3332,color,1
+vertexID,3165,color,2
+vertexID,3092,color,1
+vertexID,3166,color,3
+vertexID,3202,color,1
+vertexID,3227,color,1
+vertexID,3048,color,2
+vertexID,3049,color,2
+vertexID,3164,color,2
+vertexID,2962,color,1
+vertexID,3019,color,3
+vertexID,2993,color,2
+vertexID,2923,color,2
+vertexID,2895,color,1
+vertexID,2852,color,3
+vertexID,2896,color,1
+vertexID,2897,color,1
+vertexID,2850,color,1
+vertexID,2851,color,1
+vertexID,2931,color,1
+vertexID,2965,color,2
+vertexID,2958,color,2
+vertexID,2908,color,2
+vertexID,2887,color,3
+vertexID,2907,color,2
+vertexID,2964,color,2
+vertexID,3031,color,1
+vertexID,3006,color,2
+vertexID,3087,color,2
+vertexID,3067,color,3
+vertexID,3068,color,3
+vertexID,3005,color,2
+vertexID,3120,color,1
+vertexID,3119,color,1
+vertexID,3150,color,2
+vertexID,3184,color,1
+vertexID,3209,color,3
+vertexID,3183,color,1
+vertexID,3145,color,1
+vertexID,3238,color,1
+vertexID,3311,color,2
+vertexID,3310,color,1
+vertexID,3282,color,2
+vertexID,3338,color,2
+vertexID,3361,color,2
+vertexID,3414,color,1
+vertexID,3415,color,1
+vertexID,3416,color,1
+vertexID,2889,color,1
+vertexID,2910,color,2
+vertexID,2911,color,2
+vertexID,2912,color,2
+vertexID,2926,color,1
+vertexID,2974,color,2
+vertexID,2973,color,2
+vertexID,2927,color,2
+vertexID,2898,color,3
+vertexID,2925,color,2
+vertexID,2924,color,1
+vertexID,2899,color,1
+vertexID,2975,color,2
+vertexID,2956,color,3
+vertexID,2900,color,2
+vertexID,2901,color,2
+vertexID,2928,color,2
+vertexID,2955,color,1
+vertexID,2915,color,1
+vertexID,3220,color,1
+vertexID,3260,color,2
+vertexID,3189,color,2
+vertexID,3316,color,2
+vertexID,3285,color,2
+vertexID,3286,color,3
+vertexID,3454,color,1
+vertexID,3075,color,1
+vertexID,2999,color,2
+vertexID,3221,color,2
+vertexID,3153,color,2
+vertexID,3427,color,2
+vertexID,3527,color,2
+vertexID,3426,color,2
+vertexID,3074,color,1
+vertexID,3076,color,1
+vertexID,3558,color,1
+vertexID,3591,color,1
+vertexID,3617,color,1
+vertexID,3616,color,2
+vertexID,3039,color,1
+vertexID,3013,color,2
+vertexID,3012,color,2
+vertexID,3014,color,2
+vertexID,3130,color,2
+vertexID,3129,color,1
+vertexID,3158,color,1
+vertexID,3192,color,1
+vertexID,3193,color,2
+vertexID,3447,color,1
+vertexID,3479,color,2
+vertexID,3358,color,2
+vertexID,3443,color,3
+vertexID,3480,color,2
+vertexID,3546,color,2
+vertexID,3547,color,2
+vertexID,3555,color,3
+vertexID,3548,color,2
+vertexID,3303,color,1
+vertexID,3412,color,1
+vertexID,3481,color,1
+vertexID,3636,color,1
+vertexID,3607,color,2
+vertexID,3280,color,2
+vertexID,3302,color,2
+vertexID,3337,color,2
+vertexID,3606,color,2
+vertexID,3173,color,1
+vertexID,3140,color,2
+vertexID,3172,color,2
+vertexID,3204,color,2
+vertexID,3055,color,1
+vertexID,3093,color,3
+vertexID,3023,color,2
+vertexID,3022,color,2
+vertexID,3024,color,2
+vertexID,3034,color,1
+vertexID,3032,color,2
+vertexID,3033,color,2
+vertexID,3095,color,2
+vertexID,3122,color,3
+vertexID,3096,color,2
+vertexID,3097,color,1
+vertexID,3365,color,1
+vertexID,3218,color,2
+vertexID,3349,color,3
+vertexID,3348,color,3
+vertexID,3488,color,2
+vertexID,3425,color,2
+vertexID,3453,color,2
+vertexID,3452,color,3
+vertexID,3526,color,1
+vertexID,3101,color,1
+vertexID,3240,color,1
+vertexID,3347,color,1
+vertexID,3188,color,2
+vertexID,3073,color,2
+vertexID,3239,color,2
+vertexID,3579,color,2
+vertexID,3590,color,3
+vertexID,3580,color,2
+vertexID,3036,color,1
+vertexID,3614,color,1
+vertexID,3642,color,1
+vertexID,3641,color,1
+vertexID,3035,color,2
+vertexID,3100,color,2
+vertexID,3083,color,1
+vertexID,3042,color,2
+vertexID,3044,color,2
+vertexID,3043,color,2
+vertexID,3162,color,2
+vertexID,3115,color,2
+vertexID,3200,color,1
+vertexID,3235,color,2
+vertexID,3296,color,3
+vertexID,3163,color,2
+vertexID,3297,color,1
+vertexID,3435,color,2
+vertexID,3273,color,2
+vertexID,3329,color,2
+vertexID,3436,color,1
+vertexID,3469,color,2
+vertexID,3402,color,2
+vertexID,3224,color,1
+vertexID,3118,color,2
+vertexID,3225,color,3
+vertexID,3277,color,2
+vertexID,3242,color,2
+vertexID,3299,color,2
+vertexID,3330,color,3
+vertexID,3276,color,2
+vertexID,3047,color,1
+vertexID,3106,color,3
+vertexID,3107,color,3
+vertexID,3223,color,1
+vertexID,3404,color,1
+vertexID,3406,color,1
+vertexID,3405,color,2
+vertexID,3045,color,2
+vertexID,3046,color,2
+vertexID,3440,color,1
+vertexID,3472,color,1
+vertexID,3471,color,1
+vertexID,3492,color,1
+vertexID,3491,color,3
+vertexID,3599,color,2
+vertexID,3597,color,2
+vertexID,3598,color,2
+vertexID,3050,color,1
+vertexID,3086,color,1
+vertexID,3056,color,2
+vertexID,3058,color,2
+vertexID,3057,color,2
+vertexID,3143,color,2
+vertexID,3069,color,1
+vertexID,3082,color,1
+vertexID,3102,color,1
+vertexID,3108,color,1
+vertexID,3109,color,1
+vertexID,3125,color,1
+vertexID,3126,color,1
+vertexID,3643,color,1
+vertexID,3621,color,2
+vertexID,3559,color,3
+vertexID,3622,color,2
+vertexID,3734,color,2
+vertexID,3733,color,3
+vertexID,3700,color,2
+vertexID,3762,color,2
+vertexID,3531,color,1
+vertexID,3623,color,1
+vertexID,3808,color,1
+vertexID,3513,color,2
+vertexID,3514,color,2
+vertexID,3459,color,2
+vertexID,3866,color,2
+vertexID,3883,color,3
+vertexID,3867,color,2
+vertexID,3429,color,1
+vertexID,3908,color,1
+vertexID,3931,color,1
+vertexID,3932,color,1
+vertexID,3320,color,2
+vertexID,3981,color,2
+vertexID,3289,color,1
+vertexID,3391,color,1
+vertexID,3460,color,1
+vertexID,4014,color,1
+vertexID,4015,color,3
+vertexID,4016,color,1
+vertexID,4013,color,1
+vertexID,3261,color,2
+vertexID,4076,color,1
+vertexID,4077,color,1
+vertexID,3157,color,1
+vertexID,3262,color,1
+vertexID,3321,color,1
+vertexID,3191,color,2
+vertexID,3156,color,2
+vertexID,3128,color,2
+vertexID,3127,color,1
+vertexID,3139,color,1
+vertexID,3174,color,1
+vertexID,3141,color,2
+vertexID,3229,color,2
+vertexID,3205,color,2
+vertexID,3175,color,2
+vertexID,3304,color,1
+vertexID,3306,color,1
+vertexID,3305,color,1
+vertexID,3142,color,1
+vertexID,3185,color,1
+vertexID,3256,color,1
+vertexID,3255,color,2
+vertexID,3215,color,3
+vertexID,3257,color,2
+vertexID,3343,color,2
+vertexID,3342,color,2
+vertexID,3345,color,2
+vertexID,3344,color,3
+vertexID,3214,color,1
+vertexID,3186,color,2
+vertexID,3216,color,1
+vertexID,3388,color,1
+vertexID,3423,color,2
+vertexID,3217,color,1
+vertexID,3387,color,1
+vertexID,3449,color,1
+vertexID,3485,color,3
+vertexID,3450,color,1
+vertexID,3530,color,1
+vertexID,3506,color,2
+vertexID,3507,color,2
+vertexID,3194,color,1
+vertexID,3199,color,1
+vertexID,3206,color,1
+vertexID,3219,color,1
+vertexID,3228,color,1
+vertexID,3248,color,2
+vertexID,3247,color,2
+vertexID,3246,color,2
+vertexID,3241,color,1
+vertexID,3250,color,1
+vertexID,3290,color,1
+vertexID,3291,color,2
+vertexID,3263,color,2
+vertexID,3322,color,2
+vertexID,3351,color,2
+vertexID,3264,color,1
+vertexID,3394,color,1
+vertexID,3393,color,1
+vertexID,3392,color,1
+vertexID,3265,color,1
+vertexID,3272,color,1
+vertexID,3279,color,1
+vertexID,3283,color,1
+vertexID,3288,color,1
+vertexID,3292,color,1
+vertexID,3307,color,1
+vertexID,3315,color,1
+vertexID,3319,color,1
+vertexID,3325,color,1
+vertexID,3574,color,1
+vertexID,3604,color,2
+vertexID,3575,color,2
+vertexID,3545,color,3
+vertexID,3657,color,2
+vertexID,3680,color,2
+vertexID,3714,color,2
+vertexID,3635,color,2
+vertexID,3605,color,1
+vertexID,3576,color,1
+vertexID,3478,color,1
+vertexID,3715,color,1
+vertexID,3357,color,2
+vertexID,3441,color,3
+vertexID,3384,color,3
+vertexID,3442,color,2
+vertexID,3336,color,1
+vertexID,3334,color,1
+vertexID,3335,color,1
+vertexID,3354,color,1
+vertexID,3362,color,1
+vertexID,3385,color,1
+vertexID,3366,color,2
+vertexID,3417,color,2
+vertexID,3444,color,3
+vertexID,3418,color,2
+vertexID,3367,color,2
+vertexID,3380,color,2
+vertexID,3494,color,1
+vertexID,3496,color,1
+vertexID,3522,color,2
+vertexID,3549,color,1
+vertexID,3523,color,1
+vertexID,3495,color,2
+vertexID,3386,color,1
+vertexID,3399,color,1
+vertexID,3401,color,1
+vertexID,3419,color,1
+vertexID,3458,color,1
+vertexID,3461,color,1
+vertexID,3493,color,1
+vertexID,3475,color,2
+vertexID,3476,color,2
+vertexID,3477,color,2
+vertexID,3515,color,1
+vertexID,3532,color,2
+vertexID,3501,color,2
+vertexID,3486,color,3
+vertexID,3502,color,2
+vertexID,3552,color,2
+vertexID,3553,color,2
+vertexID,3489,color,1
+vertexID,3525,color,1
+vertexID,3497,color,2
+vertexID,3498,color,2
+vertexID,3608,color,2
+vertexID,3639,color,3
+vertexID,3556,color,2
+vertexID,3640,color,1
+vertexID,3499,color,2
+vertexID,3662,color,1
+vertexID,3686,color,1
+vertexID,3748,color,2
+vertexID,3805,color,2
+vertexID,3775,color,2
+vertexID,3806,color,1
+vertexID,3703,color,1
+vertexID,3627,color,2
+vertexID,3644,color,3
+vertexID,3560,color,1
+vertexID,3704,color,2
+vertexID,3736,color,2
+vertexID,3737,color,3
+vertexID,3764,color,2
+vertexID,3809,color,1
+vertexID,3626,color,2
+vertexID,3533,color,2
+vertexID,3628,color,2
+vertexID,3868,color,2
+vertexID,3885,color,3
+vertexID,3869,color,2
+vertexID,3516,color,1
+vertexID,3517,color,1
+vertexID,3518,color,1
+vertexID,3933,color,1
+vertexID,3911,color,1
+vertexID,3934,color,1
+vertexID,3554,color,1
+vertexID,3536,color,2
+vertexID,3570,color,3
+vertexID,3519,color,3
+vertexID,3569,color,2
+vertexID,3653,color,2
+vertexID,3652,color,2
+vertexID,3654,color,2
+vertexID,3520,color,1
+vertexID,3571,color,1
+vertexID,3684,color,1
+vertexID,3739,color,2
+vertexID,3721,color,3
+vertexID,3722,color,3
+vertexID,3766,color,1
+vertexID,3776,color,1
+vertexID,3777,color,1
+vertexID,3853,color,2
+vertexID,4020,color,1
+vertexID,3990,color,3
+vertexID,3888,color,1
+vertexID,3917,color,1
+vertexID,3854,color,1
+vertexID,3915,color,2
+vertexID,4019,color,3
+vertexID,3989,color,2
+vertexID,4048,color,2
+vertexID,4091,color,2
+vertexID,3916,color,2
+vertexID,3914,color,1
+vertexID,3988,color,1
+vertexID,4196,color,1
+vertexID,4168,color,1
+vertexID,4131,color,1
+vertexID,4195,color,2
+vertexID,3534,color,1
+vertexID,3535,color,2
+vertexID,3565,color,2
+vertexID,3630,color,2
+vertexID,3651,color,3
+vertexID,3564,color,2
+vertexID,3593,color,2
+vertexID,3629,color,1
+vertexID,3540,color,1
+vertexID,3829,color,1
+vertexID,3781,color,2
+vertexID,3830,color,2
+vertexID,3856,color,2
+vertexID,3947,color,3
+vertexID,3922,color,2
+vertexID,3782,color,2
+vertexID,3857,color,2
+vertexID,3889,color,2
+vertexID,3745,color,1
+vertexID,3921,color,1
+vertexID,3665,color,2
+vertexID,3723,color,3
+vertexID,3724,color,3
+vertexID,3768,color,2
+vertexID,3634,color,1
+vertexID,3542,color,2
+vertexID,3602,color,3
+vertexID,3603,color,3
+vertexID,3601,color,2
+vertexID,3543,color,1
+vertexID,3544,color,1
+vertexID,3747,color,1
+vertexID,3774,color,2
+vertexID,3685,color,2
+vertexID,3726,color,3
+vertexID,3727,color,3
+vertexID,3785,color,2
+vertexID,3786,color,2
+vertexID,3659,color,1
+vertexID,3661,color,1
+vertexID,3835,color,1
+vertexID,3582,color,2
+vertexID,3860,color,2
+vertexID,3859,color,2
+vertexID,3861,color,2
+vertexID,3577,color,1
+vertexID,3660,color,1
+vertexID,3585,color,1
+vertexID,3668,color,2
+vertexID,3690,color,3
+vertexID,3612,color,2
+vertexID,3611,color,2
+vertexID,3646,color,2
+vertexID,3586,color,2
+vertexID,3669,color,1
+vertexID,3749,color,1
+vertexID,3788,color,2
+vertexID,3812,color,1
+vertexID,3844,color,1
+vertexID,3877,color,1
+vertexID,3904,color,3
+vertexID,3813,color,1
+vertexID,3878,color,1
+vertexID,3755,color,1
+vertexID,3754,color,2
+vertexID,3691,color,2
+vertexID,3815,color,2
+vertexID,3879,color,2
+vertexID,3880,color,3
+vertexID,3881,color,2
+vertexID,3930,color,2
+vertexID,3814,color,2
+vertexID,3729,color,1
+vertexID,3756,color,1
+vertexID,3692,color,1
+vertexID,3968,color,1
+vertexID,3979,color,3
+vertexID,3969,color,1
+vertexID,3613,color,2
+vertexID,4010,color,1
+vertexID,4025,color,1
+vertexID,4026,color,1
+vertexID,3588,color,1
+vertexID,3587,color,1
+vertexID,3589,color,1
+vertexID,4066,color,2
+vertexID,4085,color,1
+vertexID,4097,color,3
+vertexID,4086,color,1
+vertexID,4123,color,1
+vertexID,4143,color,1
+vertexID,4144,color,1
+vertexID,4178,color,2
+vertexID,4179,color,2
+vertexID,4204,color,1
+vertexID,4241,color,2
+vertexID,4252,color,3
+vertexID,4242,color,2
+vertexID,4183,color,2
+vertexID,3592,color,1
+vertexID,3618,color,2
+vertexID,3619,color,2
+vertexID,3620,color,2
+vertexID,3596,color,1
+vertexID,3609,color,1
+vertexID,3615,color,1
+vertexID,3624,color,1
+vertexID,3625,color,2
+vertexID,3647,color,2
+vertexID,3648,color,2
+vertexID,3735,color,3
+vertexID,3701,color,2
+vertexID,3673,color,2
+vertexID,3702,color,1
+vertexID,3804,color,1
+vertexID,3725,color,2
+vertexID,3783,color,3
+vertexID,3784,color,3
+vertexID,3841,color,2
+vertexID,3834,color,2
+vertexID,3842,color,2
+vertexID,3681,color,1
+vertexID,3682,color,1
+vertexID,3875,color,1
+vertexID,3638,color,2
+vertexID,3658,color,3
+vertexID,3901,color,2
+vertexID,3926,color,3
+vertexID,3902,color,2
+vertexID,3637,color,1
+vertexID,3958,color,1
+vertexID,3959,color,1
+vertexID,3950,color,1
+vertexID,3975,color,2
+vertexID,3976,color,2
+vertexID,4006,color,1
+vertexID,4029,color,2
+vertexID,4060,color,3
+vertexID,4030,color,2
+vertexID,4001,color,2
+vertexID,4093,color,1
+vertexID,4094,color,1
+vertexID,4118,color,2
+vertexID,4149,color,1
+vertexID,4176,color,3
+vertexID,4150,color,1
+vertexID,4110,color,1
+vertexID,4207,color,1
+vertexID,4208,color,1
+vertexID,4248,color,2
+vertexID,4268,color,1
+vertexID,4290,color,3
+vertexID,4267,color,1
+vertexID,4239,color,1
+vertexID,3674,color,1
+vertexID,3664,color,2
+vertexID,3645,color,3
+vertexID,3663,color,2
+vertexID,3719,color,2
+vertexID,3720,color,2
+vertexID,3711,color,2
+vertexID,3666,color,1
+vertexID,3689,color,2
+vertexID,3688,color,2
+vertexID,3667,color,2
+vertexID,3752,color,2
+vertexID,3787,color,3
+vertexID,3728,color,2
+vertexID,3751,color,1
+vertexID,3836,color,1
+vertexID,3876,color,2
+vertexID,3864,color,3
+vertexID,3863,color,3
+vertexID,3903,color,1
+vertexID,3929,color,1
+vertexID,3928,color,1
+vertexID,3670,color,1
+vertexID,3671,color,2
+vertexID,3696,color,2
+vertexID,3695,color,2
+vertexID,3759,color,2
+vertexID,3791,color,3
+vertexID,3732,color,2
+vertexID,3758,color,1
+vertexID,3837,color,1
+vertexID,3897,color,2
+vertexID,3905,color,3
+vertexID,3898,color,2
+vertexID,3955,color,1
+vertexID,3940,color,1
+vertexID,3954,color,1
+vertexID,4035,color,2
+vertexID,4036,color,1
+vertexID,4100,color,1
+vertexID,4075,color,1
+vertexID,4099,color,2
+vertexID,4213,color,2
+vertexID,4214,color,3
+vertexID,4215,color,1
+vertexID,4303,color,1
+vertexID,4272,color,3
+vertexID,4273,color,3
+vertexID,4271,color,2
+vertexID,3672,color,1
+vertexID,3697,color,2
+vertexID,3698,color,2
+vertexID,3699,color,2
+vertexID,3799,color,1
+vertexID,3839,color,2
+vertexID,3827,color,2
+vertexID,3780,color,2
+vertexID,3750,color,3
+vertexID,3779,color,2
+vertexID,3840,color,2
+vertexID,3874,color,1
+vertexID,3712,color,1
+vertexID,3900,color,2
+vertexID,3918,color,3
+vertexID,3899,color,2
+vertexID,3677,color,2
+vertexID,3678,color,2
+vertexID,3676,color,2
+vertexID,3957,color,1
+vertexID,3946,color,1
+vertexID,3956,color,1
+vertexID,3996,color,2
+vertexID,3994,color,3
+vertexID,4050,color,1
+vertexID,4081,color,2
+vertexID,4051,color,1
+vertexID,3995,color,1
+vertexID,4049,color,1
+vertexID,4136,color,1
+vertexID,4229,color,2
+vertexID,4198,color,3
+vertexID,4199,color,3
+vertexID,4137,color,2
+vertexID,4197,color,1
+vertexID,4263,color,1
+vertexID,4264,color,1
+vertexID,4293,color,2
+vertexID,4286,color,1
+vertexID,4326,color,1
+vertexID,4342,color,3
+vertexID,4327,color,1
+vertexID,4395,color,1
+vertexID,4433,color,2
+vertexID,4435,color,2
+vertexID,4434,color,3
+vertexID,4436,color,3
+vertexID,4485,color,1
+vertexID,4486,color,1
+vertexID,4576,color,2
+vertexID,4578,color,2
+vertexID,4577,color,3
+vertexID,4579,color,3
+vertexID,4643,color,1
+vertexID,4644,color,1
+vertexID,3683,color,1
+vertexID,3687,color,1
+vertexID,3693,color,1
+vertexID,3731,color,2
+vertexID,3730,color,2
+vertexID,3694,color,2
+vertexID,3789,color,2
+vertexID,3817,color,3
+vertexID,3757,color,2
+vertexID,3865,color,1
+vertexID,3790,color,1
+vertexID,3937,color,2
+vertexID,3938,color,2
+vertexID,3939,color,2
+vertexID,4012,color,1
+vertexID,4011,color,2
+vertexID,4072,color,2
+vertexID,4034,color,2
+vertexID,4073,color,1
+vertexID,4157,color,2
+vertexID,4184,color,1
+vertexID,4185,color,1
+vertexID,4186,color,1
+vertexID,4299,color,2
+vertexID,4300,color,3
+vertexID,4301,color,2
+vertexID,4302,color,2
+vertexID,4355,color,1
+vertexID,4356,color,1
+vertexID,3705,color,1
+vertexID,3941,color,1
+vertexID,3870,color,2
+vertexID,3936,color,3
+vertexID,3935,color,3
+vertexID,3973,color,2
+vertexID,3972,color,2
+vertexID,3961,color,2
+vertexID,3824,color,1
+vertexID,4046,color,1
+vertexID,3797,color,2
+vertexID,3765,color,2
+vertexID,3798,color,2
+vertexID,4047,color,2
+vertexID,4104,color,2
+vertexID,4080,color,2
+vertexID,3738,color,1
+vertexID,4103,color,1
+vertexID,3709,color,2
+vertexID,3710,color,2
+vertexID,3708,color,2
+vertexID,4221,color,2
+vertexID,4222,color,3
+vertexID,4245,color,3
+vertexID,4257,color,2
+vertexID,4192,color,2
+vertexID,4256,color,1
+vertexID,4309,color,1
+vertexID,4366,color,1
+vertexID,4338,color,1
+vertexID,4457,color,2
+vertexID,4473,color,3
+vertexID,4365,color,2
+vertexID,4458,color,2
+vertexID,4459,color,2
+vertexID,4541,color,1
+vertexID,4542,color,1
+vertexID,4543,color,1
+vertexID,4140,color,1
+vertexID,3974,color,2
+vertexID,4058,color,3
+vertexID,4174,color,2
+vertexID,4175,color,2
+vertexID,4206,color,3
+vertexID,4247,color,2
+vertexID,4173,color,3
+vertexID,4238,color,3
+vertexID,4172,color,2
+vertexID,4205,color,1
+vertexID,3949,color,1
+vertexID,4059,color,1
+vertexID,4057,color,1
+vertexID,4289,color,1
+vertexID,4265,color,3
+vertexID,4266,color,3
+vertexID,3892,color,2
+vertexID,4347,color,2
+vertexID,4345,color,2
+vertexID,3833,color,1
+vertexID,3893,color,3
+vertexID,3891,color,3
+vertexID,3948,color,1
+vertexID,4376,color,1
+vertexID,3803,color,2
+vertexID,3890,color,2
+vertexID,4402,color,2
+vertexID,4375,color,2
+vertexID,3772,color,1
+vertexID,3773,color,1
+vertexID,3716,color,3
+vertexID,3746,color,1
+vertexID,4346,color,1
+vertexID,3717,color,1
+vertexID,3718,color,1
+vertexID,3753,color,1
+vertexID,3793,color,1
+vertexID,3792,color,2
+vertexID,3760,color,3
+vertexID,3794,color,2
+vertexID,3795,color,2
+vertexID,3882,color,2
+vertexID,3846,color,2
+vertexID,3845,color,2
+vertexID,3907,color,2
+vertexID,3906,color,1
+vertexID,3761,color,1
+vertexID,3763,color,1
+vertexID,3858,color,1
+vertexID,3769,color,2
+vertexID,3832,color,3
+vertexID,3831,color,2
+vertexID,3923,color,2
+vertexID,3925,color,3
+vertexID,3924,color,2
+vertexID,3770,color,1
+vertexID,3771,color,1
+vertexID,3802,color,1
+vertexID,3966,color,1
+vertexID,4000,color,2
+vertexID,3965,color,1
+vertexID,4056,color,1
+vertexID,3967,color,1
+vertexID,4107,color,2
+vertexID,4139,color,3
+vertexID,4108,color,2
+vertexID,4055,color,2
+vertexID,4109,color,1
+vertexID,3819,color,1
+vertexID,3838,color,2
+vertexID,3796,color,3
+vertexID,3818,color,2
+vertexID,3847,color,2
+vertexID,3910,color,2
+vertexID,3909,color,3
+vertexID,3884,color,2
+vertexID,3820,color,1
+vertexID,3983,color,1
+vertexID,3984,color,2
+vertexID,3982,color,1
+vertexID,4039,color,1
+vertexID,4078,color,3
+vertexID,4038,color,1
+vertexID,4040,color,1
+vertexID,3807,color,1
+vertexID,3816,color,1
+vertexID,3851,color,1
+vertexID,3825,color,2
+vertexID,3849,color,3
+vertexID,3850,color,3
+vertexID,3871,color,3
+vertexID,3913,color,2
+vertexID,3942,color,2
+vertexID,3852,color,1
+vertexID,4067,color,1
+vertexID,4089,color,2
+vertexID,4105,color,3
+vertexID,4090,color,2
+vertexID,4130,color,1
+vertexID,4147,color,1
+vertexID,4148,color,1
+vertexID,4193,color,2
+vertexID,4246,color,1
+vertexID,4224,color,3
+vertexID,4311,color,2
+vertexID,4339,color,3
+vertexID,4223,color,1
+vertexID,4225,color,1
+vertexID,4310,color,1
+vertexID,4381,color,1
+vertexID,4312,color,1
+vertexID,4426,color,2
+vertexID,4408,color,3
+vertexID,4409,color,3
+vertexID,4474,color,1
+vertexID,4460,color,1
+vertexID,4475,color,1
+vertexID,4515,color,2
+vertexID,4545,color,1
+vertexID,4544,color,1
+vertexID,4546,color,1
+vertexID,3843,color,1
+vertexID,4004,color,1
+vertexID,4023,color,2
+vertexID,4032,color,2
+vertexID,3960,color,2
+vertexID,3977,color,3
+vertexID,3978,color,3
+vertexID,4031,color,2
+vertexID,4095,color,1
+vertexID,3895,color,1
+vertexID,4119,color,2
+vertexID,4142,color,3
+vertexID,4120,color,2
+vertexID,3862,color,2
+vertexID,4180,color,1
+vertexID,4181,color,1
+vertexID,4177,color,1
+vertexID,3894,color,1
+vertexID,3896,color,1
+vertexID,4269,color,2
+vertexID,4250,color,1
+vertexID,4249,color,1
+vertexID,4294,color,1
+vertexID,4324,color,3
+vertexID,4295,color,1
+vertexID,4349,color,1
+vertexID,4350,color,1
+vertexID,4382,color,2
+vertexID,4379,color,1
+vertexID,4441,color,1
+vertexID,4411,color,3
+vertexID,4412,color,3
+vertexID,4476,color,2
+vertexID,4560,color,1
+vertexID,4559,color,3
+vertexID,4558,color,1
+vertexID,4561,color,1
+vertexID,4619,color,1
+vertexID,4618,color,2
+vertexID,4617,color,1
+vertexID,4673,color,1
+vertexID,4708,color,2
+vertexID,4709,color,3
+vertexID,4710,color,2
+vertexID,4711,color,2
+vertexID,4777,color,1
+vertexID,4778,color,1
+vertexID,4885,color,2
+vertexID,4886,color,3
+vertexID,4887,color,2
+vertexID,4888,color,2
+vertexID,4953,color,1
+vertexID,4954,color,1
+vertexID,4976,color,2
+vertexID,5053,color,1
+vertexID,5050,color,1
+vertexID,5051,color,3
+vertexID,5052,color,1
+vertexID,5107,color,1
+vertexID,5108,color,1
+vertexID,5151,color,2
+vertexID,5229,color,1
+vertexID,5228,color,1
+vertexID,5227,color,3
+vertexID,5226,color,1
+vertexID,5296,color,1
+vertexID,5295,color,1
+vertexID,5373,color,2
+vertexID,5372,color,3
+vertexID,5371,color,2
+vertexID,5374,color,2
+vertexID,5436,color,1
+vertexID,5437,color,1
+vertexID,4002,color,1
+vertexID,3927,color,2
+vertexID,4022,color,2
+vertexID,4061,color,2
+vertexID,4063,color,2
+vertexID,4003,color,2
+vertexID,4141,color,2
+vertexID,4111,color,3
+vertexID,3952,color,1
+vertexID,3951,color,1
+vertexID,3953,color,1
+vertexID,4062,color,1
+vertexID,4202,color,1
+vertexID,4240,color,1
+vertexID,4112,color,1
+vertexID,4322,color,2
+vertexID,4348,color,2
+vertexID,4203,color,2
+vertexID,4261,color,2
+vertexID,4323,color,1
+vertexID,4410,color,1
+vertexID,4378,color,3
+vertexID,4443,color,2
+vertexID,4470,color,3
+vertexID,4444,color,2
+vertexID,4495,color,1
+vertexID,4494,color,1
+vertexID,4496,color,1
+vertexID,4555,color,2
+vertexID,4557,color,3
+vertexID,4556,color,1
+vertexID,4615,color,1
+vertexID,4654,color,3
+vertexID,4616,color,1
+vertexID,4614,color,1
+vertexID,4683,color,1
+vertexID,4672,color,1
+vertexID,4684,color,1
+vertexID,4718,color,2
+vertexID,4747,color,1
+vertexID,4776,color,3
+vertexID,4748,color,1
+vertexID,4807,color,1
+vertexID,4808,color,1
+vertexID,4822,color,2
+vertexID,4818,color,1
+vertexID,4854,color,1
+vertexID,4884,color,3
+vertexID,4855,color,1
+vertexID,4950,color,1
+vertexID,4952,color,1
+vertexID,4965,color,2
+vertexID,4951,color,1
+vertexID,5024,color,1
+vertexID,4133,color,1
+vertexID,4068,color,2
+vertexID,4132,color,3
+vertexID,4134,color,3
+vertexID,4226,color,2
+vertexID,4228,color,3
+vertexID,4227,color,2
+vertexID,4021,color,1
+vertexID,4135,color,1
+vertexID,4283,color,1
+vertexID,4314,color,2
+vertexID,4284,color,1
+vertexID,3992,color,2
+vertexID,3945,color,3
+vertexID,3991,color,2
+vertexID,3993,color,2
+vertexID,4285,color,1
+vertexID,3943,color,1
+vertexID,3944,color,1
+vertexID,3962,color,1
+vertexID,4005,color,1
+vertexID,4027,color,2
+vertexID,4037,color,3
+vertexID,4028,color,2
+vertexID,3970,color,2
+vertexID,3971,color,2
+vertexID,3980,color,2
+vertexID,4087,color,1
+vertexID,4088,color,1
+vertexID,4115,color,2
+vertexID,4158,color,1
+vertexID,4145,color,3
+vertexID,4146,color,3
+vertexID,4101,color,1
+vertexID,4216,color,2
+vertexID,4253,color,1
+vertexID,4254,color,1
+vertexID,4255,color,3
+vertexID,4274,color,2
+vertexID,4305,color,2
+vertexID,4304,color,2
+vertexID,4388,color,1
+vertexID,4389,color,3
+vertexID,4390,color,1
+vertexID,4391,color,1
+vertexID,4449,color,1
+vertexID,4450,color,1
+vertexID,3985,color,1
+vertexID,4042,color,2
+vertexID,4079,color,3
+vertexID,4017,color,2
+vertexID,3986,color,2
+vertexID,3987,color,2
+vertexID,4041,color,1
+vertexID,4128,color,1
+vertexID,4220,color,2
+vertexID,4164,color,3
+vertexID,4190,color,3
+vertexID,4129,color,2
+vertexID,4189,color,1
+vertexID,3997,color,1
+vertexID,4083,color,2
+vertexID,4053,color,3
+vertexID,4054,color,3
+vertexID,3998,color,2
+vertexID,3999,color,2
+vertexID,4052,color,1
+vertexID,4106,color,1
+vertexID,4169,color,2
+vertexID,4170,color,2
+vertexID,4171,color,2
+vertexID,4033,color,1
+vertexID,4009,color,2
+vertexID,4008,color,2
+vertexID,4007,color,2
+vertexID,4153,color,2
+vertexID,4122,color,3
+vertexID,4084,color,2
+vertexID,4152,color,1
+vertexID,4182,color,1
+vertexID,4209,color,1
+vertexID,4298,color,2
+vertexID,4297,color,2
+vertexID,4325,color,3
+vertexID,4296,color,2
+vertexID,4413,color,1
+vertexID,4446,color,2
+vertexID,4384,color,2
+vertexID,4527,color,2
+vertexID,4565,color,2
+vertexID,4526,color,1
+vertexID,4528,color,1
+vertexID,4592,color,1
+vertexID,4018,color,1
+vertexID,4043,color,2
+vertexID,4044,color,2
+vertexID,4045,color,2
+vertexID,4071,color,1
+vertexID,4064,color,2
+vertexID,4024,color,3
+vertexID,4065,color,2
+vertexID,4113,color,2
+vertexID,4096,color,2
+vertexID,4114,color,2
+vertexID,4154,color,1
+vertexID,4156,color,3
+vertexID,4210,color,1
+vertexID,4251,color,2
+vertexID,4211,color,1
+vertexID,4155,color,1
+vertexID,4270,color,1
+vertexID,4212,color,1
+vertexID,4328,color,2
+vertexID,4329,color,2
+vertexID,4330,color,2
+vertexID,4092,color,1
+vertexID,4069,color,2
+vertexID,4082,color,2
+vertexID,4070,color,2
+vertexID,4117,color,2
+vertexID,4138,color,3
+vertexID,4116,color,2
+vertexID,4074,color,1
+vertexID,4098,color,1
+vertexID,4102,color,1
+vertexID,4121,color,1
+vertexID,4161,color,1
+vertexID,4124,color,2
+vertexID,4160,color,3
+vertexID,4162,color,3
+vertexID,4218,color,2
+vertexID,4217,color,2
+vertexID,4159,color,1
+vertexID,4423,color,1
+vertexID,4453,color,2
+vertexID,4406,color,2
+vertexID,4380,color,3
+vertexID,4407,color,2
+vertexID,4471,color,2
+vertexID,4472,color,2
+vertexID,4306,color,1
+vertexID,4279,color,2
+vertexID,4219,color,2
+vertexID,4278,color,2
+vertexID,4188,color,1
+vertexID,4127,color,1
+vertexID,4163,color,3
+vertexID,4187,color,3
+vertexID,4125,color,2
+vertexID,4126,color,2
+vertexID,4151,color,1
+vertexID,4191,color,1
+vertexID,4243,color,2
+vertexID,4262,color,3
+vertexID,4244,color,2
+vertexID,4167,color,2
+vertexID,4165,color,2
+vertexID,4166,color,2
+vertexID,4291,color,1
+vertexID,4308,color,2
+vertexID,4292,color,1
+vertexID,4361,color,1
+vertexID,4363,color,1
+vertexID,4394,color,2
+vertexID,4362,color,1
+vertexID,4456,color,1
+vertexID,4482,color,2
+vertexID,4514,color,2
+vertexID,4512,color,2
+vertexID,4455,color,2
+vertexID,4513,color,1
+vertexID,4194,color,1
+vertexID,4442,color,1
+vertexID,4372,color,2
+vertexID,4440,color,3
+vertexID,4439,color,3
+vertexID,4520,color,2
+vertexID,4521,color,3
+vertexID,4522,color,2
+vertexID,4523,color,2
+vertexID,4288,color,1
+vertexID,4373,color,3
+vertexID,4371,color,3
+vertexID,4581,color,1
+vertexID,4583,color,2
+vertexID,4582,color,1
+vertexID,4235,color,2
+vertexID,4374,color,2
+vertexID,4671,color,1
+vertexID,4649,color,3
+vertexID,4650,color,3
+vertexID,4236,color,1
+vertexID,4200,color,3
+vertexID,4234,color,1
+vertexID,4287,color,1
+vertexID,4772,color,2
+vertexID,4651,color,2
+vertexID,4237,color,1
+vertexID,4734,color,1
+vertexID,4735,color,1
+vertexID,4201,color,1
+vertexID,4258,color,1
+vertexID,4232,color,2
+vertexID,4231,color,2
+vertexID,4230,color,2
+vertexID,4401,color,1
+vertexID,4399,color,2
+vertexID,4463,color,2
+vertexID,4490,color,3
+vertexID,4344,color,2
+vertexID,4400,color,2
+vertexID,4438,color,2
+vertexID,4318,color,1
+vertexID,4319,color,1
+vertexID,4259,color,3
+vertexID,4320,color,1
+vertexID,4464,color,1
+vertexID,4233,color,1
+vertexID,4260,color,1
+vertexID,4635,color,1
+vertexID,4667,color,2
+vertexID,4587,color,2
+vertexID,4622,color,3
+vertexID,4623,color,3
+vertexID,4678,color,2
+vertexID,4679,color,2
+vertexID,4534,color,1
+vertexID,4714,color,1
+vertexID,4509,color,2
+vertexID,4451,color,3
+vertexID,4510,color,2
+vertexID,4508,color,2
+vertexID,4739,color,2
+vertexID,4758,color,3
+vertexID,4740,color,2
+vertexID,4360,color,1
+vertexID,4452,color,1
+vertexID,4802,color,1
+vertexID,4784,color,1
+vertexID,4801,color,1
+vertexID,4275,color,2
+vertexID,4333,color,3
+vertexID,4334,color,3
+vertexID,4332,color,2
+vertexID,4867,color,2
+vertexID,4866,color,3
+vertexID,4277,color,1
+vertexID,4276,color,1
+vertexID,4936,color,1
+vertexID,4962,color,2
+vertexID,4935,color,1
+vertexID,4868,color,1
+vertexID,4934,color,1
+vertexID,4282,color,1
+vertexID,4280,color,2
+vertexID,4281,color,2
+vertexID,4313,color,2
+vertexID,4340,color,2
+vertexID,4367,color,3
+vertexID,4341,color,1
+vertexID,4307,color,1
+vertexID,4335,color,2
+vertexID,4336,color,2
+vertexID,4337,color,2
+vertexID,4424,color,1
+vertexID,4425,color,2
+vertexID,4393,color,1
+vertexID,4454,color,1
+vertexID,4343,color,1
+vertexID,4317,color,2
+vertexID,4316,color,2
+vertexID,4315,color,2
+vertexID,4398,color,2
+vertexID,4437,color,3
+vertexID,4397,color,1
+vertexID,4396,color,1
+vertexID,4321,color,1
+vertexID,4353,color,1
+vertexID,4415,color,2
+vertexID,4331,color,2
+vertexID,4352,color,3
+vertexID,4354,color,3
+vertexID,4416,color,2
+vertexID,4499,color,1
+vertexID,4502,color,1
+vertexID,4501,color,3
+vertexID,4500,color,1
+vertexID,4351,color,1
+vertexID,4567,color,1
+vertexID,4568,color,1
+vertexID,4357,color,1
+vertexID,4358,color,2
+vertexID,4359,color,2
+vertexID,4422,color,2
+vertexID,4448,color,3
+vertexID,4421,color,2
+vertexID,4420,color,1
+vertexID,4364,color,1
+vertexID,4370,color,1
+vertexID,4368,color,2
+vertexID,4430,color,2
+vertexID,4462,color,3
+vertexID,4431,color,2
+vertexID,4369,color,2
+vertexID,4432,color,1
+vertexID,4613,color,1
+vertexID,4660,color,2
+vertexID,4590,color,2
+vertexID,4564,color,3
+vertexID,4591,color,2
+vertexID,4653,color,2
+vertexID,4661,color,2
+vertexID,4706,color,1
+vertexID,4707,color,3
+vertexID,4524,color,1
+vertexID,4492,color,2
+vertexID,4468,color,1
+vertexID,4493,color,1
+vertexID,4773,color,1
+vertexID,4796,color,2
+vertexID,4774,color,1
+vertexID,4404,color,2
+vertexID,4775,color,1
+vertexID,4377,color,1
+vertexID,4403,color,2
+vertexID,4405,color,2
+vertexID,4383,color,1
+vertexID,4985,color,1
+vertexID,5027,color,2
+vertexID,5035,color,3
+vertexID,5028,color,2
+vertexID,4967,color,2
+vertexID,4856,color,3
+vertexID,4955,color,2
+vertexID,4968,color,2
+vertexID,5087,color,1
+vertexID,4825,color,1
+vertexID,4897,color,1
+vertexID,4720,color,1
+vertexID,5115,color,2
+vertexID,5116,color,3
+vertexID,5117,color,2
+vertexID,5118,color,2
+vertexID,4826,color,2
+vertexID,4750,color,2
+vertexID,4655,color,2
+vertexID,4685,color,2
+vertexID,5180,color,1
+vertexID,5181,color,2
+vertexID,4625,color,1
+vertexID,4566,color,3
+vertexID,4624,color,1
+vertexID,4497,color,1
+vertexID,4626,color,1
+vertexID,4477,color,2
+vertexID,4529,color,2
+vertexID,4498,color,2
+vertexID,4447,color,1
+vertexID,4414,color,2
+vertexID,4385,color,1
+vertexID,4386,color,1
+vertexID,4387,color,1
+vertexID,4392,color,1
+vertexID,4419,color,1
+vertexID,4417,color,2
+vertexID,4479,color,2
+vertexID,4503,color,3
+vertexID,4480,color,2
+vertexID,4418,color,2
+vertexID,4481,color,1
+vertexID,4606,color,1
+vertexID,4562,color,2
+vertexID,4588,color,3
+vertexID,4589,color,3
+vertexID,4642,color,2
+vertexID,4659,color,2
+vertexID,4658,color,2
+vertexID,4516,color,1
+vertexID,4696,color,1
+vertexID,4694,color,3
+vertexID,4483,color,2
+vertexID,4461,color,2
+vertexID,4427,color,3
+vertexID,4484,color,2
+vertexID,4788,color,1
+vertexID,4763,color,2
+vertexID,4764,color,2
+vertexID,4695,color,1
+vertexID,4428,color,1
+vertexID,4429,color,1
+vertexID,4762,color,2
+vertexID,4445,color,1
+vertexID,4491,color,1
+vertexID,4467,color,2
+vertexID,4465,color,2
+vertexID,4466,color,2
+vertexID,4525,color,2
+vertexID,4563,color,1
+vertexID,4612,color,2
+vertexID,4652,color,1
+vertexID,4585,color,1
+vertexID,4469,color,1
+vertexID,4478,color,1
+vertexID,4518,color,1
+vertexID,4487,color,2
+vertexID,4519,color,2
+vertexID,4551,color,2
+vertexID,4580,color,2
+vertexID,4488,color,1
+vertexID,4645,color,1
+vertexID,4647,color,1
+vertexID,4646,color,1
+vertexID,4733,color,2
+vertexID,4732,color,1
+vertexID,4768,color,1
+vertexID,4789,color,1
+vertexID,4790,color,2
+vertexID,4489,color,1
+vertexID,4530,color,1
+vertexID,4505,color,2
+vertexID,4504,color,2
+vertexID,4506,color,2
+vertexID,4593,color,2
+vertexID,4665,color,1
+vertexID,4594,color,1
+vertexID,4633,color,1
+vertexID,4664,color,2
+vertexID,4634,color,1
+vertexID,4676,color,2
+vertexID,4620,color,2
+vertexID,4586,color,3
+vertexID,4621,color,2
+vertexID,4666,color,2
+vertexID,4677,color,2
+vertexID,4724,color,1
+vertexID,4531,color,1
+vertexID,4533,color,1
+vertexID,4755,color,2
+vertexID,4757,color,2
+vertexID,4756,color,2
+vertexID,4507,color,2
+vertexID,4532,color,1
+vertexID,4906,color,1
+vertexID,4904,color,2
+vertexID,4813,color,3
+vertexID,4938,color,2
+vertexID,5000,color,2
+vertexID,5043,color,3
+vertexID,5001,color,2
+vertexID,5002,color,2
+vertexID,4963,color,2
+vertexID,4964,color,2
+vertexID,4743,color,1
+vertexID,4786,color,1
+vertexID,4832,color,1
+vertexID,4905,color,1
+vertexID,4657,color,2
+vertexID,4744,color,3
+vertexID,4539,color,1
+vertexID,4668,color,1
+vertexID,4669,color,1
+vertexID,4670,color,1
+vertexID,4538,color,2
+vertexID,4511,color,3
+vertexID,4540,color,2
+vertexID,4598,color,2
+vertexID,4599,color,2
+vertexID,4537,color,1
+vertexID,4548,color,1
+vertexID,4547,color,2
+vertexID,4517,color,3
+vertexID,4549,color,2
+vertexID,4607,color,2
+vertexID,4608,color,2
+vertexID,4550,color,1
+vertexID,4697,color,1
+vertexID,4698,color,1
+vertexID,4699,color,3
+vertexID,4765,color,2
+vertexID,4729,color,2
+vertexID,4766,color,2
+vertexID,4656,color,1
+vertexID,4597,color,2
+vertexID,4536,color,3
+vertexID,4595,color,2
+vertexID,4681,color,2
+vertexID,4690,color,3
+vertexID,4680,color,2
+vertexID,4535,color,1
+vertexID,4572,color,1
+vertexID,4742,color,1
+vertexID,4725,color,1
+vertexID,4741,color,1
+vertexID,4596,color,2
+vertexID,4811,color,2
+vertexID,4831,color,1
+vertexID,4812,color,2
+vertexID,4810,color,2
+vertexID,4903,color,2
+vertexID,4937,color,3
+vertexID,4902,color,1
+vertexID,4901,color,1
+vertexID,4970,color,1
+vertexID,4971,color,1
+vertexID,4988,color,2
+vertexID,4977,color,1
+vertexID,5030,color,1
+vertexID,5042,color,3
+vertexID,5031,color,1
+vertexID,5091,color,1
+vertexID,5127,color,2
+vertexID,5128,color,3
+vertexID,5129,color,2
+vertexID,5130,color,2
+vertexID,5184,color,1
+vertexID,5185,color,1
+vertexID,4648,color,1
+vertexID,4609,color,2
+vertexID,4703,color,2
+vertexID,4705,color,3
+vertexID,4704,color,3
+vertexID,4552,color,2
+vertexID,4610,color,3
+vertexID,4611,color,3
+vertexID,4770,color,1
+vertexID,4792,color,3
+vertexID,4771,color,1
+vertexID,4554,color,1
+vertexID,4553,color,1
+vertexID,4769,color,1
+vertexID,4838,color,1
+vertexID,4837,color,2
+vertexID,4911,color,2
+vertexID,4946,color,3
+vertexID,4876,color,2
+vertexID,4912,color,1
+vertexID,5461,color,1
+vertexID,5446,color,2
+vertexID,5384,color,3
+vertexID,5447,color,2
+vertexID,5531,color,2
+vertexID,5532,color,3
+vertexID,5533,color,2
+vertexID,5534,color,2
+vertexID,5383,color,1
+vertexID,5324,color,2
+vertexID,5385,color,1
+vertexID,5588,color,1
+vertexID,5589,color,1
+vertexID,5261,color,1
+vertexID,5262,color,1
+vertexID,5386,color,1
+vertexID,5669,color,2
+vertexID,5670,color,2
+vertexID,5671,color,2
+vertexID,5174,color,2
+vertexID,5036,color,1
+vertexID,5156,color,3
+vertexID,5263,color,1
+vertexID,5154,color,2
+vertexID,4969,color,2
+vertexID,5155,color,2
+vertexID,5059,color,2
+vertexID,4858,color,1
+vertexID,4931,color,3
+vertexID,5058,color,1
+vertexID,4995,color,1
+vertexID,4857,color,2
+vertexID,4799,color,3
+vertexID,4859,color,2
+vertexID,4930,color,2
+vertexID,4751,color,1
+vertexID,4860,color,1
+vertexID,4722,color,2
+vertexID,4662,color,2
+vertexID,4723,color,2
+vertexID,4630,color,1
+vertexID,4571,color,3
+vertexID,4631,color,1
+vertexID,4632,color,1
+vertexID,4569,color,1
+vertexID,4570,color,1
+vertexID,4726,color,1
+vertexID,4715,color,2
+vertexID,4682,color,3
+vertexID,4716,color,2
+vertexID,4759,color,2
+vertexID,4783,color,2
+vertexID,4782,color,2
+vertexID,4600,color,1
+vertexID,4636,color,2
+vertexID,4803,color,1
+vertexID,4601,color,2
+vertexID,4573,color,2
+vertexID,4834,color,2
+vertexID,4574,color,1
+vertexID,4833,color,1
+vertexID,4907,color,1
+vertexID,4939,color,3
+vertexID,4908,color,1
+vertexID,4909,color,1
+vertexID,4575,color,1
+vertexID,4584,color,1
+vertexID,4869,color,1
+vertexID,4846,color,2
+vertexID,4821,color,3
+vertexID,4847,color,2
+vertexID,4917,color,2
+vertexID,4918,color,2
+vertexID,4910,color,3
+vertexID,4919,color,2
+vertexID,5008,color,1
+vertexID,5007,color,1
+vertexID,4728,color,1
+vertexID,5094,color,2
+vertexID,5009,color,2
+vertexID,5138,color,2
+vertexID,5160,color,3
+vertexID,5137,color,1
+vertexID,5065,color,2
+vertexID,4727,color,2
+vertexID,4760,color,2
+vertexID,4693,color,2
+vertexID,5136,color,1
+vertexID,5280,color,1
+vertexID,4638,color,1
+vertexID,4692,color,1
+vertexID,5242,color,2
+vertexID,5243,color,2
+vertexID,5338,color,2
+vertexID,5355,color,3
+vertexID,5337,color,2
+vertexID,4637,color,2
+vertexID,4602,color,3
+vertexID,4691,color,2
+vertexID,5336,color,1
+vertexID,4640,color,1
+vertexID,4639,color,1
+vertexID,4761,color,1
+vertexID,4717,color,2
+vertexID,4745,color,3
+vertexID,4746,color,3
+vertexID,4804,color,2
+vertexID,4787,color,2
+vertexID,4805,color,2
+vertexID,4641,color,1
+vertexID,4870,color,1
+vertexID,4604,color,2
+vertexID,4603,color,2
+vertexID,4605,color,2
+vertexID,4891,color,2
+vertexID,4920,color,1
+vertexID,4940,color,3
+vertexID,4921,color,1
+vertexID,4848,color,1
+vertexID,4849,color,1
+vertexID,4809,color,1
+vertexID,4844,color,2
+vertexID,4797,color,2
+vertexID,4781,color,3
+vertexID,4798,color,2
+vertexID,4828,color,2
+vertexID,4845,color,2
+vertexID,4898,color,1
+vertexID,4721,color,1
+vertexID,4900,color,1
+vertexID,4929,color,2
+vertexID,4687,color,2
+vertexID,4688,color,2
+vertexID,4627,color,3
+vertexID,4689,color,2
+vertexID,4899,color,1
+vertexID,4628,color,1
+vertexID,4629,color,1
+vertexID,4829,color,1
+vertexID,4800,color,2
+vertexID,4820,color,3
+vertexID,4819,color,3
+vertexID,4861,color,2
+vertexID,4890,color,2
+vertexID,4889,color,2
+vertexID,4754,color,1
+vertexID,4752,color,1
+vertexID,4959,color,1
+vertexID,4960,color,3
+vertexID,4675,color,2
+vertexID,5037,color,2
+vertexID,4998,color,3
+vertexID,4997,color,3
+vertexID,4961,color,2
+vertexID,4663,color,1
+vertexID,4753,color,1
+vertexID,4996,color,1
+vertexID,5124,color,1
+vertexID,5123,color,2
+vertexID,5122,color,2
+vertexID,5157,color,2
+vertexID,5182,color,2
+vertexID,5212,color,3
+vertexID,5183,color,1
+vertexID,4928,color,1
+vertexID,4896,color,2
+vertexID,4823,color,3
+vertexID,4895,color,2
+vertexID,4894,color,2
+vertexID,4991,color,2
+vertexID,4966,color,3
+vertexID,4992,color,2
+vertexID,4993,color,3
+vertexID,4749,color,1
+vertexID,4824,color,1
+vertexID,5086,color,1
+vertexID,5152,color,1
+vertexID,5114,color,3
+vertexID,5056,color,1
+vertexID,4719,color,2
+vertexID,5113,color,2
+vertexID,5112,color,2
+vertexID,5205,color,2
+vertexID,4780,color,1
+vertexID,4674,color,1
+vertexID,4712,color,3
+vertexID,4713,color,3
+vertexID,4779,color,1
+vertexID,5254,color,1
+vertexID,5258,color,2
+vertexID,5259,color,1
+vertexID,5349,color,1
+vertexID,5408,color,1
+vertexID,5380,color,3
+vertexID,5327,color,1
+vertexID,5379,color,2
+vertexID,5378,color,2
+vertexID,5469,color,2
+vertexID,5496,color,1
+vertexID,5470,color,1
+vertexID,5497,color,1
+vertexID,5581,color,1
+vertexID,5558,color,3
+vertexID,5528,color,1
+vertexID,5557,color,2
+vertexID,5667,color,2
+vertexID,5693,color,1
+vertexID,5695,color,3
+vertexID,5694,color,1
+vertexID,5696,color,1
+vertexID,5762,color,1
+vertexID,5763,color,1
+vertexID,5792,color,1
+vertexID,5820,color,1
+vertexID,5821,color,2
+vertexID,4686,color,1
+vertexID,4700,color,1
+vertexID,5013,color,1
+vertexID,4942,color,2
+vertexID,5015,color,2
+vertexID,5014,color,3
+vertexID,5072,color,2
+vertexID,5046,color,2
+vertexID,5165,color,2
+vertexID,5195,color,3
+vertexID,5140,color,2
+vertexID,5166,color,1
+vertexID,5097,color,2
+vertexID,4926,color,1
+vertexID,4893,color,3
+vertexID,4927,color,1
+vertexID,5167,color,1
+vertexID,4852,color,1
+vertexID,4806,color,1
+vertexID,4872,color,2
+vertexID,4853,color,1
+vertexID,4731,color,2
+vertexID,4730,color,1
+vertexID,4702,color,1
+vertexID,4767,color,1
+vertexID,4701,color,2
+vertexID,4984,color,1
+vertexID,5021,color,2
+vertexID,4990,color,2
+vertexID,4913,color,2
+vertexID,4974,color,2
+vertexID,5079,color,2
+vertexID,5104,color,2
+vertexID,5143,color,2
+vertexID,5171,color,3
+vertexID,5144,color,1
+vertexID,4958,color,1
+vertexID,4883,color,1
+vertexID,4881,color,1
+vertexID,5145,color,1
+vertexID,4817,color,2
+vertexID,4736,color,1
+vertexID,4794,color,3
+vertexID,4795,color,3
+vertexID,4793,color,1
+vertexID,4737,color,2
+vertexID,4738,color,2
+vertexID,4840,color,1
+vertexID,4882,color,1
+vertexID,4785,color,1
+vertexID,4791,color,1
+vertexID,4957,color,1
+vertexID,4924,color,2
+vertexID,4972,color,2
+vertexID,4979,color,3
+vertexID,4973,color,2
+vertexID,4925,color,2
+vertexID,4835,color,2
+vertexID,4814,color,1
+vertexID,4815,color,1
+vertexID,4816,color,1
+vertexID,5034,color,1
+vertexID,5096,color,2
+vertexID,5070,color,1
+vertexID,5071,color,1
+vertexID,4827,color,1
+vertexID,4863,color,1
+vertexID,4862,color,2
+vertexID,4830,color,3
+vertexID,4864,color,2
+vertexID,4932,color,2
+vertexID,4956,color,3
+vertexID,4933,color,2
+vertexID,4865,color,1
+vertexID,5061,color,1
+vertexID,5062,color,1
+vertexID,5063,color,2
+vertexID,5125,color,2
+vertexID,5088,color,2
+vertexID,5126,color,2
+vertexID,5158,color,2
+vertexID,5213,color,1
+vertexID,5214,color,3
+vertexID,5215,color,1
+vertexID,5216,color,1
+vertexID,5267,color,1
+vertexID,5268,color,1
+vertexID,5352,color,2
+vertexID,5411,color,2
+vertexID,5391,color,2
+vertexID,5409,color,2
+vertexID,5472,color,2
+vertexID,5410,color,1
+vertexID,5502,color,1
+vertexID,5503,color,3
+vertexID,5504,color,1
+vertexID,5505,color,1
+vertexID,5560,color,1
+vertexID,5561,color,1
+vertexID,5620,color,2
+vertexID,5662,color,1
+vertexID,5688,color,2
+vertexID,5704,color,3
+vertexID,5689,color,2
+vertexID,5635,color,2
+vertexID,5636,color,2
+vertexID,5769,color,1
+vertexID,5770,color,2
+vertexID,5825,color,1
+vertexID,5798,color,1
+vertexID,5944,color,2
+vertexID,5826,color,2
+vertexID,5946,color,2
+vertexID,5945,color,2
+vertexID,6023,color,1
+vertexID,6024,color,3
+vertexID,6022,color,1
+vertexID,6088,color,1
+vertexID,6111,color,2
+vertexID,6089,color,1
+vertexID,6090,color,1
+vertexID,4836,color,1
+vertexID,4875,color,2
+vertexID,4874,color,2
+vertexID,4873,color,2
+vertexID,4878,color,1
+vertexID,4839,color,2
+vertexID,4877,color,3
+vertexID,4879,color,3
+vertexID,4947,color,2
+vertexID,4948,color,2
+vertexID,4880,color,1
+vertexID,4949,color,1
+vertexID,4914,color,2
+vertexID,4843,color,3
+vertexID,4915,color,2
+vertexID,5022,color,2
+vertexID,4916,color,2
+vertexID,4975,color,2
+vertexID,5023,color,1
+vertexID,4842,color,1
+vertexID,4841,color,1
+vertexID,5080,color,2
+vertexID,5105,color,3
+vertexID,5081,color,2
+vertexID,5082,color,1
+vertexID,4892,color,1
+vertexID,4850,color,2
+vertexID,4871,color,2
+vertexID,4851,color,2
+vertexID,4923,color,2
+vertexID,4941,color,3
+vertexID,4922,color,2
+vertexID,4945,color,1
+vertexID,4944,color,2
+vertexID,4981,color,2
+vertexID,5016,color,3
+vertexID,4980,color,2
+vertexID,4943,color,2
+vertexID,4982,color,1
+vertexID,5004,color,1
+vertexID,4978,color,2
+vertexID,5003,color,3
+vertexID,5044,color,2
+vertexID,5064,color,2
+vertexID,5135,color,2
+vertexID,5149,color,3
+vertexID,5109,color,2
+vertexID,5093,color,3
+vertexID,5006,color,1
+vertexID,5005,color,1
+vertexID,5241,color,1
+vertexID,5218,color,1
+vertexID,5277,color,1
+vertexID,5278,color,2
+vertexID,5393,color,1
+vertexID,5420,color,1
+vertexID,5354,color,1
+vertexID,5507,color,2
+vertexID,5421,color,3
+vertexID,5479,color,1
+vertexID,5478,color,1
+vertexID,5543,color,1
+vertexID,5595,color,2
+vertexID,5621,color,3
+vertexID,5593,color,2
+vertexID,5594,color,2
+vertexID,5647,color,1
+vertexID,5676,color,1
+vertexID,5709,color,1
+vertexID,5710,color,2
+vertexID,5761,color,2
+vertexID,5711,color,1
+vertexID,5802,color,1
+vertexID,5789,color,3
+vertexID,5788,color,3
+vertexID,5849,color,2
+vertexID,5831,color,2
+vertexID,5848,color,2
+vertexID,5885,color,1
+vertexID,5883,color,1
+vertexID,5918,color,2
+vertexID,5959,color,1
+vertexID,5884,color,1
+vertexID,6006,color,2
+vertexID,5981,color,1
+vertexID,5982,color,1
+vertexID,6041,color,1
+vertexID,6058,color,3
+vertexID,6042,color,1
+vertexID,6116,color,1
+vertexID,6118,color,2
+vertexID,6117,color,1
+vertexID,6176,color,1
+vertexID,6207,color,3
+vertexID,6177,color,1
+vertexID,6178,color,1
+vertexID,6257,color,1
+vertexID,6288,color,2
+vertexID,6290,color,2
+vertexID,6291,color,3
+vertexID,6289,color,3
+vertexID,6355,color,1
+vertexID,6356,color,1
+vertexID,6430,color,2
+vertexID,6431,color,3
+vertexID,6432,color,2
+vertexID,6433,color,2
+vertexID,6494,color,1
+vertexID,6495,color,1
+vertexID,5019,color,1
+vertexID,5110,color,2
+vertexID,5020,color,2
+vertexID,4983,color,3
+vertexID,5018,color,2
+vertexID,5074,color,2
+vertexID,5075,color,2
+vertexID,5150,color,1
+vertexID,5111,color,3
+vertexID,5017,color,1
+vertexID,5177,color,2
+vertexID,5196,color,3
+vertexID,5178,color,2
+vertexID,5141,color,2
+vertexID,5232,color,1
+vertexID,5233,color,1
+vertexID,5257,color,2
+vertexID,5301,color,1
+vertexID,5315,color,3
+vertexID,5302,color,1
+vertexID,5249,color,1
+vertexID,5365,color,1
+vertexID,5366,color,1
+vertexID,5367,color,2
+vertexID,5400,color,3
+vertexID,5458,color,1
+vertexID,5492,color,1
+vertexID,5459,color,2
+vertexID,5516,color,2
+vertexID,5029,color,1
+vertexID,5054,color,2
+vertexID,5057,color,3
+vertexID,5055,color,2
+vertexID,4986,color,2
+vertexID,4994,color,2
+vertexID,4987,color,2
+vertexID,5119,color,1
+vertexID,5121,color,1
+vertexID,5153,color,2
+vertexID,5209,color,1
+vertexID,5120,color,1
+vertexID,5237,color,1
+vertexID,5238,color,3
+vertexID,5210,color,2
+vertexID,5260,color,1
+vertexID,5211,color,1
+vertexID,5350,color,1
+vertexID,5323,color,2
+vertexID,5351,color,3
+vertexID,5329,color,1
+vertexID,5330,color,1
+vertexID,5382,color,1
+vertexID,5308,color,1
+vertexID,5484,color,2
+vertexID,5164,color,2
+vertexID,5282,color,3
+vertexID,5310,color,3
+vertexID,5361,color,2
+vertexID,5311,color,1
+vertexID,5359,color,2
+vertexID,5395,color,2
+vertexID,5360,color,1
+vertexID,5464,color,2
+vertexID,5510,color,3
+vertexID,5485,color,1
+vertexID,5427,color,2
+vertexID,5191,color,1
+vertexID,5176,color,1
+vertexID,5139,color,3
+vertexID,5163,color,1
+vertexID,5162,color,2
+vertexID,5246,color,1
+vertexID,5309,color,1
+vertexID,5486,color,1
+vertexID,5599,color,1
+vertexID,5544,color,1
+vertexID,5600,color,1
+vertexID,5161,color,1
+vertexID,5084,color,1
+vertexID,5085,color,1
+vertexID,5746,color,2
+vertexID,5773,color,3
+vertexID,5678,color,2
+vertexID,5601,color,2
+vertexID,5713,color,2
+vertexID,5652,color,2
+vertexID,5045,color,2
+vertexID,5712,color,1
+vertexID,5745,color,1
+vertexID,5832,color,1
+vertexID,5033,color,1
+vertexID,4989,color,3
+vertexID,5032,color,1
+vertexID,5069,color,1
+vertexID,5833,color,2
+vertexID,5889,color,2
+vertexID,5922,color,3
+vertexID,5890,color,2
+vertexID,5888,color,1
+vertexID,5040,color,1
+vertexID,5041,color,2
+vertexID,4999,color,3
+vertexID,5039,color,2
+vertexID,5089,color,2
+vertexID,5090,color,2
+vertexID,5147,color,2
+vertexID,5038,color,1
+vertexID,5148,color,1
+vertexID,5175,color,3
+vertexID,5159,color,1
+vertexID,5207,color,1
+vertexID,5217,color,2
+vertexID,5206,color,1
+vertexID,5255,color,1
+vertexID,5256,color,1
+vertexID,5297,color,2
+vertexID,5326,color,1
+vertexID,5332,color,3
+vertexID,5325,color,1
+vertexID,5269,color,1
+vertexID,5392,color,1
+vertexID,5413,color,2
+vertexID,5414,color,3
+vertexID,5415,color,2
+vertexID,5412,color,2
+vertexID,5473,color,1
+vertexID,5474,color,1
+vertexID,5012,color,1
+vertexID,5010,color,2
+vertexID,5011,color,2
+vertexID,5067,color,2
+vertexID,5095,color,3
+vertexID,5066,color,2
+vertexID,5068,color,1
+vertexID,5106,color,1
+vertexID,5179,color,2
+vertexID,5173,color,3
+vertexID,5203,color,2
+vertexID,5204,color,3
+vertexID,5049,color,2
+vertexID,5146,color,2
+vertexID,5292,color,1
+vertexID,5202,color,1
+vertexID,5293,color,1
+vertexID,5294,color,1
+vertexID,5048,color,1
+vertexID,5026,color,1
+vertexID,5083,color,1
+vertexID,5369,color,2
+vertexID,5025,color,2
+vertexID,5401,color,1
+vertexID,5402,color,3
+vertexID,5370,color,1
+vertexID,5435,color,1
+vertexID,5076,color,1
+vertexID,5047,color,2
+vertexID,5077,color,3
+vertexID,5221,color,2
+vertexID,5197,color,2
+vertexID,5102,color,2
+vertexID,5170,color,2
+vertexID,5142,color,2
+vertexID,5103,color,1
+vertexID,5078,color,1
+vertexID,5222,color,1
+vertexID,5223,color,3
+vertexID,5060,color,1
+vertexID,5099,color,1
+vertexID,5073,color,2
+vertexID,5100,color,3
+vertexID,5098,color,3
+vertexID,5169,color,2
+vertexID,5168,color,2
+vertexID,5208,color,3
+vertexID,5101,color,1
+vertexID,5231,color,1
+vertexID,5248,color,2
+vertexID,5230,color,1
+vertexID,5289,color,1
+vertexID,5299,color,1
+vertexID,5300,color,1
+vertexID,5342,color,2
+vertexID,5344,color,2
+vertexID,5363,color,1
+vertexID,5364,color,2
+vertexID,5399,color,2
+vertexID,5343,color,1
+vertexID,5133,color,1
+vertexID,5132,color,2
+vertexID,5092,color,3
+vertexID,5134,color,2
+vertexID,5186,color,2
+vertexID,5187,color,2
+vertexID,5131,color,1
+vertexID,5199,color,1
+vertexID,5198,color,2
+vertexID,5172,color,3
+vertexID,5253,color,2
+vertexID,5321,color,2
+vertexID,5291,color,2
+vertexID,5225,color,2
+vertexID,5200,color,1
+vertexID,5348,color,2
+vertexID,5347,color,1
+vertexID,5377,color,3
+vertexID,5322,color,1
+vertexID,5201,color,1
+vertexID,5368,color,1
+vertexID,5407,color,1
+vertexID,5433,color,2
+vertexID,5406,color,1
+vertexID,5467,color,1
+vertexID,5549,color,2
+vertexID,5550,color,3
+vertexID,5551,color,2
+vertexID,5552,color,2
+vertexID,5616,color,1
+vertexID,5617,color,1
+vertexID,5692,color,2
+vertexID,5666,color,1
+vertexID,5665,color,1
+vertexID,5729,color,1
+vertexID,5752,color,3
+vertexID,5730,color,1
+vertexID,5810,color,1
+vertexID,5842,color,2
+vertexID,5841,color,2
+vertexID,5840,color,2
+vertexID,5394,color,1
+vertexID,5357,color,2
+vertexID,5356,color,2
+vertexID,5358,color,2
+vertexID,5426,color,2
+vertexID,5441,color,3
+vertexID,5483,color,2
+vertexID,5451,color,2
+vertexID,5281,color,1
+vertexID,5450,color,1
+vertexID,5598,color,1
+vertexID,5509,color,1
+vertexID,5188,color,2
+vertexID,5245,color,3
+vertexID,5244,color,2
+vertexID,5597,color,2
+vertexID,5649,color,2
+vertexID,5637,color,2
+vertexID,5629,color,3
+vertexID,5650,color,1
+vertexID,5190,color,1
+vertexID,5189,color,1
+vertexID,5219,color,1
+vertexID,5742,color,1
+vertexID,5743,color,1
+vertexID,5651,color,1
+vertexID,5744,color,1
+vertexID,5790,color,2
+vertexID,5850,color,1
+vertexID,5865,color,3
+vertexID,5851,color,1
+vertexID,5899,color,1
+vertexID,5887,color,1
+vertexID,5900,color,1
+vertexID,5220,color,1
+vertexID,5192,color,2
+vertexID,5193,color,2
+vertexID,5194,color,2
+vertexID,5251,color,1
+vertexID,5224,color,2
+vertexID,5252,color,3
+vertexID,5290,color,2
+vertexID,5320,color,2
+vertexID,5346,color,2
+vertexID,5319,color,2
+vertexID,5250,color,1
+vertexID,5816,color,1
+vertexID,5668,color,2
+vertexID,5793,color,3
+vertexID,5908,color,2
+vertexID,5857,color,2
+vertexID,5956,color,2
+vertexID,5875,color,2
+vertexID,5847,color,3
+vertexID,5698,color,1
+vertexID,5559,color,1
+vertexID,5794,color,1
+vertexID,5795,color,1
+vertexID,6014,color,1
+vertexID,6015,color,1
+vertexID,6016,color,1
+vertexID,5858,color,1
+vertexID,5640,color,2
+vertexID,5697,color,2
+vertexID,5583,color,2
+vertexID,5530,color,2
+vertexID,5529,color,1
+vertexID,5582,color,1
+vertexID,5443,color,2
+vertexID,5403,color,1
+vertexID,5438,color,3
+vertexID,5439,color,3
+vertexID,5375,color,2
+vertexID,5381,color,2
+vertexID,5376,color,2
+vertexID,5328,color,1
+vertexID,5303,color,2
+vertexID,5236,color,3
+vertexID,5304,color,2
+vertexID,5305,color,2
+vertexID,5234,color,1
+vertexID,5235,color,1
+vertexID,5271,color,1
+vertexID,5272,color,2
+vertexID,5239,color,3
+vertexID,5270,color,2
+vertexID,5333,color,2
+vertexID,5334,color,2
+vertexID,5273,color,1
+vertexID,5417,color,1
+vertexID,5418,color,3
+vertexID,5416,color,3
+vertexID,5419,color,1
+vertexID,5476,color,2
+vertexID,5475,color,2
+vertexID,5275,color,1
+vertexID,5240,color,2
+vertexID,5298,color,3
+vertexID,5276,color,3
+vertexID,5307,color,2
+vertexID,5335,color,2
+vertexID,5353,color,2
+vertexID,5274,color,1
+vertexID,5287,color,1
+vertexID,5247,color,2
+vertexID,5288,color,3
+vertexID,5314,color,2
+vertexID,5362,color,2
+vertexID,5398,color,3
+vertexID,5340,color,2
+vertexID,5341,color,2
+vertexID,5286,color,1
+vertexID,5487,color,1
+vertexID,5490,color,1
+vertexID,5489,color,2
+vertexID,5488,color,1
+vertexID,5512,color,3
+vertexID,5545,color,1
+vertexID,5604,color,1
+vertexID,5573,color,1
+vertexID,5638,color,1
+vertexID,5639,color,2
+vertexID,5664,color,3
+vertexID,5602,color,2
+vertexID,5603,color,3
+vertexID,5653,color,1
+vertexID,5690,color,1
+vertexID,5715,color,2
+vertexID,5691,color,1
+vertexID,5774,color,1
+vertexID,5775,color,3
+vertexID,5805,color,2
+vertexID,5836,color,2
+vertexID,5835,color,1
+vertexID,5923,color,2
+vertexID,5892,color,1
+vertexID,5893,color,1
+vertexID,5331,color,1
+vertexID,5306,color,2
+vertexID,5389,color,2
+vertexID,5390,color,3
+vertexID,5388,color,3
+vertexID,5387,color,2
+vertexID,5266,color,1
+vertexID,5265,color,1
+vertexID,5264,color,1
+vertexID,5448,color,1
+vertexID,5449,color,1
+vertexID,5279,color,1
+vertexID,5312,color,1
+vertexID,5283,color,2
+vertexID,5339,color,2
+vertexID,5313,color,2
+vertexID,5284,color,1
+vertexID,5285,color,1
+vertexID,5345,color,1
+vertexID,5316,color,2
+vertexID,5317,color,2
+vertexID,5318,color,2
+vertexID,5511,color,1
+vertexID,5569,color,2
+vertexID,5570,color,3
+vertexID,5571,color,2
+vertexID,5453,color,2
+vertexID,5572,color,2
+vertexID,5428,color,1
+vertexID,5630,color,1
+vertexID,5631,color,1
+vertexID,5397,color,2
+vertexID,5396,color,1
+vertexID,5452,color,1
+vertexID,5442,color,1
+vertexID,5432,color,2
+vertexID,5405,color,2
+vertexID,5465,color,2
+vertexID,5494,color,3
+vertexID,5466,color,2
+vertexID,5404,color,2
+vertexID,5547,color,1
+vertexID,5548,color,2
+vertexID,5578,color,2
+vertexID,5615,color,2
+vertexID,5614,color,1
+vertexID,5679,color,2
+vertexID,5680,color,3
+vertexID,5658,color,2
+vertexID,5724,color,2
+vertexID,5783,color,1
+vertexID,5784,color,2
+vertexID,5839,color,2
+vertexID,5809,color,2
+vertexID,5932,color,1
+vertexID,5933,color,1
+vertexID,5934,color,1
+vertexID,5838,color,1
+vertexID,5422,color,1
+vertexID,5423,color,1
+vertexID,5481,color,2
+vertexID,5508,color,3
+vertexID,5482,color,2
+vertexID,5425,color,2
+vertexID,5424,color,2
+vertexID,5480,color,1
+vertexID,5568,color,1
+vertexID,5567,color,2
+vertexID,5627,color,2
+vertexID,5648,color,3
+vertexID,5596,color,2
+vertexID,5628,color,1
+vertexID,5677,color,1
+vertexID,5739,color,2
+vertexID,5740,color,3
+vertexID,5741,color,2
+vertexID,5738,color,2
+vertexID,5804,color,1
+vertexID,5803,color,1
+vertexID,5886,color,2
+vertexID,5864,color,2
+vertexID,5921,color,2
+vertexID,5920,color,1
+vertexID,6000,color,1
+vertexID,5975,color,2
+vertexID,5939,color,3
+vertexID,5976,color,2
+vertexID,5930,color,2
+vertexID,5977,color,3
+vertexID,5819,color,1
+vertexID,5928,color,2
+vertexID,5929,color,2
+vertexID,5931,color,3
+vertexID,6044,color,2
+vertexID,6079,color,3
+vertexID,6066,color,2
+vertexID,6045,color,2
+vertexID,6123,color,1
+vertexID,6105,color,2
+vertexID,6106,color,2
+vertexID,5781,color,2
+vertexID,5782,color,2
+vertexID,5720,color,1
+vertexID,5719,color,2
+vertexID,5633,color,3
+vertexID,5721,color,2
+vertexID,5612,color,1
+vertexID,5722,color,1
+vertexID,5431,color,2
+vertexID,5576,color,3
+vertexID,5517,color,1
+vertexID,5518,color,3
+vertexID,5577,color,2
+vertexID,5429,color,1
+vertexID,5493,color,1
+vertexID,5460,color,1
+vertexID,5546,color,1
+vertexID,5430,color,2
+vertexID,5468,color,1
+vertexID,5554,color,2
+vertexID,5555,color,3
+vertexID,5556,color,2
+vertexID,5434,color,2
+vertexID,5553,color,2
+vertexID,5618,color,1
+vertexID,5619,color,1
+vertexID,5683,color,2
+vertexID,5682,color,3
+vertexID,5684,color,3
+vertexID,5681,color,2
+vertexID,5753,color,1
+vertexID,5754,color,1
+vertexID,5663,color,1
+vertexID,5645,color,2
+vertexID,5735,color,2
+vertexID,5736,color,3
+vertexID,5737,color,2
+vertexID,5734,color,2
+vertexID,5526,color,2
+vertexID,5646,color,3
+vertexID,5626,color,1
+vertexID,5527,color,1
+vertexID,5592,color,1
+vertexID,5800,color,1
+vertexID,5801,color,1
+vertexID,5477,color,2
+vertexID,5870,color,2
+vertexID,5524,color,1
+vertexID,5462,color,1
+vertexID,5440,color,3
+vertexID,5463,color,1
+vertexID,5917,color,1
+vertexID,5897,color,3
+vertexID,5898,color,3
+vertexID,5950,color,2
+vertexID,5958,color,2
+vertexID,5957,color,2
+vertexID,5980,color,1
+vertexID,6057,color,2
+vertexID,6055,color,2
+vertexID,6056,color,3
+vertexID,6092,color,1
+vertexID,6115,color,1
+vertexID,6114,color,1
+vertexID,6154,color,1
+vertexID,6153,color,2
+vertexID,6193,color,3
+vertexID,6237,color,1
+vertexID,6223,color,2
+vertexID,6224,color,2
+vertexID,6175,color,1
+vertexID,6287,color,2
+vertexID,6319,color,1
+vertexID,6317,color,1
+vertexID,6318,color,1
+vertexID,5525,color,1
+vertexID,5506,color,1
+vertexID,5523,color,1
+vertexID,5586,color,2
+vertexID,5499,color,2
+vertexID,5585,color,2
+vertexID,5444,color,2
+vertexID,5500,color,3
+vertexID,5587,color,2
+vertexID,5634,color,1
+vertexID,5471,color,1
+vertexID,5445,color,1
+vertexID,5700,color,2
+vertexID,5686,color,3
+vertexID,5687,color,3
+vertexID,5756,color,1
+vertexID,5731,color,1
+vertexID,5757,color,1
+vertexID,5796,color,2
+vertexID,5797,color,3
+vertexID,5860,color,1
+vertexID,5876,color,3
+vertexID,5861,color,1
+vertexID,5859,color,1
+vertexID,5454,color,1
+vertexID,5456,color,1
+vertexID,5491,color,2
+vertexID,5513,color,2
+vertexID,5455,color,2
+vertexID,5514,color,1
+vertexID,5457,color,1
+vertexID,5660,color,1
+vertexID,5755,color,2
+vertexID,5580,color,2
+vertexID,5661,color,3
+vertexID,5726,color,2
+vertexID,5685,color,2
+vertexID,5725,color,2
+vertexID,5812,color,1
+vertexID,5813,color,3
+vertexID,5814,color,1
+vertexID,5815,color,1
+vertexID,5520,color,1
+vertexID,5659,color,1
+vertexID,5869,color,1
+vertexID,5868,color,1
+vertexID,5521,color,2
+vertexID,5495,color,3
+vertexID,5519,color,2
+vertexID,5579,color,2
+vertexID,5522,color,1
+vertexID,5498,color,1
+vertexID,5537,color,1
+vertexID,5501,color,2
+vertexID,5538,color,3
+vertexID,5536,color,3
+vertexID,5591,color,2
+vertexID,5590,color,2
+vertexID,5535,color,1
+vertexID,5515,color,1
+vertexID,5564,color,1
+vertexID,5539,color,2
+vertexID,5563,color,3
+vertexID,5565,color,3
+vertexID,5623,color,2
+vertexID,5622,color,2
+vertexID,5562,color,1
+vertexID,5705,color,1
+vertexID,5706,color,1
+vertexID,5707,color,3
+vertexID,5708,color,1
+vertexID,5771,color,1
+vertexID,5772,color,1
+vertexID,5760,color,1
+vertexID,5728,color,2
+vertexID,5733,color,2
+vertexID,5727,color,2
+vertexID,5799,color,2
+vertexID,5786,color,3
+vertexID,5787,color,3
+vertexID,5675,color,1
+vertexID,5673,color,1
+vertexID,5863,color,1
+vertexID,5625,color,2
+vertexID,5880,color,2
+vertexID,5879,color,3
+vertexID,5881,color,3
+vertexID,5882,color,2
+vertexID,5566,color,1
+vertexID,5624,color,1
+vertexID,5643,color,1
+vertexID,5947,color,1
+vertexID,5948,color,3
+vertexID,5949,color,1
+vertexID,5542,color,2
+vertexID,5540,color,2
+vertexID,5541,color,2
+vertexID,5674,color,2
+vertexID,5990,color,1
+vertexID,6025,color,2
+vertexID,5991,color,1
+vertexID,6026,color,3
+vertexID,6054,color,1
+vertexID,5606,color,1
+vertexID,5574,color,2
+vertexID,5607,color,3
+vertexID,5605,color,3
+vertexID,5655,color,2
+vertexID,5654,color,2
+vertexID,5608,color,1
+vertexID,5751,color,1
+vertexID,5750,color,2
+vertexID,5776,color,2
+vertexID,5806,color,2
+vertexID,5807,color,1
+vertexID,5854,color,1
+vertexID,5926,color,2
+vertexID,5925,color,2
+vertexID,5924,color,2
+vertexID,5960,color,1
+vertexID,5999,color,2
+vertexID,5973,color,1
+vertexID,6037,color,1
+vertexID,5610,color,1
+vertexID,5609,color,2
+vertexID,5575,color,3
+vertexID,5656,color,2
+vertexID,5632,color,2
+vertexID,5657,color,2
+vertexID,5611,color,1
+vertexID,5584,color,1
+vertexID,5613,color,1
+vertexID,6087,color,1
+vertexID,5986,color,2
+vertexID,6052,color,3
+vertexID,6053,color,3
+vertexID,6051,color,2
+vertexID,6136,color,2
+vertexID,6137,color,3
+vertexID,5988,color,1
+vertexID,6172,color,1
+vertexID,6199,color,3
+vertexID,6201,color,1
+vertexID,5942,color,2
+vertexID,6200,color,2
+vertexID,6255,color,2
+vertexID,5877,color,1
+vertexID,5943,color,3
+vertexID,6279,color,1
+vertexID,6280,color,3
+vertexID,6281,color,1
+vertexID,5824,color,2
+vertexID,5878,color,3
+vertexID,5913,color,2
+vertexID,6347,color,1
+vertexID,6348,color,1
+vertexID,6314,color,1
+vertexID,5817,color,1
+vertexID,5785,color,3
+vertexID,5818,color,1
+vertexID,6422,color,2
+vertexID,5758,color,1
+vertexID,5759,color,1
+vertexID,5768,color,1
+vertexID,6453,color,1
+vertexID,6517,color,1
+vertexID,6455,color,1
+vertexID,6454,color,1
+vertexID,5701,color,2
+vertexID,5703,color,2
+vertexID,6518,color,2
+vertexID,6540,color,2
+vertexID,6565,color,2
+vertexID,5641,color,1
+vertexID,6564,color,1
+vertexID,5642,color,2
+vertexID,5672,color,2
+vertexID,5702,color,1
+vertexID,5987,color,1
+vertexID,5644,color,1
+vertexID,5699,color,1
+vertexID,5866,color,1
+vertexID,5791,color,2
+vertexID,5852,color,3
+vertexID,5853,color,3
+vertexID,5901,color,2
+vertexID,5902,color,3
+vertexID,5891,color,2
+vertexID,5903,color,2
+vertexID,5747,color,1
+vertexID,5748,color,1
+vertexID,6032,color,1
+vertexID,6033,color,2
+vertexID,6034,color,1
+vertexID,6035,color,1
+vertexID,5714,color,2
+vertexID,6096,color,1
+vertexID,6095,color,1
+vertexID,5749,color,1
+vertexID,6119,color,2
+vertexID,6212,color,1
+vertexID,6211,color,3
+vertexID,6213,color,3
+vertexID,6214,color,1
+vertexID,6259,color,2
+vertexID,6273,color,3
+vertexID,6260,color,2
+vertexID,6327,color,1
+vertexID,6329,color,2
+vertexID,6328,color,1
+vertexID,6385,color,1
+vertexID,6386,color,3
+vertexID,6387,color,1
+vertexID,6388,color,1
+vertexID,6447,color,1
+vertexID,6476,color,2
+vertexID,6500,color,3
+vertexID,6477,color,2
+vertexID,6533,color,1
+vertexID,6534,color,2
+vertexID,6535,color,1
+vertexID,6526,color,1
+vertexID,6607,color,1
+vertexID,6608,color,3
+vertexID,6609,color,1
+vertexID,6610,color,1
+vertexID,6666,color,1
+vertexID,6667,color,1
+vertexID,5779,color,1
+vertexID,5777,color,2
+vertexID,5855,color,2
+vertexID,5778,color,2
+vertexID,5716,color,3
+vertexID,5780,color,2
+vertexID,5856,color,2
+vertexID,5871,color,1
+vertexID,5717,color,1
+vertexID,5718,color,1
+vertexID,5904,color,2
+vertexID,5927,color,3
+vertexID,5905,color,2
+vertexID,5867,color,2
+vertexID,5723,color,1
+vertexID,5765,color,1
+vertexID,5732,color,2
+vertexID,5766,color,3
+vertexID,5764,color,3
+vertexID,5823,color,2
+vertexID,5822,color,2
+vertexID,5767,color,1
+vertexID,5911,color,1
+vertexID,5910,color,3
+vertexID,5909,color,1
+vertexID,5912,color,1
+vertexID,5964,color,1
+vertexID,5965,color,1
+vertexID,5808,color,1
+vertexID,5978,color,1
+vertexID,6001,color,2
+vertexID,5961,color,2
+vertexID,5940,color,3
+vertexID,5962,color,2
+vertexID,6012,color,2
+vertexID,6013,color,2
+vertexID,6048,color,1
+vertexID,6080,color,2
+vertexID,6099,color,3
+vertexID,6081,color,2
+vertexID,6134,color,1
+vertexID,6124,color,1
+vertexID,6135,color,1
+vertexID,6188,color,2
+vertexID,6190,color,3
+vertexID,6220,color,1
+vertexID,6270,color,3
+vertexID,6244,color,1
+vertexID,6189,color,1
+vertexID,6243,color,1
+vertexID,6336,color,1
+vertexID,6366,color,2
+vertexID,6367,color,3
+vertexID,6368,color,2
+vertexID,6369,color,2
+vertexID,6409,color,1
+vertexID,6445,color,1
+vertexID,6410,color,1
+vertexID,6513,color,2
+vertexID,6470,color,1
+vertexID,6471,color,1
+vertexID,6549,color,1
+vertexID,6590,color,2
+vertexID,6591,color,2
+vertexID,6592,color,3
+vertexID,6593,color,2
+vertexID,6650,color,1
+vertexID,6651,color,1
+vertexID,5845,color,1
+vertexID,5811,color,2
+vertexID,5844,color,3
+vertexID,5846,color,3
+vertexID,5895,color,1
+vertexID,5896,color,1
+vertexID,5843,color,1
+vertexID,5827,color,1
+vertexID,5862,color,1
+vertexID,5828,color,2
+vertexID,5829,color,2
+vertexID,5830,color,2
+vertexID,5834,color,1
+vertexID,5837,color,1
+vertexID,6275,color,1
+vertexID,6197,color,2
+vertexID,6276,color,2
+vertexID,6306,color,2
+vertexID,6338,color,2
+vertexID,6341,color,2
+vertexID,6340,color,3
+vertexID,6339,color,1
+vertexID,6418,color,2
+vertexID,6162,color,1
+vertexID,6163,color,1
+vertexID,6126,color,1
+vertexID,6082,color,2
+vertexID,6039,color,1
+vertexID,6072,color,3
+vertexID,6071,color,3
+vertexID,6004,color,2
+vertexID,6005,color,2
+vertexID,5955,color,2
+vertexID,5907,color,1
+vertexID,5874,color,2
+vertexID,5872,color,2
+vertexID,5873,color,2
+vertexID,6011,color,1
+vertexID,5984,color,2
+vertexID,5985,color,2
+vertexID,5936,color,2
+vertexID,6046,color,2
+vertexID,6070,color,3
+vertexID,6047,color,2
+vertexID,5894,color,1
+vertexID,5935,color,2
+vertexID,5937,color,2
+vertexID,5906,color,1
+vertexID,6091,color,1
+vertexID,6040,color,2
+vertexID,6073,color,3
+vertexID,6074,color,3
+vertexID,6112,color,2
+vertexID,6127,color,2
+vertexID,6128,color,2
+vertexID,5989,color,1
+vertexID,6151,color,1
+vertexID,6152,color,1
+vertexID,5967,color,2
+vertexID,5914,color,3
+vertexID,5968,color,2
+vertexID,5966,color,2
+vertexID,6192,color,2
+vertexID,5915,color,1
+vertexID,5916,color,1
+vertexID,6174,color,1
+vertexID,6221,color,1
+vertexID,6236,color,3
+vertexID,6222,color,1
+vertexID,6271,color,1
+vertexID,6303,color,2
+vertexID,6316,color,3
+vertexID,6302,color,2
+vertexID,6352,color,1
+vertexID,6370,color,1
+vertexID,6371,color,1
+vertexID,5919,color,1
+vertexID,6101,color,1
+vertexID,6125,color,2
+vertexID,6102,color,2
+vertexID,6003,color,3
+vertexID,6149,color,2
+vertexID,6150,color,2
+vertexID,6191,color,2
+vertexID,5952,color,1
+vertexID,6100,color,1
+vertexID,6248,color,1
+vertexID,6247,color,1
+vertexID,6246,color,3
+vertexID,6245,color,1
+vertexID,5953,color,2
+vertexID,5938,color,3
+vertexID,5951,color,2
+vertexID,6002,color,2
+vertexID,6300,color,1
+vertexID,6337,color,1
+vertexID,6301,color,1
+vertexID,5954,color,1
+vertexID,6412,color,2
+vertexID,6413,color,3
+vertexID,6411,color,3
+vertexID,6414,color,2
+vertexID,6473,color,1
+vertexID,6472,color,1
+vertexID,5941,color,1
+vertexID,5963,color,1
+vertexID,5971,color,1
+vertexID,5970,color,2
+vertexID,5969,color,2
+vertexID,6028,color,2
+vertexID,6062,color,3
+vertexID,6027,color,2
+vertexID,6029,color,1
+vertexID,7402,color,1
+vertexID,7266,color,2
+vertexID,7368,color,3
+vertexID,7366,color,2
+vertexID,7367,color,2
+vertexID,7426,color,2
+vertexID,7464,color,3
+vertexID,7437,color,2
+vertexID,7438,color,2
+vertexID,7315,color,1
+vertexID,7268,color,1
+vertexID,7267,color,1
+vertexID,7252,color,3
+vertexID,7344,color,1
+vertexID,7491,color,1
+vertexID,7509,color,2
+vertexID,7492,color,1
+vertexID,7156,color,1
+vertexID,7213,color,2
+vertexID,7572,color,1
+vertexID,7155,color,2
+vertexID,7130,color,3
+vertexID,7157,color,2
+vertexID,7212,color,2
+vertexID,7597,color,2
+vertexID,7599,color,2
+vertexID,7598,color,2
+vertexID,7158,color,1
+vertexID,7082,color,1
+vertexID,7639,color,1
+vertexID,7040,color,2
+vertexID,6984,color,3
+vertexID,7041,color,2
+vertexID,7039,color,2
+vertexID,7700,color,2
+vertexID,6940,color,1
+vertexID,6986,color,2
+vertexID,6985,color,1
+vertexID,7716,color,1
+vertexID,7770,color,1
+vertexID,7717,color,1
+vertexID,6933,color,2
+vertexID,6904,color,3
+vertexID,6932,color,2
+vertexID,7862,color,2
+vertexID,6871,color,1
+vertexID,6827,color,1
+vertexID,6870,color,1
+vertexID,7824,color,1
+vertexID,7825,color,1
+vertexID,6839,color,2
+vertexID,6806,color,3
+vertexID,6838,color,2
+vertexID,6764,color,1
+vertexID,6796,color,2
+vertexID,6795,color,2
+vertexID,6726,color,2
+vertexID,6677,color,1
+vertexID,6703,color,3
+vertexID,6704,color,3
+vertexID,6653,color,2
+vertexID,6652,color,2
+vertexID,6665,color,2
+vertexID,6606,color,1
+vertexID,6604,color,1
+vertexID,6545,color,2
+vertexID,6417,color,1
+vertexID,6605,color,1
+vertexID,6293,color,2
+vertexID,6400,color,3
+vertexID,6465,color,2
+vertexID,6525,color,2
+vertexID,6499,color,2
+vertexID,6183,color,1
+vertexID,6325,color,1
+vertexID,6398,color,1
+vertexID,6399,color,1
+vertexID,6258,color,2
+vertexID,6094,color,2
+vertexID,6209,color,2
+vertexID,6326,color,2
+vertexID,6210,color,1
+vertexID,6143,color,1
+vertexID,5997,color,1
+vertexID,5972,color,2
+vertexID,5998,color,3
+vertexID,6063,color,2
+vertexID,6030,color,3
+vertexID,5996,color,1
+vertexID,6064,color,2
+vertexID,6031,color,2
+vertexID,5974,color,1
+vertexID,7010,color,1
+vertexID,6944,color,2
+vertexID,6999,color,3
+vertexID,7000,color,3
+vertexID,7030,color,2
+vertexID,7060,color,3
+vertexID,7061,color,2
+vertexID,7108,color,1
+vertexID,7175,color,2
+vertexID,7059,color,2
+vertexID,6909,color,1
+vertexID,7144,color,1
+vertexID,6820,color,2
+vertexID,6878,color,3
+vertexID,6879,color,2
+vertexID,7143,color,1
+vertexID,7199,color,1
+vertexID,7200,color,1
+vertexID,6746,color,1
+vertexID,6842,color,1
+vertexID,6819,color,1
+vertexID,7284,color,2
+vertexID,7285,color,2
+vertexID,7286,color,3
+vertexID,6708,color,2
+vertexID,6655,color,2
+vertexID,6709,color,3
+vertexID,6710,color,3
+vertexID,7310,color,1
+vertexID,7331,color,1
+vertexID,7360,color,1
+vertexID,7409,color,1
+vertexID,7332,color,1
+vertexID,6623,color,1
+vertexID,6656,color,1
+vertexID,7470,color,2
+vertexID,7462,color,3
+vertexID,7463,color,3
+vertexID,6602,color,2
+vertexID,7498,color,1
+vertexID,7523,color,1
+vertexID,7524,color,1
+vertexID,6481,color,1
+vertexID,6559,color,3
+vertexID,6558,color,3
+vertexID,6557,color,1
+vertexID,7555,color,2
+vertexID,7549,color,3
+vertexID,7557,color,2
+vertexID,6482,color,2
+vertexID,6452,color,3
+vertexID,6480,color,2
+vertexID,7556,color,1
+vertexID,7633,color,1
+vertexID,6393,color,1
+vertexID,6479,color,1
+vertexID,7665,color,2
+vertexID,7675,color,3
+vertexID,7666,color,2
+vertexID,6373,color,2
+vertexID,6310,color,3
+vertexID,6374,color,2
+vertexID,7706,color,1
+vertexID,7727,color,1
+vertexID,7728,color,2
+vertexID,7729,color,1
+vertexID,6253,color,1
+vertexID,6309,color,1
+vertexID,6308,color,1
+vertexID,6345,color,1
+vertexID,7816,color,1
+vertexID,7778,color,1
+vertexID,7846,color,1
+vertexID,6167,color,2
+vertexID,6232,color,3
+vertexID,6231,color,3
+vertexID,6230,color,2
+vertexID,7845,color,2
+vertexID,6168,color,1
+vertexID,6050,color,1
+vertexID,6049,color,2
+vertexID,6018,color,2
+vertexID,6083,color,2
+vertexID,5979,color,1
+vertexID,6038,color,1
+vertexID,6009,color,2
+vertexID,5983,color,3
+vertexID,6010,color,2
+vertexID,6078,color,2
+vertexID,6065,color,2
+vertexID,6077,color,2
+vertexID,6104,color,1
+vertexID,6131,color,3
+vertexID,6103,color,1
+vertexID,6159,color,1
+vertexID,6186,color,2
+vertexID,6160,color,1
+vertexID,5992,color,1
+vertexID,5993,color,1
+vertexID,6060,color,2
+vertexID,6093,color,3
+vertexID,6061,color,2
+vertexID,5995,color,2
+vertexID,5994,color,2
+vertexID,6059,color,1
+vertexID,6142,color,1
+vertexID,6179,color,2
+vertexID,6180,color,3
+vertexID,6181,color,2
+vertexID,6182,color,2
+vertexID,6239,color,1
+vertexID,6238,color,1
+vertexID,6043,color,1
+vertexID,6036,color,2
+vertexID,6008,color,2
+vertexID,6007,color,2
+vertexID,6075,color,2
+vertexID,6097,color,3
+vertexID,6076,color,2
+vertexID,6130,color,1
+vertexID,6157,color,2
+vertexID,6184,color,3
+vertexID,6158,color,2
+vertexID,6215,color,1
+vertexID,6227,color,1
+vertexID,6228,color,1
+vertexID,6250,color,2
+vertexID,6251,color,2
+vertexID,6274,color,1
+vertexID,6261,color,2
+vertexID,6304,color,2
+vertexID,6330,color,3
+vertexID,6305,color,2
+vertexID,6372,color,1
+vertexID,6402,color,1
+vertexID,6435,color,2
+vertexID,6436,color,3
+vertexID,6466,color,1
+vertexID,6515,color,2
+vertexID,6514,color,1
+vertexID,6536,color,3
+vertexID,6550,color,1
+vertexID,6583,color,2
+vertexID,6551,color,1
+vertexID,6527,color,1
+vertexID,6642,color,1
+vertexID,6644,color,1
+vertexID,6668,color,2
+vertexID,6643,color,1
+vertexID,6730,color,1
+vertexID,6758,color,1
+vertexID,6759,color,3
+vertexID,6731,color,2
+vertexID,6732,color,1
+vertexID,6785,color,1
+vertexID,6017,color,1
+vertexID,6021,color,1
+vertexID,6020,color,2
+vertexID,6019,color,2
+vertexID,6084,color,2
+vertexID,6110,color,3
+vertexID,6085,color,2
+vertexID,6086,color,1
+vertexID,6146,color,1
+vertexID,6218,color,2
+vertexID,6147,color,2
+vertexID,6216,color,2
+vertexID,6098,color,2
+vertexID,6187,color,2
+vertexID,6268,color,2
+vertexID,6298,color,3
+vertexID,6217,color,1
+vertexID,6068,color,1
+vertexID,6069,color,1
+vertexID,6067,color,1
+vertexID,6269,color,1
+vertexID,6361,color,1
+vertexID,6390,color,1
+vertexID,6362,color,2
+vertexID,6408,color,2
+vertexID,6448,color,2
+vertexID,6509,color,1
+vertexID,6468,color,2
+vertexID,6529,color,2
+vertexID,6552,color,2
+vertexID,6648,color,1
+vertexID,6678,color,2
+vertexID,6761,color,3
+vertexID,6738,color,2
+vertexID,6617,color,2
+vertexID,6616,color,2
+vertexID,6739,color,1
+vertexID,6811,color,1
+vertexID,6835,color,1
+vertexID,6812,color,2
+vertexID,6861,color,2
+vertexID,6905,color,2
+vertexID,6924,color,1
+vertexID,6942,color,1
+vertexID,6925,color,2
+vertexID,6964,color,2
+vertexID,6741,color,1
+vertexID,6681,color,2
+vertexID,6707,color,3
+vertexID,6744,color,2
+vertexID,6818,color,3
+vertexID,6745,color,2
+vertexID,6875,color,2
+vertexID,6841,color,2
+vertexID,6743,color,1
+vertexID,6680,color,1
+vertexID,6600,color,1
+vertexID,6876,color,1
+vertexID,6556,color,2
+vertexID,6539,color,1
+vertexID,6538,color,2
+vertexID,6599,color,2
+vertexID,6451,color,2
+vertexID,6421,color,1
+vertexID,6474,color,2
+vertexID,6415,color,2
+vertexID,6391,color,3
+vertexID,6416,color,2
+vertexID,6475,color,2
+vertexID,6307,color,1
+vertexID,6342,color,1
+vertexID,6344,color,1
+vertexID,6278,color,2
+vertexID,6343,color,2
+vertexID,6198,color,1
+vertexID,6277,color,1
+vertexID,6164,color,2
+vertexID,6109,color,3
+vertexID,6165,color,2
+vertexID,6166,color,2
+vertexID,6107,color,1
+vertexID,6108,color,1
+vertexID,6139,color,1
+vertexID,6113,color,2
+vertexID,6138,color,3
+vertexID,6140,color,3
+vertexID,6205,color,2
+vertexID,6206,color,2
+vertexID,6141,color,1
+vertexID,6144,color,1
+vertexID,6120,color,2
+vertexID,6185,color,2
+vertexID,6145,color,2
+vertexID,6229,color,2
+vertexID,6121,color,1
+vertexID,6294,color,1
+vertexID,6263,color,2
+vertexID,6262,color,2
+vertexID,6331,color,2
+vertexID,6404,color,1
+vertexID,6405,color,1
+vertexID,6403,color,1
+vertexID,6122,color,1
+vertexID,6194,color,1
+vertexID,6129,color,2
+vertexID,6155,color,2
+vertexID,6225,color,2
+vertexID,6240,color,3
+vertexID,6226,color,2
+vertexID,6156,color,2
+vertexID,6272,color,1
+vertexID,6323,color,2
+vertexID,6382,color,2
+vertexID,6358,color,2
+vertexID,6383,color,1
+vertexID,6496,color,1
+vertexID,6434,color,1
+vertexID,6463,color,1
+vertexID,6497,color,2
+vertexID,6603,color,3
+vertexID,6582,color,1
+vertexID,6692,color,1
+vertexID,6581,color,1
+vertexID,6725,color,2
+vertexID,6691,color,2
+vertexID,6755,color,2
+vertexID,6756,color,1
+vertexID,6598,color,1
+vertexID,6469,color,2
+vertexID,6588,color,3
+vertexID,6589,color,3
+vertexID,6694,color,2
+vertexID,6674,color,2
+vertexID,6675,color,3
+vertexID,6649,color,2
+vertexID,6511,color,1
+vertexID,6335,color,1
+vertexID,6587,color,1
+vertexID,6788,color,1
+vertexID,6789,color,2
+vertexID,6797,color,1
+vertexID,6790,color,1
+vertexID,6510,color,2
+vertexID,6252,color,2
+vertexID,6364,color,2
+vertexID,6444,color,2
+vertexID,6836,color,2
+vertexID,6898,color,2
+vertexID,6899,color,3
+vertexID,6862,color,2
+vertexID,6900,color,1
+vertexID,6299,color,1
+vertexID,6363,color,1
+vertexID,6219,color,1
+vertexID,6938,color,1
+vertexID,6195,color,2
+vertexID,6161,color,3
+vertexID,6196,color,2
+vertexID,6995,color,2
+vertexID,6901,color,2
+vertexID,6994,color,2
+vertexID,6996,color,2
+vertexID,6133,color,1
+vertexID,6132,color,1
+vertexID,6148,color,1
+vertexID,6516,color,1
+vertexID,6483,color,2
+vertexID,6394,color,2
+vertexID,6485,color,3
+vertexID,6484,color,2
+vertexID,6561,color,2
+vertexID,6562,color,3
+vertexID,6560,color,2
+vertexID,6311,color,1
+vertexID,6376,color,3
+vertexID,6375,color,1
+vertexID,6625,color,1
+vertexID,6657,color,2
+vertexID,6624,color,1
+vertexID,6254,color,2
+vertexID,6312,color,2
+vertexID,6346,color,2
+vertexID,6313,color,2
+vertexID,6626,color,1
+vertexID,6711,color,1
+vertexID,6171,color,1
+vertexID,6233,color,3
+vertexID,6234,color,3
+vertexID,6235,color,1
+vertexID,6712,color,2
+vertexID,6770,color,2
+vertexID,6799,color,3
+vertexID,6747,color,2
+vertexID,6170,color,2
+vertexID,6169,color,2
+vertexID,6769,color,1
+vertexID,6660,color,1
+vertexID,6772,color,2
+vertexID,6792,color,3
+vertexID,6773,color,2
+vertexID,6630,color,2
+vertexID,6659,color,3
+vertexID,6774,color,2
+vertexID,6821,color,1
+vertexID,6823,color,2
+vertexID,6822,color,1
+vertexID,6629,color,1
+vertexID,6685,color,1
+vertexID,6567,color,1
+vertexID,6883,color,1
+vertexID,6911,color,3
+vertexID,6884,color,1
+vertexID,6456,color,2
+vertexID,6954,color,1
+vertexID,6955,color,2
+vertexID,6885,color,1
+vertexID,6566,color,1
+vertexID,6487,color,1
+vertexID,6315,color,1
+vertexID,6568,color,1
+vertexID,7011,color,1
+vertexID,7034,color,3
+vertexID,7012,color,1
+vertexID,6953,color,1
+vertexID,6249,color,2
+vertexID,6423,color,2
+vertexID,6486,color,2
+vertexID,6350,color,2
+vertexID,7013,color,1
+vertexID,7119,color,1
+vertexID,6282,color,1
+vertexID,6349,color,1
+vertexID,6203,color,1
+vertexID,7149,color,2
+vertexID,7151,color,2
+vertexID,7150,color,3
+vertexID,6173,color,2
+vertexID,7178,color,1
+vertexID,7203,color,1
+vertexID,7202,color,1
+vertexID,6202,color,1
+vertexID,6204,color,1
+vertexID,6208,color,1
+vertexID,6528,color,1
+vertexID,6507,color,2
+vertexID,6442,color,2
+vertexID,6407,color,3
+vertexID,6508,color,2
+vertexID,6586,color,2
+vertexID,6296,color,1
+vertexID,6585,color,1
+vertexID,6645,color,1
+vertexID,6615,color,1
+vertexID,6441,color,2
+vertexID,6389,color,2
+vertexID,6267,color,2
+vertexID,6646,color,2
+vertexID,6242,color,1
+vertexID,6241,color,2
+vertexID,6295,color,2
+vertexID,6284,color,1
+vertexID,6285,color,2
+vertexID,6256,color,3
+vertexID,6283,color,2
+vertexID,6353,color,2
+vertexID,6354,color,2
+vertexID,6286,color,1
+vertexID,6264,color,1
+vertexID,6266,color,2
+vertexID,6265,color,2
+vertexID,6334,color,2
+vertexID,6359,color,3
+vertexID,6333,color,2
+vertexID,6332,color,1
+vertexID,6321,color,1
+vertexID,6381,color,2
+vertexID,6320,color,2
+vertexID,6292,color,3
+vertexID,6380,color,2
+vertexID,6357,color,2
+vertexID,6397,color,2
+vertexID,6322,color,1
+vertexID,6460,color,1
+vertexID,6461,color,3
+vertexID,6462,color,1
+vertexID,6459,color,1
+vertexID,6524,color,1
+vertexID,6523,color,1
+vertexID,6579,color,2
+vertexID,6640,color,1
+vertexID,6664,color,3
+vertexID,6641,color,1
+vertexID,6580,color,1
+vertexID,6639,color,1
+vertexID,6724,color,1
+vertexID,6751,color,2
+vertexID,6752,color,3
+vertexID,6753,color,2
+vertexID,6754,color,2
+vertexID,6804,color,1
+vertexID,6805,color,1
+vertexID,6837,color,2
+vertexID,6917,color,1
+vertexID,6918,color,1
+vertexID,6919,color,1
+vertexID,6950,color,2
+vertexID,6951,color,2
+vertexID,6974,color,1
+vertexID,7004,color,2
+vertexID,7017,color,3
+vertexID,7005,color,2
+vertexID,6957,color,2
+vertexID,7062,color,1
+vertexID,7063,color,1
+vertexID,7086,color,2
+vertexID,7109,color,1
+vertexID,7126,color,3
+vertexID,7110,color,1
+vertexID,7079,color,1
+vertexID,6297,color,1
+vertexID,6324,color,1
+vertexID,6351,color,1
+vertexID,6360,color,1
+vertexID,6365,color,1
+vertexID,6661,color,1
+vertexID,6574,color,2
+vertexID,6663,color,2
+vertexID,6750,color,2
+vertexID,6718,color,3
+vertexID,6719,color,3
+vertexID,6662,color,2
+vertexID,6521,color,1
+vertexID,6717,color,1
+vertexID,6826,color,1
+vertexID,6520,color,2
+vertexID,6493,color,3
+vertexID,6543,color,2
+vertexID,6573,color,2
+vertexID,6825,color,2
+vertexID,6847,color,2
+vertexID,6914,color,2
+vertexID,6889,color,3
+vertexID,6522,color,1
+vertexID,6396,color,1
+vertexID,6973,color,1
+vertexID,6890,color,1
+vertexID,6949,color,1
+vertexID,6378,color,2
+vertexID,6379,color,2
+vertexID,6377,color,2
+vertexID,7003,color,2
+vertexID,7024,color,1
+vertexID,7038,color,3
+vertexID,7025,color,1
+vertexID,6972,color,1
+vertexID,7095,color,1
+vertexID,7097,color,1
+vertexID,7122,color,2
+vertexID,7154,color,1
+vertexID,7121,color,1
+vertexID,7204,color,1
+vertexID,7096,color,2
+vertexID,7205,color,2
+vertexID,7240,color,2
+vertexID,7261,color,2
+vertexID,7260,color,1
+vertexID,7259,color,1
+vertexID,7258,color,2
+vertexID,6384,color,1
+vertexID,6425,color,1
+vertexID,6457,color,2
+vertexID,6458,color,3
+vertexID,6519,color,2
+vertexID,6489,color,3
+vertexID,6490,color,1
+vertexID,6424,color,2
+vertexID,6392,color,2
+vertexID,6541,color,1
+vertexID,6631,color,2
+vertexID,6632,color,2
+vertexID,6633,color,3
+vertexID,6634,color,2
+vertexID,6687,color,1
+vertexID,6688,color,1
+vertexID,6427,color,1
+vertexID,6395,color,2
+vertexID,6426,color,3
+vertexID,6428,color,3
+vertexID,6491,color,2
+vertexID,6492,color,2
+vertexID,6429,color,1
+vertexID,6401,color,1
+vertexID,6439,color,1
+vertexID,6437,color,2
+vertexID,6406,color,3
+vertexID,6440,color,2
+vertexID,6438,color,2
+vertexID,6504,color,2
+vertexID,6505,color,2
+vertexID,6506,color,3
+vertexID,6613,color,1
+vertexID,6612,color,2
+vertexID,6614,color,2
+vertexID,6611,color,1
+vertexID,6673,color,2
+vertexID,6672,color,2
+vertexID,6450,color,1
+vertexID,6478,color,2
+vertexID,6449,color,2
+vertexID,6420,color,2
+vertexID,6419,color,1
+vertexID,6443,color,1
+vertexID,6446,color,1
+vertexID,6464,color,1
+vertexID,6467,color,1
+vertexID,6488,color,1
+vertexID,6498,color,1
+vertexID,6809,color,1
+vertexID,6693,color,2
+vertexID,6857,color,2
+vertexID,6859,color,2
+vertexID,6937,color,2
+vertexID,6831,color,3
+vertexID,6991,color,3
+vertexID,6808,color,2
+vertexID,6619,color,1
+vertexID,6669,color,1
+vertexID,6733,color,1
+vertexID,6858,color,1
+vertexID,6990,color,1
+vertexID,7020,color,1
+vertexID,7045,color,1
+vertexID,6584,color,2
+vertexID,6670,color,2
+vertexID,7161,color,2
+vertexID,7046,color,2
+vertexID,7103,color,2
+vertexID,7132,color,2
+vertexID,7142,color,3
+vertexID,7162,color,1
+vertexID,6547,color,1
+vertexID,6503,color,3
+vertexID,6546,color,1
+vertexID,6548,color,1
+vertexID,7163,color,1
+vertexID,7244,color,1
+vertexID,7271,color,1
+vertexID,7298,color,1
+vertexID,6502,color,1
+vertexID,6501,color,1
+vertexID,7299,color,2
+vertexID,7325,color,1
+vertexID,7349,color,2
+vertexID,7348,color,2
+vertexID,7411,color,2
+vertexID,7481,color,1
+vertexID,7479,color,1
+vertexID,7480,color,1
+vertexID,6512,color,1
+vertexID,6532,color,1
+vertexID,6531,color,2
+vertexID,6530,color,2
+vertexID,6594,color,2
+vertexID,6618,color,3
+vertexID,6595,color,2
+vertexID,6596,color,1
+vertexID,6676,color,1
+vertexID,6700,color,2
+vertexID,6701,color,3
+vertexID,6702,color,2
+vertexID,6699,color,2
+vertexID,6763,color,1
+vertexID,6762,color,1
+vertexID,6866,color,2
+vertexID,6865,color,3
+vertexID,6867,color,3
+vertexID,6868,color,2
+vertexID,6929,color,1
+vertexID,6930,color,1
+vertexID,7008,color,1
+vertexID,7068,color,2
+vertexID,7009,color,2
+vertexID,6975,color,3
+vertexID,7028,color,2
+vertexID,7067,color,2
+vertexID,7090,color,2
+vertexID,6907,color,1
+vertexID,7007,color,1
+vertexID,6874,color,2
+vertexID,6798,color,1
+vertexID,6908,color,1
+vertexID,6906,color,1
+vertexID,6767,color,2
+vertexID,6768,color,2
+vertexID,6654,color,2
+vertexID,6597,color,1
+vertexID,6622,color,1
+vertexID,6679,color,1
+vertexID,6537,color,2
+vertexID,6554,color,3
+vertexID,6621,color,2
+vertexID,6555,color,1
+vertexID,6553,color,1
+vertexID,6570,color,1
+vertexID,6569,color,2
+vertexID,6542,color,3
+vertexID,6571,color,2
+vertexID,6636,color,2
+vertexID,6635,color,2
+vertexID,6572,color,1
+vertexID,6576,color,1
+vertexID,6575,color,2
+vertexID,6544,color,3
+vertexID,6577,color,2
+vertexID,6637,color,2
+vertexID,6638,color,2
+vertexID,6578,color,1
+vertexID,6563,color,1
+vertexID,6601,color,1
+vertexID,6620,color,1
+vertexID,6771,color,1
+vertexID,6801,color,2
+vertexID,6683,color,2
+vertexID,6880,color,2
+vertexID,6881,color,2
+vertexID,6882,color,2
+vertexID,6658,color,1
+vertexID,6802,color,1
+vertexID,6748,color,1
+vertexID,6952,color,1
+vertexID,6627,color,2
+vertexID,6976,color,2
+vertexID,6978,color,2
+vertexID,6977,color,2
+vertexID,7072,color,2
+vertexID,6628,color,1
+vertexID,6684,color,1
+vertexID,7073,color,1
+vertexID,7093,color,1
+vertexID,7116,color,1
+vertexID,7118,color,1
+vertexID,7117,color,2
+vertexID,6647,color,1
+vertexID,6671,color,1
+vertexID,6682,color,1
+vertexID,6686,color,1
+vertexID,6714,color,1
+vertexID,6715,color,2
+vertexID,6689,color,3
+vertexID,6713,color,2
+vertexID,6778,color,2
+vertexID,6779,color,2
+vertexID,6716,color,1
+vertexID,6721,color,1
+vertexID,6720,color,2
+vertexID,6690,color,3
+vertexID,6722,color,2
+vertexID,6780,color,2
+vertexID,6781,color,2
+vertexID,6803,color,2
+vertexID,6723,color,1
+vertexID,6851,color,1
+vertexID,6848,color,1
+vertexID,6849,color,3
+vertexID,6850,color,1
+vertexID,6916,color,1
+vertexID,6915,color,1
+vertexID,6695,color,1
+vertexID,6740,color,1
+vertexID,6697,color,2
+vertexID,6696,color,2
+vertexID,6698,color,2
+vertexID,6742,color,1
+vertexID,6705,color,2
+vertexID,6765,color,2
+vertexID,6787,color,3
+vertexID,6766,color,2
+vertexID,6737,color,2
+vertexID,6706,color,2
+vertexID,6817,color,1
+vertexID,6896,color,2
+vertexID,6895,color,2
+vertexID,6897,color,2
+vertexID,7083,color,1
+vertexID,7042,color,2
+vertexID,6989,color,3
+vertexID,7043,color,2
+vertexID,7159,color,2
+vertexID,7160,color,3
+vertexID,7111,color,2
+vertexID,7044,color,2
+vertexID,6987,color,1
+vertexID,6920,color,1
+vertexID,6988,color,2
+vertexID,7214,color,1
+vertexID,7243,color,2
+vertexID,7215,color,1
+vertexID,6891,color,2
+vertexID,7216,color,1
+vertexID,7278,color,1
+vertexID,6872,color,1
+vertexID,6840,color,3
+vertexID,6873,color,1
+vertexID,6934,color,1
+vertexID,6935,color,1
+vertexID,7345,color,2
+vertexID,7346,color,2
+vertexID,7347,color,3
+vertexID,6807,color,1
+vertexID,7403,color,1
+vertexID,7369,color,1
+vertexID,7404,color,1
+vertexID,7439,color,1
+vertexID,6782,color,2
+vertexID,6729,color,3
+vertexID,6783,color,2
+vertexID,6784,color,2
+vertexID,7493,color,2
+vertexID,6727,color,1
+vertexID,6728,color,1
+vertexID,7465,color,1
+vertexID,7527,color,1
+vertexID,7540,color,3
+vertexID,7528,color,1
+vertexID,7466,color,1
+vertexID,7585,color,1
+vertexID,7655,color,2
+vertexID,7656,color,3
+vertexID,7657,color,2
+vertexID,7658,color,2
+vertexID,7718,color,1
+vertexID,7719,color,1
+vertexID,6833,color,1
+vertexID,6786,color,2
+vertexID,6834,color,3
+vertexID,6860,color,2
+vertexID,6893,color,2
+vertexID,6894,color,2
+vertexID,6922,color,2
+vertexID,6832,color,1
+vertexID,6760,color,1
+vertexID,6992,color,1
+vertexID,6734,color,2
+vertexID,6735,color,2
+vertexID,6736,color,2
+vertexID,7048,color,2
+vertexID,6993,color,2
+vertexID,7021,color,2
+vertexID,7112,color,3
+vertexID,7164,color,1
+vertexID,7134,color,3
+vertexID,7050,color,2
+vertexID,7049,color,1
+vertexID,7133,color,1
+vertexID,7135,color,1
+vertexID,7192,color,1
+vertexID,6793,color,1
+vertexID,6749,color,2
+vertexID,6776,color,3
+vertexID,6777,color,3
+vertexID,6887,color,2
+vertexID,6886,color,2
+vertexID,6888,color,2
+vertexID,6775,color,1
+vertexID,6931,color,1
+vertexID,7014,color,2
+vertexID,6979,color,2
+vertexID,7037,color,2
+vertexID,7036,color,1
+vertexID,7152,color,2
+vertexID,7120,color,2
+vertexID,7181,color,2
+vertexID,7180,color,1
+vertexID,7290,color,1
+vertexID,7306,color,3
+vertexID,7291,color,1
+vertexID,7292,color,1
+vertexID,7393,color,1
+vertexID,7361,color,1
+vertexID,7418,color,1
+vertexID,7417,color,2
+vertexID,7416,color,2
+vertexID,7415,color,1
+vertexID,6794,color,1
+vertexID,6757,color,2
+vertexID,6853,color,2
+vertexID,6852,color,2
+vertexID,6854,color,2
+vertexID,6815,color,1
+vertexID,6863,color,2
+vertexID,6814,color,2
+vertexID,6791,color,3
+vertexID,6816,color,2
+vertexID,6864,color,2
+vertexID,6813,color,1
+vertexID,6800,color,1
+vertexID,6810,color,1
+vertexID,6844,color,1
+vertexID,6845,color,2
+vertexID,6824,color,3
+vertexID,6843,color,2
+vertexID,6913,color,2
+vertexID,6912,color,2
+vertexID,6948,color,2
+vertexID,6846,color,1
+vertexID,6947,color,1
+vertexID,6971,color,3
+vertexID,6956,color,1
+vertexID,7001,color,1
+vertexID,7015,color,2
+vertexID,7002,color,1
+vertexID,7074,color,1
+vertexID,7076,color,1
+vertexID,7094,color,2
+vertexID,7075,color,1
+vertexID,7153,color,1
+vertexID,7182,color,2
+vertexID,7184,color,2
+vertexID,7183,color,3
+vertexID,7185,color,2
+vertexID,7257,color,1
+vertexID,7293,color,2
+vertexID,7324,color,2
+vertexID,7238,color,2
+vertexID,7394,color,1
+vertexID,7363,color,2
+vertexID,7362,color,2
+vertexID,7419,color,2
+vertexID,7473,color,1
+vertexID,7472,color,3
+vertexID,7474,color,1
+vertexID,7532,color,2
+vertexID,7503,color,2
+vertexID,7531,color,2
+vertexID,7564,color,2
+vertexID,6828,color,1
+vertexID,6856,color,1
+vertexID,6829,color,2
+vertexID,6855,color,3
+vertexID,6936,color,2
+vertexID,6921,color,3
+vertexID,6830,color,2
+vertexID,6892,color,2
+vertexID,7006,color,1
+vertexID,7018,color,2
+vertexID,7019,color,2
+vertexID,6910,color,1
+vertexID,6903,color,2
+vertexID,6869,color,3
+vertexID,6902,color,2
+vertexID,6946,color,2
+vertexID,6945,color,2
+vertexID,6939,color,2
+vertexID,6970,color,1
+vertexID,7031,color,2
+vertexID,7032,color,2
+vertexID,7033,color,2
+vertexID,6877,color,1
+vertexID,6923,color,1
+vertexID,7056,color,1
+vertexID,6966,color,2
+vertexID,7057,color,3
+vertexID,7105,color,2
+vertexID,7138,color,2
+vertexID,7170,color,3
+vertexID,7106,color,2
+vertexID,7085,color,2
+vertexID,6943,color,1
+vertexID,7055,color,1
+vertexID,7228,color,1
+vertexID,7230,color,1
+vertexID,7229,color,2
+vertexID,6926,color,2
+vertexID,6927,color,2
+vertexID,6965,color,2
+vertexID,7276,color,1
+vertexID,7304,color,1
+vertexID,7250,color,1
+vertexID,7277,color,1
+vertexID,6928,color,1
+vertexID,7064,color,1
+vertexID,7026,color,2
+vertexID,7087,color,2
+vertexID,7104,color,3
+vertexID,7088,color,2
+vertexID,7051,color,2
+vertexID,7027,color,2
+vertexID,6941,color,1
+vertexID,7165,color,1
+vertexID,7166,color,2
+vertexID,6961,color,2
+vertexID,6962,color,2
+vertexID,6963,color,2
+vertexID,7221,color,1
+vertexID,7193,color,1
+vertexID,7194,color,3
+vertexID,7222,color,2
+vertexID,7301,color,1
+vertexID,7223,color,1
+vertexID,7303,color,1
+vertexID,7302,color,1
+vertexID,7081,color,1
+vertexID,7099,color,2
+vertexID,6983,color,2
+vertexID,7080,color,2
+vertexID,7188,color,2
+vertexID,7210,color,3
+vertexID,7127,color,2
+vertexID,7128,color,1
+vertexID,6959,color,1
+vertexID,6960,color,1
+vertexID,6958,color,1
+vertexID,7211,color,1
+vertexID,7242,color,1
+vertexID,7265,color,1
+vertexID,7189,color,2
+vertexID,7295,color,2
+vertexID,7314,color,2
+vertexID,7386,color,2
+vertexID,7343,color,2
+vertexID,7297,color,2
+vertexID,7296,color,1
+vertexID,7425,color,1
+vertexID,7423,color,1
+vertexID,7424,color,1
+vertexID,6997,color,1
+vertexID,6967,color,2
+vertexID,7023,color,2
+vertexID,6998,color,2
+vertexID,7058,color,2
+vertexID,6968,color,1
+vertexID,7140,color,1
+vertexID,7141,color,1
+vertexID,7139,color,1
+vertexID,6969,color,1
+vertexID,7078,color,1
+vertexID,7098,color,2
+vertexID,7077,color,2
+vertexID,7016,color,2
+vertexID,7123,color,2
+vertexID,7125,color,2
+vertexID,7187,color,2
+vertexID,7206,color,3
+vertexID,7124,color,1
+vertexID,6980,color,1
+vertexID,6981,color,1
+vertexID,6982,color,1
+vertexID,7186,color,1
+vertexID,7263,color,1
+vertexID,7294,color,1
+vertexID,7262,color,2
+vertexID,7312,color,2
+vertexID,7224,color,1
+vertexID,7136,color,2
+vertexID,7225,color,2
+vertexID,7248,color,2
+vertexID,7275,color,2
+vertexID,7279,color,3
+vertexID,7273,color,2
+vertexID,7169,color,1
+vertexID,7168,color,1
+vertexID,7167,color,1
+vertexID,7053,color,1
+vertexID,7274,color,1
+vertexID,7351,color,1
+vertexID,7379,color,1
+vertexID,7319,color,1
+vertexID,7022,color,2
+vertexID,7378,color,2
+vertexID,7052,color,1
+vertexID,7054,color,1
+vertexID,7457,color,1
+vertexID,7485,color,1
+vertexID,7516,color,1
+vertexID,7515,color,2
+vertexID,7552,color,2
+vertexID,7587,color,1
+vertexID,7603,color,3
+vertexID,7586,color,1
+vertexID,7514,color,1
+vertexID,7625,color,1
+vertexID,7640,color,1
+vertexID,7641,color,1
+vertexID,7282,color,1
+vertexID,7308,color,2
+vertexID,7107,color,2
+vertexID,7197,color,3
+vertexID,7283,color,2
+vertexID,7358,color,2
+vertexID,7388,color,3
+vertexID,7330,color,2
+vertexID,7309,color,2
+vertexID,7069,color,1
+vertexID,7196,color,1
+vertexID,7070,color,1
+vertexID,7198,color,1
+vertexID,7359,color,1
+vertexID,7029,color,2
+vertexID,7071,color,1
+vertexID,7035,color,1
+vertexID,7047,color,1
+vertexID,7089,color,1
+vertexID,7065,color,2
+vertexID,7066,color,2
+vertexID,7113,color,2
+vertexID,7137,color,3
+vertexID,7114,color,2
+vertexID,7084,color,2
+vertexID,7226,color,1
+vertexID,7171,color,1
+vertexID,7249,color,2
+vertexID,7227,color,1
+vertexID,7320,color,1
+vertexID,7352,color,3
+vertexID,7321,color,1
+vertexID,7353,color,2
+vertexID,7380,color,1
+vertexID,7432,color,1
+vertexID,7458,color,2
+vertexID,7430,color,1
+vertexID,7431,color,1
+vertexID,7092,color,1
+vertexID,7091,color,2
+vertexID,7115,color,2
+vertexID,7145,color,2
+vertexID,7146,color,1
+vertexID,7147,color,3
+vertexID,7131,color,1
+vertexID,7101,color,2
+vertexID,7100,color,2
+vertexID,7102,color,2
+vertexID,7129,color,1
+vertexID,7148,color,1
+vertexID,7328,color,1
+vertexID,7280,color,2
+vertexID,7327,color,2
+vertexID,7408,color,2
+vertexID,7440,color,2
+vertexID,7494,color,2
+vertexID,7495,color,2
+vertexID,7281,color,1
+vertexID,7195,color,3
+vertexID,7329,color,1
+vertexID,7307,color,1
+vertexID,7632,color,1
+vertexID,7610,color,3
+vertexID,7611,color,1
+vertexID,7609,color,1
+vertexID,7174,color,1
+vertexID,7172,color,1
+vertexID,7173,color,1
+vertexID,7642,color,1
+vertexID,7673,color,1
+vertexID,7703,color,1
+vertexID,7775,color,2
+vertexID,7776,color,1
+vertexID,7815,color,1
+vertexID,7840,color,1
+vertexID,7839,color,2
+vertexID,7445,color,1
+vertexID,7384,color,2
+vertexID,7444,color,3
+vertexID,7446,color,3
+vertexID,7499,color,2
+vertexID,7500,color,2
+vertexID,7525,color,3
+vertexID,7333,color,1
+vertexID,7443,color,1
+vertexID,7591,color,1
+vertexID,7559,color,1
+vertexID,7617,color,1
+vertexID,7201,color,2
+vertexID,7616,color,2
+vertexID,7176,color,1
+vertexID,7236,color,1
+vertexID,7335,color,1
+vertexID,7334,color,1
+vertexID,7177,color,2
+vertexID,7237,color,2
+vertexID,7179,color,1
+vertexID,7190,color,1
+vertexID,7510,color,1
+vertexID,7427,color,2
+vertexID,7511,color,3
+vertexID,7574,color,2
+vertexID,7600,color,3
+vertexID,7575,color,2
+vertexID,7512,color,2
+vertexID,7372,color,1
+vertexID,7573,color,1
+vertexID,7371,color,2
+vertexID,7269,color,3
+vertexID,7373,color,2
+vertexID,7428,color,2
+vertexID,7219,color,1
+vertexID,7370,color,1
+vertexID,7191,color,2
+vertexID,7218,color,3
+vertexID,7220,color,3
+vertexID,7270,color,2
+vertexID,7217,color,1
+vertexID,7420,color,1
+vertexID,7385,color,2
+vertexID,7505,color,2
+vertexID,7596,color,3
+vertexID,7570,color,2
+vertexID,7422,color,2
+vertexID,7478,color,2
+vertexID,7537,color,2
+vertexID,7421,color,1
+vertexID,7341,color,1
+vertexID,7536,color,1
+vertexID,7569,color,1
+vertexID,7638,color,1
+vertexID,7313,color,2
+vertexID,7650,color,2
+vertexID,7651,color,2
+vertexID,7652,color,2
+vertexID,7714,color,2
+vertexID,7340,color,1
+vertexID,7241,color,1
+vertexID,7342,color,1
+vertexID,7744,color,1
+vertexID,7745,color,1
+vertexID,7746,color,1
+vertexID,7207,color,2
+vertexID,7208,color,2
+vertexID,7209,color,2
+vertexID,7251,color,1
+vertexID,7232,color,2
+vertexID,7233,color,2
+vertexID,7231,color,2
+vertexID,7305,color,1
+vertexID,7254,color,2
+vertexID,7391,color,2
+vertexID,7390,color,3
+vertexID,7389,color,2
+vertexID,7255,color,2
+vertexID,7392,color,2
+vertexID,7234,color,1
+vertexID,7442,color,1
+vertexID,7441,color,1
+vertexID,7253,color,2
+vertexID,7530,color,2
+vertexID,7558,color,1
+vertexID,7605,color,3
+vertexID,7590,color,1
+vertexID,7677,color,2
+vertexID,7588,color,1
+vertexID,7529,color,1
+vertexID,7589,color,2
+vertexID,7676,color,1
+vertexID,7707,color,1
+vertexID,7737,color,1
+vertexID,7755,color,3
+vertexID,7738,color,2
+vertexID,7849,color,1
+vertexID,7848,color,1
+vertexID,7847,color,1
+vertexID,7880,color,2
+vertexID,7235,color,1
+vertexID,7239,color,1
+vertexID,7272,color,1
+vertexID,7245,color,2
+vertexID,7246,color,2
+vertexID,7247,color,2
+vertexID,7681,color,1
+vertexID,7667,color,2
+vertexID,7634,color,3
+vertexID,7668,color,2
+vertexID,7730,color,2
+vertexID,7731,color,3
+vertexID,7732,color,2
+vertexID,7709,color,2
+vertexID,7592,color,1
+vertexID,7783,color,1
+vertexID,7784,color,2
+vertexID,7785,color,1
+vertexID,7786,color,1
+vertexID,7560,color,2
+vertexID,7561,color,2
+vertexID,7562,color,2
+vertexID,7501,color,2
+vertexID,7852,color,1
+vertexID,7853,color,1
+vertexID,7448,color,1
+vertexID,7882,color,2
+vertexID,7414,color,2
+vertexID,7449,color,3
+vertexID,7471,color,2
+vertexID,7502,color,2
+vertexID,7447,color,1
+vertexID,7336,color,1
+vertexID,7288,color,2
+vertexID,7289,color,1
+vertexID,7256,color,3
+vertexID,7337,color,1
+vertexID,7311,color,1
+vertexID,7287,color,1
+vertexID,7264,color,1
+vertexID,7300,color,1
+vertexID,7429,color,1
+vertexID,7467,color,2
+vertexID,7468,color,3
+vertexID,7469,color,2
+vertexID,7387,color,2
+vertexID,7413,color,3
+vertexID,7412,color,3
+vertexID,7456,color,2
+vertexID,7350,color,1
+vertexID,7542,color,1
+vertexID,7543,color,1
+vertexID,7544,color,1
+vertexID,7316,color,2
+vertexID,7318,color,2
+vertexID,7317,color,2
+vertexID,7322,color,1
+vertexID,7323,color,1
+vertexID,7355,color,2
+vertexID,7356,color,2
+vertexID,7357,color,2
+vertexID,7326,color,1
+vertexID,7338,color,1
+vertexID,7364,color,2
+vertexID,7339,color,2
+vertexID,7452,color,2
+vertexID,7476,color,3
+vertexID,7396,color,1
+vertexID,7475,color,2
+vertexID,7398,color,2
+vertexID,7397,color,1
+vertexID,7504,color,1
+vertexID,7395,color,2
+vertexID,7450,color,2
+vertexID,7451,color,1
+vertexID,7354,color,1
+vertexID,7382,color,2
+vertexID,7381,color,2
+vertexID,7383,color,2
+vertexID,7410,color,1
+vertexID,7365,color,2
+vertexID,7399,color,3
+vertexID,7400,color,3
+vertexID,7454,color,2
+vertexID,7477,color,3
+vertexID,7453,color,2
+vertexID,7401,color,1
+vertexID,7455,color,1
+vertexID,7534,color,1
+vertexID,7568,color,1
+vertexID,7533,color,2
+vertexID,7595,color,2
+vertexID,7637,color,2
+vertexID,7686,color,1
+vertexID,7648,color,1
+vertexID,7647,color,2
+vertexID,7713,color,2
+vertexID,7405,color,1
+vertexID,7374,color,2
+vertexID,7376,color,2
+vertexID,7375,color,2
+vertexID,7377,color,1
+vertexID,7406,color,1
+vertexID,7435,color,2
+vertexID,7407,color,2
+vertexID,7436,color,2
+vertexID,7461,color,2
+vertexID,7521,color,2
+vertexID,7487,color,3
+vertexID,7488,color,1
+vertexID,7553,color,1
+vertexID,7631,color,2
+vertexID,7630,color,2
+vertexID,7584,color,2
+vertexID,7672,color,1
+vertexID,7702,color,2
+vertexID,7726,color,3
+vertexID,7701,color,2
+vertexID,7629,color,2
+vertexID,7758,color,1
+vertexID,7757,color,1
+vertexID,7754,color,1
+vertexID,7774,color,2
+vertexID,7814,color,3
+vertexID,7773,color,2
+vertexID,7837,color,1
+vertexID,7871,color,2
+vertexID,7836,color,1
+vertexID,7433,color,1
+vertexID,7434,color,2
+vertexID,7459,color,2
+vertexID,7460,color,2
+vertexID,7486,color,2
+vertexID,7546,color,2
+vertexID,7520,color,3
+vertexID,7519,color,1
+vertexID,7513,color,1
+vertexID,7482,color,2
+vertexID,7483,color,2
+vertexID,7484,color,2
+vertexID,7522,color,1
+vertexID,7489,color,2
+vertexID,7547,color,2
+vertexID,7554,color,3
+vertexID,7548,color,2
+vertexID,7497,color,2
+vertexID,7490,color,2
+vertexID,7612,color,1
+vertexID,7614,color,1
+vertexID,7643,color,2
+vertexID,7704,color,1
+vertexID,7735,color,3
+vertexID,7613,color,1
+vertexID,7674,color,1
+vertexID,7736,color,2
+vertexID,7759,color,1
+vertexID,7777,color,1
+vertexID,7841,color,2
+vertexID,7843,color,2
+vertexID,7842,color,2
+vertexID,7496,color,1
+vertexID,7538,color,1
+vertexID,7571,color,2
+vertexID,7539,color,2
+vertexID,7506,color,2
+vertexID,7608,color,2
+vertexID,7654,color,2
+vertexID,7507,color,1
+vertexID,7688,color,1
+vertexID,7687,color,2
+vertexID,7653,color,1
+vertexID,7715,color,1
+vertexID,7769,color,1
+vertexID,7823,color,2
+vertexID,7861,color,1
+vertexID,7791,color,1
+vertexID,7508,color,1
+vertexID,7518,color,1
+vertexID,7581,color,2
+vertexID,7583,color,2
+vertexID,7517,color,2
+vertexID,7545,color,2
+vertexID,7664,color,2
+vertexID,7699,color,2
+vertexID,7698,color,3
+vertexID,7582,color,1
+vertexID,7663,color,3
+vertexID,7662,color,1
+vertexID,7725,color,1
+vertexID,7756,color,2
+vertexID,7812,color,1
+vertexID,7832,color,3
+vertexID,7813,color,1
+vertexID,7870,color,1
+vertexID,7879,color,1
+vertexID,7878,color,1
+vertexID,7563,color,1
+vertexID,7593,color,2
+vertexID,7550,color,2
+vertexID,7526,color,3
+vertexID,7551,color,2
+vertexID,7606,color,2
+vertexID,7607,color,2
+vertexID,7635,color,1
+vertexID,7669,color,2
+vertexID,7682,color,3
+vertexID,7670,color,2
+vertexID,7710,color,1
+vertexID,7733,color,1
+vertexID,7734,color,1
+vertexID,7535,color,1
+vertexID,7577,color,1
+vertexID,7578,color,2
+vertexID,7541,color,3
+vertexID,7620,color,2
+vertexID,7619,color,2
+vertexID,7601,color,2
+vertexID,7576,color,1
+vertexID,7684,color,1
+vertexID,7594,color,2
+vertexID,7636,color,3
+vertexID,7685,color,2
+vertexID,7743,color,2
+vertexID,7761,color,3
+vertexID,7742,color,2
+vertexID,7566,color,1
+vertexID,7567,color,1
+vertexID,7565,color,1
+vertexID,7741,color,1
+vertexID,7602,color,1
+vertexID,7580,color,2
+vertexID,7623,color,2
+vertexID,7697,color,2
+vertexID,7721,color,2
+vertexID,7749,color,2
+vertexID,7624,color,2
+vertexID,7579,color,1
+vertexID,7622,color,1
+vertexID,7750,color,1
+vertexID,7751,color,1
+vertexID,7752,color,2
+vertexID,7804,color,2
+vertexID,7671,color,1
+vertexID,7627,color,2
+vertexID,7833,color,2
+vertexID,7834,color,2
+vertexID,7835,color,2
+vertexID,7604,color,1
+vertexID,7626,color,2
+vertexID,7628,color,2
+vertexID,7615,color,1
+vertexID,7645,color,1
+vertexID,7644,color,2
+vertexID,7618,color,3
+vertexID,7712,color,2
+vertexID,7683,color,2
+vertexID,7740,color,2
+vertexID,7711,color,2
+vertexID,7646,color,1
+vertexID,7695,color,1
+vertexID,7621,color,2
+vertexID,7694,color,3
+vertexID,7696,color,3
+vertexID,7771,color,2
+vertexID,7748,color,3
+vertexID,7747,color,2
+vertexID,7693,color,1
+vertexID,7808,color,1
+vertexID,7828,color,3
+vertexID,7809,color,1
+vertexID,7874,color,1
+vertexID,7875,color,1
+vertexID,7867,color,1
+vertexID,7649,color,1
+vertexID,7766,color,1
+vertexID,7689,color,2
+vertexID,7764,color,2
+vertexID,7826,color,2
+vertexID,7807,color,3
+vertexID,7797,color,2
+vertexID,7765,color,2
+vertexID,7659,color,1
+vertexID,7660,color,1
+vertexID,7661,color,1
+vertexID,7827,color,1
+vertexID,7708,color,1
+vertexID,7678,color,2
+vertexID,7679,color,2
+vertexID,7680,color,3
+vertexID,7720,color,1
+vertexID,7690,color,2
+vertexID,7692,color,2
+vertexID,7691,color,2
+vertexID,7705,color,1
+vertexID,7831,color,1
+vertexID,7877,color,2
+vertexID,7772,color,2
+vertexID,7811,color,3
+vertexID,7810,color,3
+vertexID,7876,color,2
+vertexID,7869,color,2
+vertexID,7753,color,1
+vertexID,7724,color,2
+vertexID,7722,color,2
+vertexID,7723,color,2
+vertexID,7739,color,1
+vertexID,7781,color,1
+vertexID,7760,color,2
+vertexID,7780,color,3
+vertexID,7782,color,3
+vertexID,7851,color,2
+vertexID,7850,color,2
+vertexID,7779,color,1
+vertexID,7881,color,1
+vertexID,7762,color,1
+vertexID,7790,color,2
+vertexID,7789,color,2
+vertexID,7788,color,2
+vertexID,7794,color,1
+vertexID,7793,color,2
+vertexID,7763,color,3
+vertexID,7795,color,2
+vertexID,7863,color,2
+vertexID,7864,color,2
+vertexID,7796,color,1
+vertexID,7883,color,1
+vertexID,7799,color,1
+vertexID,7767,color,2
+vertexID,7800,color,3
+vertexID,7798,color,3
+vertexID,7865,color,2
+vertexID,7866,color,2
+vertexID,7801,color,1
+vertexID,7884,color,1
+vertexID,7817,color,1
+vertexID,7872,color,2
+vertexID,7805,color,2
+vertexID,7768,color,3
+vertexID,7806,color,2
+vertexID,7854,color,2
+vertexID,7873,color,2
+vertexID,7787,color,1
+vertexID,7819,color,2
+vertexID,7818,color,2
+vertexID,7820,color,2
+vertexID,7792,color,1
+vertexID,7829,color,1
+vertexID,7868,color,2
+vertexID,7802,color,2
+vertexID,7830,color,2
+vertexID,7803,color,1
+vertexID,7821,color,1
+vertexID,7857,color,2
+vertexID,7855,color,2
+vertexID,7856,color,2
+vertexID,7822,color,1
+vertexID,7858,color,2
+vertexID,7859,color,2
+vertexID,7860,color,2
+vertexID,7838,color,1
+vertexID,7844,color,1
+vertexID,7885,color,1
+vertexID,7886,color,1
+vertexID,7887,color,1
+vertexID,7899,color,2
+vertexID,7888,color,1
+vertexID,7900,color,2
+vertexID,7889,color,1
+vertexID,7901,color,2
+vertexID,7890,color,1
+vertexID,7902,color,2
+vertexID,7891,color,1
+vertexID,7903,color,2
+vertexID,7892,color,1
+vertexID,7904,color,2
+vertexID,7893,color,1
+vertexID,7905,color,2
+vertexID,7894,color,1
+vertexID,7906,color,2
+vertexID,7895,color,1
+vertexID,7907,color,2
+vertexID,7896,color,1
+vertexID,7908,color,2
+vertexID,7897,color,1
+vertexID,7898,color,1
+vertexID,7909,color,1
+vertexID,7910,color,1
+vertexID,7922,color,2
+vertexID,7911,color,1
+vertexID,7923,color,2
+vertexID,7912,color,1
+vertexID,7924,color,2
+vertexID,7913,color,1
+vertexID,7925,color,2
+vertexID,7914,color,1
+vertexID,7926,color,2
+vertexID,7915,color,1
+vertexID,7927,color,2
+vertexID,7916,color,1
+vertexID,7928,color,2
+vertexID,7917,color,1
+vertexID,7929,color,2
+vertexID,7918,color,1
+vertexID,7930,color,2
+vertexID,7919,color,1
+vertexID,7931,color,2
+vertexID,7920,color,1
+vertexID,7932,color,2
+vertexID,7921,color,1
