@@ -7,7 +7,7 @@
 ----------------------------------------------------
 -    Final Result    -
 ----------------------
-conflict vertices: 
+conflict vertices:
 vertexID,122 ,color,1
 vertexID,93  ,color,2
 vertexID,82  ,color,3

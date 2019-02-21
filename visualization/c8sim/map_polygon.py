@@ -42,11 +42,16 @@ def poly_in_bbox(poly, bbox):
     lx, ly = bbox[0]
     rx, ry = bbox[1]
     on_boundary_count = 0
+    check = [False, False, False, False]
     for i, coor in enumerate(poly):
         x, y = coor
         if not (lx <= x and x <= rx and ly <= y and y <= ry): return False
-        if lx == x or x == rx or ly == y or y == ry: on_boundary_count += 1
-    if on_boundary_count < 4: return False
+        if x == lx and ly <= y and y <= ry: check[0] = True
+        if x == rx and ly <= y and y <= ry: check[1] = True
+        if y == ly and lx <= x and x <= rx: check[2] = True
+        if y == ry and lx <= x and x <= rx: check[3] = True
+    for c in check:
+        if not c: return False
     return True
 
 

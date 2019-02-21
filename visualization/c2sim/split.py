@@ -21,7 +21,9 @@ with open(report_file, 'r') as f:
         line = line.strip().split(':')
         if line[0] == 'conflict vertices':
             conflict_v_collected = True
-            conflict_list = list(map(int, line[-1].strip().split(' ')))
+            conflict_list = []
+            if len(line) > 2:
+                conflict_list = list(map(int, line[-1].strip().split(' ')))
             continue
         if conflict_v_collected:
             line = line[0].split(',')
