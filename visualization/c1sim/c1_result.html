@@ -4,9 +4,9 @@
 <title>Gnuplot Canvas Graph</title>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <!--[if IE]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
-<script src="/usr/share/gnuplot/gnuplot/5.2/js/canvastext.js"></script>
-<script src="/usr/share/gnuplot/gnuplot/5.2/js/gnuplot_common.js"></script>
-<script src="/usr/share/gnuplot/gnuplot/5.2/js/gnuplot_dashedlines.js"></script>
+<script src="/usr/local/Cellar/gnuplot/5.2.4/share/gnuplot/5.2/js/canvastext.js"></script>
+<script src="/usr/local/Cellar/gnuplot/5.2.4/share/gnuplot/5.2/js/gnuplot_common.js"></script>
+<script src="/usr/local/Cellar/gnuplot/5.2.4/share/gnuplot/5.2/js/gnuplot_dashedlines.js"></script>
 <script type="text/javascript">gnuplot.init = function() {};</script>
 <script type="text/javascript">
 var canvas, ctx;
@@ -17,7 +17,7 @@ gnuplot.active_plot_name = "gnuplot_canvas";
 function gnuplot_canvas() {
 canvas = document.getElementById("gnuplot_canvas");
 ctx = canvas.getContext("2d");
-// Gnuplot version 5.2.2
+// Gnuplot version 5.2.4
 // short forms of commands provided by gnuplot_common.js
 function DT  (dt)  {gnuplot.dashtype(dt);};
 function DS  (x,y) {gnuplot.dashstart(x,y);};
@@ -42,11 +42,11 @@ function Hypertext(x,y,w,text) {
 gnuplot.dashlength = 400;
 ctx.lineCap = "round"; ctx.lineJoin = "round";
 CanvasTextFunctions.enable(ctx);
-ctx.strokeStyle = "rgb(215,215,215)";
+ctx.strokeStyle = " rgb(215,215,215)";
 ctx.lineWidth = 1;
 
 ctx.lineWidth = 1;
-ctx.strokeStyle = "rgb(000,000,000)";
+ctx.strokeStyle = " rgb(000,000,000)";
 ctx.beginPath();
 M(200,101);
 L(200,3840);
@@ -56,7 +56,8 @@ L(200,101);
 ctx.closePath();
 ctx.stroke();
 if (typeof(gnuplot.hide_gp_plot_1) == "undefined"|| !gnuplot.hide_gp_plot_1) {
-ctx.strokeStyle = "rgb(190,190,190)";
+ctx.strokeStyle = "rgba(190,190,190,1.00)";
+ctx.fillStyle = "rgba(190,190,190,1.00)";
 DT(gnuplot.solid);
 ctx.fillStyle = "rgba(190,190,190,0.50)";
 bp(1183, 3359);
@@ -4735,9 +4736,10 @@ cfp();
 } // End gp_plot_1 
 if (typeof(gnuplot.hide_gp_plot_2) == "undefined"|| !gnuplot.hide_gp_plot_2) {
 ctx.lineWidth = 1;
-ctx.strokeStyle = "rgb(000,000,000)";
+ctx.strokeStyle = " rgb(000,000,000)";
 DT(gnuplot.solid);
-ctx.strokeStyle = "rgb(190,190,190)";
+ctx.strokeStyle = "rgba(190,190,190,1.00)";
+ctx.fillStyle = "rgba(190,190,190,1.00)";
 ctx.beginPath();
 M(1183,3359);
 L(1183,3003);
@@ -8429,9 +8431,10 @@ ctx.closePath();
 } // End gp_plot_2 
 if (typeof(gnuplot.hide_gp_plot_3) == "undefined"|| !gnuplot.hide_gp_plot_3) {
 ctx.lineWidth = 1;
-ctx.strokeStyle = "rgb(000,000,000)";
+ctx.strokeStyle = " rgb(000,000,000)";
 DT(gnuplot.solid);
-ctx.strokeStyle = "rgb(000,255,000)";
+ctx.strokeStyle = "rgba(000,255,000,1.00)";
+ctx.fillStyle = "rgba(000,255,000,1.00)";
 DT(gnuplot.solid);
 ctx.fillStyle = "rgba(000,255,000,0.50)";
 bp(1247, 3632);
@@ -9785,9 +9788,10 @@ cfp();
 } // End gp_plot_3 
 if (typeof(gnuplot.hide_gp_plot_4) == "undefined"|| !gnuplot.hide_gp_plot_4) {
 ctx.lineWidth = 1;
-ctx.strokeStyle = "rgb(000,000,000)";
+ctx.strokeStyle = " rgb(000,000,000)";
 DT(gnuplot.solid);
-ctx.strokeStyle = "rgb(000,255,000)";
+ctx.strokeStyle = "rgba(000,255,000,1.00)";
+ctx.fillStyle = "rgba(000,255,000,1.00)";
 ctx.beginPath();
 M(1247,3632);
 L(1265,3632);
@@ -10928,9 +10932,10 @@ ctx.closePath();
 } // End gp_plot_4 
 if (typeof(gnuplot.hide_gp_plot_5) == "undefined"|| !gnuplot.hide_gp_plot_5) {
 ctx.lineWidth = 1;
-ctx.strokeStyle = "rgb(000,000,000)";
+ctx.strokeStyle = " rgb(000,000,000)";
 DT(gnuplot.solid);
-ctx.strokeStyle = "rgb(000,000,255)";
+ctx.strokeStyle = "rgba(000,000,255,1.00)";
+ctx.fillStyle = "rgba(000,000,255,1.00)";
 DT(gnuplot.solid);
 ctx.fillStyle = "rgba(000,000,255,0.50)";
 bp(1224, 2624);
@@ -15325,9 +15330,10 @@ cfp();
 } // End gp_plot_5 
 if (typeof(gnuplot.hide_gp_plot_6) == "undefined"|| !gnuplot.hide_gp_plot_6) {
 ctx.lineWidth = 1;
-ctx.strokeStyle = "rgb(000,000,000)";
+ctx.strokeStyle = " rgb(000,000,000)";
 DT(gnuplot.solid);
-ctx.strokeStyle = "rgb(000,000,255)";
+ctx.strokeStyle = "rgba(000,000,255,1.00)";
+ctx.fillStyle = "rgba(000,000,255,1.00)";
 ctx.beginPath();
 M(1224,2624);
 L(1224,2517);
@@ -18735,9 +18741,10 @@ ctx.closePath();
 } // End gp_plot_6 
 if (typeof(gnuplot.hide_gp_plot_7) == "undefined"|| !gnuplot.hide_gp_plot_7) {
 ctx.lineWidth = 1;
-ctx.strokeStyle = "rgb(000,000,000)";
+ctx.strokeStyle = " rgb(000,000,000)";
 DT(gnuplot.solid);
-ctx.strokeStyle = "rgb(255,000,000)";
+ctx.strokeStyle = "rgba(255,000,000,1.00)";
+ctx.fillStyle = "rgba(255,000,000,1.00)";
 DT(gnuplot.solid);
 ctx.fillStyle = "rgba(255,000,000,0.50)";
 bp(1206, 1214);
@@ -19004,9 +19011,10 @@ cfp();
 } // End gp_plot_7 
 if (typeof(gnuplot.hide_gp_plot_8) == "undefined"|| !gnuplot.hide_gp_plot_8) {
 ctx.lineWidth = 1;
-ctx.strokeStyle = "rgb(000,000,000)";
+ctx.strokeStyle = " rgb(000,000,000)";
 DT(gnuplot.solid);
-ctx.strokeStyle = "rgb(255,000,000)";
+ctx.strokeStyle = "rgba(255,000,000,1.00)";
+ctx.fillStyle = "rgba(255,000,000,1.00)";
 ctx.beginPath();
 M(1206,1214);
 L(1224,1214);
@@ -19237,7 +19245,7 @@ ctx.stroke();
 ctx.closePath();
 } // End gp_plot_8 
 ctx.lineWidth = 2;
-ctx.strokeStyle = "rgb(000,000,000)";
+ctx.strokeStyle = " rgb(000,000,000)";
 DT(gnuplot.solid);
 ctx.lineWidth = 1;
 ctx.beginPath();
@@ -19272,7 +19280,7 @@ gnuplot.plot_axis_width = gnuplot.plot_axis_xmax - gnuplot.plot_axis_xmin;
 gnuplot.plot_axis_height = gnuplot.plot_axis_ymax - gnuplot.plot_axis_ymin;
 }
 </script>
-<link type="text/css" href="/usr/share/gnuplot/gnuplot/5.2/js/gnuplot_mouse.css" rel="stylesheet">
+<link type="text/css" href="/usr/local/Cellar/gnuplot/5.2.4/share/gnuplot/5.2/js/gnuplot_mouse.css" rel="stylesheet">
 </head>
 <body onload="gnuplot_canvas(); gnuplot.init();" oncontextmenu="return false;">
 
