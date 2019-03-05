@@ -230,20 +230,3 @@ inline bool Graph::check(Vertex*& currentVertex, vector<bool>& color_checker) {
     }
     return true;
 }
-
-/*inline bool Graph::not_colorable_due_to_ident_process(int& id) {
-    return not_colorable_due_to_ident_process(_vertex[id]);
-}
-
-inline bool Graph::not_colorable_due_to_ident_process(Vertex*& v) {
-    bool color_checker[] = {true, true, true, true};
-    for (auto it = _adjList[v->ID].begin(); it != _adjList[v->ID].end(); ++it) {
-        if (_vertex[*it]->color == UNDEF) continue;
-        if (!_vertex[*it]->isGlobalRef()) continue;
-        color_checker[int(_vertex[*it]->color)] = false;
-        if (color_checker[1] == false && color_checker[2] == false && color_checker[3] == false) {
-            if (v->state == VERTEX_COLORABLE) return true;
-        }
-    }
-    return false;
-}*/

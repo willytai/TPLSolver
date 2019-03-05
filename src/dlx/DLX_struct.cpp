@@ -78,7 +78,6 @@ void DancingLink::initHeader(Graph& g, const int& component_id) {
      * _header is the header of the whole DancingLink structure
      */
     int prev_id = -1;
-    // for (unsigned int id = 1; id < vertexes.size(); ++id) {
     for (auto it = vertexes.begin(); it != vertexes.end(); ++it) {
         if (_columnHeader.size() < (*it)->ID+1) _columnHeader.resize((*it)->ID+1);
         _columnHeader[(*it)->ID] = new VertexCell(*it);
@@ -88,21 +87,13 @@ void DancingLink::initHeader(Graph& g, const int& component_id) {
             Insert_Right(_columnHeader[(*it)->ID], _columnHeader[prev_id]);
         prev_id = (*it)->ID;
     }
-    /*for (auto it = vertexes.begin(); it != vertexes.end(); ++it) {
-        _columnHeader.push_back(new VertexCell(*it));
-        Insert_Right(_columnHeader[_columnHeader.size()-1], _columnHeader[_columnHeader.size()-2]);
-    }*/
-    // for (unsigned int i = 0; i < edges.size(); ++i) {
     for (auto it = edges.begin(); it != edges.end(); ++it) {
         for (auto ti = (it->second).begin(); ti != (it->second).end(); ++ti) {
-        // Cell* MainEdgeCell = new EdgeCell(edges[i], RED);
         Cell* MainEdgeCell = new EdgeCell(ti->second, RED);
         _columnHeader.push_back(MainEdgeCell);
         Insert_Right(_columnHeader[_columnHeader.size()-1], _columnHeader[prev_id]); prev_id = _columnHeader.size() - 1;
-        // _columnHeader.push_back(new EdgeCell(edges[i], GREEN));
         _columnHeader.push_back(new EdgeCell(ti->second, GREEN));
         Insert_Right(_columnHeader[_columnHeader.size()-1], _columnHeader[prev_id]); prev_id = _columnHeader.size() - 1;
-        // _columnHeader.push_back(new EdgeCell(edges[i], BLUE));
         _columnHeader.push_back(new EdgeCell(ti->second, BLUE));
         Insert_Right(_columnHeader[_columnHeader.size()-1], _columnHeader[prev_id]); prev_id = _columnHeader.size() - 1;
 
@@ -123,10 +114,8 @@ void DancingLink::initHeader(Graph& g, const int& component_id) {
     _rowHeader.resize(3*vertexes.size(), NULL);
     for (unsigned int i = 0; i < vertexes.size(); ++i) {
         _rowHeader[3*i+0] = new RowHeaderCell(vertexes[i], RED);
-        if (!i)
-            Insert_Down(_rowHeader[3*i+0], _header);
-        else
-            Insert_Down(_rowHeader[3*i+0], _rowHeader[3*i-1]);
+        if (!i) Insert_Down(_rowHeader[3*i+0], _header);
+        else    Insert_Down(_rowHeader[3*i+0], _rowHeader[3*i-1]);
         _rowHeader[3*i+1] = new RowHeaderCell(vertexes[i], GREEN);
         Insert_Down(_rowHeader[3*i+1], _rowHeader[3*i+0]);
         _rowHeader[3*i+2] = new RowHeaderCell(vertexes[i], BLUE);

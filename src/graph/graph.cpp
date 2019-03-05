@@ -262,22 +262,6 @@ void Graph::add_vertex(istringstream& iss) {
 
 void Graph::construct_edge(string& token, istringstream& iss) {
     assert(0);
-    /*string buffer;
-    iss >> buffer;
-    int id_1 = stoi(token);
-    int id_2 = stoi(buffer);
-
-    // record the edge just once, make key1 > key2
-    if (id_1 > id_2) ::swap(id_1, id_2);
-    if (_edge.find(id_1) == _edge.end()) {
-        _edge[id_1][id_2] = new Edge(id_1, id_2);
-    }
-    else if (_edge[id_1].find(id_2) == _edge[id_1].end()) {
-        _edge[id_1][id_2] = new Edge(id_1, id_2);
-    }
-
-    _adjList[id_1].push_back(id_2);
-    _adjList[id_2].push_back(id_1);*/
 }
 
 int Graph::get_order(const Vertex* v) const {

@@ -25,7 +25,6 @@ void ExactCoverSolver::Solve() {
         cout << "Solving Component " << i << ", " << _graph.size(i) << " vertices" << endl;
         _component_id = i;
         solve(i);
-        // if (i == 2) break;
     }
 }
 
