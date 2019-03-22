@@ -4,4 +4,4 @@
 ### python3 split.py c\*\_report.txt
 ## Plot
 ### gnuplot plot.gp
-
+### plot_all.sh plot c1 ~ c7
