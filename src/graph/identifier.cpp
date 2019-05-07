@@ -42,46 +42,20 @@ void Graph::runIdentification(const int& component_id) {
 
     Vertex::setGlobalRef();
     _conflict_subgraphs.resize(_conflict_subgraphs.size()+1); // the container for the next subgraph
-    this->propagate(_root);
+    if (_native_detection) this->propagate(_root);
+    else this->simple_solution(_root);
     this->RemoveEdges(component_id);
 
-#ifdef DEBUG_MODE_IDENT
+// #ifdef DEBUG_MODE_IDENT
     cout << "New identified conflict vertexes" << endl;
     assert(_conflict_subgraphs.back().size());
     for (auto it = _conflict_subgraphs.back().begin(); it != _conflict_subgraphs.back().end(); ++it)
         cout << *(*it) << ' ';
     cout << endl;
-#endif
+// #endif
 
     // because some edges will be removed, need to re-run bfs
     bfs(component_id, -1);
-}
-
-void Graph::reportConflictSubgraphs(ostream& os, string filename) const {
-    #define VERTEX_ID_LENGTH 4
-    os << "****************************************************" << endl;
-    os << "*          Uncolorable Subgraph Reporter           *" << endl;
-    os << "****************************************************" << endl;
-    os << "|" << left << setw(50) << filename << "|" << endl;
-    os << "----------------------------------------------------" << endl;
-    os << "| There are " << setw(3) << _conflict_subgraphs.size() << "  uncolorable parts                 |" << endl;
-    os << "----------------------------------------------------" << endl;
-    for (unsigned int i = 0; i < _conflict_subgraphs.size(); ++i) {
-        os << "| subgraph " << setw(40) << left << i+1 << "|" << endl;
-        os << "| ";
-        int edgecount = 0;
-        stringstream ss;
-        for (auto it = _conflict_subgraphs.at(i).begin(); it != _conflict_subgraphs.at(i).end(); ++it) {
-            ss << setw(VERTEX_ID_LENGTH) << *(*it) << ", ";
-            if (++edgecount == 6 && it != --(_conflict_subgraphs.at(i).end())) {
-                edgecount = 0;
-                os << left << setw(49) << ss.str() << "|" << endl << "| ";
-                ss.str("");
-            }
-        }
-        os << left << setw(49) << ss.str() << "|" << endl; 
-        os << "----------------------------------------------------" << endl;
-    }
 }
 
 void Graph::RemoveEdges(const int& component_id) {
@@ -109,6 +83,18 @@ void Graph::RemoveEdges(const int& component_id) {
 
 void Graph::GetLatestConflictEdges(vector<pair<int, int> >& cedges) {
     cedges = _latest_conflict_edges;
+}
+
+void Graph::simple_solution(Vertex* currentVertex) {
+    for (auto it = --(_adjList[currentVertex->ID].end()); it != _adjList[currentVertex->ID].begin(); --it) {
+        if (_vertex[*it]->color == UNDEF) continue;
+        _conflict_subgraphs.back().push_back(currentVertex);
+        _conflict_subgraphs.back().push_back(_vertex[*it]);
+        currentVertex->state = VERTEX_UNCOLORABLE;
+        _vertex[*it]->state  = VERTEX_UNCOLORABLE;
+        return;
+    }
+    assert(0);
 }
 
 bool Graph::propagate(Vertex* currentVertex) {
@@ -229,4 +215,35 @@ inline bool Graph::check(Vertex*& currentVertex, vector<bool>& color_checker) {
         return false;
     }
     return true;
+}
+
+void Graph::reportConflictSubgraphs(ostream& os, string filename) const {
+    #define VERTEX_ID_LENGTH 4
+    os << "****************************************************" << endl;
+    os << "*          Uncolorable Subgraph Reporter           *" << endl;
+    os << "****************************************************" << endl;
+    os << "|" << left << setw(50) << filename << "|" << endl;
+    os << "----------------------------------------------------" << endl;
+    os << "| There are " << setw(3) << _conflict_subgraphs.size() << "  uncolorable parts                 |" << endl;
+    os << "----------------------------------------------------" << endl;
+    for (unsigned int i = 0; i < _conflict_subgraphs.size(); ++i) {
+        os << "| subgraph " << setw(40) << left << i+1 << "|" << endl;
+        os << "| ";
+        int edgecount = 0;
+        stringstream ss;
+        for (auto it = _conflict_subgraphs.at(i).begin(); it != _conflict_subgraphs.at(i).end(); ++it) {
+            ss << setw(VERTEX_ID_LENGTH) << *(*it) << ", ";
+            if (++edgecount == 6 && it != --(_conflict_subgraphs.at(i).end())) {
+                edgecount = 0;
+                os << left << setw(49) << ss.str() << "|" << endl << "| ";
+                ss.str("");
+            }
+        }
+        os << left << setw(49) << ss.str() << "|" << endl; 
+        os << "----------------------------------------------------" << endl;
+    }
+}
+
+void Graph::reportInputScale() const {
+    cout << "There are " << _vertex.size() << " polygons" << endl;
 }

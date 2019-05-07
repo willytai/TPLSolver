@@ -36,6 +36,7 @@ public:
     void   GetBFSList          (vector<Vertex*>& vec, int component_id) const;
     void   GetConflictID       (vector<int>& conflict_vID);
     void   print               ();
+    void   SetDetectionMode    (int m) { _native_detection = m; }
     int    bfs                 (int component_id, int r_id);
     int    get_order           (const Vertex* v)      const;
     size_t size                (const int& component_id) const;
@@ -50,8 +51,10 @@ public:
     void              ApplySolution           (const vector<Cell*>& sol, int RootID);
     void              GetLatestConflictEdges  (vector<pair<int, int> >& cedges);
     void              reportConflictSubgraphs (ostream& os, string filename) const;
+    void              reportInputScale        () const;
     void              runIdentification       (const int& component_id);
     void              RemoveEdges             (const int& component_id);
+    void              simple_solution         (Vertex* currentVertex);
     bool              propagate               (Vertex* currentVertex);
     inline bool       check                   (Vertex*& currentVertex, vector<bool>& LegalColor);
 
@@ -62,6 +65,7 @@ private:
     vector<vector<int> >                _adjList;      // adjacency list
     vector<int>                         _root_of_cc;   // roots of connected components
     vector<Vertex*>                     _vertex;
+    vector<Vertex*>                     _irrelevant_v;
     vector<vector<Vertex*> >            _bfsList;      // bfslist of each CC
     vector<map<int, map<int, Edge*> > > _edge;         // _edge[1][2] is the edge pointer formed by vertex 1 and 2, and is only record once
     stack<Edge*>                        _removed_edges;
@@ -73,12 +77,15 @@ private:
     Vertex*                             _root;                         // this is for uncolorable subgraph identification
     int*                                _predecessor;                  // for identifing CC
 
+    bool                                _native_detection;
+
     mutable bool          _bfsDone;
 
     void add_vertex                   (istringstream& iss);
     void construct_edge               (string& token, istringstream& iss);
     void restore                      (Vertex* v);
     void identify_connected_component ();
+    void collect_irrelevant_vertices  ();
 };
 
 #endif /* GRAPH_H */

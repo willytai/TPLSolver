@@ -37,41 +37,6 @@ void Graph::RestoreEdges() {
 void Graph::ContstructByFile(fstream& file) {
     cerr << "Method ContstructByFile(fstream& file) removed from Graph!" << endl;
     assert(false);
-
-    string buffer;
-    if (!file.is_open()) return;
-
-    while (getline(file, buffer)) {
-        if (buffer.empty()) break;
-
-        istringstream iss(buffer);
-
-        string token;
-        while (iss >> token) {
-            // skip comments
-            if (!token.compare("c")) break;
-            if (!token.compare("vertex")) add_vertex(iss);
-            else construct_edge(token, iss);
-        }
-    }
-    _root_of_cc.push_back(bfs(_root_of_cc.size(), 1));
-#ifdef DEBUG_MODE
-    cout << "vertices: ";
-    auto it = _vertex.begin();
-    ++it;
-    for (; it != _vertex.end(); ++it)
-        cout << *(*it) << ' ';
-    cout << endl;
-    cout << "edges of component 0: ";
-    /*for (auto it = _edge.begin(); it != _edge.end(); ++it)
-        cout << *(*it) << ' ';
-    cout << endl;*/
-    for (auto it = _edge[0].begin(); it != _edge[0].end(); ++it) {
-        for (auto ti = (it->second).begin(); ti != (it->second).end(); ++ti) {
-            cout << *(ti->second) << endl;
-        }
-    }
-#endif
 }
 
 void Graph::ContstructByAdjList(fstream& file) {
@@ -97,18 +62,57 @@ void Graph::ContstructByAdjList(fstream& file) {
         _vertex[RowNum] = new Vertex(RowNum);
         ++RowNum;
     }
-#ifdef DEBUG_MODE_GRAPH
-    for (unsigned int i = 0; i < _adjList.size(); ++i) {
-        // cout << i << ':';
-        for (auto ti = _adjList[i].begin(); ti != _adjList[i].end(); ++ti) {
-            cout << *ti << ' ';
-        } cout << endl;
-    }
-#endif
     cerr << "Done" << endl;
+    // cerr << "Collecting irrelevant vertices...";
+    // this->collect_irrelevant_vertices();
     cerr << "Identifying CC...";
     this->identify_connected_component();
-    cerr << "Done" << endl;
+}
+
+void Graph::collect_irrelevant_vertices() {
+    _irrelevant_v.clear();
+    for (unsigned int v = 0; v < _vertex.size(); ++v) {
+        if (get_order(_vertex[v]) < 3) {
+            _irrelevant_v.push_back(_vertex[v]);
+            _vertex[v] = NULL;
+        }
+    }
+    cerr << _irrelevant_v.size() << " irrelevant vertices collected." << endl;
+}
+
+void Graph::identify_connected_component() {
+    int CC_count = 0;
+    _predecessor = new int[_vertex.size()];
+    for (unsigned int i = 0; i < _vertex.size(); ++i) _predecessor[i] = -1;
+    for (unsigned int v = 0; v < _vertex.size(); ++v) {
+        if (!_vertex[v]) continue;
+        if (_predecessor[v] == -1) {
+            _root_of_cc.push_back(bfs(CC_count++, v));
+        }
+    }
+    delete _predecessor; _predecessor = NULL;
+    cerr << "There are " << _root_of_cc.size() << " connected components" << endl;
+
+#ifndef DEBUG_MODE_GRAPH
+    return;
+#else
+    // sort the CCs is ascendig order in terms of the number of vertexes
+    // very stupid
+    assert (_bfsList.size() == _root_of_cc.size());
+    assert (_edge.size() == _bfsList.size());
+    for (unsigned int i = 0; i < _root_of_cc.size()-1; ++i) {
+        for (unsigned int j = i + 1; j < _root_of_cc.size(); ++j) {
+            if (_bfsList[i].size() > _bfsList[j].size()) {
+                ::swap(_bfsList[i], _bfsList[j]);
+                ::swap(_root_of_cc[i], _root_of_cc[j]);
+                ::swap(_edge[i], _edge[j]);
+            }
+        }
+    }
+    for (unsigned int i = 0; i < _bfsList.size(); ++i)
+        cout << "cc " << i << ": " << _bfsList[i].size() << endl;
+
+#endif
 }
 
 unsigned Vertex::_globalRef = 0;
@@ -116,8 +120,8 @@ unsigned Vertex::_globalRef = 0;
 int Graph::bfs(int component_id, int r_id) {
     if (r_id == -1) {
         // cerr << "not yet implemented in graph.cpp" << endl;
-        // cerr << "need to run bfs, this CC could be split into two or more due to the removeall of the conflict edges" << endl;
-        // identify all the connect component add replace the current component with the largest one
+        // cerr << "need to run bfs, this CC could be split into two or more due to the removal of the conflict edges" << endl;
+        // identify all the connect component and replace the current component with the largest one
         // while adding the other CCs to the end of _bfsList
         // set the root of _root_of_cc 
         vector<Vertex*> tmp;
@@ -131,6 +135,7 @@ int Graph::bfs(int component_id, int r_id) {
                 tmp.push_back(currentNode);
                 currentNode->setToGlobalRef();
                 for (unsigned int j = 0; j < _adjList[currentNode->ID].size(); ++j) {
+                    if (!_vertex[_adjList[currentNode->ID][j]]) continue; // vertex with degree less than 3
                     if (_vertex[_adjList[currentNode->ID][j]]->isGlobalRef()) continue;
                     Q.push(_vertex[_adjList[currentNode->ID][j]]);
                 }
@@ -152,6 +157,7 @@ int Graph::bfs(int component_id, int r_id) {
             tmp.push_back(currentNode);
             currentNode->setToGlobalRef();
             for (unsigned int j = 0; j < _adjList[currentNode->ID].size(); ++j) {
+                if (!_vertex[_adjList[currentNode->ID][j]]) continue; // vertex with degree less than 3
                 if (_vertex[_adjList[currentNode->ID][j]]->isGlobalRef()) continue;
                 Q.push(_vertex[_adjList[currentNode->ID][j]]);
             }
@@ -161,9 +167,6 @@ int Graph::bfs(int component_id, int r_id) {
             tmp.push_back(_bfsList[component_id][i]);
         }
         _bfsList[component_id].swap(tmp);
-        /*for (auto it = _bfsList[component_id].begin(); it != _bfsList[component_id].end(); ++it) {
-            cout << *(*it) << ' ';
-        } cout << endl;*/
         return -1;
     }
 
@@ -181,6 +184,7 @@ int Graph::bfs(int component_id, int r_id) {
         _bfsList[component_id].push_back(currentNode);
         currentNode->setToGlobalRef();
         for (unsigned int i = 0; i < _adjList[currentNode->ID].size(); ++i) {
+            if (!_vertex[_adjList[currentNode->ID][i]]) continue; // vertex with degree less than 3
             if (_vertex[_adjList[currentNode->ID][i]]->isGlobalRef()) continue;
             Q.push(_vertex[_adjList[currentNode->ID][i]]);
             _predecessor[_adjList[currentNode->ID][i]] = currentNode->ID;
@@ -225,6 +229,7 @@ int Graph::bfs(int component_id, int r_id) {
 #endif
 
             // bfs part
+            if (!_vertex[_adjList[currentNode->ID][i]]) continue; // vertex with degree less than 3
             if (_vertex[_adjList[currentNode->ID][i]]->isGlobalRef()) continue;
             Q.push(_vertex[_adjList[currentNode->ID][i]]);
             _predecessor[_adjList[currentNode->ID][i]] = currentNode->ID;
@@ -364,60 +369,6 @@ void Graph::print() {
             cout << "\tVertex ID: " << *(*it) << endl;
         } cout << endl;
     }
-}
-
-void Graph::identify_connected_component() {
-    int CC_count = 0;
-    _predecessor = new int[_vertex.size()];
-    for (unsigned int i = 0; i < _vertex.size(); ++i) _predecessor[i] = -1;
-    for (unsigned int v = 0; v < _vertex.size(); ++v) {
-        if (_predecessor[v] == -1) {
-            // cerr << "bfs...";
-            _root_of_cc.push_back(bfs(CC_count++, v));
-            // cerr << "Done" << endl;
-        }
-    }
-    delete _predecessor;
-    _predecessor = NULL;
-    cout << "There are " << _root_of_cc.size() << " connected components" << endl;
-#ifdef DEBUG_MODE_GRAPH
-    cout << "CC 0" << endl;
-    for (int i = 0; i < _bfsList[0].size(); ++i) {
-        cout << *_bfsList[0][i] << endl;
-    }
-    for (auto it = _edge[0].begin(); it != _edge[0].end(); ++it) {
-        for (auto ti = (*it).second.begin(); ti != (*it).second.end(); ++ti) {
-            cout << *((*ti).second) << endl;
-        }
-    }
-#endif
-
-#ifndef DEBUG_MODE_GRAPH
-    return;
-#else
-    // sort the CCs is ascendig order in terms of the number of vertexes
-    // very stupid
-    assert (_bfsList.size() == _root_of_cc.size());
-    assert (_edge.size() == _bfsList.size());
-    for (unsigned int i = 0; i < _root_of_cc.size()-1; ++i) {
-        for (unsigned int j = i + 1; j < _root_of_cc.size(); ++j) {
-            if (_bfsList[i].size() > _bfsList[j].size()) {
-                ::swap(_bfsList[i], _bfsList[j]);
-                ::swap(_root_of_cc[i], _root_of_cc[j]);
-                ::swap(_edge[i], _edge[j]);
-            }
-        }
-    }
-    for (unsigned int i = 0; i < _bfsList.size(); ++i)
-        cout << "cc " << i << ": " << _bfsList[i].size() << endl;
-
-// #ifdef DEBUG_MODE_IDENT
-//     if (_bfsList.size() > 96) {
-//         ::swap(_bfsList[0], _bfsList[96]);
-//         ::swap(_root_of_cc[0], _root_of_cc[96]);
-//         ::swap(_edge[0], _edge[96]);
-//     }
-#endif
 }
 
 void Graph::GetConflictID(vector<int>& conflict_vID) {

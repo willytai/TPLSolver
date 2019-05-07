@@ -11,6 +11,7 @@ void ExactCoverSolver::InitByFile(fstream& file) {
 
 void ExactCoverSolver::InitByAdjList(fstream& file) {
     _graph.ContstructByAdjList(file);
+    _graph.SetDetectionMode(_detection_stat);
 }
 
 void ExactCoverSolver::Solve() {
@@ -29,6 +30,7 @@ void ExactCoverSolver::Solve() {
 }
 
 void ExactCoverSolver::report(ostream& os, string filename, bool dump_adjlist) {
+    _graph.reportInputScale();
     _graph.reportConflictSubgraphs(os,   " Filename: "+filename); // write to file if filename specified
     _graph.reportConflictSubgraphs(cout, " Filename: "+filename); // display conflict part on screen
     for (int i = 0; i < _solution.size(); ++i) {

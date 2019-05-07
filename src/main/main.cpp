@@ -7,15 +7,15 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-    if (argc < 2) {
-        cerr << "usage: ./TPLSolver <adjacency list> <report filename (default cout)> <whether to dump adjacency list> (default 0)" << endl;
+    if (argc < 3) {
+        cerr << "usage: ./TPLSolver <adjacency list> <native conflict detection: enable/disable> <report filename (default cout)> <whether to dump adjacency list> (default 0)" << endl;
         return 0;
     }
 
     ofstream ofile;
     bool dump_adjlist = false;
-    if (argc == 3) ofile.open(argv[2]);
-    else if (argc == 4) dump_adjlist = true;
+    if (argc == 4) ofile.open(argv[3]);
+    else if (argc == 5) dump_adjlist = true;
 
     MyUsage usg;
     fstream file;
@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
         return 0;
     }
 
-    ExactCoverSolver* solver = new ExactCoverSolver;
+    ExactCoverSolver* solver = new ExactCoverSolver(argv[2]);
     usg.reset();
     solver->InitByAdjList(file);
     solver->Solve();

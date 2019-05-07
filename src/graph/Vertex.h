@@ -17,7 +17,7 @@ enum VertexState
 // 16 byte
 struct Vertex
 {
-    Vertex(int id) : color(UNDEF), state(VERTEX_STATE_NOT_DETERMINED) { ID = id; }
+    Vertex(int id) : color(UNDEF), state(VERTEX_STATE_NOT_DETERMINED), _ref(0){ ID = id; }
     
     int                 ID;
     Color               color;

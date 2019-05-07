@@ -1,0 +1,10 @@
+*.o
+*tags
+*.DS_store
+*.extheader*
+*.depend*
+TPLSolver
+bin*
+include*
+lib*
+Result*
